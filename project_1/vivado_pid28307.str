@@ -1,0 +1,411 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 28307
+License: Customer
+
+Current time: 	Thu Jul 09 16:55:13 CDT 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 5.3.0-62-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 9 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/vivado/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Xilinx/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-28307-rsaradhy-acer
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	191 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 966 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 946 MB. GUI used memory: 48 MB. Current time: 7/9/20, 4:55:15 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 100 MB (+102713kb) [00:00:12]
+// [Engine Memory]: 983 MB (+879221kb) [00:00:12]
+// [GUI Memory]: 107 MB (+1528kb) [00:00:12]
+// [Engine Memory]: 1,042 MB (+10284kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2128 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'. 
+// Project name: project_1; location: /home/rsaradhy/Work/trenz/vivado/project_1; part: xczu2cg-sfvc784-1-e
+dismissDialog("Open Project"); // bB (cr)
+// [GUI Memory]: 114 MB (+1701kb) [00:00:15]
+// [Engine Memory]: 1,106 MB (+12766kb) [00:00:15]
+// [GUI Memory]: 124 MB (+5131kb) [00:00:15]
+// [Engine Memory]: 1,177 MB (+16678kb) [00:00:17]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,150 MB. GUI used memory: 62 MB. Current time: 7/9/20, 5:25:15 PM CDT
+// Elapsed time: 3433 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("main.v", 136, 530); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,273 MB. GUI used memory: 60 MB. Current time: 7/9/20, 5:52:46 PM CDT
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (f, cr)
+selectButton(PAResourceCommand.PACommandNames_RUN_BITGEN, "run_bitstream"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 11 
+// Tcl Message: [Thu Jul  9 17:52:52 2020] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Thu Jul  9 17:52:52 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 58 seconds
+selectCodeEditor("main.v", 108, 489); // ch (w, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 54 seconds
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, cr)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 1214 seconds
+selectCodeEditor("main.v", 22, 486); // ch (w, cr)
+// Elapsed time: 76 seconds
+selectCodeEditor("main.v", 204, 511); // ch (w, cr)
+selectCodeEditor("main.v", 201, 515); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v)]", 2, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("design_1_wrapper.v", 72, 281); // ch (w, cr)
+selectCodeEditor("design_1_wrapper.v", 174, 468); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 1); // i (h, cr)
+selectCodeEditor("main.v", 61, 516); // ch (w, cr)
+selectCodeEditor("main.v", 180, 511); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 2); // i (h, cr)
+// [Engine Memory]: 1,324 MB (+91734kb) [01:22:11]
+// TclEventType: DG_GRAPH_STALE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v)]", 2); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// WARNING: HEventQueue.dispatchEvent() is taking  1216 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+dismissDialog("Open Block Design"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,352 MB. GUI used memory: 70 MB. Current time: 7/9/20, 6:17:26 PM CDT
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd), design_1 (design_1.v)]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("design_1.v", 71, 304); // C (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("design_1.v", 245, 357); // C (w, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v)]", 2, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectCodeEditor("main.v", 62, 517); // ch (w, cr)
+selectCodeEditor("main.v", 62, 517, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("main.v", 173, 671); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+// [GUI Memory]: 149 MB (+19686kb) [01:23:09]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 951, 185, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 227 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 45 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1139, 328, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1121, 282, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // af (ao, cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1099, 371, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cr): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (k)
+dismissDialog("Edit in IP Packager"); // k (cr)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1184, 348, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cr): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (k)
+dismissDialog("Edit in IP Packager"); // k (cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+selectButton(PAResourceCommand.PACommandNames_SELECT_AREA, "System_select_area"); // x (f, cr): TRUE
+// Run Command: PAResourceCommand.PACommandNames_SELECT_AREA
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// cd (cr): Select Area: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (cd)
+dismissDialog("Select Area"); // cd (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectCodeEditor("main.v", 153, 659); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1.v", 4); // i (h, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("design_1.v", 1746, 245); // C (w, cr)
+selectCodeEditor("design_1.v", 17, 161); // C (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("design_1.v", 500, 795); // C (w, cr)
+selectCodeEditor("design_1.v", 504, 794); // C (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,372 MB. GUI used memory: 84 MB. Current time: 7/9/20, 6:26:11 PM CDT
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "design_1_wrapper.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+// Elapsed time: 548 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 1); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), my_design : design_1_wrapper (design_1_wrapper.v), design_1_i : design_1 (design_1.bd)]", 3, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd} 
+dismissDialog("Open Block Design"); // bB (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Elapsed time: 48 seconds
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+selectButton(PAResourceCommand.PACommandNames_SELECT_AREA, "System_select_area"); // x (f, cr): TRUE
+// Run Command: PAResourceCommand.PACommandNames_SELECT_AREA
+// Elapsed time: 570 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 257, 395, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 222, 539, 1834, 894, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+// Elapsed time: 19 seconds
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "fifo"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1, "AXI4-Stream Data FIFO", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1, "AXI4-Stream Data FIFO", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 
+// Tcl Message: endgroup 
+// [Engine Memory]: 1,445 MB (+57472kb) [01:51:20]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,393 MB. GUI used memory: 91 MB. Current time: 7/9/20, 6:46:31 PM CDT
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells axis_data_fifo_0] 
+// Elapsed time: 86 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "main.v", 2); // i (h, cr)
+selectCodeEditor("main.v", 151, 700); // ch (w, cr)
+selectCodeEditor("main.v", 60, 691); // ch (w, cr)
+selectCodeEditor("main.v", 72, 688); // ch (w, cr)
+selectCodeEditor("main.v", 84, 692); // ch (w, cr)
+selectCodeEditor("main.v", 42, 672); // ch (w, cr)
+// Elapsed time: 1107 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_HELP, "Help"); // aa (q, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 83 MB. Current time: 7/9/20, 7:16:31 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2221 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 81 MB. Current time: 7/9/20, 7:46:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 8:16:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 8:46:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 9:16:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 9:46:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 10:16:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 10:46:31 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 80 MB. Current time: 7/9/20, 11:16:31 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1095 ms.

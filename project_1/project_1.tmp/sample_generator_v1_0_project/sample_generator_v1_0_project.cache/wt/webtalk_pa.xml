@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Fri Jul 17 07:35:49 2020">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="1cf19f8bb3ad4b2f876ba8dd0125e9ac" type="ProjectID"/>
+<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddBusInterfaceHandler" value="1" type="JavaHandler"/>
+<property name="AutoConnectPort" value="1" type="JavaHandler"/>
+<property name="AutoInferInterfaceHandler" value="1" type="JavaHandler"/>
+<property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
+<property name="EditDelete" value="1" type="JavaHandler"/>
+<property name="EditInIPPackagerHandler" value="1" type="JavaHandler"/>
+<property name="IPPackagerHandler" value="1" type="JavaHandler"/>
+<property name="NewExportHardware" value="1" type="JavaHandler"/>
+<property name="ToolsSettings" value="1" type="JavaHandler"/>
+</item>
+<item name="Gui Handlers">
+<property name="BaseDialog_CANCEL" value="7" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="2" type="GuiHandlerData"/>
+<property name="CreateRSBInterfaceDialog_CONNECT_TO_SELECTED_INTERFACE" value="7" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_CHECKPOINT" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_EXPORT" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_IP" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="MainMenuMgr_TEXT_EDITOR" value="2" type="GuiHandlerData"/>
+<property name="MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_AUTO_CONNECT_PORTS" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_CLOSE_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_EDIT_IN_IP_PACKAGER" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_IP_SETTINGS" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_PACKAGER_ADD_BUS_INTERFACE" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_PACKAGER_AUTO_INFER_INTERFACE" value="1" type="GuiHandlerData"/>
+<property name="PAViews_PACKAGE_IP" value="2" type="GuiHandlerData"/>
+<property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="2" type="GuiHandlerData"/>
+<property name="PortAndInterfaceFacetTable_AUTO_INFER_SINGLE_BIT_INTERFACE" value="1" type="GuiHandlerData"/>
+<property name="PortAndInterfaceFacetTable_EDIT_PORT" value="1" type="GuiHandlerData"/>
+<property name="PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE" value="12" type="GuiHandlerData"/>
+<property name="RSBExternalInterfacePropPanels_ASSOCIATED_CLOCK_PORT" value="1" type="GuiHandlerData"/>
+<property name="SearchCommandComponent_QUICK_ACCESS" value="2" type="GuiHandlerData"/>
+<property name="SelectMenu_HIGHLIGHT" value="4" type="GuiHandlerData"/>
+<property name="SystemBuilderMenu_CREATE_INTERFACE_PORT" value="2" type="GuiHandlerData"/>
+<property name="SystemBuilderMenu_IP_DOCUMENTATION" value="2" type="GuiHandlerData"/>
+<property name="SystemBuilderView_EXPAND_COLLAPSE" value="7" type="GuiHandlerData"/>
+<property name="SystemBuilderView_ORIENTATION" value="2" type="GuiHandlerData"/>
+<property name="SystemBuilderView_PINNING" value="5" type="GuiHandlerData"/>
+<property name="TclObjectTreeTable_TREETABLE" value="1" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="34" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="22" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

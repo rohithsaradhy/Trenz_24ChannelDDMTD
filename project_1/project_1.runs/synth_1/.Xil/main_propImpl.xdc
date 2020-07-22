@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc rfile:../../../project_1.srcs/constrs_1/new/main.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H1 [get_ports {x0[0]}]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN J1 [get_ports {x1[0]}]

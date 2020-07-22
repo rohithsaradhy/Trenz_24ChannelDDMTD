@@ -1,0 +1,127 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jul  8 15:30:32 2020
+# Process ID: 11215
+# Current directory: /home/rsaradhy/Work/trenz/vivado/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+# Journal file: /home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:09 . Memory (MB): peak = 6647.930 ; gain = 178.426 ; free physical = 11440 ; free virtual = 15993
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps8_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_100M
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- user.org:user:sample_generator:1.0 - sample_generator_0
+Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
+Successfully read diagram <design_1> from BD file </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: Endpoint Slave READ_WRITE_MODE is WRITE_ONLY. To prevent illegal transaction from master to slave enable SUPPORTS_DECERR for S00_Entry through Advanced Properties.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/sample_generator_0/s_axis_tvalid
+
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block sample_generator_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = 825563c9f1f185a5; cache size = 11.007 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = 4d2b8f5642695872; cache size = 11.007 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_xbar_0, cache-ID = 4cc70a7a50237304; cache size = 11.007 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Wed Jul  8 15:31:21 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 15:31:21 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 7105.102 ; gain = 165.918 ; free physical = 11021 ; free virtual = 15671
+write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
+write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7105.102 ; gain = 0.000 ; free physical = 10556 ; free virtual = 15611
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+ipx::edit_ip_in_project -upgrade true -name sample_generator_v1_0_project -directory /home/rsaradhy/Work/trenz/vivado/project_1/project_1.tmp/sample_generator_v1_0_project /home/rsaradhy/Work/trenz/mycores/ip_repo/sample_generator_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/rsaradhy/Work/trenz/mycores/ip_repo/sample_generator_1.0/hdl/sample_generator_v1_0_M_AXIS.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/rsaradhy/Work/trenz/mycores/ip_repo/sample_generator_1.0/hdl/sample_generator_v1_0.v:]
+update_compile_order -fileset sources_1
+close_project
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Jul  8 15:59:58 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 15:59:58 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+file mkdir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1
+file mkdir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new
+close [ open /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc w ]
+add_files -fileset constrs_1 /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Jul  8 16:10:35 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 16:10:35 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Jul  8 16:20:41 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 16:20:41 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Jul  8 16:28:28 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 16:28:29 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Jul  8 16:41:36 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Jul  8 16:41:36 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
