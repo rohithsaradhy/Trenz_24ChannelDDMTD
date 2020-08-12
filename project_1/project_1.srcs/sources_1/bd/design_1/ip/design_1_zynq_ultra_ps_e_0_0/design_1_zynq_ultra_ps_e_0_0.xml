@@ -13725,7 +13725,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PL_CLK1.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PL_CLK1.FREQ_HZ">160000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -13743,7 +13743,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PL_CLK1.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PL_CLK1.CLK_DOMAIN">design_1_zynq_ultra_ps_e_0_0_pl_clk1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -13781,7 +13781,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.PL_CLK1" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE))=1)">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.PL_CLK1" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE))=1)">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -30628,11 +30628,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:12:32 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:04 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33826227</spirit:value>
+            <spirit:value>9:ae282618</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30643,7 +30643,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33826227</spirit:value>
+            <spirit:value>9:ae282618</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30659,40 +30659,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:12:33 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:05 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33826227</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_hardwarehandoff</spirit:name>
-        <spirit:displayName>Hardware Handoff</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:hw.handoff</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33826227</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_externalfiles</spirit:name>
-        <spirit:displayName>External Files</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:14:58 UTC 2020</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:33826227</spirit:value>
+            <spirit:value>9:ae282618</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30717,7 +30688,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9b0bd88b</spirit:value>
+            <spirit:value>9:9a8fe5e9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30733,11 +30704,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:54:18 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:05 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e64cbdcb</spirit:value>
+            <spirit:value>9:5543b454</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30757,11 +30728,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:54:18 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:05 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3c505e8b</spirit:value>
+            <spirit:value>9:255bc40c</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30784,11 +30755,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:54:18 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:06 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9b0bd88b</spirit:value>
+            <spirit:value>9:9a8fe5e9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -30804,11 +30775,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:54:18 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:06 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e64cbdcb</spirit:value>
+            <spirit:value>9:5543b454</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
@@ -30828,15 +30799,44 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jul 22 13:54:23 UTC 2020</spirit:value>
+            <spirit:value>Thu Jul 30 16:44:11 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3c505e8b</spirit:value>
+            <spirit:value>9:255bc40c</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>sim_type</spirit:name>
             <spirit:value>tlm_dpi</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_hardwarehandoff</spirit:name>
+        <spirit:displayName>Hardware Handoff</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:hw.handoff</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ae282618</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Jul 30 16:46:00 UTC 2020</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ae282618</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -53500,7 +53500,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pl_clk1" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE))=1)">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.pl_clk1" xilinx:dependency="(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE))=1)">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -65708,7 +65708,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_PL_CLK1_BUF</spirit:name>
-        <spirit:value spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PL_CLK1_BUF" spirit:dependency="spirit:decode(id(PARAM_VALUE.PSU__PL_CLK1_BUF))">FALSE</spirit:value>
+        <spirit:value spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.C_PL_CLK1_BUF" spirit:dependency="spirit:decode(id(PARAM_VALUE.PSU__PL_CLK1_BUF))">TRUE</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="STRING">
         <spirit:name>C_PL_CLK2_BUF</spirit:name>
@@ -67526,42 +67526,6 @@
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>design_1_zynq_ultra_ps_e_0_0.dcp</spirit:name>
-        <spirit:userFileType>dcp</spirit:userFileType>
-        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_zynq_ultra_ps_e_0_0_stub.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_zynq_ultra_ps_e_0_0_stub.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_zynq_ultra_ps_e_0_0_sim_netlist.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
-        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
-        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_axi_infrastructure_1_1__ref_view_fileset</spirit:name>
       <spirit:file>
         <spirit:name>../../ipshared/ec67/hdl/axi_infrastructure_v1_1_0.vh</spirit:name>
@@ -67767,6 +67731,42 @@
       <spirit:file>
         <spirit:name>sim/design_1_zynq_ultra_ps_e_0_0.sv</spirit:name>
         <spirit:fileType>systemVerilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>design_1_zynq_ultra_ps_e_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_zynq_ultra_ps_e_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_zynq_ultra_ps_e_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_zynq_ultra_ps_e_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>design_1_zynq_ultra_ps_e_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
@@ -68191,7 +68191,7 @@
     <spirit:parameter>
       <spirit:name>PSU__FPGA_PL1_ENABLE</spirit:name>
       <spirit:displayName>PL1</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__FPGA_PL1_ENABLE" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__FPGA_PL1_ENABLE" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__FPGA_PL2_ENABLE</spirit:name>
@@ -77133,7 +77133,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>PL0 DIV0</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">5</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77145,7 +77145,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>PL1 DIV0</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">5</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77403,7 +77403,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__RPLL_CTRL__FBDIV</spirit:name>
       <spirit:displayName>RPLL</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__RPLL_CTRL__FBDIV" spirit:choiceRef="choice_list_efecb9ff">72</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__RPLL_CTRL__FBDIV" spirit:choiceRef="choice_list_efecb9ff">48</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77427,7 +77427,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>RPLL_TO_FPD</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">3</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77631,7 +77631,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>SDIO0 DIV0</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">4</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77655,7 +77655,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>SDIO1 DIV0</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">4</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -77893,7 +77893,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0</spirit:name>
       <spirit:displayName>IOU SWITCH DIV0</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">5</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0" spirit:choiceRef="choice_list_efecb9ff">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -78108,19 +78108,12 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL0_REF_CTRL__SRCSEL</spirit:name>
       <spirit:displayName>PL0 CLKSRC</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" spirit:choiceRef="choice_list_c27c51c5">RPLL</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" spirit:choiceRef="choice_list_c27c51c5">IOPLL</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL1_REF_CTRL__SRCSEL</spirit:name>
       <spirit:displayName>PL1 CLKSRC</spirit:displayName>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__SRCSEL" spirit:choiceRef="choice_list_c27c51c5">RPLL</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__CRL_APB__PL1_REF_CTRL__SRCSEL">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL2_REF_CTRL__SRCSEL</spirit:name>
@@ -78506,11 +78499,11 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__PL_CLK1_BUF</spirit:name>
       <spirit:displayName>PL1</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PL_CLK1_BUF" spirit:choiceRef="choice_list_d10f4555">FALSE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__PL_CLK1_BUF" spirit:choiceRef="choice_list_d10f4555">TRUE</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__PL_CLK1_BUF" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ)) > 0)&amp;&amp;(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE)) == 1))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.PSU__PL_CLK1_BUF" xilinx:dependency="((spirit:decode(id(PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ)) > 0)&amp;&amp;(spirit:decode(id(PARAM_VALUE.PSU__FPGA_PL1_ENABLE)) == 1))">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -78692,7 +78685,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ</spirit:name>
       <spirit:displayName>ACT PL1</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" spirit:minimum="-2" spirit:maximum="-1">100</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" spirit:minimum="-2" spirit:maximum="-1">160.000000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL2_REF_CTRL__ACT_FREQMHZ</spirit:name>
@@ -78842,7 +78835,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ</spirit:name>
       <spirit:displayName>ACT IOU_SWITCH</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ" spirit:minimum="-2" spirit:maximum="-1">240.000000</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ" spirit:minimum="-2" spirit:maximum="-1">266.666656</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__CSU_PLL_CTRL__ACT_FREQMHZ</spirit:name>
@@ -79006,19 +78999,12 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ</spirit:name>
       <spirit:displayName>PL0</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" spirit:minimum="0.000000" spirit:maximum="1600.000000">320</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" spirit:minimum="0.000000" spirit:maximum="1600.000000">300</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ</spirit:name>
       <spirit:displayName>PL1</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" spirit:minimum="0.000000" spirit:maximum="1600.000000">100</spirit:value>
-      <spirit:vendorExtensions>
-        <xilinx:parameterInfo>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ">false</xilinx:isEnabled>
-          </xilinx:enablement>
-        </xilinx:parameterInfo>
-      </spirit:vendorExtensions>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" spirit:minimum="0.000000" spirit:maximum="1600.000000">160</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PSU__CRL_APB__PL2_REF_CTRL__FREQMHZ</spirit:name>
@@ -81214,6 +81200,11 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK0.CLK_DOMAIN" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK0.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK0.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK1.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK1.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK1.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK1.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_CLK1.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PL_RESETN0.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_HP0_FPD.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_HP0_FPD.ARUSER_WIDTH" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
@@ -81525,8 +81516,12 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__DIVISOR1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL1_REF_CTRL__SRCSEL" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL2_REF_CTRL__DIVISOR0" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL2_REF_CTRL__DIVISOR1" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__CRL_APB__PL3_REF_CTRL__DIVISOR0" xilinx:valueSource="user"/>
@@ -81644,6 +81639,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__FPD_SLCR__WDT1__ACT_FREQMHZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__FPD_SLCR__WDT1__FREQMHZ" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__FPD_SLCR__WDT_CLK_SEL__SELECT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__FPGA_PL1_ENABLE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__GEM3_COHERENCY" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__GEM3_ROUTE_THROUGH_FPD" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__GEM__TSU__ENABLE" xilinx:valueSource="user"/>
@@ -81668,6 +81664,7 @@ pi_tx_data[2]#ulpi_nxt#ulpi_tx_data[0]#ulpi_tx_data[1]#ulpi_stp#ulpi_tx_data[3]#
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__M_AXI_GP2__FREQMHZ" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__NUM_F2P0__INTR__INPUTS" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__NUM_F2P1__INTR__INPUTS" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PL_CLK1_BUF" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PRESET_APPLIED" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PROTECTION__MASTERS" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PSU__PROTECTION__SLAVES" xilinx:valueSource="user"/>

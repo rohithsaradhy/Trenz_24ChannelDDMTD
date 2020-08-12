@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Jul 22 09:12:33 2020
+//Date        : Thu Jul 30 11:43:49 2020
 //Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=1,da_clkrst_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=2,da_clkrst_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_En,
     CLK,
@@ -21,6 +21,8 @@ module design_1
     TREADY,
     TSTRB,
     TVALID,
+    clk_160,
+    gpio_rtl_0_tri_i,
     gpio_rtl_tri_o);
   input AXI_En;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SEND2MMAP_AXIS:S_AXIS_S2MM_0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, FREQ_HZ 300000000, INSERT_VIP 0, PHASE 0.000" *) output CLK;
@@ -32,6 +34,8 @@ module design_1
   output TREADY;
   input [7:0]TSTRB;
   input TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_160 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_160, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk1, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) output clk_160;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_0 TRI_I" *) input [31:0]gpio_rtl_0_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl TRI_O" *) output [31:0]gpio_rtl_tri_o;
 
   wire AXI_En_1;
@@ -57,6 +61,7 @@ module design_1
   wire axi_dma_0_M_AXI_S2MM_WREADY;
   wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
+  wire [31:0]axi_gpio_0_GPIO2_TRI_I;
   wire [31:0]axi_gpio_0_GPIO_TRI_O;
   wire [48:0]axi_smc_M00_AXI_AWADDR;
   wire [1:0]axi_smc_M00_AXI_AWBURST;
@@ -158,6 +163,7 @@ module design_1
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB;
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID;
   wire zynq_ultra_ps_e_0_pl_clk0;
+  wire zynq_ultra_ps_e_0_pl_clk1;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign AXI_En_1 = AXI_En;
@@ -170,6 +176,8 @@ module design_1
   assign TREADY = data_transfer_0_TREADY;
   assign TSTRB_1 = TSTRB[7:0];
   assign TVALID_1 = TVALID;
+  assign axi_gpio_0_GPIO2_TRI_I = gpio_rtl_0_tri_i[31:0];
+  assign clk_160 = zynq_ultra_ps_e_0_pl_clk1;
   assign gpio_rtl_tri_o[31:0] = axi_gpio_0_GPIO_TRI_O;
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps8_0_100M_peripheral_aresetn),
@@ -213,7 +221,8 @@ module design_1
         .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
   design_1_axi_gpio_0_0 axi_gpio_0
-       (.gpio_io_o(axi_gpio_0_GPIO_TRI_O),
+       (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
+        .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
         .s_axi_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .s_axi_araddr(ps8_0_axi_periph_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(rst_ps8_0_100M_peripheral_aresetn),
@@ -426,6 +435,7 @@ module design_1
         .maxigp2_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID),
         .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .pl_clk0(zynq_ultra_ps_e_0_pl_clk0),
+        .pl_clk1(zynq_ultra_ps_e_0_pl_clk1),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0),
         .saxigp2_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .saxigp2_arburst({1'b0,1'b1}),

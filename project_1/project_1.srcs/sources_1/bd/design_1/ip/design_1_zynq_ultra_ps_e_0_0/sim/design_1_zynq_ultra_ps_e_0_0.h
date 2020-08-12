@@ -158,6 +158,7 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<4> > saxigp2_arqos;
   sc_core::sc_out< bool > pl_resetn0;
   sc_core::sc_out< bool > pl_clk0;
+  sc_core::sc_out< bool > pl_clk1;
 
 protected:
 

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul 22 09:12:34 2020" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jul 30 11:44:12 2020" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="trenz.biz:te0820_2cg_1e:part0:2.0" DEVICE="xczu2cg" NAME="design_1" PACKAGE="sfvc784" SPEEDGRADE="-1"/>
 
@@ -7,11 +7,6 @@
     <PORT CLKFREQUENCY="300000000" DIR="O" NAME="CLK" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="gpio_rtl_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="FrameSize" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_FrameSize">
@@ -59,12 +54,32 @@
         <CONNECTION INSTANCE="data_transfer_0" PORT="TSTRB"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="31" NAME="gpio_rtl_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="gpio_rtl_0_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_gpio_0" PORT="gpio2_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="160000000" DIR="O" NAME="clk_160" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="pl_clk1"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
     <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="gpio_rtl" TYPE="INITIATOR">
       <PORTMAPS>
         <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_rtl_tri_o"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="gpio_rtl_0" TYPE="INITIATOR">
+      <PORTMAPS>
+        <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio_rtl_0_tri_i"/>
       </PORTMAPS>
     </BUSINTERFACE>
   </EXTERNALINTERFACES>
@@ -1464,13 +1479,13 @@
         <PARAMETER NAME="C_GPIO_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_GPIO2_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_ALL_INPUTS" VALUE="0"/>
-        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="0"/>
+        <PARAMETER NAME="C_ALL_INPUTS_2" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS" VALUE="1"/>
         <PARAMETER NAME="C_ALL_OUTPUTS_2" VALUE="0"/>
         <PARAMETER NAME="C_INTERRUPT_PRESENT" VALUE="0"/>
         <PARAMETER NAME="C_DOUT_DEFAULT" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT" VALUE="0xFFFFFFFF"/>
-        <PARAMETER NAME="C_IS_DUAL" VALUE="0"/>
+        <PARAMETER NAME="C_IS_DUAL" VALUE="1"/>
         <PARAMETER NAME="C_DOUT_DEFAULT_2" VALUE="0x00000000"/>
         <PARAMETER NAME="C_TRI_DEFAULT_2" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_axi_gpio_0_0"/>
@@ -1582,6 +1597,11 @@
             <CONNECTION INSTANCE="design_1_imp" PORT="gpio_rtl_tri_o"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="gpio2_io_i" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_gpio2_io_i">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="design_1_imp" PORT="gpio_rtl_0_tri_i"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M01_AXI" DATAWIDTH="32" NAME="S_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -1639,6 +1659,11 @@
         <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO" NAME="GPIO" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="TRI_O" PHYSICAL="gpio_io_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="axi_gpio_0_GPIO2" NAME="GPIO2" TYPE="INITIATOR" VLNV="xilinx.com:interface:gpio:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TRI_I" PHYSICAL="gpio2_io_i"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -2577,89 +2602,6 @@
             <CONNECTION INSTANCE="rst_ps8_0_100M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="39" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="39" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_gpio_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_gpio_0" PORT="s_axi_awaddr"/>
@@ -2934,6 +2876,89 @@
             <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxigp2_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="39" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="axi_dma_0_s_axi_lite_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_rready"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM0_LPD" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -3110,7 +3135,7 @@
         <PARAMETER NAME="C_EN_FIFO_ENET2" VALUE="0"/>
         <PARAMETER NAME="C_EN_FIFO_ENET3" VALUE="0"/>
         <PARAMETER NAME="C_PL_CLK0_BUF" VALUE="TRUE"/>
-        <PARAMETER NAME="C_PL_CLK1_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="C_PL_CLK1_BUF" VALUE="TRUE"/>
         <PARAMETER NAME="C_PL_CLK2_BUF" VALUE="FALSE"/>
         <PARAMETER NAME="C_PL_CLK3_BUF" VALUE="FALSE"/>
         <PARAMETER NAME="C_TRACE_PIPELINE_WIDTH" VALUE="8"/>
@@ -3161,7 +3186,7 @@
         <PARAMETER NAME="PSU__ENET1__PERIPHERAL__IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PSU__ENET1__GRP_MDIO__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__FPGA_PL0_ENABLE" VALUE="1"/>
-        <PARAMETER NAME="PSU__FPGA_PL1_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="PSU__FPGA_PL1_ENABLE" VALUE="1"/>
         <PARAMETER NAME="PSU__FPGA_PL2_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__FPGA_PL3_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__ENET1__GRP_MDIO__IO" VALUE="&lt;Select>"/>
@@ -4262,8 +4287,8 @@
         <PARAMETER NAME="PSU__SATA__LANE1__ENABLE" VALUE="0"/>
         <PARAMETER NAME="PSU__SATA__LANE1__IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__DIVISOR0" VALUE="6"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" VALUE="4"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" VALUE="4"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__DIVISOR0" VALUE="5"/>
         <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__DIVISOR0" VALUE="4"/>
         <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__DIVISOR0" VALUE="4"/>
         <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__DIVISOR1" VALUE="1"/>
@@ -4288,9 +4313,9 @@
         <PARAMETER NAME="PSU__CRF_APB__GTGREF0__ENABLE" VALUE="NA"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__DIVISOR0" VALUE="2"/>
         <PARAMETER NAME="PSU__CRL_APB__IOPLL_CTRL__FBDIV" VALUE="90"/>
-        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FBDIV" VALUE="72"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_CTRL__FBDIV" VALUE="48"/>
         <PARAMETER NAME="PSU__CRL_APB__IOPLL_TO_FPD_CTRL__DIVISOR0" VALUE="3"/>
-        <PARAMETER NAME="PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0" VALUE="3"/>
+        <PARAMETER NAME="PSU__CRL_APB__RPLL_TO_FPD_CTRL__DIVISOR0" VALUE="2"/>
         <PARAMETER NAME="PSU__CRL_APB__GEM0_REF_CTRL__DIVISOR0" VALUE="12"/>
         <PARAMETER NAME="PSU__CRL_APB__GEM1_REF_CTRL__DIVISOR0" VALUE="12"/>
         <PARAMETER NAME="PSU__CRL_APB__GEM2_REF_CTRL__DIVISOR0" VALUE="12"/>
@@ -4307,9 +4332,9 @@
         <PARAMETER NAME="PSU__CRL_APB__USB1_BUS_REF_CTRL__DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR0" VALUE="5"/>
         <PARAMETER NAME="PSU__CRL_APB__QSPI_REF_CTRL__DIVISOR1" VALUE="1"/>
-        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR0" VALUE="4"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO0_REF_CTRL__DIVISOR1" VALUE="1"/>
-        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" VALUE="6"/>
+        <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR0" VALUE="4"/>
         <PARAMETER NAME="PSU__CRL_APB__SDIO1_REF_CTRL__DIVISOR1" VALUE="1"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR0" VALUE="15"/>
         <PARAMETER NAME="PSU__CRL_APB__UART0_REF_CTRL__DIVISOR1" VALUE="1"/>
@@ -4330,7 +4355,7 @@
         <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__DIVISOR0" VALUE="6"/>
         <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__DIVISOR0" VALUE="3"/>
         <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__DIVISOR0" VALUE="3"/>
-        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0" VALUE="5"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__DIVISOR0" VALUE="3"/>
         <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__DIVISOR0" VALUE="3"/>
         <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__DIVISOR0" VALUE="8"/>
         <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__DIVISOR0" VALUE="15"/>
@@ -4359,7 +4384,7 @@
         <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__SRCSEL" VALUE="DPLL"/>
         <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
         <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" VALUE="RPLL"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__SRCSEL" VALUE="IOPLL"/>
         <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__SRCSEL" VALUE="RPLL"/>
         <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__SRCSEL" VALUE="RPLL"/>
         <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__SRCSEL" VALUE="RPLL"/>
@@ -4422,7 +4447,7 @@
         <PARAMETER NAME="PSU__OVERRIDE__BASIC_CLOCK" VALUE="0"/>
         <PARAMETER NAME="PSU__DLL__ISUSED" VALUE="1"/>
         <PARAMETER NAME="PSU__PL_CLK0_BUF" VALUE="TRUE"/>
-        <PARAMETER NAME="PSU__PL_CLK1_BUF" VALUE="FALSE"/>
+        <PARAMETER NAME="PSU__PL_CLK1_BUF" VALUE="TRUE"/>
         <PARAMETER NAME="PSU__PL_CLK2_BUF" VALUE="FALSE"/>
         <PARAMETER NAME="PSU__PL_CLK3_BUF" VALUE="FALSE"/>
         <PARAMETER NAME="PSU__CRF_APB__APLL_CTRL__FRACFREQ" VALUE="27.138"/>
@@ -4456,7 +4481,7 @@
         <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__ACT_FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ" VALUE="300.000000"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ" VALUE="160.000000"/>
         <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__ACT_FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__ACT_FREQMHZ" VALUE="600.000000"/>
@@ -4486,7 +4511,7 @@
         <PARAMETER NAME="PSU__CRL_APB__DEBUG_R5_ATCLK_CTRL__ACT_FREQMHZ" VALUE="1000"/>
         <PARAMETER NAME="PSU__CRL_APB__CPU_R5_CTRL__ACT_FREQMHZ" VALUE="500.000000"/>
         <PARAMETER NAME="PSU__CRL_APB__OCM_MAIN_CTRL__ACT_FREQMHZ" VALUE="500"/>
-        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ" VALUE="240.000000"/>
+        <PARAMETER NAME="PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ" VALUE="266.666656"/>
         <PARAMETER NAME="PSU__CRL_APB__CSU_PLL_CTRL__ACT_FREQMHZ" VALUE="180"/>
         <PARAMETER NAME="PSU__CRL_APB__PCAP_CTRL__ACT_FREQMHZ" VALUE="187.500000"/>
         <PARAMETER NAME="PSU__CRL_APB__LPD_LSBUS_CTRL__ACT_FREQMHZ" VALUE="100.000000"/>
@@ -4516,8 +4541,8 @@
         <PARAMETER NAME="PSU__CRF_APB__AFI5_REF_CTRL__FREQMHZ" VALUE="667"/>
         <PARAMETER NAME="PSU__CRF_APB__SATA_REF_CTRL__FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRF_APB__PCIE_REF_CTRL__FREQMHZ" VALUE="250"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" VALUE="320"/>
-        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" VALUE="100"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ" VALUE="300"/>
+        <PARAMETER NAME="PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ" VALUE="160"/>
         <PARAMETER NAME="PSU__CRL_APB__PL2_REF_CTRL__FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRL_APB__PL3_REF_CTRL__FREQMHZ" VALUE="100"/>
         <PARAMETER NAME="PSU__CRF_APB__GDMA_REF_CTRL__FREQMHZ" VALUE="600"/>
@@ -5135,6 +5160,11 @@
             <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
             <CONNECTION INSTANCE="data_transfer_0" PORT="m_axis_aclk"/>
             <CONNECTION INSTANCE="axis_data_fifo_0" PORT="s_axis_aclk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="160000000" DIR="O" NAME="pl_clk1" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk_160"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

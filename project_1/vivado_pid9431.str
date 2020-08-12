@@ -1,0 +1,177 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 9431
+License: Customer
+
+Current time: 	Thu Aug 06 15:45:48 CDT 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 5.4.0-42-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 332 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/vivado/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Xilinx/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9431-rsaradhy-acer
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 971 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 958 MB. GUI used memory: 48 MB. Current time: 8/6/20, 3:45:50 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 103 MB (+105636kb) [00:00:14]
+// [Engine Memory]: 995 MB (+892201kb) [00:00:14]
+// [GUI Memory]: 111 MB (+2956kb) [00:00:14]
+// [Engine Memory]: 1,049 MB (+4327kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  2557 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/vivado/ip_repo/AXIS_distributor_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'. 
+// [GUI Memory]: 120 MB (+3278kb) [00:00:16]
+// Project name: project_1; location: /home/rsaradhy/Work/trenz/vivado/project_1; part: xczu2cg-sfvc784-1-e
+// [Engine Memory]: 1,122 MB (+21218kb) [00:00:17]
+// Tcl Message: open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 6644.637 ; gain = 189.016 ; free physical = 25764 ; free virtual = 30334 
+dismissDialog("Open Project"); // bB (cr)
+selectButton(PAResourceCommand.PACommandNames_SYNTH_SETTINGS, "Vivado Synthesis Defaults"); // h (Q, cr)
+selectButton(PAResourceAtoD.BoardGadget_URL, "trenz.org/te0820-info"); // h (Q, cr)
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,214 MB (+37590kb) [00:00:21]
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,172 MB. GUI used memory: 62 MB. Current time: 8/6/20, 3:46:05 PM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo_chain (fifo_chain.v)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fifo_chain (fifo_chain.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+selectCodeEditor("fifo_chain.v", 131, 279); // ch (w, cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  23544743 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,180 MB. GUI used memory: 64 MB. Current time: 8/6/20, 10:46:45 PM CDT

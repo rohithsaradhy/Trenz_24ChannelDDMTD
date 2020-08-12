@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Jul 22 09:18:48 2020
+| Date             : Thu Jul 30 11:50:45 2020
 | Host             : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.063        |
+| Total On-Chip Power (W)  | 2.060        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.754        |
+| Dynamic (W)              | 1.752        |
 | Device Static (W)        | 0.308        |
 | Effective TJA (C/W)      | 2.4          |
 | Max Ambient (C)          | 95.1         |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.033 |        3 |       --- |             --- |
-| CLB Logic                |     0.025 |     6490 |       --- |             --- |
+| Clocks                   |     0.035 |        4 |       --- |             --- |
+| CLB Logic                |     0.026 |     6754 |       --- |             --- |
 |   LUT as Distributed RAM |     0.015 |      152 |     28800 |            0.53 |
-|   LUT as Logic           |     0.008 |     1908 |     47232 |            4.04 |
+|   LUT as Logic           |     0.008 |     1946 |     47232 |            4.12 |
 |   LUT as Shift Register  |     0.001 |      139 |     28800 |            0.48 |
-|   Register               |    <0.001 |     3236 |     94464 |            3.43 |
+|   Register               |    <0.001 |     3460 |     94464 |            3.66 |
 |   CARRY8                 |    <0.001 |       33 |      8820 |            0.37 |
-|   Others                 |     0.000 |      249 |       --- |             --- |
-| Signals                  |     0.012 |     4730 |       --- |             --- |
+|   Others                 |     0.000 |      253 |       --- |             --- |
+| Signals                  |     0.012 |     4963 |       --- |             --- |
 | Block RAM                |     0.120 |     66.5 |       150 |           44.33 |
 | I/O                      |     0.000 |        2 |       252 |            0.79 |
-| PS8                      |     1.564 |        1 |       --- |             --- |
+| PS8                      |     1.560 |        1 |       --- |             --- |
 | Static Power             |     0.308 |          |           |                 |
 |   PS Static              |     0.093 |          |           |                 |
 |   PL Static              |     0.215 |          |           |                 |
-| Total                    |     2.063 |          |           |                 |
+| Total                    |     2.060 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.264 |       0.211 |      0.053 |
+| Vccint          |       0.850 |     0.266 |       0.213 |      0.053 |
 | Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
 | Vccbram         |       0.850 |     0.014 |       0.013 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
@@ -91,10 +91,10 @@ Table of Contents
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
 | VCC_PSINTFP     |       0.850 |     0.382 |       0.354 |      0.028 |
-| VCC_PSINTLP     |       0.850 |     0.287 |       0.280 |      0.007 |
+| VCC_PSINTLP     |       0.850 |     0.286 |       0.279 |      0.007 |
 | VPS_MGTRAVCC    |       0.850 |     0.001 |       0.000 |      0.001 |
 | VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.004 |
-| VCC_PSPLL       |       1.200 |     0.057 |       0.055 |      0.002 |
+| VCC_PSPLL       |       1.200 |     0.054 |       0.052 |      0.002 |
 | VPS_MGTRAVTT    |       1.800 |     0.001 |       0.000 |      0.001 |
 | VCCO_PSDDR_504  |       1.200 |     0.401 |       0.367 |      0.034 |
 | VCC_PSAUX       |       1.800 |     0.002 |       0.000 |      0.002 |
@@ -161,16 +161,16 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| main                    |     1.754 |
-|   my_design             |     1.754 |
-|     design_1_i          |     1.754 |
+| main                    |     1.752 |
+|   my_design             |     1.751 |
+|     design_1_i          |     1.751 |
 |       axi_dma_0         |     0.019 |
-|       axi_gpio_0        |     0.002 |
+|       axi_gpio_0        |     0.003 |
 |       axi_smc           |     0.029 |
 |       axis_data_fifo_0  |     0.122 |
 |       data_transfer_0   |     0.001 |
 |       ps8_0_axi_periph  |     0.015 |
-|       zynq_ultra_ps_e_0 |     1.565 |
+|       zynq_ultra_ps_e_0 |     1.561 |
 +-------------------------+-----------+
 
 

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Jul 22 09:12:33 2020
+//Date        : Thu Jul 30 11:43:49 2020
 //Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -20,6 +20,8 @@ module design_1_wrapper
     TREADY,
     TSTRB,
     TVALID,
+    clk_160,
+    gpio_rtl_0_tri_i,
     gpio_rtl_tri_o);
   input AXI_En;
   output CLK;
@@ -31,6 +33,8 @@ module design_1_wrapper
   output TREADY;
   input [7:0]TSTRB;
   input TVALID;
+  output clk_160;
+  input [31:0]gpio_rtl_0_tri_i;
   output [31:0]gpio_rtl_tri_o;
 
   wire AXI_En;
@@ -43,6 +47,8 @@ module design_1_wrapper
   wire TREADY;
   wire [7:0]TSTRB;
   wire TVALID;
+  wire clk_160;
+  wire [31:0]gpio_rtl_0_tri_i;
   wire [31:0]gpio_rtl_tri_o;
 
   design_1 design_1_i
@@ -56,5 +62,7 @@ module design_1_wrapper
         .TREADY(TREADY),
         .TSTRB(TSTRB),
         .TVALID(TVALID),
+        .clk_160(clk_160),
+        .gpio_rtl_0_tri_i(gpio_rtl_0_tri_i),
         .gpio_rtl_tri_o(gpio_rtl_tri_o));
 endmodule

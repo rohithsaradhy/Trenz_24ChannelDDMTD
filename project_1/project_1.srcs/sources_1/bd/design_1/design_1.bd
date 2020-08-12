@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x62F819B89F24E781",
+      "boundary_crc": "0xEC9BFB04D3F00AE5",
       "device": "xczu2cg-sfvc784-1-e",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -27,6 +27,10 @@
     },
     "interface_ports": {
       "gpio_rtl": {
+        "mode": "Master",
+        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+      },
+      "gpio_rtl_0": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
@@ -108,6 +112,28 @@
         "direction": "I",
         "left": "7",
         "right": "0"
+      },
+      "clk_160": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk1",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "160000000",
+            "value_src": "user_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -248,7 +274,7 @@
             "value": "100.000000"
           },
           "PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ": {
-            "value": "240.000000"
+            "value": "266.666656"
           },
           "PSU__CRL_APB__LPD_LSBUS_CTRL__ACT_FREQMHZ": {
             "value": "100.000000"
@@ -263,7 +289,19 @@
             "value": "300.000000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ": {
-            "value": "320"
+            "value": "300"
+          },
+          "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL": {
+            "value": "IOPLL"
+          },
+          "PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ": {
+            "value": "160.000000"
+          },
+          "PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ": {
+            "value": "160"
+          },
+          "PSU__CRL_APB__PL1_REF_CTRL__SRCSEL": {
+            "value": "RPLL"
           },
           "PSU__CRL_APB__QSPI_REF_CTRL__ACT_FREQMHZ": {
             "value": "300.000000"
@@ -427,6 +465,9 @@
           "PSU__FPD_SLCR__WDT1__ACT_FREQMHZ": {
             "value": "100.000000"
           },
+          "PSU__FPGA_PL1_ENABLE": {
+            "value": "1"
+          },
           "PSU__GEM3_COHERENCY": {
             "value": "0"
           },
@@ -462,6 +503,9 @@
           },
           "PSU__IOU_SLCR__WDT0__ACT_FREQMHZ": {
             "value": "100.000000"
+          },
+          "PSU__PL_CLK1_BUF": {
+            "value": "TRUE"
           },
           "PSU__PRESET_APPLIED": {
             "value": "1"
@@ -845,16 +889,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -983,22 +1027,16 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "m00_couplers_to_ps8_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
             ]
           },
-          "m01_couplers_to_ps8_0_axi_periph": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "ps8_0_axi_periph_to_s00_couplers": {
@@ -1017,6 +1055,12 @@
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps8_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           }
         },
@@ -1105,7 +1149,13 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_1_axi_gpio_0_0",
         "parameters": {
+          "C_ALL_INPUTS_2": {
+            "value": "1"
+          },
           "C_ALL_OUTPUTS": {
+            "value": "1"
+          },
+          "C_IS_DUAL": {
             "value": "1"
           }
         }
@@ -1133,6 +1183,18 @@
       }
     },
     "interface_nets": {
+      "data_transfer_0_M_AXIS": {
+        "interface_ports": [
+          "data_transfer_0/M_AXIS",
+          "axis_data_fifo_0/S_AXIS"
+        ]
+      },
+      "axi_gpio_0_GPIO2": {
+        "interface_ports": [
+          "gpio_rtl_0",
+          "axi_gpio_0/GPIO2"
+        ]
+      },
       "axi_gpio_0_GPIO": {
         "interface_ports": [
           "gpio_rtl",
@@ -1145,10 +1207,10 @@
           "ps8_0_axi_periph/S00_AXI"
         ]
       },
-      "axi_smc_M00_AXI": {
+      "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
-          "axi_smc/M00_AXI",
-          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
+          "axi_dma_0/M_AXI_S2MM",
+          "axi_smc/S00_AXI"
         ]
       },
       "ps8_0_axi_periph_M01_AXI": {
@@ -1157,10 +1219,10 @@
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_dma_0_M_AXI_S2MM": {
+      "axis_data_fifo_0_M_AXIS": {
         "interface_ports": [
-          "axi_dma_0/M_AXI_S2MM",
-          "axi_smc/S00_AXI"
+          "axis_data_fifo_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "ps8_0_axi_periph_M00_AXI": {
@@ -1169,16 +1231,10 @@
           "axi_dma_0/S_AXI_LITE"
         ]
       },
-      "data_transfer_0_M_AXIS": {
+      "axi_smc_M00_AXI": {
         "interface_ports": [
-          "data_transfer_0/M_AXIS",
-          "axis_data_fifo_0/S_AXIS"
-        ]
-      },
-      "axis_data_fifo_0_M_AXIS": {
-        "interface_ports": [
-          "axis_data_fifo_0/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
+          "axi_smc/M00_AXI",
+          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
         ]
       }
     },
@@ -1269,6 +1325,12 @@
         "ports": [
           "TSTRB",
           "data_transfer_0/TSTRB"
+        ]
+      },
+      "zynq_ultra_ps_e_0_pl_clk1": {
+        "ports": [
+          "zynq_ultra_ps_e_0/pl_clk1",
+          "clk_160"
         ]
       }
     },

@@ -32,6 +32,7 @@ output [0:0] x0
   wire En;
   wire RST;
   wire CLK;
+  
 
 
 
@@ -52,6 +53,24 @@ output [0:0] x0
   wire TLAST;
   wire TVALID;
   wire TREADY;
+  
+  wire clk_160;
+  wire ddmtd_beat;
+  wire clk_ref;
+  
+//  DDMTD_Signal_Generator DSG1(
+//  .clk_160(clk_160),
+//  .clk_ref(clk_ref),
+//  .ddmtd_beat(ddmtd_beat)
+//  );
+
+
+
+
+
+
+  
+  
 
    MAXIS_WriteData # ( 
 	 	.C_M_AXIS_TDATA_WIDTH(C_M_AXIS_TDATA_WIDTH),
@@ -75,7 +94,7 @@ output [0:0] x0
   design_1_wrapper my_design
        (
        
-       
+         .clk_160(clk_160),
          .CLK(CLK),
          .RST(RST),
          
