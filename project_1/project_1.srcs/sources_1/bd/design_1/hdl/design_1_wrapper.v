@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Jul 30 11:43:49 2020
-//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
+//Date        : Wed Aug 12 15:05:28 2020
+//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -28,10 +28,10 @@ module design_1_wrapper
   input En;
   input [7:0]FrameSize;
   output [0:0]RST;
-  input [63:0]TDATA;
+  input [31:0]TDATA;
   input TLAST;
   output TREADY;
-  input [7:0]TSTRB;
+  input [3:0]TSTRB;
   input TVALID;
   output clk_160;
   input [31:0]gpio_rtl_0_tri_i;
@@ -42,10 +42,10 @@ module design_1_wrapper
   wire En;
   wire [7:0]FrameSize;
   wire [0:0]RST;
-  wire [63:0]TDATA;
+  wire [31:0]TDATA;
   wire TLAST;
   wire TREADY;
-  wire [7:0]TSTRB;
+  wire [3:0]TSTRB;
   wire TVALID;
   wire clk_160;
   wire [31:0]gpio_rtl_0_tri_i;

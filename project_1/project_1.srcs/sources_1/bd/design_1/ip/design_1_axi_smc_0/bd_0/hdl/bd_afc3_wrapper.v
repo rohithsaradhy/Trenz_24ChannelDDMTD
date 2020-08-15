@@ -76,10 +76,10 @@ module bd_afc3_wrapper
   input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
   output S00_AXI_bvalid;
-  input [63:0]S00_AXI_wdata;
+  input [31:0]S00_AXI_wdata;
   input S00_AXI_wlast;
   output S00_AXI_wready;
-  input [7:0]S00_AXI_wstrb;
+  input [3:0]S00_AXI_wstrb;
   input S00_AXI_wvalid;
   input aclk;
   input aresetn;
@@ -115,10 +115,10 @@ module bd_afc3_wrapper
   wire S00_AXI_bready;
   wire [1:0]S00_AXI_bresp;
   wire S00_AXI_bvalid;
-  wire [63:0]S00_AXI_wdata;
+  wire [31:0]S00_AXI_wdata;
   wire S00_AXI_wlast;
   wire S00_AXI_wready;
-  wire [7:0]S00_AXI_wstrb;
+  wire [3:0]S00_AXI_wstrb;
   wire S00_AXI_wvalid;
   wire aclk;
   wire aresetn;

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEC9BFB04D3F00AE5",
+      "boundary_crc": "0x80E76566AF0D0CD4",
       "device": "xczu2cg-sfvc784-1-e",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -22,8 +22,7 @@
       "rst_ps8_0_100M": "",
       "axi_smc": "",
       "axi_gpio_0": "",
-      "data_transfer_0": "",
-      "axis_data_fifo_0": ""
+      "data_transfer_0": ""
     },
     "interface_ports": {
       "gpio_rtl": {
@@ -97,22 +96,6 @@
       "TVALID": {
         "direction": "I"
       },
-      "TDATA": {
-        "direction": "I",
-        "left": "63",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default_prop"
-          }
-        }
-      },
-      "TSTRB": {
-        "direction": "I",
-        "left": "7",
-        "right": "0"
-      },
       "clk_160": {
         "type": "clk",
         "direction": "O",
@@ -134,6 +117,22 @@
             "value_src": "default"
           }
         }
+      },
+      "TDATA": {
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
+      "TSTRB": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
       }
     },
     "components": {
@@ -1033,16 +1032,16 @@
               "m00_couplers/M_AXI"
             ]
           },
+          "m01_couplers_to_ps8_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m00_couplers": {
             "interface_ports": [
               "xbar/M00_AXI",
               "m00_couplers/S_AXI"
-            ]
-          },
-          "ps8_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -1051,16 +1050,16 @@
               "xbar/S00_AXI"
             ]
           },
+          "ps8_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
-            ]
-          },
-          "m01_couplers_to_ps8_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
             ]
           }
         },
@@ -1124,7 +1123,7 @@
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "parameters": {
               "MAX_BURST_LENGTH": {
-                "value": "8"
+                "value": "4"
               },
               "NUM_READ_OUTSTANDING": {
                 "value": "2"
@@ -1165,28 +1164,19 @@
         "xci_name": "design_1_data_transfer_0_0",
         "parameters": {
           "C_M_AXIS_START_COUNT": {
-            "value": "64"
+            "value": "32"
           },
           "C_M_AXIS_TDATA_WIDTH": {
-            "value": "64"
-          }
-        }
-      },
-      "axis_data_fifo_0": {
-        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
-        "xci_name": "design_1_axis_data_fifo_0_0",
-        "parameters": {
-          "FIFO_DEPTH": {
-            "value": "32768"
+            "value": "32"
           }
         }
       }
     },
     "interface_nets": {
-      "data_transfer_0_M_AXIS": {
+      "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
-          "data_transfer_0/M_AXIS",
-          "axis_data_fifo_0/S_AXIS"
+          "axi_dma_0/M_AXI_S2MM",
+          "axi_smc/S00_AXI"
         ]
       },
       "axi_gpio_0_GPIO2": {
@@ -1195,22 +1185,10 @@
           "axi_gpio_0/GPIO2"
         ]
       },
-      "axi_gpio_0_GPIO": {
+      "ps8_0_axi_periph_M00_AXI": {
         "interface_ports": [
-          "gpio_rtl",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
-        "interface_ports": [
-          "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
-          "ps8_0_axi_periph/S00_AXI"
-        ]
-      },
-      "axi_dma_0_M_AXI_S2MM": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_S2MM",
-          "axi_smc/S00_AXI"
+          "ps8_0_axi_periph/M00_AXI",
+          "axi_dma_0/S_AXI_LITE"
         ]
       },
       "ps8_0_axi_periph_M01_AXI": {
@@ -1219,22 +1197,28 @@
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axis_data_fifo_0_M_AXIS": {
+      "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
         "interface_ports": [
-          "axis_data_fifo_0/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
+          "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
+          "ps8_0_axi_periph/S00_AXI"
         ]
       },
-      "ps8_0_axi_periph_M00_AXI": {
+      "axi_gpio_0_GPIO": {
         "interface_ports": [
-          "ps8_0_axi_periph/M00_AXI",
-          "axi_dma_0/S_AXI_LITE"
+          "gpio_rtl",
+          "axi_gpio_0/GPIO"
         ]
       },
       "axi_smc_M00_AXI": {
         "interface_ports": [
           "axi_smc/M00_AXI",
           "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
+        ]
+      },
+      "data_transfer_0_M_AXIS": {
+        "interface_ports": [
+          "data_transfer_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       }
     },
@@ -1254,8 +1238,7 @@
           "axi_gpio_0/s_axi_aclk",
           "ps8_0_axi_periph/M01_ACLK",
           "CLK",
-          "data_transfer_0/m_axis_aclk",
-          "axis_data_fifo_0/s_axis_aclk"
+          "data_transfer_0/m_axis_aclk"
         ]
       },
       "zynq_ultra_ps_e_0_pl_resetn0": {
@@ -1275,8 +1258,7 @@
           "axi_gpio_0/s_axi_aresetn",
           "ps8_0_axi_periph/M01_ARESETN",
           "data_transfer_0/m_axis_aresetn",
-          "RST",
-          "axis_data_fifo_0/s_axis_aresetn"
+          "RST"
         ]
       },
       "FrameSize_1": {
@@ -1315,6 +1297,12 @@
           "data_transfer_0/TVALID"
         ]
       },
+      "zynq_ultra_ps_e_0_pl_clk1": {
+        "ports": [
+          "zynq_ultra_ps_e_0/pl_clk1",
+          "clk_160"
+        ]
+      },
       "TDATA_1": {
         "ports": [
           "TDATA",
@@ -1325,12 +1313,6 @@
         "ports": [
           "TSTRB",
           "data_transfer_0/TSTRB"
-        ]
-      },
-      "zynq_ultra_ps_e_0_pl_clk1": {
-        "ports": [
-          "zynq_ultra_ps_e_0/pl_clk1",
-          "clk_160"
         ]
       }
     },

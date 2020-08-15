@@ -1,15 +1,15 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Thu Jul 30 11:43:49 2020
-//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
+//Date        : Wed Aug 12 15:05:28 2020
+//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=2,da_clkrst_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=2,da_clkrst_cnt=3,da_zynq_ultra_ps_e_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (AXI_En,
     CLK,
@@ -29,10 +29,10 @@ module design_1
   input En;
   input [7:0]FrameSize;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output [0:0]RST;
-  input [63:0]TDATA;
+  input [31:0]TDATA;
   input TLAST;
   output TREADY;
-  input [7:0]TSTRB;
+  input [3:0]TSTRB;
   input TVALID;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_160 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_160, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk1, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) output clk_160;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_0 TRI_I" *) input [31:0]gpio_rtl_0_tri_i;
@@ -41,9 +41,9 @@ module design_1
   wire AXI_En_1;
   wire En_1;
   wire [7:0]FrameSize_1;
-  wire [63:0]TDATA_1;
+  wire [31:0]TDATA_1;
   wire TLAST_1;
-  wire [7:0]TSTRB_1;
+  wire [3:0]TSTRB_1;
   wire TVALID_1;
   wire [31:0]axi_dma_0_M_AXI_S2MM_AWADDR;
   wire [1:0]axi_dma_0_M_AXI_S2MM_AWBURST;
@@ -56,10 +56,10 @@ module design_1
   wire axi_dma_0_M_AXI_S2MM_BREADY;
   wire [1:0]axi_dma_0_M_AXI_S2MM_BRESP;
   wire axi_dma_0_M_AXI_S2MM_BVALID;
-  wire [63:0]axi_dma_0_M_AXI_S2MM_WDATA;
+  wire [31:0]axi_dma_0_M_AXI_S2MM_WDATA;
   wire axi_dma_0_M_AXI_S2MM_WLAST;
   wire axi_dma_0_M_AXI_S2MM_WREADY;
-  wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
+  wire [3:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
   wire [31:0]axi_gpio_0_GPIO2_TRI_I;
   wire [31:0]axi_gpio_0_GPIO_TRI_O;
@@ -81,14 +81,9 @@ module design_1
   wire axi_smc_M00_AXI_WREADY;
   wire [15:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [63:0]axis_data_fifo_0_M_AXIS_TDATA;
-  wire axis_data_fifo_0_M_AXIS_TLAST;
-  wire axis_data_fifo_0_M_AXIS_TREADY;
-  wire axis_data_fifo_0_M_AXIS_TVALID;
-  wire [63:0]data_transfer_0_M_AXIS_TDATA;
+  wire [31:0]data_transfer_0_M_AXIS_TDATA;
   wire data_transfer_0_M_AXIS_TLAST;
   wire data_transfer_0_M_AXIS_TREADY;
-  wire [7:0]data_transfer_0_M_AXIS_TSTRB;
   wire data_transfer_0_M_AXIS_TVALID;
   wire data_transfer_0_TREADY;
   wire [39:0]ps8_0_axi_periph_M00_AXI_ARADDR;
@@ -171,10 +166,10 @@ module design_1
   assign En_1 = En;
   assign FrameSize_1 = FrameSize[7:0];
   assign RST[0] = rst_ps8_0_100M_peripheral_aresetn;
-  assign TDATA_1 = TDATA[63:0];
+  assign TDATA_1 = TDATA[31:0];
   assign TLAST_1 = TLAST;
   assign TREADY = data_transfer_0_TREADY;
-  assign TSTRB_1 = TSTRB[7:0];
+  assign TSTRB_1 = TSTRB[3:0];
   assign TVALID_1 = TVALID;
   assign axi_gpio_0_GPIO2_TRI_I = gpio_rtl_0_tri_i[31:0];
   assign clk_160 = zynq_ultra_ps_e_0_pl_clk1;
@@ -215,11 +210,11 @@ module design_1
         .s_axi_lite_wdata(ps8_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .s_axis_s2mm_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .s_axis_s2mm_tvalid(axis_data_fifo_0_M_AXIS_TVALID));
+        .s_axis_s2mm_tdata(data_transfer_0_M_AXIS_TDATA),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_s2mm_tlast(data_transfer_0_M_AXIS_TLAST),
+        .s_axis_s2mm_tready(data_transfer_0_M_AXIS_TREADY),
+        .s_axis_s2mm_tvalid(data_transfer_0_M_AXIS_TVALID));
   design_1_axi_gpio_0_0 axi_gpio_0
        (.gpio2_io_i(axi_gpio_0_GPIO2_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),
@@ -281,18 +276,6 @@ module design_1
         .S00_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
         .aclk(zynq_ultra_ps_e_0_pl_clk0),
         .aresetn(rst_ps8_0_100M_peripheral_aresetn));
-  design_1_axis_data_fifo_0_0 axis_data_fifo_0
-       (.m_axis_tdata(axis_data_fifo_0_M_AXIS_TDATA),
-        .m_axis_tlast(axis_data_fifo_0_M_AXIS_TLAST),
-        .m_axis_tready(axis_data_fifo_0_M_AXIS_TREADY),
-        .m_axis_tvalid(axis_data_fifo_0_M_AXIS_TVALID),
-        .s_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
-        .s_axis_aresetn(rst_ps8_0_100M_peripheral_aresetn),
-        .s_axis_tdata(data_transfer_0_M_AXIS_TDATA),
-        .s_axis_tlast(data_transfer_0_M_AXIS_TLAST),
-        .s_axis_tready(data_transfer_0_M_AXIS_TREADY),
-        .s_axis_tstrb(data_transfer_0_M_AXIS_TSTRB),
-        .s_axis_tvalid(data_transfer_0_M_AXIS_TVALID));
   design_1_data_transfer_0_0 data_transfer_0
        (.AXI_En(AXI_En_1),
         .En(En_1),
@@ -307,7 +290,6 @@ module design_1
         .m_axis_tdata(data_transfer_0_M_AXIS_TDATA),
         .m_axis_tlast(data_transfer_0_M_AXIS_TLAST),
         .m_axis_tready(data_transfer_0_M_AXIS_TREADY),
-        .m_axis_tstrb(data_transfer_0_M_AXIS_TSTRB),
         .m_axis_tvalid(data_transfer_0_M_AXIS_TVALID));
   design_1_ps8_0_axi_periph_0 ps8_0_axi_periph
        (.ACLK(zynq_ultra_ps_e_0_pl_clk0),

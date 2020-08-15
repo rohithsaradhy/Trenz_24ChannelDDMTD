@@ -18,7 +18,24 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+// Instantiation
+//   MAXIS_WriteData # ( 
+//	 	.C_M_AXIS_TDATA_WIDTH(C_M_AXIS_TDATA_WIDTH),
+//	 	.C_M_START_COUNT(C_M_START_COUNT),
+//	 	.FRAME_BITWIDTH(8)
+//	 )
+//   MAXIS_WriteData_inst(
+//	 	.En(En),
+//	 	.FrameSize(FrameSize),
+//	 	.M_AXIS_ACLK(CLK),
+//	 	.M_AXIS_ARESETN(RST),
+//	 	.M_AXIS_TDATA(TDATA),
+//	 	.M_AXIS_TSTRB(TSTRB),
+//	 	.M_AXIS_TLAST(TLAST),
+//	 	.M_AXIS_TREADY(TREADY),
+//	 	.M_AXIS_TVALID(TVALID)
 
+//   );
 
 module MAXIS_WriteData
 #
@@ -133,3 +150,6 @@ module MAXIS_WriteData
 
 	
 endmodule
+
+
+

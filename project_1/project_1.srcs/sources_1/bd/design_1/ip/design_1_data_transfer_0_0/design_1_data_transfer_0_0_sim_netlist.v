@@ -1,8 +1,8 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Jul 22 08:57:05 2020
-// Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
+// Date        : Wed Aug 12 15:06:56 2020
+// Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_data_transfer_0_0/design_1_data_transfer_0_0_sim_netlist.v
 // Design      : design_1_data_transfer_0_0
@@ -33,32 +33,32 @@ module design_1_data_transfer_0_0
   input [7:0]FrameSize;
   input En;
   input AXI_En;
-  input [63:0]TDATA;
+  input [31:0]TDATA;
   input TVALID;
-  input [7:0]TSTRB;
+  input [3:0]TSTRB;
   input TLAST;
   output TREADY;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXIS_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_CLK, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_RESET m_axis_aresetn, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input m_axis_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M_AXIS_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m_axis_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [63:0]m_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *) output [7:0]m_axis_tstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [31:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *) output [3:0]m_axis_tstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) output m_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
 
   wire AXI_En;
   wire En;
   wire [7:0]FrameSize;
-  wire [63:0]TDATA;
+  wire [31:0]TDATA;
   wire TLAST;
-  wire [7:0]TSTRB;
+  wire [3:0]TSTRB;
   wire TVALID;
   wire m_axis_aclk;
   wire m_axis_aresetn;
-  wire [63:0]m_axis_tdata;
+  wire [31:0]m_axis_tdata;
   wire m_axis_tlast;
   wire m_axis_tready;
-  wire [7:0]m_axis_tstrb;
+  wire [3:0]m_axis_tstrb;
   wire m_axis_tvalid;
 
   assign TREADY = m_axis_tready;
@@ -99,30 +99,6 @@ module design_1_data_transfer_0_0
        (.I0(TSTRB[3]),
         .I1(AXI_En),
         .O(m_axis_tstrb[3]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[4]_INST_0 
-       (.I0(TSTRB[4]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[4]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[5]_INST_0 
-       (.I0(TSTRB[5]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[5]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[6]_INST_0 
-       (.I0(TSTRB[6]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[6]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[7]_INST_0 
-       (.I0(TSTRB[7]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[7]));
 endmodule
 
 (* ORIG_REF_NAME = "data_transfer_v1_0" *) 
@@ -141,7 +117,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0
     TDATA);
   output m_axis_tvalid;
   output m_axis_tlast;
-  output [63:0]m_axis_tdata;
+  output [31:0]m_axis_tdata;
   input m_axis_aclk;
   input m_axis_tready;
   input TVALID;
@@ -150,17 +126,17 @@ module design_1_data_transfer_0_0_data_transfer_v1_0
   input [7:0]FrameSize;
   input m_axis_aresetn;
   input En;
-  input [63:0]TDATA;
+  input [31:0]TDATA;
 
   wire AXI_En;
   wire En;
   wire [7:0]FrameSize;
-  wire [63:0]TDATA;
+  wire [31:0]TDATA;
   wire TLAST;
   wire TVALID;
   wire m_axis_aclk;
   wire m_axis_aresetn;
-  wire [63:0]m_axis_tdata;
+  wire [31:0]m_axis_tdata;
   wire m_axis_tlast;
   wire m_axis_tready;
   wire m_axis_tvalid;
@@ -196,7 +172,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
     TDATA);
   output m_axis_tvalid;
   output m_axis_tlast;
-  output [63:0]m_axis_tdata;
+  output [31:0]m_axis_tdata;
   input m_axis_aclk;
   input m_axis_tready;
   input TVALID;
@@ -205,7 +181,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   input [7:0]FrameSize;
   input m_axis_aresetn;
   input En;
-  input [63:0]TDATA;
+  input [31:0]TDATA;
 
   wire AXI_En;
   wire En;
@@ -232,14 +208,14 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   wire M_AXIS_TLAST_carry_n_5;
   wire M_AXIS_TLAST_carry_n_6;
   wire M_AXIS_TLAST_carry_n_7;
-  wire [63:0]TDATA;
+  wire [31:0]TDATA;
   wire TLAST;
   wire TVALID;
   wire \afterResetCycleCounterR[7]_i_3_n_0 ;
   wire [7:0]afterResetCycleCounterR_reg;
   wire clear;
   wire \counterR[0]_i_2_n_0 ;
-  wire [63:0]counterR_reg;
+  wire [31:0]counterR_reg;
   wire \counterR_reg[0]_i_1_n_0 ;
   wire \counterR_reg[0]_i_1_n_1 ;
   wire \counterR_reg[0]_i_1_n_10 ;
@@ -272,7 +248,6 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   wire \counterR_reg[16]_i_1_n_7 ;
   wire \counterR_reg[16]_i_1_n_8 ;
   wire \counterR_reg[16]_i_1_n_9 ;
-  wire \counterR_reg[24]_i_1_n_0 ;
   wire \counterR_reg[24]_i_1_n_1 ;
   wire \counterR_reg[24]_i_1_n_10 ;
   wire \counterR_reg[24]_i_1_n_11 ;
@@ -288,69 +263,6 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   wire \counterR_reg[24]_i_1_n_7 ;
   wire \counterR_reg[24]_i_1_n_8 ;
   wire \counterR_reg[24]_i_1_n_9 ;
-  wire \counterR_reg[32]_i_1_n_0 ;
-  wire \counterR_reg[32]_i_1_n_1 ;
-  wire \counterR_reg[32]_i_1_n_10 ;
-  wire \counterR_reg[32]_i_1_n_11 ;
-  wire \counterR_reg[32]_i_1_n_12 ;
-  wire \counterR_reg[32]_i_1_n_13 ;
-  wire \counterR_reg[32]_i_1_n_14 ;
-  wire \counterR_reg[32]_i_1_n_15 ;
-  wire \counterR_reg[32]_i_1_n_2 ;
-  wire \counterR_reg[32]_i_1_n_3 ;
-  wire \counterR_reg[32]_i_1_n_4 ;
-  wire \counterR_reg[32]_i_1_n_5 ;
-  wire \counterR_reg[32]_i_1_n_6 ;
-  wire \counterR_reg[32]_i_1_n_7 ;
-  wire \counterR_reg[32]_i_1_n_8 ;
-  wire \counterR_reg[32]_i_1_n_9 ;
-  wire \counterR_reg[40]_i_1_n_0 ;
-  wire \counterR_reg[40]_i_1_n_1 ;
-  wire \counterR_reg[40]_i_1_n_10 ;
-  wire \counterR_reg[40]_i_1_n_11 ;
-  wire \counterR_reg[40]_i_1_n_12 ;
-  wire \counterR_reg[40]_i_1_n_13 ;
-  wire \counterR_reg[40]_i_1_n_14 ;
-  wire \counterR_reg[40]_i_1_n_15 ;
-  wire \counterR_reg[40]_i_1_n_2 ;
-  wire \counterR_reg[40]_i_1_n_3 ;
-  wire \counterR_reg[40]_i_1_n_4 ;
-  wire \counterR_reg[40]_i_1_n_5 ;
-  wire \counterR_reg[40]_i_1_n_6 ;
-  wire \counterR_reg[40]_i_1_n_7 ;
-  wire \counterR_reg[40]_i_1_n_8 ;
-  wire \counterR_reg[40]_i_1_n_9 ;
-  wire \counterR_reg[48]_i_1_n_0 ;
-  wire \counterR_reg[48]_i_1_n_1 ;
-  wire \counterR_reg[48]_i_1_n_10 ;
-  wire \counterR_reg[48]_i_1_n_11 ;
-  wire \counterR_reg[48]_i_1_n_12 ;
-  wire \counterR_reg[48]_i_1_n_13 ;
-  wire \counterR_reg[48]_i_1_n_14 ;
-  wire \counterR_reg[48]_i_1_n_15 ;
-  wire \counterR_reg[48]_i_1_n_2 ;
-  wire \counterR_reg[48]_i_1_n_3 ;
-  wire \counterR_reg[48]_i_1_n_4 ;
-  wire \counterR_reg[48]_i_1_n_5 ;
-  wire \counterR_reg[48]_i_1_n_6 ;
-  wire \counterR_reg[48]_i_1_n_7 ;
-  wire \counterR_reg[48]_i_1_n_8 ;
-  wire \counterR_reg[48]_i_1_n_9 ;
-  wire \counterR_reg[56]_i_1_n_1 ;
-  wire \counterR_reg[56]_i_1_n_10 ;
-  wire \counterR_reg[56]_i_1_n_11 ;
-  wire \counterR_reg[56]_i_1_n_12 ;
-  wire \counterR_reg[56]_i_1_n_13 ;
-  wire \counterR_reg[56]_i_1_n_14 ;
-  wire \counterR_reg[56]_i_1_n_15 ;
-  wire \counterR_reg[56]_i_1_n_2 ;
-  wire \counterR_reg[56]_i_1_n_3 ;
-  wire \counterR_reg[56]_i_1_n_4 ;
-  wire \counterR_reg[56]_i_1_n_5 ;
-  wire \counterR_reg[56]_i_1_n_6 ;
-  wire \counterR_reg[56]_i_1_n_7 ;
-  wire \counterR_reg[56]_i_1_n_8 ;
-  wire \counterR_reg[56]_i_1_n_9 ;
   wire \counterR_reg[8]_i_1_n_0 ;
   wire \counterR_reg[8]_i_1_n_1 ;
   wire \counterR_reg[8]_i_1_n_10 ;
@@ -385,7 +297,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   wire i__carry_i_9_n_0;
   wire m_axis_aclk;
   wire m_axis_aresetn;
-  wire [63:0]m_axis_tdata;
+  wire [31:0]m_axis_tdata;
   wire m_axis_tlast;
   wire m_axis_tlastW;
   wire m_axis_tready;
@@ -418,7 +330,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   wire [7:0]NLW_M_AXIS_TLAST_carry_O_UNCONNECTED;
   wire [7:3]NLW_M_AXIS_TLAST_carry__0_CO_UNCONNECTED;
   wire [7:0]NLW_M_AXIS_TLAST_carry__0_O_UNCONNECTED;
-  wire [7:7]\NLW_counterR_reg[56]_i_1_CO_UNCONNECTED ;
+  wire [7:7]\NLW_counterR_reg[24]_i_1_CO_UNCONNECTED ;
   wire [7:0]\NLW_packetCounter0_inferred__0/i__carry_O_UNCONNECTED ;
   wire [7:3]\NLW_packetCounter0_inferred__0/i__carry__0_CO_UNCONNECTED ;
   wire [7:0]\NLW_packetCounter0_inferred__0/i__carry__0_O_UNCONNECTED ;
@@ -522,13 +434,13 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I4(FrameSize[3]),
         .I5(packetCounter_reg[4]),
         .O(M_AXIS_TLAST_carry_i_9_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \afterResetCycleCounterR[0]_i_1 
        (.I0(afterResetCycleCounterR_reg[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \afterResetCycleCounterR[1]_i_1 
@@ -774,7 +686,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
   CARRY8 \counterR_reg[24]_i_1 
        (.CI(\counterR_reg[16]_i_1_n_0 ),
         .CI_TOP(1'b0),
-        .CO({\counterR_reg[24]_i_1_n_0 ,\counterR_reg[24]_i_1_n_1 ,\counterR_reg[24]_i_1_n_2 ,\counterR_reg[24]_i_1_n_3 ,\counterR_reg[24]_i_1_n_4 ,\counterR_reg[24]_i_1_n_5 ,\counterR_reg[24]_i_1_n_6 ,\counterR_reg[24]_i_1_n_7 }),
+        .CO({\NLW_counterR_reg[24]_i_1_CO_UNCONNECTED [7],\counterR_reg[24]_i_1_n_1 ,\counterR_reg[24]_i_1_n_2 ,\counterR_reg[24]_i_1_n_3 ,\counterR_reg[24]_i_1_n_4 ,\counterR_reg[24]_i_1_n_5 ,\counterR_reg[24]_i_1_n_6 ,\counterR_reg[24]_i_1_n_7 }),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .O({\counterR_reg[24]_i_1_n_8 ,\counterR_reg[24]_i_1_n_9 ,\counterR_reg[24]_i_1_n_10 ,\counterR_reg[24]_i_1_n_11 ,\counterR_reg[24]_i_1_n_12 ,\counterR_reg[24]_i_1_n_13 ,\counterR_reg[24]_i_1_n_14 ,\counterR_reg[24]_i_1_n_15 }),
         .S(counterR_reg[31:24]));
@@ -826,140 +738,11 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .D(\counterR_reg[24]_i_1_n_8 ),
         .Q(counterR_reg[31]),
         .R(clear));
-  FDRE \counterR_reg[32] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_15 ),
-        .Q(counterR_reg[32]),
-        .R(clear));
-  CARRY8 \counterR_reg[32]_i_1 
-       (.CI(\counterR_reg[24]_i_1_n_0 ),
-        .CI_TOP(1'b0),
-        .CO({\counterR_reg[32]_i_1_n_0 ,\counterR_reg[32]_i_1_n_1 ,\counterR_reg[32]_i_1_n_2 ,\counterR_reg[32]_i_1_n_3 ,\counterR_reg[32]_i_1_n_4 ,\counterR_reg[32]_i_1_n_5 ,\counterR_reg[32]_i_1_n_6 ,\counterR_reg[32]_i_1_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\counterR_reg[32]_i_1_n_8 ,\counterR_reg[32]_i_1_n_9 ,\counterR_reg[32]_i_1_n_10 ,\counterR_reg[32]_i_1_n_11 ,\counterR_reg[32]_i_1_n_12 ,\counterR_reg[32]_i_1_n_13 ,\counterR_reg[32]_i_1_n_14 ,\counterR_reg[32]_i_1_n_15 }),
-        .S(counterR_reg[39:32]));
-  FDRE \counterR_reg[33] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_14 ),
-        .Q(counterR_reg[33]),
-        .R(clear));
-  FDRE \counterR_reg[34] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_13 ),
-        .Q(counterR_reg[34]),
-        .R(clear));
-  FDRE \counterR_reg[35] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_12 ),
-        .Q(counterR_reg[35]),
-        .R(clear));
-  FDRE \counterR_reg[36] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_11 ),
-        .Q(counterR_reg[36]),
-        .R(clear));
-  FDRE \counterR_reg[37] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_10 ),
-        .Q(counterR_reg[37]),
-        .R(clear));
-  FDRE \counterR_reg[38] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_9 ),
-        .Q(counterR_reg[38]),
-        .R(clear));
-  FDRE \counterR_reg[39] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[32]_i_1_n_8 ),
-        .Q(counterR_reg[39]),
-        .R(clear));
   FDRE \counterR_reg[3] 
        (.C(m_axis_aclk),
         .CE(\packetCounter[7]_i_2_n_0 ),
         .D(\counterR_reg[0]_i_1_n_12 ),
         .Q(counterR_reg[3]),
-        .R(clear));
-  FDRE \counterR_reg[40] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_15 ),
-        .Q(counterR_reg[40]),
-        .R(clear));
-  CARRY8 \counterR_reg[40]_i_1 
-       (.CI(\counterR_reg[32]_i_1_n_0 ),
-        .CI_TOP(1'b0),
-        .CO({\counterR_reg[40]_i_1_n_0 ,\counterR_reg[40]_i_1_n_1 ,\counterR_reg[40]_i_1_n_2 ,\counterR_reg[40]_i_1_n_3 ,\counterR_reg[40]_i_1_n_4 ,\counterR_reg[40]_i_1_n_5 ,\counterR_reg[40]_i_1_n_6 ,\counterR_reg[40]_i_1_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\counterR_reg[40]_i_1_n_8 ,\counterR_reg[40]_i_1_n_9 ,\counterR_reg[40]_i_1_n_10 ,\counterR_reg[40]_i_1_n_11 ,\counterR_reg[40]_i_1_n_12 ,\counterR_reg[40]_i_1_n_13 ,\counterR_reg[40]_i_1_n_14 ,\counterR_reg[40]_i_1_n_15 }),
-        .S(counterR_reg[47:40]));
-  FDRE \counterR_reg[41] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_14 ),
-        .Q(counterR_reg[41]),
-        .R(clear));
-  FDRE \counterR_reg[42] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_13 ),
-        .Q(counterR_reg[42]),
-        .R(clear));
-  FDRE \counterR_reg[43] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_12 ),
-        .Q(counterR_reg[43]),
-        .R(clear));
-  FDRE \counterR_reg[44] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_11 ),
-        .Q(counterR_reg[44]),
-        .R(clear));
-  FDRE \counterR_reg[45] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_10 ),
-        .Q(counterR_reg[45]),
-        .R(clear));
-  FDRE \counterR_reg[46] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_9 ),
-        .Q(counterR_reg[46]),
-        .R(clear));
-  FDRE \counterR_reg[47] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[40]_i_1_n_8 ),
-        .Q(counterR_reg[47]),
-        .R(clear));
-  FDRE \counterR_reg[48] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_15 ),
-        .Q(counterR_reg[48]),
-        .R(clear));
-  CARRY8 \counterR_reg[48]_i_1 
-       (.CI(\counterR_reg[40]_i_1_n_0 ),
-        .CI_TOP(1'b0),
-        .CO({\counterR_reg[48]_i_1_n_0 ,\counterR_reg[48]_i_1_n_1 ,\counterR_reg[48]_i_1_n_2 ,\counterR_reg[48]_i_1_n_3 ,\counterR_reg[48]_i_1_n_4 ,\counterR_reg[48]_i_1_n_5 ,\counterR_reg[48]_i_1_n_6 ,\counterR_reg[48]_i_1_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\counterR_reg[48]_i_1_n_8 ,\counterR_reg[48]_i_1_n_9 ,\counterR_reg[48]_i_1_n_10 ,\counterR_reg[48]_i_1_n_11 ,\counterR_reg[48]_i_1_n_12 ,\counterR_reg[48]_i_1_n_13 ,\counterR_reg[48]_i_1_n_14 ,\counterR_reg[48]_i_1_n_15 }),
-        .S(counterR_reg[55:48]));
-  FDRE \counterR_reg[49] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_14 ),
-        .Q(counterR_reg[49]),
         .R(clear));
   FDRE \counterR_reg[4] 
        (.C(m_axis_aclk),
@@ -967,102 +750,11 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .D(\counterR_reg[0]_i_1_n_11 ),
         .Q(counterR_reg[4]),
         .R(clear));
-  FDRE \counterR_reg[50] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_13 ),
-        .Q(counterR_reg[50]),
-        .R(clear));
-  FDRE \counterR_reg[51] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_12 ),
-        .Q(counterR_reg[51]),
-        .R(clear));
-  FDRE \counterR_reg[52] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_11 ),
-        .Q(counterR_reg[52]),
-        .R(clear));
-  FDRE \counterR_reg[53] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_10 ),
-        .Q(counterR_reg[53]),
-        .R(clear));
-  FDRE \counterR_reg[54] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_9 ),
-        .Q(counterR_reg[54]),
-        .R(clear));
-  FDRE \counterR_reg[55] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[48]_i_1_n_8 ),
-        .Q(counterR_reg[55]),
-        .R(clear));
-  FDRE \counterR_reg[56] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_15 ),
-        .Q(counterR_reg[56]),
-        .R(clear));
-  CARRY8 \counterR_reg[56]_i_1 
-       (.CI(\counterR_reg[48]_i_1_n_0 ),
-        .CI_TOP(1'b0),
-        .CO({\NLW_counterR_reg[56]_i_1_CO_UNCONNECTED [7],\counterR_reg[56]_i_1_n_1 ,\counterR_reg[56]_i_1_n_2 ,\counterR_reg[56]_i_1_n_3 ,\counterR_reg[56]_i_1_n_4 ,\counterR_reg[56]_i_1_n_5 ,\counterR_reg[56]_i_1_n_6 ,\counterR_reg[56]_i_1_n_7 }),
-        .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .O({\counterR_reg[56]_i_1_n_8 ,\counterR_reg[56]_i_1_n_9 ,\counterR_reg[56]_i_1_n_10 ,\counterR_reg[56]_i_1_n_11 ,\counterR_reg[56]_i_1_n_12 ,\counterR_reg[56]_i_1_n_13 ,\counterR_reg[56]_i_1_n_14 ,\counterR_reg[56]_i_1_n_15 }),
-        .S(counterR_reg[63:56]));
-  FDRE \counterR_reg[57] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_14 ),
-        .Q(counterR_reg[57]),
-        .R(clear));
-  FDRE \counterR_reg[58] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_13 ),
-        .Q(counterR_reg[58]),
-        .R(clear));
-  FDRE \counterR_reg[59] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_12 ),
-        .Q(counterR_reg[59]),
-        .R(clear));
   FDRE \counterR_reg[5] 
        (.C(m_axis_aclk),
         .CE(\packetCounter[7]_i_2_n_0 ),
         .D(\counterR_reg[0]_i_1_n_10 ),
         .Q(counterR_reg[5]),
-        .R(clear));
-  FDRE \counterR_reg[60] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_11 ),
-        .Q(counterR_reg[60]),
-        .R(clear));
-  FDRE \counterR_reg[61] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_10 ),
-        .Q(counterR_reg[61]),
-        .R(clear));
-  FDRE \counterR_reg[62] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_9 ),
-        .Q(counterR_reg[62]),
-        .R(clear));
-  FDRE \counterR_reg[63] 
-       (.C(m_axis_aclk),
-        .CE(\packetCounter[7]_i_2_n_0 ),
-        .D(\counterR_reg[56]_i_1_n_8 ),
-        .Q(counterR_reg[63]),
         .R(clear));
   FDRE \counterR_reg[6] 
        (.C(m_axis_aclk),
@@ -1225,7 +917,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I4(FrameSize[3]),
         .I5(FrameSize[5]),
         .O(i__carry_i_9_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[0]_INST_0 
@@ -1233,7 +925,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[0]),
         .O(m_axis_tdata[0]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[10]_INST_0 
@@ -1241,7 +933,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[10]),
         .O(m_axis_tdata[10]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[11]_INST_0 
@@ -1249,7 +941,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[11]),
         .O(m_axis_tdata[11]));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[12]_INST_0 
@@ -1257,7 +949,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[12]),
         .O(m_axis_tdata[12]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[13]_INST_0 
@@ -1265,7 +957,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[13]),
         .O(m_axis_tdata[13]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[14]_INST_0 
@@ -1273,7 +965,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[14]),
         .O(m_axis_tdata[14]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[15]_INST_0 
@@ -1281,7 +973,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[15]),
         .O(m_axis_tdata[15]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[16]_INST_0 
@@ -1289,7 +981,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[16]),
         .O(m_axis_tdata[16]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[17]_INST_0 
@@ -1297,7 +989,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[17]),
         .O(m_axis_tdata[17]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[18]_INST_0 
@@ -1305,7 +997,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[18]),
         .O(m_axis_tdata[18]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[19]_INST_0 
@@ -1313,7 +1005,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[19]),
         .O(m_axis_tdata[19]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[1]_INST_0 
@@ -1321,7 +1013,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[1]),
         .O(m_axis_tdata[1]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[20]_INST_0 
@@ -1329,7 +1021,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[20]),
         .O(m_axis_tdata[20]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[21]_INST_0 
@@ -1337,7 +1029,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[21]),
         .O(m_axis_tdata[21]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[22]_INST_0 
@@ -1345,7 +1037,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[22]),
         .O(m_axis_tdata[22]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[23]_INST_0 
@@ -1353,7 +1045,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[23]),
         .O(m_axis_tdata[23]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[24]_INST_0 
@@ -1361,7 +1053,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[24]),
         .O(m_axis_tdata[24]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[25]_INST_0 
@@ -1369,7 +1061,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[25]),
         .O(m_axis_tdata[25]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[26]_INST_0 
@@ -1377,7 +1069,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[26]),
         .O(m_axis_tdata[26]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[27]_INST_0 
@@ -1385,7 +1077,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[27]),
         .O(m_axis_tdata[27]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[28]_INST_0 
@@ -1393,7 +1085,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[28]),
         .O(m_axis_tdata[28]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[29]_INST_0 
@@ -1401,7 +1093,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[29]),
         .O(m_axis_tdata[29]));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[2]_INST_0 
@@ -1409,7 +1101,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[2]),
         .O(m_axis_tdata[2]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[30]_INST_0 
@@ -1417,7 +1109,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[30]),
         .O(m_axis_tdata[30]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[31]_INST_0 
@@ -1425,71 +1117,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[31]),
         .O(m_axis_tdata[31]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[32]_INST_0 
-       (.I0(TDATA[32]),
-        .I1(AXI_En),
-        .I2(counterR_reg[32]),
-        .O(m_axis_tdata[32]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[33]_INST_0 
-       (.I0(TDATA[33]),
-        .I1(AXI_En),
-        .I2(counterR_reg[33]),
-        .O(m_axis_tdata[33]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[34]_INST_0 
-       (.I0(TDATA[34]),
-        .I1(AXI_En),
-        .I2(counterR_reg[34]),
-        .O(m_axis_tdata[34]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[35]_INST_0 
-       (.I0(TDATA[35]),
-        .I1(AXI_En),
-        .I2(counterR_reg[35]),
-        .O(m_axis_tdata[35]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[36]_INST_0 
-       (.I0(TDATA[36]),
-        .I1(AXI_En),
-        .I2(counterR_reg[36]),
-        .O(m_axis_tdata[36]));
   (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[37]_INST_0 
-       (.I0(TDATA[37]),
-        .I1(AXI_En),
-        .I2(counterR_reg[37]),
-        .O(m_axis_tdata[37]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[38]_INST_0 
-       (.I0(TDATA[38]),
-        .I1(AXI_En),
-        .I2(counterR_reg[38]),
-        .O(m_axis_tdata[38]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[39]_INST_0 
-       (.I0(TDATA[39]),
-        .I1(AXI_En),
-        .I2(counterR_reg[39]),
-        .O(m_axis_tdata[39]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[3]_INST_0 
@@ -1497,87 +1125,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[3]),
         .O(m_axis_tdata[3]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[40]_INST_0 
-       (.I0(TDATA[40]),
-        .I1(AXI_En),
-        .I2(counterR_reg[40]),
-        .O(m_axis_tdata[40]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[41]_INST_0 
-       (.I0(TDATA[41]),
-        .I1(AXI_En),
-        .I2(counterR_reg[41]),
-        .O(m_axis_tdata[41]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[42]_INST_0 
-       (.I0(TDATA[42]),
-        .I1(AXI_En),
-        .I2(counterR_reg[42]),
-        .O(m_axis_tdata[42]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[43]_INST_0 
-       (.I0(TDATA[43]),
-        .I1(AXI_En),
-        .I2(counterR_reg[43]),
-        .O(m_axis_tdata[43]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[44]_INST_0 
-       (.I0(TDATA[44]),
-        .I1(AXI_En),
-        .I2(counterR_reg[44]),
-        .O(m_axis_tdata[44]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[45]_INST_0 
-       (.I0(TDATA[45]),
-        .I1(AXI_En),
-        .I2(counterR_reg[45]),
-        .O(m_axis_tdata[45]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[46]_INST_0 
-       (.I0(TDATA[46]),
-        .I1(AXI_En),
-        .I2(counterR_reg[46]),
-        .O(m_axis_tdata[46]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[47]_INST_0 
-       (.I0(TDATA[47]),
-        .I1(AXI_En),
-        .I2(counterR_reg[47]),
-        .O(m_axis_tdata[47]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[48]_INST_0 
-       (.I0(TDATA[48]),
-        .I1(AXI_En),
-        .I2(counterR_reg[48]),
-        .O(m_axis_tdata[48]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[49]_INST_0 
-       (.I0(TDATA[49]),
-        .I1(AXI_En),
-        .I2(counterR_reg[49]),
-        .O(m_axis_tdata[49]));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[4]_INST_0 
@@ -1585,87 +1133,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[4]),
         .O(m_axis_tdata[4]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[50]_INST_0 
-       (.I0(TDATA[50]),
-        .I1(AXI_En),
-        .I2(counterR_reg[50]),
-        .O(m_axis_tdata[50]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[51]_INST_0 
-       (.I0(TDATA[51]),
-        .I1(AXI_En),
-        .I2(counterR_reg[51]),
-        .O(m_axis_tdata[51]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[52]_INST_0 
-       (.I0(TDATA[52]),
-        .I1(AXI_En),
-        .I2(counterR_reg[52]),
-        .O(m_axis_tdata[52]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[53]_INST_0 
-       (.I0(TDATA[53]),
-        .I1(AXI_En),
-        .I2(counterR_reg[53]),
-        .O(m_axis_tdata[53]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[54]_INST_0 
-       (.I0(TDATA[54]),
-        .I1(AXI_En),
-        .I2(counterR_reg[54]),
-        .O(m_axis_tdata[54]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[55]_INST_0 
-       (.I0(TDATA[55]),
-        .I1(AXI_En),
-        .I2(counterR_reg[55]),
-        .O(m_axis_tdata[55]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[56]_INST_0 
-       (.I0(TDATA[56]),
-        .I1(AXI_En),
-        .I2(counterR_reg[56]),
-        .O(m_axis_tdata[56]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[57]_INST_0 
-       (.I0(TDATA[57]),
-        .I1(AXI_En),
-        .I2(counterR_reg[57]),
-        .O(m_axis_tdata[57]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[58]_INST_0 
-       (.I0(TDATA[58]),
-        .I1(AXI_En),
-        .I2(counterR_reg[58]),
-        .O(m_axis_tdata[58]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[59]_INST_0 
-       (.I0(TDATA[59]),
-        .I1(AXI_En),
-        .I2(counterR_reg[59]),
-        .O(m_axis_tdata[59]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[5]_INST_0 
@@ -1673,39 +1141,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[5]),
         .O(m_axis_tdata[5]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[60]_INST_0 
-       (.I0(TDATA[60]),
-        .I1(AXI_En),
-        .I2(counterR_reg[60]),
-        .O(m_axis_tdata[60]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[61]_INST_0 
-       (.I0(TDATA[61]),
-        .I1(AXI_En),
-        .I2(counterR_reg[61]),
-        .O(m_axis_tdata[61]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[62]_INST_0 
-       (.I0(TDATA[62]),
-        .I1(AXI_En),
-        .I2(counterR_reg[62]),
-        .O(m_axis_tdata[62]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \m_axis_tdata[63]_INST_0 
-       (.I0(TDATA[63]),
-        .I1(AXI_En),
-        .I2(counterR_reg[63]),
-        .O(m_axis_tdata[63]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[6]_INST_0 
@@ -1713,7 +1149,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[6]),
         .O(m_axis_tdata[6]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[7]_INST_0 
@@ -1721,7 +1157,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[7]),
         .O(m_axis_tdata[7]));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[8]_INST_0 
@@ -1729,7 +1165,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .I1(AXI_En),
         .I2(counterR_reg[8]),
         .O(m_axis_tdata[8]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \m_axis_tdata[9]_INST_0 
@@ -1909,8 +1345,8 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
        (.I0(sampleGeneratorEnR_i_2_n_0),
         .I1(afterResetCycleCounterR_reg[3]),
         .I2(afterResetCycleCounterR_reg[2]),
-        .I3(afterResetCycleCounterR_reg[6]),
-        .I4(afterResetCycleCounterR_reg[7]),
+        .I3(afterResetCycleCounterR_reg[5]),
+        .I4(afterResetCycleCounterR_reg[6]),
         .I5(sampleGeneratorEnR),
         .O(sampleGeneratorEnR_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
@@ -1919,7 +1355,7 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
     sampleGeneratorEnR_i_2
        (.I0(afterResetCycleCounterR_reg[1]),
         .I1(afterResetCycleCounterR_reg[0]),
-        .I2(afterResetCycleCounterR_reg[5]),
+        .I2(afterResetCycleCounterR_reg[7]),
         .I3(afterResetCycleCounterR_reg[4]),
         .O(sampleGeneratorEnR_i_2_n_0));
   FDRE sampleGeneratorEnR_reg

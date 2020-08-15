@@ -23,7 +23,7 @@
 module fifo_chain
 #(
     parameter data_width = 32,  // data IO word size
-    parameter num_fifo = 64
+    parameter num_fifo = 32
 )
 (
     input  read_en,
@@ -40,6 +40,7 @@ module fifo_chain
 
 
 wire INTCLK;
+assign INTCLK = read_clk;
 // First generate nets
 genvar m;
 generate
@@ -73,12 +74,12 @@ assign net[num_fifo-1].RE = read_en;
 FIFO_DUALCLOCK_MACRO #(
 .ALMOST_EMPTY_OFFSET(9'h080),//Setsthealmostemptythreshold
 .ALMOST_FULL_OFFSET(9'h080),//Setsalmostfullthreshold
-.DATA_WIDTH(32),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
+.DATA_WIDTH(data_width),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
 .DEVICE("7SERIES"),//Targetdevice:"7SERIES"
 .FIFO_SIZE("36Kb"),//TargetBRAM:"18Kb"or"36Kb"
 .FIRST_WORD_FALL_THROUGH("TRUE")//SetstheFIforFWFTto"TRUE"or"FALSE"
 )
-FIFO_FWFT(
+FIRST_FIFO(
 // .ALMOSTEMPTY(ALMOSTEMPTY),//1-bitoutputalmostempty
 // .ALMOSTFULL(ALMOSTFULL),//1-bitoutputalmostfull
 .DO(net[0].out),//Outputdata,widthdefinedbyDATA_WIDTHparameter
@@ -93,7 +94,7 @@ FIFO_FWFT(
 .RDEN(net[0].RE),//1-bitinputreadenable
 .RST(rst),//1-bitinputreset
 .WRCLK(write_clk),//1-bit input write clock
-.WREN(net[0].WE&(~rst))//1-bitinputwriteenable
+.WREN(net[0].WE)//1-bitinputwriteenable
 );
 
 assign net[1].in=net[0].out;// internal data read/write
@@ -119,12 +120,12 @@ generate
         FIFO_DUALCLOCK_MACRO #(
         .ALMOST_EMPTY_OFFSET(9'h080),//Setsthealmostemptythreshold
         .ALMOST_FULL_OFFSET(9'h080),//Setsalmostfullthreshold
-        .DATA_WIDTH(32),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
+        .DATA_WIDTH(data_width),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
         .DEVICE("7SERIES"),//Targetdevice:"7SERIES"
         .FIFO_SIZE("36Kb"),//TargetBRAM:"18Kb"or"36Kb"
         .FIRST_WORD_FALL_THROUGH("TRUE")//SetstheFIforFWFTto"TRUE"or"FALSE"
         )
-        FIFO_FWFT(
+        i_FIFO_FWFT(
         // .ALMOSTEMPTY(ALMOSTEMPTY),//1-bitoutputalmostempty
         // .ALMOSTFULL(ALMOSTFULL),//1-bitoutputalmostfull
         .DO(net[i].out),//Outputdata,widthdefinedbyDATA_WIDTHparameter
@@ -139,7 +140,7 @@ generate
         .RDEN(net[i].RE),//1-bitinputreadenable
         .RST(rst),//1-bitinputreset
         .WRCLK(INTCLK),//1-bit input write clock
-        .WREN(net[i].WE&(~rst))//1-bitinputwriteenable
+        .WREN(net[i].WE)//1-bitinputwriteenable
         );
     end:fifo_inst
 endgenerate
@@ -149,7 +150,7 @@ endgenerate
 FIFO_DUALCLOCK_MACRO #(
 .ALMOST_EMPTY_OFFSET(9'h080),//Setsthealmostemptythreshold
 .ALMOST_FULL_OFFSET(9'h080),//Setsalmostfullthreshold
-.DATA_WIDTH(32),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
+.DATA_WIDTH(data_width),//Validvaluesare1-72(37-72onlyvalidwhenFIFO_SIZE = "36Kb")
 .DEVICE("7SERIES"),//Targetdevice:"7SERIES"
 .FIFO_SIZE("36Kb"),//TargetBRAM:"18Kb"or"36Kb"
 .FIRST_WORD_FALL_THROUGH("FALSE")//SetstheFIforFWFTto"TRUE"or"FALSE"
@@ -169,6 +170,6 @@ LAST_FIFO(
 .RDEN(net[num_fifo-1].RE),//1-bitinputreadenable
 .RST(rst),//1-bitinputreset
 .WRCLK(INTCLK),//1-bit input write clock
-.WREN(net[num_fifo-1].WE&(~rst))//1-bitinputwriteenable
+.WREN(net[num_fifo-1].WE)//1-bitinputwriteenable
 );
 endmodule
