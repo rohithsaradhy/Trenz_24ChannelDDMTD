@@ -57,6 +57,7 @@ module DDMTD_Sampler
 
 assign M_AXIS_TSTRB = {(DATA_WIDTH/8){1'b1}};
 
+assign ARESETN = M_AXIS_ARESETN;
 
 reg temp_mem=0;
 reg write_en=0;
@@ -81,7 +82,7 @@ reg sampleGeneratorEnR=0;
 reg [7:0] afterResetCycleCounterR=0;
 
 always @(posedge M_AXIS_ACLK)
-    if( ! M_AXIS_ARESETN )begin
+    if( ! ARESETN )begin
         sampleGeneratorEnR <=0;
         afterResetCycleCounterR <=0;		
     end
@@ -99,7 +100,7 @@ reg  		tValidR=0;
 assign M_AXIS_TVALID = tValidR;
 
 always @(posedge M_AXIS_ACLK)
-    if( ! M_AXIS_ARESETN )begin
+    if( ! ARESETN )begin
         tValidR <=0;
     end
     else if (sampleGeneratorEnR)
@@ -161,7 +162,28 @@ always @(posedge M_AXIS_ACLK)
     .read_clk(M_AXIS_ACLK),
     .write_clk(clk_ref)
     );
-    // assign M_AXIS_TLAST = empty;
+
+
+
+
+    //M_AXIS_TLAST LOGIC
+    // The Current page size is 4096 bytes which 1024 32bit words // modified
+    // So we trigger TLAST on 1024th word
+    parameter integer WORDS_TO_SEND = 1000; 
+    integer counter_TLAST =0;
+    reg tlast=0;
+    always @(posedge M_AXIS_ACLK)begin
+        if( ! ARESETN )begin
+        counter_TLAST<=0;	
+        end
+        else if (M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic) begin
+            if (counter_TLAST == WORDS_TO_SEND-1) counter_TLAST<=0;
+            else begin
+                counter_TLAST = counter_TLAST+1;      
+            end
+        end 
+    end
+    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:0;
     // assign FULL = full;
 
 

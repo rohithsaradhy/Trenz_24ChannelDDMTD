@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Sun Aug 16 15:26:08 2020
+| Date         : Mon Aug 17 00:28:10 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_axi_dma_0_0_utilization_synth.rpt -pb design_1_axi_dma_0_0_utilization_synth.pb
 | Design       : design_1_axi_dma_0_0
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  982 |     0 |     47232 |  2.08 |
-|   LUT as Logic             |  879 |     0 |     47232 |  1.86 |
-|   LUT as Memory            |  103 |     0 |     28800 |  0.36 |
+| CLB LUTs*                  | 1073 |     0 |     47232 |  2.27 |
+|   LUT as Logic             |  964 |     0 |     47232 |  2.04 |
+|   LUT as Memory            |  109 |     0 |     28800 |  0.38 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
-|     LUT as Shift Register  |   95 |     0 |           |       |
-| CLB Registers              | 1309 |     0 |     94464 |  1.39 |
-|   Register as Flip Flop    | 1309 |     0 |     94464 |  1.39 |
+|     LUT as Shift Register  |  101 |     0 |           |       |
+| CLB Registers              | 1363 |     0 |     94464 |  1.44 |
+|   Register as Flip Flop    | 1363 |     0 |     94464 |  1.44 |
 |   Register as Latch        |    0 |     0 |     94464 |  0.00 |
-| CARRY8                     |   15 |     0 |      8820 |  0.17 |
+| CARRY8                     |   20 |     0 |      8820 |  0.23 |
 | F7 Muxes                   |    0 |     0 |     35280 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     17640 |  0.00 |
 | F9 Muxes                   |    0 |     0 |      8820 |  0.00 |
@@ -61,8 +61,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 61    |          Yes |         Set |            - |
-| 1248  |          Yes |       Reset |            - |
+| 59    |          Yes |         Set |            - |
+| 1304  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -72,10 +72,11 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |    1 |     0 |       150 |  0.67 |
-|   RAMB36/FIFO*    |    1 |     0 |       150 |  0.67 |
-|     RAMB36E2 only |    1 |       |           |       |
-|   RAMB18          |    0 |     0 |       300 |  0.00 |
+| Block RAM Tile    |  2.5 |     0 |       150 |  1.67 |
+|   RAMB36/FIFO*    |    2 |     0 |       150 |  1.33 |
+|     RAMB36E2 only |    2 |       |           |       |
+|   RAMB18          |    1 |     0 |       300 |  0.33 |
+|     RAMB18E2 only |    1 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
@@ -150,19 +151,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 1248 |            Register |
-| LUT3     |  271 |                 CLB |
-| LUT4     |  234 |                 CLB |
-| LUT6     |  172 |                 CLB |
-| LUT5     |  153 |                 CLB |
-| LUT2     |  137 |                 CLB |
-| SRL16E   |   95 |                 CLB |
-| LUT1     |   64 |                 CLB |
-| FDSE     |   61 |            Register |
-| CARRY8   |   15 |                 CLB |
+| FDRE     | 1304 |            Register |
+| LUT3     |  280 |                 CLB |
+| LUT4     |  233 |                 CLB |
+| LUT6     |  215 |                 CLB |
+| LUT5     |  182 |                 CLB |
+| LUT2     |  157 |                 CLB |
+| SRL16E   |  101 |                 CLB |
+| FDSE     |   59 |            Register |
+| LUT1     |   58 |                 CLB |
+| CARRY8   |   20 |                 CLB |
 | RAMD32   |   14 |                 CLB |
 | RAMS32   |    2 |                 CLB |
-| RAMB36E2 |    1 |           Block Ram |
+| RAMB36E2 |    2 |           Block Ram |
+| RAMB18E2 |    1 |           Block Ram |
 +----------+------+---------------------+
 
 

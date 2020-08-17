@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Sun Aug 16 15:25:53 2020
+-- Date        : Mon Aug 17 00:27:54 2020
 -- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_smc_0 -prefix
---               design_1_axi_smc_0_ design_1_axi_smc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0_sim_netlist.vhdl
 -- Design      : design_1_axi_smc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,6 +20,8 @@ entity design_1_axi_smc_0_cdc_sync is
     aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_cdc_sync : entity is "cdc_sync";
 end design_1_axi_smc_0_cdc_sync;
 
 architecture STRUCTURE of design_1_axi_smc_0_cdc_sync is
@@ -107,6 +109,8 @@ entity design_1_axi_smc_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_upcnt_n : entity is "upcnt_n";
 end design_1_axi_smc_0_upcnt_n;
 
 architecture STRUCTURE of design_1_axi_smc_0_upcnt_n is
@@ -324,6 +328,8 @@ entity design_1_axi_smc_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of design_1_axi_smc_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_1_axi_smc_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_1_axi_smc_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -6969,6 +6975,8 @@ entity design_1_axi_smc_0_sc_mmu_v1_0_8_top is
   attribute C_WRITE_ACCEPTANCE of design_1_axi_smc_0_sc_mmu_v1_0_8_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_axi_smc_0_sc_mmu_v1_0_8_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_mmu_v1_0_8_top : entity is "sc_mmu_v1_0_8_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of design_1_axi_smc_0_sc_mmu_v1_0_8_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -10342,6 +10350,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_fi_regulator is
     allow_transfer_r0 : in STD_LOGIC;
     s_sc_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_fi_regulator : entity is "sc_node_v1_0_10_fi_regulator";
 end design_1_axi_smc_0_sc_node_v1_0_10_fi_regulator;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_node_v1_0_10_fi_regulator is
@@ -12134,6 +12144,8 @@ entity design_1_axi_smc_0_sc_util_v1_0_4_counter is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_sc_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_util_v1_0_4_counter : entity is "sc_util_v1_0_4_counter";
 end design_1_axi_smc_0_sc_util_v1_0_4_counter;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_util_v1_0_4_counter is
@@ -14487,6 +14499,8 @@ entity design_1_axi_smc_0_sc_util_v1_0_4_pipeline is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_util_v1_0_4_pipeline : entity is "sc_util_v1_0_4_pipeline";
 end design_1_axi_smc_0_sc_util_v1_0_4_pipeline;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_util_v1_0_4_pipeline is
@@ -14753,6 +14767,8 @@ entity design_1_axi_smc_0_sc_util_v1_0_4_srl_rtl is
     s_axi_awsize : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_util_v1_0_4_srl_rtl : entity is "sc_util_v1_0_4_srl_rtl";
 end design_1_axi_smc_0_sc_util_v1_0_4_srl_rtl;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_util_v1_0_4_srl_rtl is
@@ -15777,6 +15793,8 @@ entity design_1_axi_smc_0_bd_afc3_s00mmu_0 is
     S00_AXI_awvalid : in STD_LOGIC;
     s_axi_awready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_s00mmu_0 : entity is "bd_afc3_s00mmu_0";
 end design_1_axi_smc_0_bd_afc3_s00mmu_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_s00mmu_0 is
@@ -16027,6 +16045,8 @@ entity design_1_axi_smc_0_lpf is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_lpf : entity is "lpf";
 end design_1_axi_smc_0_lpf;
 
 architecture STRUCTURE of design_1_axi_smc_0_lpf is
@@ -16103,6 +16123,8 @@ entity design_1_axi_smc_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sequence_psr : entity is "sequence_psr";
 end design_1_axi_smc_0_sequence_psr;
 
 architecture STRUCTURE of design_1_axi_smc_0_sequence_psr is
@@ -16375,6 +16397,8 @@ entity design_1_axi_smc_0_xpm_memory_sdpram is
   attribute MEMORY_SIZE of design_1_axi_smc_0_xpm_memory_sdpram : entity is 4992;
   attribute MESSAGE_CONTROL : integer;
   attribute MESSAGE_CONTROL of design_1_axi_smc_0_xpm_memory_sdpram : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_xpm_memory_sdpram : entity is "xpm_memory_sdpram";
   attribute P_CLOCKING_MODE : integer;
   attribute P_CLOCKING_MODE of design_1_axi_smc_0_xpm_memory_sdpram : entity is 0;
   attribute P_ECC_MODE : integer;
@@ -17054,6 +17078,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_si_handler is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_si_handler : entity is "sc_node_v1_0_10_si_handler";
 end design_1_axi_smc_0_sc_node_v1_0_10_si_handler;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_node_v1_0_10_si_handler is
@@ -17145,6 +17171,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_upsizer is
     arb_stall_late : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_upsizer : entity is "sc_node_v1_0_10_upsizer";
 end design_1_axi_smc_0_sc_node_v1_0_10_upsizer;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_node_v1_0_10_upsizer is
@@ -19334,6 +19362,8 @@ entity design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_singleorder is
     s_axi_awvalid : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_singleorder : entity is "sc_transaction_regulator_v1_0_8_singleorder";
 end design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_singleorder;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_singleorder is
@@ -20697,6 +20727,8 @@ entity design_1_axi_smc_0_proc_sys_reset is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_proc_sys_reset : entity is "proc_sys_reset";
 end design_1_axi_smc_0_proc_sys_reset;
 
 architecture STRUCTURE of design_1_axi_smc_0_proc_sys_reset is
@@ -20749,6 +20781,8 @@ entity design_1_axi_smc_0_sc_exit_v1_0_9_exit is
     m_axi_bvalid : in STD_LOGIC;
     s_axi_bready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_exit_v1_0_9_exit : entity is "sc_exit_v1_0_9_exit";
 end design_1_axi_smc_0_sc_exit_v1_0_9_exit;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_exit_v1_0_9_exit is
@@ -20790,6 +20824,8 @@ entity design_1_axi_smc_0_sc_si_converter_v1_0_9_splitter is
     s_axi_awsize : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_si_converter_v1_0_9_splitter : entity is "sc_si_converter_v1_0_9_splitter";
 end design_1_axi_smc_0_sc_si_converter_v1_0_9_splitter;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_si_converter_v1_0_9_splitter is
@@ -20966,6 +21002,8 @@ entity design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_top is
   attribute C_WRITE_ACCEPTANCE of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_top : entity is "sc_transaction_regulator_v1_0_8_top";
   attribute P_FULLY_PIPELINED : integer;
   attribute P_FULLY_PIPELINED of design_1_axi_smc_0_sc_transaction_regulator_v1_0_8_top : entity is 2;
   attribute P_ID_BUFFER_WIDTH : integer;
@@ -26332,6 +26370,8 @@ entity design_1_axi_smc_0_sc_util_v1_0_4_xpm_memory_fifo is
     s_sc_valid : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_util_v1_0_4_xpm_memory_fifo : entity is "sc_util_v1_0_4_xpm_memory_fifo";
 end design_1_axi_smc_0_sc_util_v1_0_4_xpm_memory_fifo;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_util_v1_0_4_xpm_memory_fifo is
@@ -27546,6 +27586,8 @@ entity design_1_axi_smc_0_bd_afc3_psr_aclk_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_psr_aclk_0 : entity is "bd_afc3_psr_aclk_0";
 end design_1_axi_smc_0_bd_afc3_psr_aclk_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_psr_aclk_0 is
@@ -27578,6 +27620,8 @@ entity design_1_axi_smc_0_bd_afc3_s00tr_0 is
     \state_reg[s_stall_d]\ : in STD_LOGIC;
     \state_reg[s_stall_d]_0\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_s00tr_0 : entity is "bd_afc3_s00tr_0";
 end design_1_axi_smc_0_bd_afc3_s00tr_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_s00tr_0 is
@@ -27897,9 +27941,9 @@ entity design_1_axi_smc_0_sc_exit_v1_0_9_top is
   attribute C_M_ID_WIDTH : integer;
   attribute C_M_ID_WIDTH of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 0;
   attribute C_M_LIMIT_READ_LENGTH : integer;
-  attribute C_M_LIMIT_READ_LENGTH of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 4;
+  attribute C_M_LIMIT_READ_LENGTH of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 64;
   attribute C_M_LIMIT_WRITE_LENGTH : integer;
-  attribute C_M_LIMIT_WRITE_LENGTH of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 4;
+  attribute C_M_LIMIT_WRITE_LENGTH of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 64;
   attribute C_M_PROTOCOL : integer;
   attribute C_M_PROTOCOL of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 0;
   attribute C_M_RUSER_BITS_PER_BYTE : integer;
@@ -27934,6 +27978,8 @@ entity design_1_axi_smc_0_sc_exit_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is "sc_exit_v1_0_9_top";
   attribute P_BYPASS : integer;
   attribute P_BYPASS of design_1_axi_smc_0_sc_exit_v1_0_9_top : entity is 0;
   attribute P_FULLY_PIPELINED : integer;
@@ -30624,6 +30670,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_fifo is
     s_sc_valid : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_fifo : entity is "sc_node_v1_0_10_fifo";
 end design_1_axi_smc_0_sc_node_v1_0_10_fifo;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_node_v1_0_10_fifo is
@@ -30877,6 +30925,8 @@ entity design_1_axi_smc_0_sc_si_converter_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of design_1_axi_smc_0_sc_si_converter_v1_0_9_top : entity is 32;
   attribute C_WRITE_WATERMARK : integer;
   attribute C_WRITE_WATERMARK of design_1_axi_smc_0_sc_si_converter_v1_0_9_top : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_si_converter_v1_0_9_top : entity is "sc_si_converter_v1_0_9_top";
   attribute P_EXOK : string;
   attribute P_EXOK of design_1_axi_smc_0_sc_si_converter_v1_0_9_top : entity is "2'b01";
   attribute P_FULLY_PIPELINED : integer;
@@ -36360,6 +36410,8 @@ entity design_1_axi_smc_0_bd_afc3_m00e_0 is
     M00_AXI_wready : in STD_LOGIC;
     M00_AXI_bvalid : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_m00e_0 : entity is "bd_afc3_m00e_0";
 end design_1_axi_smc_0_bd_afc3_m00e_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_m00e_0 is
@@ -36425,9 +36477,9 @@ architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_m00e_0 is
   attribute C_M_ID_WIDTH : integer;
   attribute C_M_ID_WIDTH of inst : label is 0;
   attribute C_M_LIMIT_READ_LENGTH : integer;
-  attribute C_M_LIMIT_READ_LENGTH of inst : label is 4;
+  attribute C_M_LIMIT_READ_LENGTH of inst : label is 64;
   attribute C_M_LIMIT_WRITE_LENGTH : integer;
-  attribute C_M_LIMIT_WRITE_LENGTH of inst : label is 4;
+  attribute C_M_LIMIT_WRITE_LENGTH of inst : label is 64;
   attribute C_M_PROTOCOL : integer;
   attribute C_M_PROTOCOL of inst : label is 0;
   attribute C_M_RUSER_BITS_PER_BYTE : integer;
@@ -36584,6 +36636,8 @@ entity design_1_axi_smc_0_bd_afc3_s00sic_0 is
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_s00sic_0 : entity is "bd_afc3_s00sic_0";
 end design_1_axi_smc_0_bd_afc3_s00sic_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_s00sic_0 is
@@ -36819,6 +36873,8 @@ entity design_1_axi_smc_0_clk_map_imp_5Y9LOC is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_clk_map_imp_5Y9LOC : entity is "clk_map_imp_5Y9LOC";
 end design_1_axi_smc_0_clk_map_imp_5Y9LOC;
 
 architecture STRUCTURE of design_1_axi_smc_0_clk_map_imp_5Y9LOC is
@@ -36848,6 +36904,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_mi_handler is
     s_sc_valid : in STD_LOGIC;
     m_sc_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_mi_handler : entity is "sc_node_v1_0_10_mi_handler";
 end design_1_axi_smc_0_sc_node_v1_0_10_mi_handler;
 
 architecture STRUCTURE of design_1_axi_smc_0_sc_node_v1_0_10_mi_handler is
@@ -37538,6 +37596,8 @@ entity design_1_axi_smc_0_m00_exit_pipeline_imp_1TZX5BB is
     M00_AXI_wready : in STD_LOGIC;
     M00_AXI_bvalid : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_m00_exit_pipeline_imp_1TZX5BB : entity is "m00_exit_pipeline_imp_1TZX5BB";
 end design_1_axi_smc_0_m00_exit_pipeline_imp_1TZX5BB;
 
 architecture STRUCTURE of design_1_axi_smc_0_m00_exit_pipeline_imp_1TZX5BB is
@@ -37590,6 +37650,8 @@ entity design_1_axi_smc_0_s00_entry_pipeline_imp_USCCV8 is
     S00_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     S00_AXI_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_s00_entry_pipeline_imp_USCCV8 : entity is "s00_entry_pipeline_imp_USCCV8";
 end design_1_axi_smc_0_s00_entry_pipeline_imp_USCCV8;
 
 architecture STRUCTURE of design_1_axi_smc_0_s00_entry_pipeline_imp_USCCV8 is
@@ -37789,6 +37851,8 @@ entity design_1_axi_smc_0_sc_node_v1_0_10_top is
   attribute LP_S_STATIC_DWIDTH of design_1_axi_smc_0_sc_node_v1_0_10_top : entity is 1;
   attribute LP_ZERO_ROUTE_WIDTH : integer;
   attribute LP_ZERO_ROUTE_WIDTH of design_1_axi_smc_0_sc_node_v1_0_10_top : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_sc_node_v1_0_10_top : entity is "sc_node_v1_0_10_top";
   attribute P_NUM_OUTSTANDING : integer;
   attribute P_NUM_OUTSTANDING of design_1_axi_smc_0_sc_node_v1_0_10_top : entity is 16;
 end design_1_axi_smc_0_sc_node_v1_0_10_top;
@@ -38511,6 +38575,8 @@ entity design_1_axi_smc_0_bd_afc3_sawn_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 68 downto 0 );
     M_SC_AW_recv : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_sawn_0 : entity is "bd_afc3_sawn_0";
 end design_1_axi_smc_0_bd_afc3_sawn_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_sawn_0 is
@@ -38686,6 +38752,8 @@ entity design_1_axi_smc_0_bd_afc3_sbn_0 is
     S_SC_B_payld : in STD_LOGIC_VECTOR ( 2 downto 0 );
     S00_AXI_bready : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_sbn_0 : entity is "bd_afc3_sbn_0";
 end design_1_axi_smc_0_bd_afc3_sbn_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_sbn_0 is
@@ -38849,6 +38917,8 @@ entity design_1_axi_smc_0_bd_afc3_swn_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3_swn_0 : entity is "bd_afc3_swn_0";
 end design_1_axi_smc_0_bd_afc3_swn_0;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3_swn_0 is
@@ -39025,6 +39095,8 @@ entity design_1_axi_smc_0_s00_nodes_imp_Y7M43I is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 50 downto 0 );
     M_SC_W_recv : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_s00_nodes_imp_Y7M43I : entity is "s00_nodes_imp_Y7M43I";
 end design_1_axi_smc_0_s00_nodes_imp_Y7M43I;
 
 architecture STRUCTURE of design_1_axi_smc_0_s00_nodes_imp_Y7M43I is
@@ -39114,6 +39186,8 @@ entity design_1_axi_smc_0_bd_afc3 is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1_axi_smc_0_bd_afc3 : entity is "design_1_axi_smc_0.hwdef";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_axi_smc_0_bd_afc3 : entity is "bd_afc3";
 end design_1_axi_smc_0_bd_afc3;
 
 architecture STRUCTURE of design_1_axi_smc_0_bd_afc3 is
@@ -39155,7 +39229,7 @@ architecture STRUCTURE of design_1_axi_smc_0_bd_afc3 is
   attribute X_INTERFACE_INFO of S00_AXI_awvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID";
   attribute X_INTERFACE_INFO of S00_AXI_bready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of S00_AXI_bready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of S00_AXI_bready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of S00_AXI_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of S00_AXI_wlast : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WLAST";
   attribute X_INTERFACE_INFO of S00_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
@@ -39165,7 +39239,7 @@ architecture STRUCTURE of design_1_axi_smc_0_bd_afc3 is
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 aux_reset RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of M00_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 M00_AXI AWADDR";
-  attribute X_INTERFACE_PARAMETER of M00_AXI_awaddr : signal is "XIL_INTERFACENAME M00_AXI, ADDR_WIDTH 49, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, DATA_WIDTH 128, FREQ_HZ 187500000, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 4, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of M00_AXI_awaddr : signal is "XIL_INTERFACENAME M00_AXI, ADDR_WIDTH 49, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, DATA_WIDTH 128, FREQ_HZ 187500000, HAS_BRESP 1, HAS_BURST 1, HAS_CACHE 1, HAS_LOCK 1, HAS_PROT 1, HAS_QOS 1, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 64, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of M00_AXI_awburst : signal is "xilinx.com:interface:aximm:1.0 M00_AXI AWBURST";
   attribute X_INTERFACE_INFO of M00_AXI_awcache : signal is "xilinx.com:interface:aximm:1.0 M00_AXI AWCACHE";
   attribute X_INTERFACE_INFO of M00_AXI_awlen : signal is "xilinx.com:interface:aximm:1.0 M00_AXI AWLEN";
@@ -39177,7 +39251,7 @@ architecture STRUCTURE of design_1_axi_smc_0_bd_afc3 is
   attribute X_INTERFACE_INFO of M00_AXI_wdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WDATA";
   attribute X_INTERFACE_INFO of M00_AXI_wstrb : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WSTRB";
   attribute X_INTERFACE_INFO of S00_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
-  attribute X_INTERFACE_PARAMETER of S00_AXI_awaddr : signal is "XIL_INTERFACENAME S00_AXI, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, DATA_WIDTH 32, FREQ_HZ 187500000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 16, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
+  attribute X_INTERFACE_PARAMETER of S00_AXI_awaddr : signal is "XIL_INTERFACENAME S00_AXI, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, DATA_WIDTH 32, FREQ_HZ 187500000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.000, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
   attribute X_INTERFACE_INFO of S00_AXI_awburst : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWBURST";
   attribute X_INTERFACE_INFO of S00_AXI_awcache : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWCACHE";
   attribute X_INTERFACE_INFO of S00_AXI_awlen : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWLEN";
@@ -39424,7 +39498,7 @@ architecture STRUCTURE of design_1_axi_smc_0 is
   attribute X_INTERFACE_INFO of M00_AXI_awvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI AWVALID";
   attribute X_INTERFACE_INFO of M00_AXI_bready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI BREADY";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of M00_AXI_bready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 49, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 4, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of M00_AXI_bready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 49, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 64, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of M00_AXI_bvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI BVALID";
   attribute X_INTERFACE_INFO of M00_AXI_wlast : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WLAST";
   attribute X_INTERFACE_INFO of M00_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WREADY";
@@ -39432,7 +39506,7 @@ architecture STRUCTURE of design_1_axi_smc_0 is
   attribute X_INTERFACE_INFO of S00_AXI_awready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWREADY";
   attribute X_INTERFACE_INFO of S00_AXI_awvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI AWVALID";
   attribute X_INTERFACE_INFO of S00_AXI_bready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BREADY";
-  attribute X_INTERFACE_PARAMETER of S00_AXI_bready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of S00_AXI_bready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 187500000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 16, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of S00_AXI_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of S00_AXI_wlast : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WLAST";
   attribute X_INTERFACE_INFO of S00_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";

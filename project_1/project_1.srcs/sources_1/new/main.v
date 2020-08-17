@@ -115,8 +115,8 @@ module main(
   end
 
 
-
- assign user_reset = GPIO[0]; //resetting of FIFOs not implemented
+ wire reset_DDMTD_Sampler_n;
+ assign reset_DDMTD_Sample_n = ~GPIO[0]; //Active Low
  wire user_cmd;
  assign user_cmd  = GPIO[1]; 
   
@@ -152,42 +152,6 @@ module main(
     
 
 
-// //DDMTD Sampler
-
-  
-  
-//  DDMTD_Sampler
-// #(
-//     .DATA_WIDTH(C_M_AXIS_TDATA_WIDTH),
-//     .C_M_START_COUNT(C_M_START_COUNT),
-//     .FIFO_DEPTH(10)
-//  )
-//   DDMTD0
-//  (
-//     // Inputs for the sampling logic
-//     .enable_sampling_logic(enable_sampling_logic), //Active High
-//     .clk_ref(clk_ref),
-//     .clk_beat(beat_0_q1),
-//     .external_counter(external_counter),
-//     .reset(internal_reset),
-
-
-//     // Fifo chain to AXIS
-//      .M_AXIS_ACLK(TCLK),
-//      .M_AXIS_ARESETN(RESETN), //RESET when low.
-//      .M_AXIS_TVALID(TVALID), //output
-//      .M_AXIS_TDATA(TDATA),  
-//      .M_AXIS_TSTRB(TSTRB),
-//      .M_AXIS_TLAST(TLAST),
-//      .M_AXIS_TREADY(TREADY)
-
-//  );
-        
-
-
-
-
-
 
 
 //DDMTD Sampler1
@@ -217,7 +181,7 @@ module main(
 
     // Fifo chain to AXIS
      .M_AXIS_ACLK(TCLK),
-     .M_AXIS_ARESETN(RESETN), //RESET when low.
+     .M_AXIS_ARESETN(RESETN&reset_DDMTD_Sample_n), //RESET when low.
      .M_AXIS_TVALID(tvalid1), //output
      .M_AXIS_TDATA(tdata1),  
      .M_AXIS_TSTRB(tstrb1),
@@ -256,7 +220,7 @@ module main(
 
     // Fifo chain to AXIS
      .M_AXIS_ACLK(TCLK),
-     .M_AXIS_ARESETN(RESETN), //RESET when low.
+     .M_AXIS_ARESETN(RESETN&reset_DDMTD_Sample_n), //RESET when low.
      .M_AXIS_TVALID(tvalid2), //output
      .M_AXIS_TDATA(tdata2),  
      .M_AXIS_TSTRB(tstrb2),

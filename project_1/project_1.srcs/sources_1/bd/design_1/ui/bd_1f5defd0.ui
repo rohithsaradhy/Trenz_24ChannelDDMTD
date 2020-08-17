@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.03012",
-   "Default View_TopLeft":"-48,-10",
+   "Default View_TopLeft":"-148,184",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
@@ -36,9 +36,9 @@ preplace netloc data_transfer_0_TREADY 1 0 2 NJ 450 270
 preplace netloc TVALID_1 1 0 1 NJ 310
 preplace netloc TDATA_1 1 0 1 N 290
 preplace netloc TSTRB_1 1 0 1 N 330
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 4 1 1580 80n
-preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 380
 preplace netloc axi_dma_0_M_AXI_S2MM 1 2 1 N 300
+preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 380
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 4 1 1580 80n
 preplace netloc axi_gpio_0_GPIO2 1 6 1 NJ 400
 preplace netloc ps8_0_axi_periph_M00_AXI 1 1 5 290 220 NJ 220 NJ 220 NJ 220 1940
 preplace netloc ps8_0_axi_periph_M01_AXI 1 5 1 N 370

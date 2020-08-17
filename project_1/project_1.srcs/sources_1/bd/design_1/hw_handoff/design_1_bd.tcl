@@ -184,7 +184,7 @@ proc create_root_design { parentCell } {
    CONFIG.c_include_s2mm_dre {0} \
    CONFIG.c_include_sg {0} \
    CONFIG.c_micro_dma {0} \
-   CONFIG.c_s2mm_burst_size {16} \
+   CONFIG.c_s2mm_burst_size {256} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
  ] $axi_dma_0
 
