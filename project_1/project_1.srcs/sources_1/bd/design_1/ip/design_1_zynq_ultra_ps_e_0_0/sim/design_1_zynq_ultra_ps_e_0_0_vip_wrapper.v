@@ -139,8 +139,7 @@ saxigp2_rready,
 saxigp2_awqos, 
 saxigp2_arqos, 
 pl_resetn0, 
-pl_clk0, 
-pl_clk1 
+pl_clk0 
 );
 input maxihpm0_lpd_aclk;
 output [15 : 0] maxigp2_awid;
@@ -224,7 +223,6 @@ input [3 : 0] saxigp2_awqos;
 input [3 : 0] saxigp2_arqos;
 output pl_resetn0;
 output pl_clk0;
-output pl_clk1;
 wire pl_clk_t[3:0] ;
 
 wire saxihpc0_fpd_rclk_temp;
@@ -245,7 +243,7 @@ wire saxi_lpd_wclk_temp;
 
 assign pl_clk0 = pl_clk_t[0] ;
 
- assign pl_clk1 = pl_clk_t[1] ;
+ assign  pl_clk1 = 1'b0 ;
 
  assign  pl_clk2 = 1'b0 ;
 
@@ -287,7 +285,7 @@ assign pl_clk0 = pl_clk_t[0] ;
     .C_S_AXI_GP4_DATA_WIDTH(128),
     .C_S_AXI_GP5_DATA_WIDTH(128),
     .C_S_AXI_GP6_DATA_WIDTH(128),
-    .C_FCLK_CLK0_FREQ(300.000000),
+    .C_FCLK_CLK0_FREQ(187.500000),
     .C_FCLK_CLK1_FREQ(160.000000),
     .C_FCLK_CLK2_FREQ(100),
     .C_FCLK_CLK3_FREQ(100)

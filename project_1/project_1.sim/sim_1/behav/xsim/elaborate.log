@@ -10,15 +10,3 @@ WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 f
 WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'DOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:282]
 WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:197]
 WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:198]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module unisims_ver.FIFO36E2(CASCADE_ORDER="FIRST",F...
-Compiling module unisims_ver.FIFO36E2(CASCADE_ORDER="MIDDLE",...
-Compiling module unisims_ver.FIFO36E2(CASCADE_ORDER="LAST",FI...
-Compiling module xil_defaultlib.FIFOs_Ultrascale(num_fifo=4)
-Compiling module xil_defaultlib.DDMTD_Sampler
-Compiling module xil_defaultlib.testbench_DDMTDSampler
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_DDMTDSampler_behav

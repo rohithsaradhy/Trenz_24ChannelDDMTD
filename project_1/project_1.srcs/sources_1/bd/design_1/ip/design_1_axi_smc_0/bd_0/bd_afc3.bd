@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x372AD4F52CE260EC",
+      "boundary_crc": "0x372AD4F5143BCF18",
       "design_src": "SBD",
       "device": "xczu2cg-sfvc784-1-e",
       "name": "bd_afc3",
@@ -45,7 +45,7 @@
             "value_src": "auto_prop"
           },
           "FREQ_HZ": {
-            "value": "300000000",
+            "value": "187500000",
             "value_src": "user_prop"
           },
           "ID_WIDTH": {
@@ -173,7 +173,7 @@
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "300000000",
+            "value": "187500000",
             "value_src": "user_prop"
           },
           "ID_WIDTH": {
@@ -302,7 +302,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "300000000",
+            "value": "187500000",
             "value_src": "user_prop"
           },
           "INSERT_VIP": {
@@ -698,6 +698,12 @@
           }
         },
         "interface_nets": {
+          "s00_mmu_M_AXI": {
+            "interface_ports": [
+              "s00_mmu/M_AXI",
+              "s00_transaction_regulator/S_AXI"
+            ]
+          },
           "s00_transaction_regulator_M_AXI": {
             "interface_ports": [
               "s00_transaction_regulator/M_AXI",
@@ -714,12 +720,6 @@
             "interface_ports": [
               "s_axi",
               "s00_mmu/S_AXI"
-            ]
-          },
-          "s00_mmu_M_AXI": {
-            "interface_ports": [
-              "s00_mmu/M_AXI",
-              "s00_transaction_regulator/S_AXI"
             ]
           }
         },
@@ -1534,16 +1534,10 @@
       }
     },
     "interface_nets": {
-      "S00_AXI_1": {
+      "S_SC_W_1": {
         "interface_ports": [
-          "S00_AXI",
-          "s00_entry_pipeline/s_axi"
-        ]
-      },
-      "s00_nodes_M_SC_B": {
-        "interface_ports": [
-          "s00_nodes/M_SC_B",
-          "s00_axi2sc/S_SC_B"
+          "s00_nodes/S_SC_W",
+          "s00_axi2sc/M_SC_W"
         ]
       },
       "s00_entry_pipeline_m_axi": {
@@ -1552,16 +1546,22 @@
           "s00_axi2sc/S_AXI"
         ]
       },
+      "S00_AXI_1": {
+        "interface_ports": [
+          "S00_AXI",
+          "s00_entry_pipeline/s_axi"
+        ]
+      },
       "S_SC_AW_1": {
         "interface_ports": [
           "s00_nodes/S_SC_AW",
           "s00_axi2sc/M_SC_AW"
         ]
       },
-      "S_SC_W_1": {
+      "s00_nodes_M_SC_B": {
         "interface_ports": [
-          "s00_nodes/S_SC_W",
-          "s00_axi2sc/M_SC_W"
+          "s00_nodes/M_SC_B",
+          "s00_axi2sc/S_SC_B"
         ]
       },
       "s00_nodes_M_SC_W": {

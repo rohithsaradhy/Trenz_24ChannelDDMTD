@@ -161,8 +161,8 @@ always @(posedge M_AXIS_ACLK)
     .read_clk(M_AXIS_ACLK),
     .write_clk(clk_ref)
     );
-    assign M_AXIS_TLAST = empty;
-    assign FULL = full;
+    // assign M_AXIS_TLAST = empty;
+    // assign FULL = full;
 
 
 

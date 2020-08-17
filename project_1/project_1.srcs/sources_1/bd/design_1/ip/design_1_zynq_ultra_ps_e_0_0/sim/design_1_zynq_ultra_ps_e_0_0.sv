@@ -1573,8 +1573,7 @@
   saxigp2_awqos,
   saxigp2_arqos,
   pl_resetn0,
-  pl_clk0,
-  pl_clk1
+  pl_clk0
  );
 
 //PARAMETERS
@@ -1603,7 +1602,7 @@
       parameter C_EN_FIFO_ENET2 = "0";
       parameter C_EN_FIFO_ENET3 = "0";
       parameter C_PL_CLK0_BUF = "TRUE";
-      parameter C_PL_CLK1_BUF = "TRUE";
+      parameter C_PL_CLK1_BUF = "FALSE";
       parameter C_PL_CLK2_BUF = "FALSE";
       parameter C_PL_CLK3_BUF = "FALSE";
       parameter C_TRACE_PIPELINE_WIDTH = 8;
@@ -1701,7 +1700,6 @@
       input  [3 : 0] saxigp2_arqos;
       output  pl_resetn0;
       output  pl_clk0;
-      output  pl_clk1;
 
 //REG DECLARATIONS
 
@@ -1746,7 +1744,6 @@
       reg saxigp2_rvalid;
       reg pl_resetn0;
       reg pl_clk0;
-      reg pl_clk1;
       string ip_name;
       reg disable_port;
 
@@ -1848,7 +1845,6 @@ output bit saxigp2_rvalid
 );
 
 import "DPI-C" function void ps8_simulate_single_cycle_pl_clk0();
-import "DPI-C" function void ps8_simulate_single_cycle_pl_clk1();
    export "DPI-C" function ps8_stop_sim;
    function void ps8_stop_sim();
         $display("End of simulation");
@@ -1914,32 +1910,18 @@ import "DPI-C" function void ps8_simulate_single_cycle_pl_clk1();
   ps8_init_s_axi_hp0_fpd($bits(saxigp2_awid),$bits(saxigp2_awaddr),$bits(saxigp2_awlen),$bits(saxigp2_awsize),$bits(saxigp2_awburst),$bits(saxigp2_awlock),$bits(saxigp2_awcache),$bits(saxigp2_awprot),$bits(saxigp2_awqos),$bits(saxigp2_awuser),$bits(saxigp2_awvalid),$bits(saxigp2_awready),$bits(saxigp2_wdata),$bits(saxigp2_wstrb),$bits(saxigp2_wlast),$bits(saxigp2_wvalid),$bits(saxigp2_wready),$bits(saxigp2_bid),$bits(saxigp2_bresp),$bits(saxigp2_bvalid),$bits(saxigp2_bready),$bits(saxigp2_arid),$bits(saxigp2_araddr),$bits(saxigp2_arlen),$bits(saxigp2_arsize),$bits(saxigp2_arburst),$bits(saxigp2_arlock),$bits(saxigp2_arcache),$bits(saxigp2_arprot),$bits(saxigp2_arqos),$bits(saxigp2_aruser),$bits(saxigp2_arvalid),$bits(saxigp2_arready),$bits(saxigp2_rid),$bits(saxigp2_rdata),$bits(saxigp2_rresp),$bits(saxigp2_rlast),$bits(saxigp2_rvalid),$bits(saxigp2_rready));
   ps8_init_c_model();
   pl_clk0=0;
-  pl_clk1=0;
   end
   initial
   begin
      pl_clk0 = 1'b0;
   end
 
-  always #(1.6666666666666667) pl_clk0 <= ~pl_clk0;
+  always #(2.5) pl_clk0 <= ~pl_clk0;
 
   always@(posedge pl_clk0)
   begin
    ps8_set_ip_context(ip_name);
    ps8_simulate_single_cycle_pl_clk0();
-  end
-
-  initial
-  begin
-     pl_clk1 = 1'b0;
-  end
-
-  always #(3.125) pl_clk1 <= ~pl_clk1;
-
-  always@(posedge pl_clk1)
-  begin
-   ps8_set_ip_context(ip_name);
-   ps8_simulate_single_cycle_pl_clk1();
   end
 
 

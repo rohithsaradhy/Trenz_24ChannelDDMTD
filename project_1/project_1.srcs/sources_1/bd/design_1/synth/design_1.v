@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Wed Aug 12 15:05:28 2020
+//Date        : Sun Aug 16 19:41:23 2020
 //Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -25,7 +25,7 @@ module design_1
     gpio_rtl_0_tri_i,
     gpio_rtl_tri_o);
   input AXI_En;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SEND2MMAP_AXIS:S_AXIS_S2MM_0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, FREQ_HZ 300000000, INSERT_VIP 0, PHASE 0.000" *) output CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SEND2MMAP_AXIS:S_AXIS_S2MM_0, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, FREQ_HZ 187500000, INSERT_VIP 0, PHASE 0.000" *) output CLK;
   input En;
   input [7:0]FrameSize;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output [0:0]RST;
@@ -158,7 +158,6 @@ module design_1
   wire [3:0]zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB;
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID;
   wire zynq_ultra_ps_e_0_pl_clk0;
-  wire zynq_ultra_ps_e_0_pl_clk1;
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign AXI_En_1 = AXI_En;
@@ -172,7 +171,6 @@ module design_1
   assign TSTRB_1 = TSTRB[3:0];
   assign TVALID_1 = TVALID;
   assign axi_gpio_0_GPIO2_TRI_I = gpio_rtl_0_tri_i[31:0];
-  assign clk_160 = zynq_ultra_ps_e_0_pl_clk1;
   assign gpio_rtl_tri_o[31:0] = axi_gpio_0_GPIO_TRI_O;
   design_1_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps8_0_100M_peripheral_aresetn),
@@ -417,7 +415,6 @@ module design_1
         .maxigp2_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID),
         .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .pl_clk0(zynq_ultra_ps_e_0_pl_clk0),
-        .pl_clk1(zynq_ultra_ps_e_0_pl_clk1),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0),
         .saxigp2_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .saxigp2_arburst({1'b0,1'b1}),
