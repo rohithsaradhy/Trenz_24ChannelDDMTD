@@ -1,0 +1,372 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[1].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[2].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[3].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[4].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[5].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[6].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[7].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to   MIDDLE and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.fifo_inst[8].i_FIFO36E2_inst
+Warning: [Unisim FIFO36E2-130] CASDIN[36] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[37] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[38] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[39] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[40] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[41] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[42] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[43] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[44] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[45] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[46] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[47] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[48] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[49] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[50] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[51] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[52] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[53] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[54] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[55] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[56] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[57] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[58] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[59] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[60] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[61] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[62] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDIN[63] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 0] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 1] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 2] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 3] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 4] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 5] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 6] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDINP[ 7] signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASDOMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASNXTRDEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUX signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-130] CASOREGIMUXEN signal is unconnected in CASCADE mode Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst.is_cas_connected
+Warning: [Unisim FIFO36E2-126] CASCADE_ORDER attribute is set to     LAST and some or all of the CASCADE signals are unconnected. Simulation behavior may not match hardware under these circumstances. Please check that all CASCADE signals are properly connected. Instance: testbench_DDMTDSampler.DDMTD1.FIFOs_Ultrascale_1.last_FIFO36E2_inst

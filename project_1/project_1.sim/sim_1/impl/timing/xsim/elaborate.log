@@ -4,6 +4,21 @@ Running: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xela
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-2063] Module <FIFO_DUALCLOCK_MACRO> not found while processing module instance <FIFO_FWFT> [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/fifo_chain.v:74]
-ERROR: [VRFC 10-2063] Module <FIFO_DUALCLOCK_MACRO> not found while processing module instance <LAST_FIFO> [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/fifo_chain.v:150]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:119]
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'DIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:135]
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:270]
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'DOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:282]
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:197]
+WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:198]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module simprims_ver.FIFO36E2(CASCADE_ORDER="FIRST",F...
+Compiling module simprims_ver.FIFO36E2(CASCADE_ORDER="MIDDLE",...
+Compiling module simprims_ver.FIFO36E2(CASCADE_ORDER="LAST",FI...
+Compiling module xil_defaultlib.FIFOs_Ultrascale(num_fifo=10)
+Compiling module xil_defaultlib.DDMTD_Sampler
+Compiling module xil_defaultlib.testbench_DDMTDSampler
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_DDMTDSampler_time_impl

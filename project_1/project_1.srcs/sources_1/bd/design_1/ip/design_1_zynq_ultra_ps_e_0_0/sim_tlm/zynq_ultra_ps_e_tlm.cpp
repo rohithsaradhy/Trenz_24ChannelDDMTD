@@ -144,11 +144,14 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
     xsc::common_cpp::properties&): sc_module(name)//registering module name with parent
         ,maxihpm0_lpd_aclk("maxihpm0_lpd_aclk")
         ,saxihp0_fpd_aclk("saxihp0_fpd_aclk")
+        ,pl_ps_irq0("pl_ps_irq0")
         ,pl_resetn0("pl_resetn0")
         ,pl_clk0("pl_clk0")
+        ,pl_clk1("pl_clk1")
     ,S_AXI_HP0_FPD_xtlm_brdg("S_AXI_HP0_FPD_xtlm_brdg")
     ,m_rp_bridge_M_AXI_HPM0_LPD("m_rp_bridge_M_AXI_HPM0_LPD")
-        ,pl_clk0_clk("pl_clk0_clk", sc_time(5.333333333333333,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
+        ,pl_clk0_clk("pl_clk0_clk", sc_time(5.0,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
+        ,pl_clk1_clk("pl_clk1_clk", sc_time(2.5,sc_core::SC_NS))//clock period in nanoseconds = 1000/freq(in MZ)
     {
         //creating instances of xtlm slave sockets
         S_AXI_HP0_FPD_wr_socket = new xtlm::xtlm_aximm_target_socket("S_AXI_HP0_FPD_wr_socket", 128);
@@ -182,8 +185,16 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
 
         m_zynqmp_tlm_model->tie_off();
 
+ 
+        SC_METHOD(pl_ps_irq0_method);
+        sensitive << pl_ps_irq0 ;
+        dont_initialize();
+
         SC_METHOD(trigger_pl_clk0_pin);
         sensitive << pl_clk0_clk;
+        dont_initialize();
+        SC_METHOD(trigger_pl_clk1_pin);
+        sensitive << pl_clk1_clk;
         dont_initialize();
         
         S_AXI_HP0_FPD_xtlm_brdg.registerUserExtensionHandlerCallback(add_extensions_to_tlm);
@@ -206,7 +217,23 @@ void add_extensions_to_tlm(const xtlm::aximm_payload* xtlm_pay, tlm::tlm_generic
     void zynq_ultra_ps_e_tlm ::trigger_pl_clk0_pin()    {
         pl_clk0.write(pl_clk0_clk.read());
     }
+    //Method which is sentive to pl_clk1_clk sc_clock object
+    //pl_clk1 pin written based on pl_clk1_clk clock value 
+    void zynq_ultra_ps_e_tlm ::trigger_pl_clk1_pin()    {
+        pl_clk1.write(pl_clk1_clk.read());
+    }
 
+    void zynq_ultra_ps_e_tlm ::pl_ps_irq0_method()    {
+        int irq = ((pl_ps_irq0.read().to_uint()) & 0xFF);
+        for(int i = 0; i <8; i++)   {
+            if(irq & (0x1<<i))  {
+                m_zynqmp_tlm_model->pl2ps_irq[i].write(true);
+            }
+            else{
+                m_zynqmp_tlm_model->pl2ps_irq[i].write(false);
+            }
+        }
+    }
     //pl_resetn0 output reset pin get toggle when emio bank 2's 31th signal gets toggled
     //EMIO[2] bank 31th(GPIO[95] signal)acts as reset signal to the PL(refer Zynq UltraScale+ TRM, page no:761)
     void zynq_ultra_ps_e_tlm ::pl_resetn0_trigger()   {

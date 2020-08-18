@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Mon Aug 17 10:38:28 2020
+| Date             : Tue Aug 18 14:51:41 2020
 | Host             : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.921        |
+| Total On-Chip Power (W)  | 1.934        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.614        |
+| Dynamic (W)              | 1.627        |
 | Device Static (W)        | 0.307        |
 | Effective TJA (C/W)      | 2.4          |
-| Max Ambient (C)          | 95.5         |
-| Junction Temperature (C) | 29.5         |
+| Max Ambient (C)          | 95.4         |
+| Junction Temperature (C) | 29.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.019 |        4 |       --- |             --- |
-| CLB Logic                |     0.015 |     6248 |       --- |             --- |
+| Clocks                   |     0.023 |        5 |       --- |             --- |
+| CLB Logic                |     0.016 |     6405 |       --- |             --- |
 |   LUT as Distributed RAM |     0.010 |      152 |     28800 |            0.53 |
-|   LUT as Logic           |     0.005 |     1816 |     47232 |            3.84 |
+|   LUT as Logic           |     0.005 |     1846 |     47232 |            3.91 |
 |   LUT as Shift Register  |    <0.001 |      144 |     28800 |            0.50 |
-|   Register               |    <0.001 |     3114 |     94464 |            3.30 |
+|   Register               |    <0.001 |     3157 |     94464 |            3.34 |
 |   CARRY8                 |    <0.001 |       38 |      8820 |            0.43 |
-|   Others                 |     0.000 |      251 |       --- |             --- |
-| Signals                  |     0.006 |     5352 |       --- |             --- |
-| Block RAM                |     0.018 |     22.5 |       150 |           15.00 |
+|   Others                 |     0.000 |      340 |       --- |             --- |
+| Signals                  |     0.007 |     4852 |       --- |             --- |
+| Block RAM                |     0.025 |     34.5 |       150 |           23.00 |
 | DSPs                     |    <0.001 |        1 |       240 |            0.42 |
-| PS8                      |     1.555 |        1 |       --- |             --- |
+| PS8                      |     1.556 |        1 |       --- |             --- |
 | Static Power             |     0.307 |          |           |                 |
 |   PS Static              |     0.093 |          |           |                 |
 |   PL Static              |     0.214 |          |           |                 |
-| Total                    |     1.921 |          |           |                 |
+| Total                    |     1.934 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,9 +77,9 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.121 |       0.069 |      0.052 |
+| Vccint          |       0.850 |     0.136 |       0.084 |      0.052 |
 | Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
-| Vccbram         |       0.850 |     0.001 |       0.001 |      0.001 |
+| Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
 | Vccaux_io       |       1.800 |     0.025 |       0.000 |      0.025 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
@@ -90,8 +90,8 @@ Table of Contents
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
-| VCC_PSINTFP     |       0.850 |     0.379 |       0.351 |      0.028 |
-| VCC_PSINTLP     |       0.850 |     0.284 |       0.276 |      0.007 |
+| VCC_PSINTFP     |       0.850 |     0.379 |       0.352 |      0.028 |
+| VCC_PSINTLP     |       0.850 |     0.284 |       0.277 |      0.007 |
 | VPS_MGTRAVCC    |       0.850 |     0.001 |       0.000 |      0.001 |
 | VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.004 |
 | VCC_PSPLL       |       1.200 |     0.054 |       0.052 |      0.002 |
@@ -148,7 +148,7 @@ Table of Contents
 +----------+------------------------------------------------------------------+-----------------+
 | Clock    | Domain                                                           | Constraint (ns) |
 +----------+------------------------------------------------------------------+-----------------+
-| clk_pl_0 | my_design/design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0] |             5.3 |
+| clk_pl_0 | my_design/design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0] |             5.0 |
 +----------+------------------------------------------------------------------+-----------------+
 
 
@@ -161,18 +161,20 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| main                    |     1.614 |
-|   DDMTD1                |     0.008 |
-|     FIFOs_Ultrascale_1  |     0.007 |
-|   DDMTD2                |     0.008 |
-|     FIFOs_Ultrascale_1  |     0.008 |
-|   my_design             |     1.598 |
-|     design_1_i          |     1.598 |
-|       axi_dma_0         |     0.012 |
+| main                    |     1.627 |
+|   DDMTD1                |     0.012 |
+|     FIFO_10_inst        |     0.011 |
+|       U0                |     0.011 |
+|   DDMTD2                |     0.012 |
+|     FIFO_10_inst        |     0.011 |
+|       U0                |     0.011 |
+|   my_design             |     1.603 |
+|     design_1_i          |     1.603 |
+|       axi_dma_0         |     0.013 |
 |       axi_gpio_0        |     0.002 |
-|       axi_smc           |     0.018 |
-|       ps8_0_axi_periph  |     0.009 |
-|       zynq_ultra_ps_e_0 |     1.556 |
+|       axi_smc           |     0.020 |
+|       ps8_0_axi_periph  |     0.011 |
+|       zynq_ultra_ps_e_0 |     1.557 |
 +-------------------------+-----------+
 
 

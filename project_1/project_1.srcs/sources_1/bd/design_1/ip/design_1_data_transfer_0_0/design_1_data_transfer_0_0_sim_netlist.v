@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Wed Aug 12 15:06:56 2020
+// Date        : Tue Aug 18 13:20:03 2020
 // Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_data_transfer_0_0/design_1_data_transfer_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_data_transfer_0_0 -prefix
+//               design_1_data_transfer_0_0_ design_1_data_transfer_0_0_sim_netlist.v
 // Design      : design_1_data_transfer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,96 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_data_transfer_0_0,data_transfer_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "data_transfer_v1_0,Vivado 2019.2" *) 
-(* NotValidForBitStream *)
-module design_1_data_transfer_0_0
-   (FrameSize,
-    En,
-    AXI_En,
-    TDATA,
-    TVALID,
-    TSTRB,
-    TLAST,
-    TREADY,
-    m_axis_aclk,
-    m_axis_aresetn,
-    m_axis_tvalid,
-    m_axis_tdata,
-    m_axis_tstrb,
-    m_axis_tlast,
-    m_axis_tready);
-  input [7:0]FrameSize;
-  input En;
-  input AXI_En;
-  input [31:0]TDATA;
-  input TVALID;
-  input [3:0]TSTRB;
-  input TLAST;
-  output TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXIS_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_CLK, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_RESET m_axis_aresetn, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input m_axis_aclk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M_AXIS_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m_axis_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [31:0]m_axis_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *) output [3:0]m_axis_tstrb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) output m_axis_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
-
-  wire AXI_En;
-  wire En;
-  wire [7:0]FrameSize;
-  wire [31:0]TDATA;
-  wire TLAST;
-  wire [3:0]TSTRB;
-  wire TVALID;
-  wire m_axis_aclk;
-  wire m_axis_aresetn;
-  wire [31:0]m_axis_tdata;
-  wire m_axis_tlast;
-  wire m_axis_tready;
-  wire [3:0]m_axis_tstrb;
-  wire m_axis_tvalid;
-
-  assign TREADY = m_axis_tready;
-  design_1_data_transfer_0_0_data_transfer_v1_0 inst
-       (.AXI_En(AXI_En),
-        .En(En),
-        .FrameSize(FrameSize),
-        .TDATA(TDATA),
-        .TLAST(TLAST),
-        .TVALID(TVALID),
-        .m_axis_aclk(m_axis_aclk),
-        .m_axis_aresetn(m_axis_aresetn),
-        .m_axis_tdata(m_axis_tdata),
-        .m_axis_tlast(m_axis_tlast),
-        .m_axis_tready(m_axis_tready),
-        .m_axis_tvalid(m_axis_tvalid));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[0]_INST_0 
-       (.I0(TSTRB[0]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[0]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[1]_INST_0 
-       (.I0(TSTRB[1]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[1]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[2]_INST_0 
-       (.I0(TSTRB[2]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[2]));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \m_axis_tstrb[3]_INST_0 
-       (.I0(TSTRB[3]),
-        .I1(AXI_En),
-        .O(m_axis_tstrb[3]));
-endmodule
-
-(* ORIG_REF_NAME = "data_transfer_v1_0" *) 
 module design_1_data_transfer_0_0_data_transfer_v1_0
    (m_axis_tvalid,
     m_axis_tlast,
@@ -156,7 +66,6 @@ module design_1_data_transfer_0_0_data_transfer_v1_0
         .m_axis_tvalid(m_axis_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "data_transfer_v1_0_M_AXIS" *) 
 module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
    (m_axis_tvalid,
     m_axis_tlast,
@@ -1378,6 +1287,95 @@ module design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS
         .D(tValidR_i_1_n_0),
         .Q(m_axis_tvalidW),
         .R(1'b0));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_data_transfer_0_0,data_transfer_v1_0,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "data_transfer_v1_0,Vivado 2019.2" *) 
+(* NotValidForBitStream *)
+module design_1_data_transfer_0_0
+   (FrameSize,
+    En,
+    AXI_En,
+    TDATA,
+    TVALID,
+    TSTRB,
+    TLAST,
+    TREADY,
+    m_axis_aclk,
+    m_axis_aresetn,
+    m_axis_tvalid,
+    m_axis_tdata,
+    m_axis_tstrb,
+    m_axis_tlast,
+    m_axis_tready);
+  input [7:0]FrameSize;
+  input En;
+  input AXI_En;
+  input [31:0]TDATA;
+  input TVALID;
+  input [3:0]TSTRB;
+  input TLAST;
+  output TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXIS_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_CLK, ASSOCIATED_BUSIF M_AXIS, ASSOCIATED_RESET m_axis_aresetn, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *) input m_axis_aclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 M_AXIS_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input m_axis_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TVALID" *) output m_axis_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TDATA" *) output [31:0]m_axis_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TSTRB" *) output [3:0]m_axis_tstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TLAST" *) output m_axis_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M_AXIS TREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0" *) input m_axis_tready;
+
+  wire AXI_En;
+  wire En;
+  wire [7:0]FrameSize;
+  wire [31:0]TDATA;
+  wire TLAST;
+  wire [3:0]TSTRB;
+  wire TVALID;
+  wire m_axis_aclk;
+  wire m_axis_aresetn;
+  wire [31:0]m_axis_tdata;
+  wire m_axis_tlast;
+  wire m_axis_tready;
+  wire [3:0]m_axis_tstrb;
+  wire m_axis_tvalid;
+
+  assign TREADY = m_axis_tready;
+  design_1_data_transfer_0_0_data_transfer_v1_0 inst
+       (.AXI_En(AXI_En),
+        .En(En),
+        .FrameSize(FrameSize),
+        .TDATA(TDATA),
+        .TLAST(TLAST),
+        .TVALID(TVALID),
+        .m_axis_aclk(m_axis_aclk),
+        .m_axis_aresetn(m_axis_aresetn),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tlast(m_axis_tlast),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tvalid(m_axis_tvalid));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \m_axis_tstrb[0]_INST_0 
+       (.I0(TSTRB[0]),
+        .I1(AXI_En),
+        .O(m_axis_tstrb[0]));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \m_axis_tstrb[1]_INST_0 
+       (.I0(TSTRB[1]),
+        .I1(AXI_En),
+        .O(m_axis_tstrb[1]));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \m_axis_tstrb[2]_INST_0 
+       (.I0(TSTRB[2]),
+        .I1(AXI_En),
+        .O(m_axis_tstrb[2]));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \m_axis_tstrb[3]_INST_0 
+       (.I0(TSTRB[3]),
+        .I1(AXI_En),
+        .O(m_axis_tstrb[3]));
 endmodule
 `ifndef GLBL
 `define GLBL

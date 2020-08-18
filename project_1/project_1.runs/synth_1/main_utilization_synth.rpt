@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Mon Aug 17 10:35:22 2020
+| Date         : Tue Aug 18 14:48:07 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  196 |     0 |     47232 |  0.41 |
-|   LUT as Logic          |  196 |     0 |     47232 |  0.41 |
+| CLB LUTs*               |  206 |     0 |     47232 |  0.44 |
+|   LUT as Logic          |  206 |     0 |     47232 |  0.44 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  115 |     0 |     94464 |  0.12 |
-|   Register as Flip Flop |  115 |     0 |     94464 |  0.12 |
+| CLB Registers           |  125 |     0 |     94464 |  0.13 |
+|   Register as Flip Flop |  125 |     0 |     94464 |  0.13 |
 |   Register as Latch     |    0 |     0 |     94464 |  0.00 |
 | CARRY8                  |   24 |     0 |      8820 |  0.27 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
@@ -60,21 +60,20 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 115   |          Yes |       Reset |            - |
+| 125   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. BLOCKRAM
 -----------
 
-+-------------------+------+-------+-----------+-------+
-|     Site Type     | Used | Fixed | Available | Util% |
-+-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |   20 |     0 |       150 | 13.33 |
-|   RAMB36/FIFO*    |   20 |     0 |       150 | 13.33 |
-|     FIFO36E2 only |   20 |       |           |       |
-|   RAMB18          |    0 |     0 |       300 |  0.00 |
-+-------------------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |       150 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |       150 |  0.00 |
+|   RAMB18       |    0 |     0 |       300 |  0.00 |
++----------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
 
@@ -149,15 +148,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  115 |            Register |
-| LUT2     |   97 |                 CLB |
-| LUT4     |   70 |                 CLB |
-| LUT3     |   49 |                 CLB |
-| LUT6     |   34 |                 CLB |
+| FDRE     |  125 |            Register |
+| LUT2     |  101 |                 CLB |
+| LUT4     |   80 |                 CLB |
+| LUT3     |   51 |                 CLB |
+| LUT6     |   25 |                 CLB |
 | CARRY8   |   24 |                 CLB |
-| FIFO36E2 |   20 |           Block Ram |
-| LUT5     |    8 |                 CLB |
-| LUT1     |    5 |                 CLB |
+| LUT5     |   12 |                 CLB |
+| LUT1     |    8 |                 CLB |
 | DSP48E2  |    1 |          Arithmetic |
 +----------+------+---------------------+
 
@@ -168,6 +166,7 @@ Table of Contents
 +------------------------------+------+
 |           Ref Name           | Used |
 +------------------------------+------+
+| FIFO_10                      |    2 |
 | design_1_zynq_ultra_ps_e_0_0 |    1 |
 | design_1_xbar_0              |    1 |
 | design_1_rst_ps8_0_100M_0    |    1 |

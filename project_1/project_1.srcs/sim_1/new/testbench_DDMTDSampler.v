@@ -37,6 +37,7 @@ module testbench_DDMTDSampler(
         reg  M_AXIS_ARESETN=0; //RESET active low.
         wire M_AXIS_TVALID;
         wire [31:0] M_AXIS_TDATA;
+        reg  enable_read_logic=0;
         wire [3:0]M_AXIS_TSTRB;
         wire M_AXIS_TLAST;
         reg  M_AXIS_TREADY=0;
@@ -46,7 +47,7 @@ module testbench_DDMTDSampler(
 
         always #10 clk_ref <= ~clk_ref;
         always #5  M_AXIS_ACLK <= ~M_AXIS_ACLK;
-
+        always #20 clk_beat <=~clk_beat;
 
         // integer rst_counter=0;
         // always @(negedge clk_ref)
@@ -60,13 +61,10 @@ module testbench_DDMTDSampler(
             #100  reset <=1;
             #500  reset <=0;
             #100 enable_sampling_logic <=1; 
-            #20  clk_beat=~clk_beat;  
-            #20  clk_beat=~clk_beat;  
-            #40  clk_beat=~clk_beat;  
-            #20  clk_beat=~clk_beat;  
-            #80  clk_beat=~clk_beat;  
-            #200 M_AXIS_ARESETN <=1;
-                 M_AXIS_TREADY  <=1;
+
+            #300 M_AXIS_ARESETN <=1;
+            #100 M_AXIS_TREADY  <=1;
+            #10  enable_read_logic <=1;
 
         end
 
@@ -100,10 +98,13 @@ module testbench_DDMTDSampler(
      .M_AXIS_TDATA(M_AXIS_TDATA),
      .M_AXIS_TSTRB(M_AXIS_TSTRB),
      .M_AXIS_TLAST(M_AXIS_TLAST),
-     .M_AXIS_TREADY(M_AXIS_TREADY)
+     .M_AXIS_TREADY(M_AXIS_TREADY),
+     .enable_read_logic(enable_read_logic)
 
  );
  
  assign write_en = DDMTD1.write_en;
+
+ wire empty = DDMTD1.empty;
  
 endmodule

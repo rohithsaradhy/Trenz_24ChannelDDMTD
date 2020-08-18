@@ -65,7 +65,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param power.enableLutRouteBelPower 1
   set_param chipscope.maxJobs 3
+  set_param power.BramSDPPropagationFix 1
+  set_param power.enableUnconnectedCarry8PinPower 1
+  set_param power.enableCarry8RouteBelPower 1
   create_project -in_memory -part xczu2cg-sfvc784-1-e
   set_property board_part trenz.biz:te0820_2cg_1e:part0:2.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -84,6 +88,7 @@ set rc [catch {
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
   add_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
+  read_ip -quiet /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci
   set_param project.isImplRun false
   read_xdc /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc
   set_param project.isImplRun true

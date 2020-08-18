@@ -133,8 +133,10 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     // Non-AXI ports are declared here
     sc_core::sc_in<bool> maxihpm0_lpd_aclk;
     sc_core::sc_in<bool> saxihp0_fpd_aclk;
+    sc_core::sc_in<sc_dt::sc_bv<1> >  pl_ps_irq0;
     sc_core::sc_out<bool> pl_resetn0;
     sc_core::sc_out<bool> pl_clk0;
+    sc_core::sc_out<bool> pl_clk1;
      
     // Xtlm aximm slave sockets are delcared here. these XTLM sockets will hierachically bound with 
     // slave sockets defined in vivado generated wrapper.
@@ -183,12 +185,17 @@ class zynq_ultra_ps_e_tlm : public sc_core::sc_module   {
     // sc_clocks for generating pl clocks
     // output pins pl_clk0..3 are drived by these clocks
     sc_core::sc_clock pl_clk0_clk;
+    sc_core::sc_clock pl_clk1_clk;
 
     
     //Method which is sentive to pl_clk0_clk sc_clock object
     //pl_clk0 pin written based on pl_clk0_clk clock value 
     void trigger_pl_clk0_pin();
+    //Method which is sentive to pl_clk1_clk sc_clock object
+    //pl_clk1 pin written based on pl_clk1_clk clock value 
+    void trigger_pl_clk1_pin();
 
+    void pl_ps_irq0_method();
     //pl_resetn0 output reset pin get toggle when emio bank 2's 31th signal gets toggled
     //EMIO[2] bank 31th(GPIO[95] signal)acts as reset signal to the PL(refer Zynq UltraScale+ TRM, page no:761)
     void pl_resetn0_trigger();

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x80E76566371E0906",
+      "boundary_crc": "0xD0632CA573EA9FA5",
       "device": "xczu2cg-sfvc784-1-e",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -47,7 +47,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "187500000",
+            "value": "200000000",
             "value_src": "user_prop"
           },
           "INSERT_VIP": {
@@ -96,28 +96,6 @@
       "TVALID": {
         "direction": "I"
       },
-      "clk_160": {
-        "type": "clk",
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk1",
-            "value_src": "default_prop"
-          },
-          "FREQ_HZ": {
-            "value": "160000000",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          }
-        }
-      },
       "TDATA": {
         "direction": "I",
         "left": "31",
@@ -133,6 +111,28 @@
         "direction": "I",
         "left": "3",
         "right": "0"
+      },
+      "CLK_400": {
+        "type": "clk",
+        "direction": "O",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_zynq_ultra_ps_e_0_0_pl_clk1",
+            "value_src": "default_prop"
+          },
+          "FREQ_HZ": {
+            "value": "400000000",
+            "value_src": "user_prop"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -285,16 +285,22 @@
             "value": "187.500000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ": {
-            "value": "187.500000"
+            "value": "200.000000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ": {
             "value": "200"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL": {
-            "value": "IOPLL"
+            "value": "DPLL"
           },
           "PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ": {
-            "value": "160.000000"
+            "value": "400.000000"
+          },
+          "PSU__CRL_APB__PL1_REF_CTRL__FREQMHZ": {
+            "value": "400"
+          },
+          "PSU__CRL_APB__PL1_REF_CTRL__SRCSEL": {
+            "value": "DPLL"
           },
           "PSU__CRL_APB__QSPI_REF_CTRL__ACT_FREQMHZ": {
             "value": "300.000000"
@@ -459,7 +465,7 @@
             "value": "100.000000"
           },
           "PSU__FPGA_PL1_ENABLE": {
-            "value": "0"
+            "value": "1"
           },
           "PSU__GEM3_COHERENCY": {
             "value": "0"
@@ -496,6 +502,9 @@
           },
           "PSU__IOU_SLCR__WDT0__ACT_FREQMHZ": {
             "value": "100.000000"
+          },
+          "PSU__PL_CLK1_BUF": {
+            "value": "TRUE"
           },
           "PSU__PRESET_APPLIED": {
             "value": "1"
@@ -688,6 +697,9 @@
           },
           "PSU__USB__RESET__POLARITY": {
             "value": "Active Low"
+          },
+          "PSU__USE__IRQ0": {
+            "value": "1"
           },
           "PSU__USE__S_AXI_GP2": {
             "value": "1"
@@ -1017,16 +1029,16 @@
           }
         },
         "interface_nets": {
-          "m00_couplers_to_ps8_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
           "m01_couplers_to_ps8_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
+            ]
+          },
+          "m00_couplers_to_ps8_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -1170,34 +1182,10 @@
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_gpio_0_GPIO2": {
+      "data_transfer_0_M_AXIS": {
         "interface_ports": [
-          "gpio_rtl_0",
-          "axi_gpio_0/GPIO2"
-        ]
-      },
-      "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
-        "interface_ports": [
-          "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
-          "ps8_0_axi_periph/S00_AXI"
-        ]
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "gpio_rtl",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
-        ]
-      },
-      "axi_dma_0_M_AXI_S2MM": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_S2MM",
-          "axi_smc/S00_AXI"
+          "data_transfer_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
         ]
       },
       "ps8_0_axi_periph_M00_AXI": {
@@ -1206,10 +1194,34 @@
           "axi_dma_0/S_AXI_LITE"
         ]
       },
-      "data_transfer_0_M_AXIS": {
+      "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
-          "data_transfer_0/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
+          "axi_dma_0/M_AXI_S2MM",
+          "axi_smc/S00_AXI"
+        ]
+      },
+      "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
+        "interface_ports": [
+          "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
+          "ps8_0_axi_periph/S00_AXI"
+        ]
+      },
+      "axi_gpio_0_GPIO2": {
+        "interface_ports": [
+          "gpio_rtl_0",
+          "axi_gpio_0/GPIO2"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "zynq_ultra_ps_e_0/S_AXI_HP0_FPD"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "gpio_rtl",
+          "axi_gpio_0/GPIO"
         ]
       }
     },
@@ -1298,6 +1310,18 @@
         "ports": [
           "TSTRB",
           "data_transfer_0/TSTRB"
+        ]
+      },
+      "axi_dma_0_s2mm_introut": {
+        "ports": [
+          "axi_dma_0/s2mm_introut",
+          "zynq_ultra_ps_e_0/pl_ps_irq0"
+        ]
+      },
+      "zynq_ultra_ps_e_0_pl_clk1": {
+        "ports": [
+          "zynq_ultra_ps_e_0/pl_clk1",
+          "CLK_400"
         ]
       }
     },

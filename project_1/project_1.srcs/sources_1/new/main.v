@@ -41,8 +41,8 @@ module main(
   parameter integer C_M_AXIS_TDATA_WIDTH	= 32;
   parameter integer C_M_START_COUNT	= 32;
 	
-  wire[C_M_AXIS_TDATA_WIDTH-1 : 0] TDATA;
-  wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] TSTRB;
+  wire [C_M_AXIS_TDATA_WIDTH-1 : 0] TDATA;
+  wire  [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] TSTRB;
   wire TLAST;
   wire TVALID;
   wire TREADY;
@@ -72,19 +72,32 @@ module main(
   reg beat_0_q1=0;
   reg beat_1_q1=0;
 
-
+  integer counter_clkbeat=0;
   reg odd=0;
   assign clk_ref=TCLK;
   always @(posedge TCLK)
   begin
-    // beat_0_q1<=~beat_0_q1;
-
-
-    odd <= ~odd;
+  
+  // //100k subs
+  // counter_clkbeat<=counter_clkbeat+1;
+  // if(counter_clkbeat == 100000/2) begin
+  //    beat_0_q1<=~beat_0_q1;
+  //    beat_1_q1<=~beat_1_q1;
+  //    counter_clkbeat <=0;
+  // end
+    
+    
+    // odd or even
+    odd<=~odd;
     if(odd) beat_0_q1<=~beat_0_q1;
     else beat_1_q1<=~beat_1_q1;
   end
   
+
+
+
+
+
 
 
 
@@ -117,8 +130,8 @@ module main(
 
  wire reset_DDMTD_Sampler_n;
  assign reset_DDMTD_Sample_n = ~GPIO[0]; //Active Low
- wire user_cmd;
- assign user_cmd  = GPIO[1]; 
+//  wire user_cmd;
+//  assign user_cmd  = GPIO[1]; 
   
 
   
@@ -156,10 +169,13 @@ module main(
 
 //DDMTD Sampler1
 
-  wire[C_M_AXIS_TDATA_WIDTH-1 : 0] tdata1;
+
+
+  wire [C_M_AXIS_TDATA_WIDTH-1 : 0] tdata1;
   wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] tstrb1;
   wire tlast1;
   wire tvalid1;
+  wire enable_read_logic1;
 
   
   
@@ -186,7 +202,9 @@ module main(
      .M_AXIS_TDATA(tdata1),  
      .M_AXIS_TSTRB(tstrb1),
      .M_AXIS_TLAST(tlast1),
-     .M_AXIS_TREADY(TREADY&~user_cmd)
+     .M_AXIS_TREADY(TREADY),
+     .enable_read_logic(enable_read_logic1)
+
 
  );
 
@@ -199,6 +217,8 @@ module main(
   wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] tstrb2;
   wire tlast2;
   wire tvalid2;
+  wire tready2;
+  wire enable_read_logic2;
 
   
   
@@ -225,32 +245,77 @@ module main(
      .M_AXIS_TDATA(tdata2),  
      .M_AXIS_TSTRB(tstrb2),
      .M_AXIS_TLAST(tlast2),
-     .M_AXIS_TREADY(TREADY&user_cmd)
+     .M_AXIS_TREADY(TREADY),
+     .enable_read_logic(enable_read_logic2)
 
  );
 
   
   
-  
-//  Switcher
-  assign TDATA =  (user_cmd==0)? tdata1:tdata2;
-  assign TSTRB =  (user_cmd==0)? tstrb1:tstrb2;
-  assign TVALID = (user_cmd==0)? tvalid1:tvalid2;
-  assign TLAST =  (user_cmd==0)? tlast1:tlast2;
 
 
 
 
+
+
+//  Multiplexer
+assign TDATA   = (GPIO[1]==1'b0) ? tdata1  : 
+                 (GPIO[1]==1'b1) ? tdata2  : 32'b0;
+
+
+assign TSTRB   = (GPIO[1]==1'b0) ? tstrb1  : 
+                 (GPIO[1]==1'b1) ? tstrb2  : 32'hffffffff;      
+
+assign TVALID  = (GPIO[1]==1'b0) ? tvalid1 : 
+                 (GPIO[1]==1'b1) ? tvalid2 : 0;
+
+assign TLAST   = (GPIO[1]==1'b0) ? tlast1  : 
+                 (GPIO[1]==1'b1) ? tlast2  : 0;
+
+
+assign enable_read_logic1 = (GPIO[1]==1'b0) ? 1 : 0;
+assign enable_read_logic2 = (GPIO[1]==1'b1) ? 1 : 0;
+
+
+
+
+
+// always @(GPIO[3:1])
+// begin
+//     case (GPIO[3:1])
+//       3'b000  :  begin 
+//         TDATA<=tdata1;
+//         TSTRB<=tstrb1;
+//         TVALID<=tvalid1;
+//         tready1<=TREADY;
+//         tready2<=0;
+//       end
+//       3'b001  : begin
+//         TDATA<=tdata2;
+//         TSTRB<=tstrb2;
+//         TVALID<=tvalid2;
+//         tready2<=TREADY;
+//         tready1<=0;
+//       end
+//       default : begin 
+//         TDATA<=tdata1;
+//         TSTRB<=tstrb1;
+//         TVALID<=tvalid1;
+//         tready1<=TREADY;
+//         tready2<=0;
+//       end 
+//   endcase
+
+// end
 
 
 
   design_1_wrapper my_design
        (
-       
           //  .clk_160(clk_160),
           .CLK(TCLK),
           .RST(RESETN),
-
+          .CLK_400(CLK_400),
           .En(1'b0), // Enable this and disable AXI_En for data_transfer IP to generate MAXIS Data. For debugging
           .AXI_En(1'b1), //Enable this for data_transfer IP passthrough
           .TDATA(TDATA),
@@ -258,7 +323,6 @@ module main(
           .TSTRB(TSTRB),
           .TVALID(TVALID),
           .TREADY(TREADY),
-
           .gpio_rtl_tri_o(GPIO));
 
 

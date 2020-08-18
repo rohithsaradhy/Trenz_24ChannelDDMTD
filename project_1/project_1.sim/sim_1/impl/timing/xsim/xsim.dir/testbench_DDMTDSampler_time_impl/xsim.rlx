@@ -1,0 +1,12 @@
+
+{ 
+    crc :  15941069360374822131  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 07ed4253ce224be2afe0fc0be078be9c --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L xilinx_vip -L simprims_ver -L secureip --snapshot testbench_DDMTDSampler_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.testbench_DDMTDSampler xil_defaultlib.glbl" , 
+    buildDate : "Nov  6 2019" , 
+    buildTime : "21:42:20" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/testbench_DDMTDSampler_time_impl/xsimk\"   \"xsim.dir/testbench_DDMTDSampler_time_impl/obj/xsim_0.lnx64.o\" \"xsim.dir/testbench_DDMTDSampler_time_impl/obj/xsim_1.lnx64.o\" \"xsim.dir/testbench_DDMTDSampler_time_impl/obj/xsim_2.lnx64.o\" -L\"/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

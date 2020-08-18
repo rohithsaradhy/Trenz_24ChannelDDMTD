@@ -1,12 +1,40 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 07ed4253ce224be2afe0fc0be078be9c --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_DDMTDSampler_behav xil_defaultlib.testbench_DDMTDSampler xil_defaultlib.glbl -log elaborate.log 
+Running: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 07ed4253ce224be2afe0fc0be078be9c --incr --debug typical --relax --mt 8 -L fifo_generator_v13_2_5 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_6 -L zynq_ultra_ps_e_vip_v1_0_6 -L lib_pkg_v1_0_2 -L lib_fifo_v1_0_14 -L lib_srl_fifo_v1_0_2 -L lib_cdc_v1_0_2 -L axi_datamover_v5_1_22 -L axi_sg_v4_1_13 -L axi_dma_v7_1_21 -L generic_baseblocks_v2_1_0 -L axi_register_slice_v2_1_20 -L axi_data_fifo_v2_1_19 -L axi_crossbar_v2_1_21 -L proc_sys_reset_v5_0_13 -L xlconstant_v1_1_6 -L smartconnect_v1_0 -L axi_lite_ipif_v3_0_4 -L interrupt_control_v3_1_4 -L axi_gpio_v2_0_22 -L axi_protocol_converter_v2_1_20 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_DDMTDSampler_behav xil_defaultlib.testbench_DDMTDSampler xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:119]
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'DIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:135]
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:270]
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'DOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:282]
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDOUT' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:197]
-WARNING: [VRFC 10-3091] actual bit length 36 differs from formal bit length 64 for port 'CASDIN' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v:198]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package synopsys.attributes
+Compiling package ieee.std_logic_misc
+Compiling package fifo_generator_v13_2_5.fifo_generator_v13_2_5_pkg
+Compiling package xpm.vcomponents
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture fifo36e2_v of entity unisim.FIFO36E2 [\FIFO36E2(cascade_order="FIRST",...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.builtin_prim [\builtin_prim(c_din_width=32,c_d...]
+Compiling architecture fifo36e2_v of entity unisim.FIFO36E2 [\FIFO36E2(cascade_order="LAST",c...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.builtin_prim [\builtin_prim(c_din_width=32,c_d...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.builtin_extdepth [\builtin_extdepth(c_family="8SER...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.builtin_top [\builtin_top(c_family="8SERIES",...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.input_blk [\input_blk(c_common_clock=0,c_di...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.output_blk [\output_blk(c_dout_width=32,c_pk...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.fifo_generator_v13_2_5_builtin [\fifo_generator_v13_2_5_builtin(...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.fifo_generator_top [\fifo_generator_top(c_family="vi...]
+Compiling architecture xilinx of entity fifo_generator_v13_2_5.fifo_generator_v13_2_5_synth [\fifo_generator_v13_2_5_synth(c_...]
+Compiling module xil_defaultlib.FIFO_10
+Compiling module xil_defaultlib.DDMTD_Sampler
+Compiling module xil_defaultlib.testbench_DDMTDSampler
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_DDMTDSampler_behav

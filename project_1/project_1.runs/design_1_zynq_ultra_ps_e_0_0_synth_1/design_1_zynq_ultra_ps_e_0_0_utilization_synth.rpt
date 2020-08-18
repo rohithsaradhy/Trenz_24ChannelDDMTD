@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Sun Aug 16 15:25:49 2020
+| Date         : Tue Aug 18 13:24:16 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file design_1_zynq_ultra_ps_e_0_0_utilization_synth.rpt -pb design_1_zynq_ultra_ps_e_0_0_utilization_synth.pb
 | Design       : design_1_zynq_ultra_ps_e_0_0
@@ -103,10 +103,10 @@ Table of Contents
 +----------------------+------+-------+-----------+-------+
 |       Site Type      | Used | Fixed | Available | Util% |
 +----------------------+------+-------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    1 |     0 |       196 |  0.51 |
+| GLOBAL CLOCK BUFFERs |    2 |     0 |       196 |  1.02 |
 |   BUFGCE             |    0 |     0 |        88 |  0.00 |
 |   BUFGCE_DIV         |    0 |     0 |        12 |  0.00 |
-|   BUFG_PS            |    1 |     0 |        72 |  1.39 |
+|   BUFG_PS            |    2 |     0 |        72 |  2.78 |
 |   BUFGCTRL*          |    0 |     0 |        24 |  0.00 |
 | PLL                  |    0 |     0 |         6 |  0.00 |
 | MMCM                 |    0 |     0 |         3 |  0.00 |
@@ -148,9 +148,9 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | LUT1     |  296 |                 CLB |
+| BUFG_PS  |    2 |               Clock |
 | PS8      |    1 |            Advanced |
 | FDRE     |    1 |            Register |
-| BUFG_PS  |    1 |               Clock |
 +----------+------+---------------------+
 
 

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Wed Jul 22 08:57:06 2020
--- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.4 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_data_transfer_0_0/design_1_data_transfer_0_0_sim_netlist.vhdl
+-- Date        : Tue Aug 18 13:20:03 2020
+-- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_data_transfer_0_0 -prefix
+--               design_1_data_transfer_0_0_ design_1_data_transfer_0_0_sim_netlist.vhdl
 -- Design      : design_1_data_transfer_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -18,7 +18,7 @@ entity design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS is
   port (
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axis_aclk : in STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     TVALID : in STD_LOGIC;
@@ -27,10 +27,8 @@ entity design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS is
     FrameSize : in STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axis_aresetn : in STD_LOGIC;
     En : in STD_LOGIC;
-    TDATA : in STD_LOGIC_VECTOR ( 63 downto 0 )
+    TDATA : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS : entity is "data_transfer_v1_0_M_AXIS";
 end design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS;
 
 architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS is
@@ -60,7 +58,7 @@ architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS i
   signal afterResetCycleCounterR_reg : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal clear : STD_LOGIC;
   signal \counterR[0]_i_2_n_0\ : STD_LOGIC;
-  signal counterR_reg : STD_LOGIC_VECTOR ( 63 downto 0 );
+  signal counterR_reg : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal \counterR_reg[0]_i_1_n_0\ : STD_LOGIC;
   signal \counterR_reg[0]_i_1_n_1\ : STD_LOGIC;
   signal \counterR_reg[0]_i_1_n_10\ : STD_LOGIC;
@@ -93,7 +91,6 @@ architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS i
   signal \counterR_reg[16]_i_1_n_7\ : STD_LOGIC;
   signal \counterR_reg[16]_i_1_n_8\ : STD_LOGIC;
   signal \counterR_reg[16]_i_1_n_9\ : STD_LOGIC;
-  signal \counterR_reg[24]_i_1_n_0\ : STD_LOGIC;
   signal \counterR_reg[24]_i_1_n_1\ : STD_LOGIC;
   signal \counterR_reg[24]_i_1_n_10\ : STD_LOGIC;
   signal \counterR_reg[24]_i_1_n_11\ : STD_LOGIC;
@@ -109,69 +106,6 @@ architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS i
   signal \counterR_reg[24]_i_1_n_7\ : STD_LOGIC;
   signal \counterR_reg[24]_i_1_n_8\ : STD_LOGIC;
   signal \counterR_reg[24]_i_1_n_9\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_0\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_1\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_10\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_11\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_12\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_13\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_14\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_15\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_2\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_3\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_4\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_5\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_6\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_7\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_8\ : STD_LOGIC;
-  signal \counterR_reg[32]_i_1_n_9\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_0\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_1\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_10\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_11\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_12\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_13\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_14\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_15\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_2\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_3\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_4\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_5\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_6\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_7\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_8\ : STD_LOGIC;
-  signal \counterR_reg[40]_i_1_n_9\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_0\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_1\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_10\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_11\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_12\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_13\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_14\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_15\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_2\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_3\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_4\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_5\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_6\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_7\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_8\ : STD_LOGIC;
-  signal \counterR_reg[48]_i_1_n_9\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_1\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_10\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_11\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_12\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_13\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_14\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_15\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_2\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_3\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_4\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_5\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_6\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_7\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_8\ : STD_LOGIC;
-  signal \counterR_reg[56]_i_1_n_9\ : STD_LOGIC;
   signal \counterR_reg[8]_i_1_n_0\ : STD_LOGIC;
   signal \counterR_reg[8]_i_1_n_1\ : STD_LOGIC;
   signal \counterR_reg[8]_i_1_n_10\ : STD_LOGIC;
@@ -233,13 +167,13 @@ architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS i
   signal NLW_M_AXIS_TLAST_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_M_AXIS_TLAST_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_M_AXIS_TLAST_carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_counterR_reg[56]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
+  signal \NLW_counterR_reg[24]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 to 7 );
   signal \NLW_packetCounter0_inferred__0/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \NLW_packetCounter0_inferred__0/i__carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 3 );
   signal \NLW_packetCounter0_inferred__0/i__carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \afterResetCycleCounterR[0]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \afterResetCycleCounterR[1]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \afterResetCycleCounterR[0]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \afterResetCycleCounterR[1]_i_1\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \afterResetCycleCounterR[2]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \afterResetCycleCounterR[3]_i_1\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \afterResetCycleCounterR[4]_i_1\ : label is "soft_lutpair0";
@@ -247,70 +181,38 @@ architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0_M_AXIS i
   attribute SOFT_HLUTNM of \afterResetCycleCounterR[7]_i_2\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \i__carry_i_10\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \i__carry_i_11\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axis_tdata[10]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \m_axis_tdata[11]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \m_axis_tdata[12]_INST_0\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \m_axis_tdata[13]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \m_axis_tdata[14]_INST_0\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \m_axis_tdata[15]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \m_axis_tdata[16]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axis_tdata[17]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \m_axis_tdata[18]_INST_0\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \m_axis_tdata[19]_INST_0\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \m_axis_tdata[1]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \m_axis_tdata[20]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \m_axis_tdata[21]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_axis_tdata[22]_INST_0\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \m_axis_tdata[23]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \m_axis_tdata[25]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \m_axis_tdata[26]_INST_0\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \m_axis_tdata[27]_INST_0\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \m_axis_tdata[28]_INST_0\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \m_axis_tdata[30]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axis_tdata[31]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_axis_tdata[32]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axis_tdata[33]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_axis_tdata[34]_INST_0\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \m_axis_tdata[35]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \m_axis_tdata[36]_INST_0\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \m_axis_tdata[37]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_axis_tdata[38]_INST_0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \m_axis_tdata[39]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \m_axis_tdata[40]_INST_0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \m_axis_tdata[41]_INST_0\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \m_axis_tdata[42]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[43]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axis_tdata[44]_INST_0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \m_axis_tdata[45]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \m_axis_tdata[46]_INST_0\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \m_axis_tdata[47]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_axis_tdata[48]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \m_axis_tdata[49]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \m_axis_tdata[50]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \m_axis_tdata[51]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_axis_tdata[52]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \m_axis_tdata[53]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_axis_tdata[54]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_axis_tdata[55]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_axis_tdata[56]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_axis_tdata[57]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_axis_tdata[58]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_axis_tdata[59]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \m_axis_tdata[5]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \m_axis_tdata[60]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \m_axis_tdata[61]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axis_tdata[62]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_axis_tdata[63]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \m_axis_tdata[9]_INST_0\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \m_axis_tdata[0]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axis_tdata[10]_INST_0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \m_axis_tdata[11]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \m_axis_tdata[12]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axis_tdata[13]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axis_tdata[14]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axis_tdata[15]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axis_tdata[16]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_axis_tdata[17]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m_axis_tdata[18]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \m_axis_tdata[19]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m_axis_tdata[1]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axis_tdata[20]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \m_axis_tdata[21]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_axis_tdata[22]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \m_axis_tdata[23]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_axis_tdata[24]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \m_axis_tdata[25]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_axis_tdata[26]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axis_tdata[27]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axis_tdata[28]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_axis_tdata[29]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axis_tdata[2]_INST_0\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \m_axis_tdata[30]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \m_axis_tdata[31]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axis_tdata[3]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axis_tdata[4]_INST_0\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \m_axis_tdata[5]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axis_tdata[6]_INST_0\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \m_axis_tdata[7]_INST_0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \m_axis_tdata[8]_INST_0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \m_axis_tdata[9]_INST_0\ : label is "soft_lutpair20";
   attribute SOFT_HLUTNM of m_axis_tlast_INST_0 : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of m_axis_tvalid_INST_0 : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \packetCounter[1]_i_1\ : label is "soft_lutpair10";
@@ -842,7 +744,7 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
      port map (
       CI => \counterR_reg[16]_i_1_n_0\,
       CI_TOP => '0',
-      CO(7) => \counterR_reg[24]_i_1_n_0\,
+      CO(7) => \NLW_counterR_reg[24]_i_1_CO_UNCONNECTED\(7),
       CO(6) => \counterR_reg[24]_i_1_n_1\,
       CO(5) => \counterR_reg[24]_i_1_n_2\,
       CO(4) => \counterR_reg[24]_i_1_n_3\,
@@ -925,225 +827,12 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       Q => counterR_reg(31),
       R => clear
     );
-\counterR_reg[32]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_15\,
-      Q => counterR_reg(32),
-      R => clear
-    );
-\counterR_reg[32]_i_1\: unisim.vcomponents.CARRY8
-     port map (
-      CI => \counterR_reg[24]_i_1_n_0\,
-      CI_TOP => '0',
-      CO(7) => \counterR_reg[32]_i_1_n_0\,
-      CO(6) => \counterR_reg[32]_i_1_n_1\,
-      CO(5) => \counterR_reg[32]_i_1_n_2\,
-      CO(4) => \counterR_reg[32]_i_1_n_3\,
-      CO(3) => \counterR_reg[32]_i_1_n_4\,
-      CO(2) => \counterR_reg[32]_i_1_n_5\,
-      CO(1) => \counterR_reg[32]_i_1_n_6\,
-      CO(0) => \counterR_reg[32]_i_1_n_7\,
-      DI(7 downto 0) => B"00000000",
-      O(7) => \counterR_reg[32]_i_1_n_8\,
-      O(6) => \counterR_reg[32]_i_1_n_9\,
-      O(5) => \counterR_reg[32]_i_1_n_10\,
-      O(4) => \counterR_reg[32]_i_1_n_11\,
-      O(3) => \counterR_reg[32]_i_1_n_12\,
-      O(2) => \counterR_reg[32]_i_1_n_13\,
-      O(1) => \counterR_reg[32]_i_1_n_14\,
-      O(0) => \counterR_reg[32]_i_1_n_15\,
-      S(7 downto 0) => counterR_reg(39 downto 32)
-    );
-\counterR_reg[33]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_14\,
-      Q => counterR_reg(33),
-      R => clear
-    );
-\counterR_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_13\,
-      Q => counterR_reg(34),
-      R => clear
-    );
-\counterR_reg[35]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_12\,
-      Q => counterR_reg(35),
-      R => clear
-    );
-\counterR_reg[36]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_11\,
-      Q => counterR_reg(36),
-      R => clear
-    );
-\counterR_reg[37]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_10\,
-      Q => counterR_reg(37),
-      R => clear
-    );
-\counterR_reg[38]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_9\,
-      Q => counterR_reg(38),
-      R => clear
-    );
-\counterR_reg[39]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[32]_i_1_n_8\,
-      Q => counterR_reg(39),
-      R => clear
-    );
 \counterR_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => m_axis_aclk,
       CE => \packetCounter[7]_i_2_n_0\,
       D => \counterR_reg[0]_i_1_n_12\,
       Q => counterR_reg(3),
-      R => clear
-    );
-\counterR_reg[40]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_15\,
-      Q => counterR_reg(40),
-      R => clear
-    );
-\counterR_reg[40]_i_1\: unisim.vcomponents.CARRY8
-     port map (
-      CI => \counterR_reg[32]_i_1_n_0\,
-      CI_TOP => '0',
-      CO(7) => \counterR_reg[40]_i_1_n_0\,
-      CO(6) => \counterR_reg[40]_i_1_n_1\,
-      CO(5) => \counterR_reg[40]_i_1_n_2\,
-      CO(4) => \counterR_reg[40]_i_1_n_3\,
-      CO(3) => \counterR_reg[40]_i_1_n_4\,
-      CO(2) => \counterR_reg[40]_i_1_n_5\,
-      CO(1) => \counterR_reg[40]_i_1_n_6\,
-      CO(0) => \counterR_reg[40]_i_1_n_7\,
-      DI(7 downto 0) => B"00000000",
-      O(7) => \counterR_reg[40]_i_1_n_8\,
-      O(6) => \counterR_reg[40]_i_1_n_9\,
-      O(5) => \counterR_reg[40]_i_1_n_10\,
-      O(4) => \counterR_reg[40]_i_1_n_11\,
-      O(3) => \counterR_reg[40]_i_1_n_12\,
-      O(2) => \counterR_reg[40]_i_1_n_13\,
-      O(1) => \counterR_reg[40]_i_1_n_14\,
-      O(0) => \counterR_reg[40]_i_1_n_15\,
-      S(7 downto 0) => counterR_reg(47 downto 40)
-    );
-\counterR_reg[41]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_14\,
-      Q => counterR_reg(41),
-      R => clear
-    );
-\counterR_reg[42]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_13\,
-      Q => counterR_reg(42),
-      R => clear
-    );
-\counterR_reg[43]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_12\,
-      Q => counterR_reg(43),
-      R => clear
-    );
-\counterR_reg[44]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_11\,
-      Q => counterR_reg(44),
-      R => clear
-    );
-\counterR_reg[45]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_10\,
-      Q => counterR_reg(45),
-      R => clear
-    );
-\counterR_reg[46]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_9\,
-      Q => counterR_reg(46),
-      R => clear
-    );
-\counterR_reg[47]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[40]_i_1_n_8\,
-      Q => counterR_reg(47),
-      R => clear
-    );
-\counterR_reg[48]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_15\,
-      Q => counterR_reg(48),
-      R => clear
-    );
-\counterR_reg[48]_i_1\: unisim.vcomponents.CARRY8
-     port map (
-      CI => \counterR_reg[40]_i_1_n_0\,
-      CI_TOP => '0',
-      CO(7) => \counterR_reg[48]_i_1_n_0\,
-      CO(6) => \counterR_reg[48]_i_1_n_1\,
-      CO(5) => \counterR_reg[48]_i_1_n_2\,
-      CO(4) => \counterR_reg[48]_i_1_n_3\,
-      CO(3) => \counterR_reg[48]_i_1_n_4\,
-      CO(2) => \counterR_reg[48]_i_1_n_5\,
-      CO(1) => \counterR_reg[48]_i_1_n_6\,
-      CO(0) => \counterR_reg[48]_i_1_n_7\,
-      DI(7 downto 0) => B"00000000",
-      O(7) => \counterR_reg[48]_i_1_n_8\,
-      O(6) => \counterR_reg[48]_i_1_n_9\,
-      O(5) => \counterR_reg[48]_i_1_n_10\,
-      O(4) => \counterR_reg[48]_i_1_n_11\,
-      O(3) => \counterR_reg[48]_i_1_n_12\,
-      O(2) => \counterR_reg[48]_i_1_n_13\,
-      O(1) => \counterR_reg[48]_i_1_n_14\,
-      O(0) => \counterR_reg[48]_i_1_n_15\,
-      S(7 downto 0) => counterR_reg(55 downto 48)
-    );
-\counterR_reg[49]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_14\,
-      Q => counterR_reg(49),
       R => clear
     );
 \counterR_reg[4]\: unisim.vcomponents.FDRE
@@ -1154,147 +843,12 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       Q => counterR_reg(4),
       R => clear
     );
-\counterR_reg[50]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_13\,
-      Q => counterR_reg(50),
-      R => clear
-    );
-\counterR_reg[51]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_12\,
-      Q => counterR_reg(51),
-      R => clear
-    );
-\counterR_reg[52]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_11\,
-      Q => counterR_reg(52),
-      R => clear
-    );
-\counterR_reg[53]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_10\,
-      Q => counterR_reg(53),
-      R => clear
-    );
-\counterR_reg[54]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_9\,
-      Q => counterR_reg(54),
-      R => clear
-    );
-\counterR_reg[55]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[48]_i_1_n_8\,
-      Q => counterR_reg(55),
-      R => clear
-    );
-\counterR_reg[56]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_15\,
-      Q => counterR_reg(56),
-      R => clear
-    );
-\counterR_reg[56]_i_1\: unisim.vcomponents.CARRY8
-     port map (
-      CI => \counterR_reg[48]_i_1_n_0\,
-      CI_TOP => '0',
-      CO(7) => \NLW_counterR_reg[56]_i_1_CO_UNCONNECTED\(7),
-      CO(6) => \counterR_reg[56]_i_1_n_1\,
-      CO(5) => \counterR_reg[56]_i_1_n_2\,
-      CO(4) => \counterR_reg[56]_i_1_n_3\,
-      CO(3) => \counterR_reg[56]_i_1_n_4\,
-      CO(2) => \counterR_reg[56]_i_1_n_5\,
-      CO(1) => \counterR_reg[56]_i_1_n_6\,
-      CO(0) => \counterR_reg[56]_i_1_n_7\,
-      DI(7 downto 0) => B"00000000",
-      O(7) => \counterR_reg[56]_i_1_n_8\,
-      O(6) => \counterR_reg[56]_i_1_n_9\,
-      O(5) => \counterR_reg[56]_i_1_n_10\,
-      O(4) => \counterR_reg[56]_i_1_n_11\,
-      O(3) => \counterR_reg[56]_i_1_n_12\,
-      O(2) => \counterR_reg[56]_i_1_n_13\,
-      O(1) => \counterR_reg[56]_i_1_n_14\,
-      O(0) => \counterR_reg[56]_i_1_n_15\,
-      S(7 downto 0) => counterR_reg(63 downto 56)
-    );
-\counterR_reg[57]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_14\,
-      Q => counterR_reg(57),
-      R => clear
-    );
-\counterR_reg[58]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_13\,
-      Q => counterR_reg(58),
-      R => clear
-    );
-\counterR_reg[59]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_12\,
-      Q => counterR_reg(59),
-      R => clear
-    );
 \counterR_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => m_axis_aclk,
       CE => \packetCounter[7]_i_2_n_0\,
       D => \counterR_reg[0]_i_1_n_10\,
       Q => counterR_reg(5),
-      R => clear
-    );
-\counterR_reg[60]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_11\,
-      Q => counterR_reg(60),
-      R => clear
-    );
-\counterR_reg[61]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_10\,
-      Q => counterR_reg(61),
-      R => clear
-    );
-\counterR_reg[62]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_9\,
-      Q => counterR_reg(62),
-      R => clear
-    );
-\counterR_reg[63]\: unisim.vcomponents.FDRE
-     port map (
-      C => m_axis_aclk,
-      CE => \packetCounter[7]_i_2_n_0\,
-      D => \counterR_reg[56]_i_1_n_8\,
-      Q => counterR_reg(63),
       R => clear
     );
 \counterR_reg[6]\: unisim.vcomponents.FDRE
@@ -1778,86 +1332,6 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       I2 => counterR_reg(31),
       O => m_axis_tdata(31)
     );
-\m_axis_tdata[32]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(32),
-      I1 => AXI_En,
-      I2 => counterR_reg(32),
-      O => m_axis_tdata(32)
-    );
-\m_axis_tdata[33]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(33),
-      I1 => AXI_En,
-      I2 => counterR_reg(33),
-      O => m_axis_tdata(33)
-    );
-\m_axis_tdata[34]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(34),
-      I1 => AXI_En,
-      I2 => counterR_reg(34),
-      O => m_axis_tdata(34)
-    );
-\m_axis_tdata[35]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(35),
-      I1 => AXI_En,
-      I2 => counterR_reg(35),
-      O => m_axis_tdata(35)
-    );
-\m_axis_tdata[36]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(36),
-      I1 => AXI_En,
-      I2 => counterR_reg(36),
-      O => m_axis_tdata(36)
-    );
-\m_axis_tdata[37]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(37),
-      I1 => AXI_En,
-      I2 => counterR_reg(37),
-      O => m_axis_tdata(37)
-    );
-\m_axis_tdata[38]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(38),
-      I1 => AXI_En,
-      I2 => counterR_reg(38),
-      O => m_axis_tdata(38)
-    );
-\m_axis_tdata[39]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(39),
-      I1 => AXI_En,
-      I2 => counterR_reg(39),
-      O => m_axis_tdata(39)
-    );
 \m_axis_tdata[3]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
@@ -1867,106 +1341,6 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       I1 => AXI_En,
       I2 => counterR_reg(3),
       O => m_axis_tdata(3)
-    );
-\m_axis_tdata[40]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(40),
-      I1 => AXI_En,
-      I2 => counterR_reg(40),
-      O => m_axis_tdata(40)
-    );
-\m_axis_tdata[41]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(41),
-      I1 => AXI_En,
-      I2 => counterR_reg(41),
-      O => m_axis_tdata(41)
-    );
-\m_axis_tdata[42]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(42),
-      I1 => AXI_En,
-      I2 => counterR_reg(42),
-      O => m_axis_tdata(42)
-    );
-\m_axis_tdata[43]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(43),
-      I1 => AXI_En,
-      I2 => counterR_reg(43),
-      O => m_axis_tdata(43)
-    );
-\m_axis_tdata[44]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(44),
-      I1 => AXI_En,
-      I2 => counterR_reg(44),
-      O => m_axis_tdata(44)
-    );
-\m_axis_tdata[45]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(45),
-      I1 => AXI_En,
-      I2 => counterR_reg(45),
-      O => m_axis_tdata(45)
-    );
-\m_axis_tdata[46]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(46),
-      I1 => AXI_En,
-      I2 => counterR_reg(46),
-      O => m_axis_tdata(46)
-    );
-\m_axis_tdata[47]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(47),
-      I1 => AXI_En,
-      I2 => counterR_reg(47),
-      O => m_axis_tdata(47)
-    );
-\m_axis_tdata[48]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(48),
-      I1 => AXI_En,
-      I2 => counterR_reg(48),
-      O => m_axis_tdata(48)
-    );
-\m_axis_tdata[49]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(49),
-      I1 => AXI_En,
-      I2 => counterR_reg(49),
-      O => m_axis_tdata(49)
     );
 \m_axis_tdata[4]_INST_0\: unisim.vcomponents.LUT3
     generic map(
@@ -1978,106 +1352,6 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       I2 => counterR_reg(4),
       O => m_axis_tdata(4)
     );
-\m_axis_tdata[50]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(50),
-      I1 => AXI_En,
-      I2 => counterR_reg(50),
-      O => m_axis_tdata(50)
-    );
-\m_axis_tdata[51]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(51),
-      I1 => AXI_En,
-      I2 => counterR_reg(51),
-      O => m_axis_tdata(51)
-    );
-\m_axis_tdata[52]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(52),
-      I1 => AXI_En,
-      I2 => counterR_reg(52),
-      O => m_axis_tdata(52)
-    );
-\m_axis_tdata[53]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(53),
-      I1 => AXI_En,
-      I2 => counterR_reg(53),
-      O => m_axis_tdata(53)
-    );
-\m_axis_tdata[54]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(54),
-      I1 => AXI_En,
-      I2 => counterR_reg(54),
-      O => m_axis_tdata(54)
-    );
-\m_axis_tdata[55]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(55),
-      I1 => AXI_En,
-      I2 => counterR_reg(55),
-      O => m_axis_tdata(55)
-    );
-\m_axis_tdata[56]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(56),
-      I1 => AXI_En,
-      I2 => counterR_reg(56),
-      O => m_axis_tdata(56)
-    );
-\m_axis_tdata[57]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(57),
-      I1 => AXI_En,
-      I2 => counterR_reg(57),
-      O => m_axis_tdata(57)
-    );
-\m_axis_tdata[58]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(58),
-      I1 => AXI_En,
-      I2 => counterR_reg(58),
-      O => m_axis_tdata(58)
-    );
-\m_axis_tdata[59]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(59),
-      I1 => AXI_En,
-      I2 => counterR_reg(59),
-      O => m_axis_tdata(59)
-    );
 \m_axis_tdata[5]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
@@ -2087,46 +1361,6 @@ M_AXIS_TLAST_carry_i_9: unisim.vcomponents.LUT6
       I1 => AXI_En,
       I2 => counterR_reg(5),
       O => m_axis_tdata(5)
-    );
-\m_axis_tdata[60]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(60),
-      I1 => AXI_En,
-      I2 => counterR_reg(60),
-      O => m_axis_tdata(60)
-    );
-\m_axis_tdata[61]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(61),
-      I1 => AXI_En,
-      I2 => counterR_reg(61),
-      O => m_axis_tdata(61)
-    );
-\m_axis_tdata[62]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(62),
-      I1 => AXI_En,
-      I2 => counterR_reg(62),
-      O => m_axis_tdata(62)
-    );
-\m_axis_tdata[63]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"B8"
-    )
-        port map (
-      I0 => TDATA(63),
-      I1 => AXI_En,
-      I2 => counterR_reg(63),
-      O => m_axis_tdata(63)
     );
 \m_axis_tdata[6]_INST_0\: unisim.vcomponents.LUT3
     generic map(
@@ -2413,8 +1647,8 @@ sampleGeneratorEnR_i_1: unisim.vcomponents.LUT6
       I0 => sampleGeneratorEnR_i_2_n_0,
       I1 => afterResetCycleCounterR_reg(3),
       I2 => afterResetCycleCounterR_reg(2),
-      I3 => afterResetCycleCounterR_reg(6),
-      I4 => afterResetCycleCounterR_reg(7),
+      I3 => afterResetCycleCounterR_reg(5),
+      I4 => afterResetCycleCounterR_reg(6),
       I5 => sampleGeneratorEnR,
       O => sampleGeneratorEnR_i_1_n_0
     );
@@ -2425,7 +1659,7 @@ sampleGeneratorEnR_i_2: unisim.vcomponents.LUT4
         port map (
       I0 => afterResetCycleCounterR_reg(1),
       I1 => afterResetCycleCounterR_reg(0),
-      I2 => afterResetCycleCounterR_reg(5),
+      I2 => afterResetCycleCounterR_reg(7),
       I3 => afterResetCycleCounterR_reg(4),
       O => sampleGeneratorEnR_i_2_n_0
     );
@@ -2465,7 +1699,7 @@ entity design_1_data_transfer_0_0_data_transfer_v1_0 is
   port (
     m_axis_tvalid : out STD_LOGIC;
     m_axis_tlast : out STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axis_aclk : in STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     TVALID : in STD_LOGIC;
@@ -2474,10 +1708,8 @@ entity design_1_data_transfer_0_0_data_transfer_v1_0 is
     FrameSize : in STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axis_aresetn : in STD_LOGIC;
     En : in STD_LOGIC;
-    TDATA : in STD_LOGIC_VECTOR ( 63 downto 0 )
+    TDATA : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_data_transfer_0_0_data_transfer_v1_0 : entity is "data_transfer_v1_0";
 end design_1_data_transfer_0_0_data_transfer_v1_0;
 
 architecture STRUCTURE of design_1_data_transfer_0_0_data_transfer_v1_0 is
@@ -2487,12 +1719,12 @@ data_transfer_v1_0_M_AXIS_inst: entity work.design_1_data_transfer_0_0_data_tran
       AXI_En => AXI_En,
       En => En,
       FrameSize(7 downto 0) => FrameSize(7 downto 0),
-      TDATA(63 downto 0) => TDATA(63 downto 0),
+      TDATA(31 downto 0) => TDATA(31 downto 0),
       TLAST => TLAST,
       TVALID => TVALID,
       m_axis_aclk => m_axis_aclk,
       m_axis_aresetn => m_axis_aresetn,
-      m_axis_tdata(63 downto 0) => m_axis_tdata(63 downto 0),
+      m_axis_tdata(31 downto 0) => m_axis_tdata(31 downto 0),
       m_axis_tlast => m_axis_tlast,
       m_axis_tready => m_axis_tready,
       m_axis_tvalid => m_axis_tvalid
@@ -2507,16 +1739,16 @@ entity design_1_data_transfer_0_0 is
     FrameSize : in STD_LOGIC_VECTOR ( 7 downto 0 );
     En : in STD_LOGIC;
     AXI_En : in STD_LOGIC;
-    TDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    TDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
     TVALID : in STD_LOGIC;
-    TSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    TSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
     TLAST : in STD_LOGIC;
     TREADY : out STD_LOGIC;
     m_axis_aclk : in STD_LOGIC;
     m_axis_aresetn : in STD_LOGIC;
     m_axis_tvalid : out STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axis_tlast : out STD_LOGIC;
     m_axis_tready : in STD_LOGIC
   );
@@ -2540,7 +1772,7 @@ architecture STRUCTURE of design_1_data_transfer_0_0 is
   attribute X_INTERFACE_PARAMETER of m_axis_aresetn : signal is "XIL_INTERFACENAME M_AXIS_RST, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tlast : signal is "xilinx.com:interface:axis:1.0 M_AXIS TLAST";
   attribute X_INTERFACE_INFO of m_axis_tready : signal is "xilinx.com:interface:axis:1.0 M_AXIS TREADY";
-  attribute X_INTERFACE_PARAMETER of m_axis_tready : signal is "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axis_tready : signal is "XIL_INTERFACENAME M_AXIS, WIZ_DATA_WIDTH 32, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 1, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 300000000, PHASE 0.000, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_0_pl_clk0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 M_AXIS TVALID";
   attribute X_INTERFACE_INFO of m_axis_tdata : signal is "xilinx.com:interface:axis:1.0 M_AXIS TDATA";
   attribute X_INTERFACE_INFO of m_axis_tstrb : signal is "xilinx.com:interface:axis:1.0 M_AXIS TSTRB";
@@ -2552,12 +1784,12 @@ inst: entity work.design_1_data_transfer_0_0_data_transfer_v1_0
       AXI_En => AXI_En,
       En => En,
       FrameSize(7 downto 0) => FrameSize(7 downto 0),
-      TDATA(63 downto 0) => TDATA(63 downto 0),
+      TDATA(31 downto 0) => TDATA(31 downto 0),
       TLAST => TLAST,
       TVALID => TVALID,
       m_axis_aclk => m_axis_aclk,
       m_axis_aresetn => m_axis_aresetn,
-      m_axis_tdata(63 downto 0) => m_axis_tdata(63 downto 0),
+      m_axis_tdata(31 downto 0) => m_axis_tdata(31 downto 0),
       m_axis_tlast => m_axis_tlast,
       m_axis_tready => \^m_axis_tready\,
       m_axis_tvalid => m_axis_tvalid
@@ -2597,41 +1829,5 @@ inst: entity work.design_1_data_transfer_0_0_data_transfer_v1_0
       I0 => TSTRB(3),
       I1 => AXI_En,
       O => m_axis_tstrb(3)
-    );
-\m_axis_tstrb[4]_INST_0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => TSTRB(4),
-      I1 => AXI_En,
-      O => m_axis_tstrb(4)
-    );
-\m_axis_tstrb[5]_INST_0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => TSTRB(5),
-      I1 => AXI_En,
-      O => m_axis_tstrb(5)
-    );
-\m_axis_tstrb[6]_INST_0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => TSTRB(6),
-      I1 => AXI_En,
-      O => m_axis_tstrb(6)
-    );
-\m_axis_tstrb[7]_INST_0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => TSTRB(7),
-      I1 => AXI_En,
-      O => m_axis_tstrb(7)
     );
 end STRUCTURE;

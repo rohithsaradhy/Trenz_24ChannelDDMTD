@@ -1572,8 +1572,10 @@
   saxigp2_rready,
   saxigp2_awqos,
   saxigp2_arqos,
+  pl_ps_irq0,
   pl_resetn0,
-  pl_clk0
+  pl_clk0,
+  pl_clk1
  );
 
 //PARAMETERS
@@ -1602,7 +1604,7 @@
       parameter C_EN_FIFO_ENET2 = "0";
       parameter C_EN_FIFO_ENET3 = "0";
       parameter C_PL_CLK0_BUF = "TRUE";
-      parameter C_PL_CLK1_BUF = "FALSE";
+      parameter C_PL_CLK1_BUF = "TRUE";
       parameter C_PL_CLK2_BUF = "FALSE";
       parameter C_PL_CLK3_BUF = "FALSE";
       parameter C_TRACE_PIPELINE_WIDTH = 8;
@@ -1698,8 +1700,10 @@
       input  saxigp2_rready;
       input  [3 : 0] saxigp2_awqos;
       input  [3 : 0] saxigp2_arqos;
+      input  [0 : 0] pl_ps_irq0;
       output  pl_resetn0;
       output  pl_clk0;
+      output  pl_clk1;
 
 //REG DECLARATIONS
 
@@ -1744,6 +1748,7 @@
       reg saxigp2_rvalid;
       reg pl_resetn0;
       reg pl_clk0;
+      reg pl_clk1;
       string ip_name;
       reg disable_port;
 
@@ -1752,6 +1757,17 @@ import "DPI-C" function void ps8_set_ip_context(input string ip_name);
 import "DPI-C" function void ps8_set_str_param(input string name,input string val);
 import "DPI-C" function void ps8_set_int_param(input string name,input longint val);
 import "DPI-C" function void ps8_init_c_model();
+ import "DPI-C" function void ps8_set_input_pl_ps_irq0(input int pinIndex, input int pinVlaue);
+ always@(posedge pl_ps_irq0[0])
+ begin
+  ps8_set_input_pl_ps_irq0(0,1);
+end
+
+ always@(negedge pl_ps_irq0[0])
+ begin
+  ps8_set_input_pl_ps_irq0(0,0);
+end
+
 import "DPI-C" function void ps8_init_m_axi_hpm0_lpd(input int maxigp2_awid_size,input int maxigp2_awaddr_size,input int maxigp2_awlen_size,input int maxigp2_awsize_size,input int maxigp2_awburst_size,input int maxigp2_awlock_size,input int maxigp2_awcache_size,input int maxigp2_awprot_size,input int maxigp2_awqos_size,input int maxigp2_awuser_size,input int maxigp2_awvalid_size,input int maxigp2_awready_size,input int maxigp2_wdata_size,input int maxigp2_wstrb_size,input int maxigp2_wlast_size,input int maxigp2_wvalid_size,input int maxigp2_wready_size,input int maxigp2_bid_size,input int maxigp2_bresp_size,input int maxigp2_bvalid_size,input int maxigp2_bready_size,input int maxigp2_arid_size,input int maxigp2_araddr_size,input int maxigp2_arlen_size,input int maxigp2_arsize_size,input int maxigp2_arburst_size,input int maxigp2_arlock_size,input int maxigp2_arcache_size,input int maxigp2_arprot_size,input int maxigp2_arqos_size,input int maxigp2_aruser_size,input int maxigp2_arvalid_size,input int maxigp2_arready_size,input int maxigp2_rid_size,input int maxigp2_rdata_size,input int maxigp2_rresp_size,input int maxigp2_rlast_size,input int maxigp2_rvalid_size,input int maxigp2_rready_size);
 import "DPI-C" function void ps8_init_s_axi_hp0_fpd(input int saxigp2_awid_size,input int saxigp2_awaddr_size,input int saxigp2_awlen_size,input int saxigp2_awsize_size,input int saxigp2_awburst_size,input int saxigp2_awlock_size,input int saxigp2_awcache_size,input int saxigp2_awprot_size,input int saxigp2_awqos_size,input int saxigp2_awuser_size,input int saxigp2_awvalid_size,input int saxigp2_awready_size,input int saxigp2_wdata_size,input int saxigp2_wstrb_size,input int saxigp2_wlast_size,input int saxigp2_wvalid_size,input int saxigp2_wready_size,input int saxigp2_bid_size,input int saxigp2_bresp_size,input int saxigp2_bvalid_size,input int saxigp2_bready_size,input int saxigp2_arid_size,input int saxigp2_araddr_size,input int saxigp2_arlen_size,input int saxigp2_arsize_size,input int saxigp2_arburst_size,input int saxigp2_arlock_size,input int saxigp2_arcache_size,input int saxigp2_arprot_size,input int saxigp2_arqos_size,input int saxigp2_aruser_size,input int saxigp2_arvalid_size,input int saxigp2_arready_size,input int saxigp2_rid_size,input int saxigp2_rdata_size,input int saxigp2_rresp_size,input int saxigp2_rlast_size,input int saxigp2_rvalid_size,input int saxigp2_rready_size);
 import "DPI-C" function void ps8_simulate_single_cycle_maxihpm0_lpd_aclk();
@@ -1845,6 +1861,7 @@ output bit saxigp2_rvalid
 );
 
 import "DPI-C" function void ps8_simulate_single_cycle_pl_clk0();
+import "DPI-C" function void ps8_simulate_single_cycle_pl_clk1();
    export "DPI-C" function ps8_stop_sim;
    function void ps8_stop_sim();
         $display("End of simulation");
@@ -1910,6 +1927,7 @@ import "DPI-C" function void ps8_simulate_single_cycle_pl_clk0();
   ps8_init_s_axi_hp0_fpd($bits(saxigp2_awid),$bits(saxigp2_awaddr),$bits(saxigp2_awlen),$bits(saxigp2_awsize),$bits(saxigp2_awburst),$bits(saxigp2_awlock),$bits(saxigp2_awcache),$bits(saxigp2_awprot),$bits(saxigp2_awqos),$bits(saxigp2_awuser),$bits(saxigp2_awvalid),$bits(saxigp2_awready),$bits(saxigp2_wdata),$bits(saxigp2_wstrb),$bits(saxigp2_wlast),$bits(saxigp2_wvalid),$bits(saxigp2_wready),$bits(saxigp2_bid),$bits(saxigp2_bresp),$bits(saxigp2_bvalid),$bits(saxigp2_bready),$bits(saxigp2_arid),$bits(saxigp2_araddr),$bits(saxigp2_arlen),$bits(saxigp2_arsize),$bits(saxigp2_arburst),$bits(saxigp2_arlock),$bits(saxigp2_arcache),$bits(saxigp2_arprot),$bits(saxigp2_arqos),$bits(saxigp2_aruser),$bits(saxigp2_arvalid),$bits(saxigp2_arready),$bits(saxigp2_rid),$bits(saxigp2_rdata),$bits(saxigp2_rresp),$bits(saxigp2_rlast),$bits(saxigp2_rvalid),$bits(saxigp2_rready));
   ps8_init_c_model();
   pl_clk0=0;
+  pl_clk1=0;
   end
   initial
   begin
@@ -1922,6 +1940,19 @@ import "DPI-C" function void ps8_simulate_single_cycle_pl_clk0();
   begin
    ps8_set_ip_context(ip_name);
    ps8_simulate_single_cycle_pl_clk0();
+  end
+
+  initial
+  begin
+     pl_clk1 = 1'b0;
+  end
+
+  always #(1.25) pl_clk1 <= ~pl_clk1;
+
+  always@(posedge pl_clk1)
+  begin
+   ps8_set_ip_context(ip_name);
+   ps8_simulate_single_cycle_pl_clk1();
   end
 
 

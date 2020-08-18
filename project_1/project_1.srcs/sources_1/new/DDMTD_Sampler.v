@@ -50,9 +50,13 @@ module DDMTD_Sampler
     // TREADY indicates that the slave can accept a transfer in the current cycle.
     input wire  M_AXIS_TREADY,
 
-    output wire FULL
+    input wire enable_read_logic
 
  );
+
+wire full;
+wire empty;
+
 
 
 assign M_AXIS_TSTRB = {(DATA_WIDTH/8){1'b1}};
@@ -86,7 +90,7 @@ always @(posedge M_AXIS_ACLK)
         sampleGeneratorEnR <=0;
         afterResetCycleCounterR <=0;		
     end
-    else begin
+    else if(enable_read_logic)   begin
         afterResetCycleCounterR <= afterResetCycleCounterR + 1;
         if (afterResetCycleCounterR == C_M_START_COUNT) begin
             sampleGeneratorEnR <=1;
@@ -95,11 +99,10 @@ always @(posedge M_AXIS_ACLK)
 	
 
 //M_AXIS_TVALID circuit
-
 reg  		tValidR=0;
 assign M_AXIS_TVALID = tValidR;
 
-always @(posedge M_AXIS_ACLK)
+always @(negedge M_AXIS_ACLK)
     if( ! ARESETN )begin
         tValidR <=0;
     end
@@ -142,28 +145,44 @@ always @(posedge M_AXIS_ACLK)
 
 
 
-    wire full;
-    wire empty;
-    FIFOs_Ultrascale  
-    #(
-     .data_width(36),
-     .num_fifo(FIFO_DEPTH)
-    )
-    FIFOs_Ultrascale_1(
+
+
+ 
+    // FIFOs_Ultrascale  
+    // #(
+    //  .data_width(36),
+    //  .num_fifo(FIFO_DEPTH)
+    // )
+    // FIFOs_Ultrascale_1(
     
     
-    .read_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic),
-    .write_en(write_en),
-    .data_in(external_counter),
-    .data_out(M_AXIS_TDATA),
+    // .read_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic),
+    // .write_en(write_en),
+    // .data_in(external_counter),
+    // .data_out(M_AXIS_TDATA),
+    // .full(full),
+    // .empty(empty),
+    // .rst(reset),
+    // .read_clk(M_AXIS_ACLK),
+    // .write_clk(clk_ref)
+    // );
+
+
+
+   // wire full,empty;
+    FIFO_10 FIFO_10_inst (
+    .srst(reset),
+    .wr_clk(clk_ref),
+    .rd_clk(~M_AXIS_ACLK),
+    .din(external_counter),
+    .wr_en(write_en),
+    .rd_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic),
+    .dout(M_AXIS_TDATA),
     .full(full),
-    .empty(empty),
-    .rst(reset),
-    .read_clk(M_AXIS_ACLK),
-    .write_clk(clk_ref)
+    .empty(empty)
+    // wr_rst_busy,
+    // rd_rst_busy
     );
-
-
 
 
     //M_AXIS_TLAST LOGIC
@@ -172,19 +191,18 @@ always @(posedge M_AXIS_ACLK)
     parameter integer WORDS_TO_SEND = 1000; 
     integer counter_TLAST =0;
     reg tlast=0;
-    always @(posedge M_AXIS_ACLK)begin
+    always @(negedge M_AXIS_ACLK)begin
         if( ! ARESETN )begin
         counter_TLAST<=0;	
         end
-        else if (M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic) begin
+        else if (M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic) begin
             if (counter_TLAST == WORDS_TO_SEND-1) counter_TLAST<=0;
             else begin
                 counter_TLAST = counter_TLAST+1;      
             end
         end 
     end
-    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:0;
-    // assign FULL = full;
+    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:empty;
 
 
 
