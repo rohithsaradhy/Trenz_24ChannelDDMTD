@@ -18,6 +18,7 @@ proc create_report { reportName command } {
   }
 }
 set_param power.enableLutRouteBelPower 1
+set_param chipscope.maxJobs 3
 set_param power.BramSDPPropagationFix 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1

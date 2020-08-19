@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Aug 18 14:48:07 2020
+| Date         : Wed Aug 19 17:35:43 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  206 |     0 |     47232 |  0.44 |
-|   LUT as Logic          |  206 |     0 |     47232 |  0.44 |
+| CLB LUTs*               |  216 |     0 |     47232 |  0.46 |
+|   LUT as Logic          |  216 |     0 |     47232 |  0.46 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  125 |     0 |     94464 |  0.13 |
-|   Register as Flip Flop |  125 |     0 |     94464 |  0.13 |
+| CLB Registers           |  131 |     0 |     94464 |  0.14 |
+|   Register as Flip Flop |  131 |     0 |     94464 |  0.14 |
 |   Register as Latch     |    0 |     0 |     94464 |  0.00 |
 | CARRY8                  |   24 |     0 |      8820 |  0.27 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 125   |          Yes |       Reset |            - |
+| 131   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,14 +148,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  125 |            Register |
-| LUT2     |  101 |                 CLB |
-| LUT4     |   80 |                 CLB |
-| LUT3     |   51 |                 CLB |
-| LUT6     |   25 |                 CLB |
+| FDRE     |  131 |            Register |
+| LUT5     |  102 |                 CLB |
+| LUT2     |  102 |                 CLB |
+| LUT6     |   32 |                 CLB |
 | CARRY8   |   24 |                 CLB |
-| LUT5     |   12 |                 CLB |
-| LUT1     |    8 |                 CLB |
+| LUT3     |   21 |                 CLB |
+| LUT4     |    8 |                 CLB |
+| LUT1     |    7 |                 CLB |
 | DSP48E2  |    1 |          Arithmetic |
 +----------+------+---------------------+
 

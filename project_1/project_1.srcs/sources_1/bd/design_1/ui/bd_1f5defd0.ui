@@ -1,53 +1,53 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.867009",
-   "Default View_TopLeft":"764,-10",
+   "Default View_ScaleFactor":"1.30548",
+   "Default View_TopLeft":"-148,192",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port gpio_rtl -pg 1 -lvl 7 -x 2200 -y 380 -defaultsOSRD
-preplace port gpio_rtl_0 -pg 1 -lvl 7 -x 2200 -y 400 -defaultsOSRD
-preplace port CLK -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD -left
-preplace port En -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
-preplace port AXI_En -pg 1 -lvl 0 -x 0 -y 270 -defaultsOSRD
-preplace port TLAST -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
-preplace port TREADY -pg 1 -lvl 0 -x 0 -y 450 -defaultsOSRD -left
-preplace port TVALID -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
-preplace port CLK_400 -pg 1 -lvl 7 -x 2200 -y 150 -defaultsOSRD
-preplace portBus FrameSize -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
-preplace portBus RST -pg 1 -lvl 7 -x 2200 -y 310 -defaultsOSRD
-preplace portBus TDATA -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
-preplace portBus TSTRB -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
-preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 4 -x 1250 -y 110 -defaultsOSRD -resize 566 182
-preplace inst axi_dma_0 -pg 1 -lvl 2 -x 470 -y 320 -defaultsOSRD
-preplace inst ps8_0_axi_periph -pg 1 -lvl 5 -x 1770 -y 360 -defaultsOSRD
-preplace inst rst_ps8_0_100M -pg 1 -lvl 5 -x 1770 -y 610 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 3 -x 790 -y 320 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2070 -y 390 -defaultsOSRD
-preplace inst data_transfer_0 -pg 1 -lvl 1 -x 150 -y 310 -defaultsOSRD
-preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 20 470 280 210 650 120 930 0 1570 500 1960
-preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 4 1 1560 90n
-preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 7 30 460 290 420 650 400 NJ 400 1590 210 1950 310 NJ
-preplace netloc FrameSize_1 1 0 1 NJ 230
-preplace netloc En_1 1 0 1 NJ 250
-preplace netloc AXI_En_1 1 0 1 NJ 270
-preplace netloc TLAST_1 1 0 1 NJ 350
-preplace netloc data_transfer_0_TREADY 1 0 2 NJ 450 270
-preplace netloc TVALID_1 1 0 1 NJ 310
-preplace netloc TDATA_1 1 0 1 N 290
-preplace netloc TSTRB_1 1 0 1 N 330
-preplace netloc axi_dma_0_s2mm_introut 1 2 2 640 150 NJ
-preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 4 3 N 150 NJ 150 NJ
-preplace netloc ps8_0_axi_periph_M01_AXI 1 5 1 N 370
-preplace netloc axi_gpio_0_GPIO2 1 6 1 NJ 400
-preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 4 1 1580 70n
-preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 380
-preplace netloc axi_smc_M00_AXI 1 3 1 940 70n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 2 1 N 300
-preplace netloc ps8_0_axi_periph_M00_AXI 1 1 5 290 220 NJ 220 NJ 220 NJ 220 1940
-preplace netloc data_transfer_0_M_AXIS 1 1 1 N 300
-levelinfo -pg 1 0 150 470 790 1250 1770 2070 2200
-pagesize -pg 1 -db -bbox -sgen -150 -20 2320 700
+preplace port gpio_rtl -pg 1 -lvl 7 -x 2180 -y 390 -defaultsOSRD
+preplace port gpio_rtl_0 -pg 1 -lvl 7 -x 2180 -y 410 -defaultsOSRD
+preplace port CLK -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD -left
+preplace port En -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace port AXI_En -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port TLAST -pg 1 -lvl 0 -x 0 -y 360 -defaultsOSRD
+preplace port TREADY -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD -left
+preplace port TVALID -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port CLK_400 -pg 1 -lvl 7 -x 2180 -y 160 -defaultsOSRD
+preplace portBus FrameSize -pg 1 -lvl 0 -x 0 -y 240 -defaultsOSRD
+preplace portBus RST -pg 1 -lvl 7 -x 2180 -y 220 -defaultsOSRD
+preplace portBus TDATA -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace portBus TSTRB -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 4 -x 1240 -y 120 -defaultsOSRD -resize 566 182
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 460 -y 330 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 5 -x 1750 -y 370 -defaultsOSRD
+preplace inst rst_ps8_0_100M -pg 1 -lvl 5 -x 1750 -y 610 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 3 -x 780 -y 330 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2050 -y 400 -defaultsOSRD
+preplace inst data_transfer_0 -pg 1 -lvl 1 -x 150 -y 320 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 20 480 280 220 640 130 920 10 1560 510 1940
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 4 1 1550 100n
+preplace netloc rst_ps8_0_100M_peripheral_aresetn 1 0 7 30 470 290 430 640 410 NJ 410 1580 220 1930 220 NJ
+preplace netloc FrameSize_1 1 0 1 NJ 240
+preplace netloc En_1 1 0 1 NJ 260
+preplace netloc AXI_En_1 1 0 1 NJ 280
+preplace netloc TLAST_1 1 0 1 NJ 360
+preplace netloc data_transfer_0_TREADY 1 0 2 NJ 460 270
+preplace netloc TVALID_1 1 0 1 NJ 320
+preplace netloc TDATA_1 1 0 1 N 300
+preplace netloc TSTRB_1 1 0 1 N 340
+preplace netloc axi_dma_0_s2mm_introut 1 2 2 630 160 NJ
+preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 4 3 N 160 NJ 160 NJ
+preplace netloc ps8_0_axi_periph_M01_AXI 1 5 1 N 380
+preplace netloc axi_gpio_0_GPIO2 1 6 1 NJ 410
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 4 1 1570 80n
+preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 390
+preplace netloc axi_smc_M00_AXI 1 3 1 930 80n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 1 N 310
+preplace netloc ps8_0_axi_periph_M00_AXI 1 1 5 290 230 NJ 230 NJ 230 NJ 230 1920
+preplace netloc data_transfer_0_M_AXIS 1 1 1 N 310
+levelinfo -pg 1 0 150 460 780 1240 1750 2050 2180
+pagesize -pg 1 -db -bbox -sgen -150 0 2300 700
 "
 }
 {

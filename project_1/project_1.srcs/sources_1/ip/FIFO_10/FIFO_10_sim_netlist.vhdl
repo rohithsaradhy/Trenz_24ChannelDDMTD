@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Tue Aug 18 12:48:26 2020
+-- Date        : Wed Aug 19 00:16:03 2020
 -- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_sim_netlist.vhdl
@@ -16,24 +16,26 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_builtin_prim is
   port (
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
+    emp_1 : out STD_LOGIC;
+    full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
+    \d[1]_0\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_1 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    wr_en : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_builtin_prim : entity is "builtin_prim";
 end FIFO_10_builtin_prim;
 
 architecture STRUCTURE of FIFO_10_builtin_prim is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
@@ -107,6 +109,10 @@ architecture STRUCTURE of FIFO_10_builtin_prim is
   signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -139,11 +145,9 @@ architecture STRUCTURE of FIFO_10_builtin_prim is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 8 to 8 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
@@ -163,33 +167,34 @@ begin
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
       PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
+      PROG_FULL_THRESH => 1016,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
       CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       CASDINP(7 downto 0) => B"00000000",
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp(0),
-      CASNXTRDEN => re(0),
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[1]_0\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[1]_0\(35 downto 32),
+      CASNXTEMPTY => emp_1,
+      CASNXTRDEN => re_1,
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
       CASPRVEMPTY => '0',
       CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
       DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
+      DIN(63 downto 32) => B"00000000000000000000000000000000",
+      DIN(31 downto 0) => din(31 downto 0),
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
       DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
@@ -255,7 +260,11 @@ begin
       DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
       DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
       DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -265,11 +274,11 @@ begin
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
       EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => rd_clk_0(0),
+      FULL => full,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
       PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(8),
+      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
       RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
@@ -287,7 +296,7 @@ begin
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
       RDEN => '0',
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
+      RDRSTBUSY => rd_rst_busy,
       REGCE => '0',
       RST => srst,
       RSTREG => srst,
@@ -308,2178 +317,9 @@ begin
       WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
       WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
       WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
+      WREN => wr_en,
       WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_11 is
-  port (
-    emp_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_11 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_11;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_11 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp_0(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => ful(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(5),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_13 is
-  port (
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_13 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_13;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_13 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => rd_clk_0(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(4),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_15 is
-  port (
-    emp_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    full : out STD_LOGIC;
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    full_0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    full_1 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_15 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_15;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_15 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \^ful\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-  ful(0) <= \^ful\(0);
-full_INST_0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \^ful\(0),
-      I1 => full_0(2),
-      I2 => full_0(0),
-      I3 => full_0(1),
-      I4 => full_1,
-      O => full
-    );
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp_0(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => \^ful\(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(3),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_17 is
-  port (
-    emp_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_17 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_17;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_17 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp_0(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => ful(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(2),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_19 is
-  port (
-    emp_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_19 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_19;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_19 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp_0(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => ful(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(1),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_7 is
-  port (
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_7 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_7;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_7 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 7 to 7 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => rd_clk_0(0),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(7),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => wr_tmp,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_prim_9 is
-  port (
-    emp_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    wr_tmp : out STD_LOGIC;
-    rd_clk_0 : out STD_LOGIC;
-    re : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    wr_en : in STD_LOGIC;
-    full : in STD_LOGIC_VECTOR ( 6 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_prim_9 : entity is "builtin_prim";
-end FIFO_10_builtin_prim_9;
-
-architecture STRUCTURE of FIFO_10_builtin_prim_9 is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal ful : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \gf36e2_inst.sngfifo36e2_n_1\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
-  signal pf : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \^rd_clk_0\ : STD_LOGIC;
-  signal \^wr_tmp\ : STD_LOGIC;
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-  rd_clk_0 <= \^rd_clk_0\;
-  wr_tmp <= \^wr_tmp\;
-full_INST_0_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => ful(6),
-      I1 => full(4),
-      I2 => full(6),
-      I3 => full(5),
-      O => \^rd_clk_0\
-    );
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "FIRST",
-      CLOCK_DOMAINS => "INDEPENDENT",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 10,
-      PROG_FULL_THRESH => 8190,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3 downto 0) => CASDOUT(3 downto 0),
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => emp_0(0),
-      CASNXTRDEN => re(0),
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => '0',
-      CASPRVRDEN => \gf36e2_inst.sngfifo36e2_n_1\,
-      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
-      DIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      DIN(3 downto 0) => din(3 downto 0),
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
-      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
-      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
-      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
-      FULL => ful(6),
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
-      PROGFULL => pf(6),
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => '0',
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => rrst_busy_i(0),
-      REGCE => '0',
-      RST => srst,
-      RSTREG => srst,
-      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
-      SLEEP => '0',
-      WRCLK => wr_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => \^wr_tmp\,
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => wrst_busy_i(0)
-    );
-\gf36e2_inst.sngfifo36e2_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000002"
-    )
-        port map (
-      I0 => wr_en,
-      I1 => \^rd_clk_0\,
-      I2 => full(1),
-      I3 => full(0),
-      I4 => full(3),
-      I5 => full(2),
-      O => \^wr_tmp\
+      WRRSTBUSY => wr_rst_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -2488,28 +328,24 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \FIFO_10_builtin_prim__parameterized0\ is
   port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp : in STD_LOGIC_VECTOR ( 0 to 0 );
+    emp_2 : out STD_LOGIC;
+    re_1 : out STD_LOGIC;
+    \d[2]_1\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_2 : in STD_LOGIC;
+    emp_1 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
-    \dout[31]\ : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    \d[1]_0\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0\ : entity is "builtin_prim";
 end \FIFO_10_builtin_prim__parameterized0\;
 
 architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 8 to 8 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
@@ -2576,8 +412,16 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0\ is
   signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -2587,6 +431,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0\ is
   signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
@@ -2597,6 +442,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0\ is
   signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
@@ -2608,19 +454,17 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0\ is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 8 to 8 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 8 to 8 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
 \gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
     generic map(
-      CASCADE_ORDER => "LAST",
+      CASCADE_ORDER => "MIDDLE",
       CLOCK_DOMAINS => "COMMON",
       EN_ECC_PIPE => "FALSE",
       EN_ECC_READ => "FALSE",
@@ -2633,36 +477,35 @@ begin
       IS_RST_INVERTED => '0',
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
+      PROG_EMPTY_THRESH => 10,
       PROG_FULL_THRESH => 10,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[1]_0\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[1]_0\(35 downto 32),
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[2]_1\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[2]_1\(35 downto 32),
+      CASNXTEMPTY => emp_2,
+      CASNXTRDEN => re_2,
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(8),
+      CASPRVEMPTY => emp_1,
+      CASPRVRDEN => re_1,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
       DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
@@ -2725,8 +568,15 @@ begin
       DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
       DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
       DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -2735,11 +585,11 @@ begin
       ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => rd_clk_0(0),
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
       FULL => \gf36e2_inst.sngfifo36e2_n_4\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      PROGEMPTY => pe(8),
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
       PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
@@ -2756,13 +606,13 @@ begin
       RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
       RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[31]\,
+      RDEN => '0',
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
       RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[31]\,
+      REGCE => '0',
       RST => \out\(0),
       RSTREG => \out\(0),
-      SBITERR => sbiterr_col(8),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
       SLEEP => '0',
       WRCLK => rd_clk,
       WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
@@ -2788,33 +638,26 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_10\ is
+entity \FIFO_10_builtin_prim__parameterized0_0\ is
   port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_en_0 : out STD_LOGIC;
-    rd_clk_0 : out STD_LOGIC;
-    emp_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    emp_3 : out STD_LOGIC;
+    re_2 : out STD_LOGIC;
+    \d[3]_2\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_3 : in STD_LOGIC;
+    emp_2 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_en : in STD_LOGIC;
-    empty : in STD_LOGIC_VECTOR ( 6 downto 0 )
+    \d[2]_1\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_10\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_10\;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_0\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized0_0\;
 
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_10\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal emp : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_0\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
@@ -2881,8 +724,16 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_10\ is
   signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -2892,6 +743,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_10\ is
   signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
@@ -2902,6 +754,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_10\ is
   signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
@@ -2913,34 +766,17 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_10\ is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \^rd_clk_0\ : STD_LOGIC;
-  signal \^rd_en_0\ : STD_LOGIC;
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 6 to 6 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
-  rd_clk_0 <= \^rd_clk_0\;
-  rd_en_0 <= \^rd_en_0\;
-empty_INST_0_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => emp(6),
-      I1 => empty(4),
-      I2 => empty(6),
-      I3 => empty(5),
-      O => \^rd_clk_0\
-    );
 \gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
     generic map(
-      CASCADE_ORDER => "LAST",
+      CASCADE_ORDER => "MIDDLE",
       CLOCK_DOMAINS => "COMMON",
       EN_ECC_PIPE => "FALSE",
       EN_ECC_READ => "FALSE",
@@ -2953,36 +789,35 @@ empty_INST_0_i_1: unisim.vcomponents.LUT4
       IS_RST_INVERTED => '0',
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
+      PROG_EMPTY_THRESH => 10,
       PROG_FULL_THRESH => 10,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[2]_1\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[2]_1\(35 downto 32),
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[3]_2\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[3]_2\(35 downto 32),
+      CASNXTEMPTY => emp_3,
+      CASNXTRDEN => re_3,
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp_0(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(6),
+      CASPRVEMPTY => emp_2,
+      CASPRVRDEN => re_2,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
       DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
@@ -3045,8 +880,15 @@ empty_INST_0_i_1: unisim.vcomponents.LUT4
       DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
       DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
       DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -3055,11 +897,11 @@ empty_INST_0_i_1: unisim.vcomponents.LUT4
       ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => emp(6),
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
       FULL => \gf36e2_inst.sngfifo36e2_n_4\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      PROGEMPTY => pe(6),
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
       PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
@@ -3076,13 +918,13 @@ empty_INST_0_i_1: unisim.vcomponents.LUT4
       RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
       RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \^rd_en_0\,
+      RDEN => '0',
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
       RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \^rd_en_0\,
+      REGCE => '0',
       RST => \out\(0),
       RSTREG => \out\(0),
-      SBITERR => sbiterr_col(6),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
       SLEEP => '0',
       WRCLK => rd_clk,
       WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
@@ -3103,48 +945,31 @@ empty_INST_0_i_1: unisim.vcomponents.LUT4
       WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
       WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
     );
-\gf36e2_inst.sngfifo36e2_i_1__0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000002"
-    )
-        port map (
-      I0 => rd_en,
-      I1 => \^rd_clk_0\,
-      I2 => empty(1),
-      I3 => empty(0),
-      I4 => empty(3),
-      I5 => empty(2),
-      O => \^rd_en_0\
-    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_12\ is
+entity \FIFO_10_builtin_prim__parameterized0_1\ is
   port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    emp_4 : out STD_LOGIC;
+    re_3 : out STD_LOGIC;
+    \d[4]_3\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_4 : in STD_LOGIC;
+    emp_3 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
-    \dout[19]\ : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    \d[3]_2\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_12\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_12\;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_1\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized0_1\;
 
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_12\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_1\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
@@ -3211,8 +1036,16 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_12\ is
   signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -3222,6 +1055,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_12\ is
   signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
@@ -3232,6 +1066,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_12\ is
   signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
@@ -3243,19 +1078,17 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_12\ is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 5 to 5 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
 \gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
     generic map(
-      CASCADE_ORDER => "LAST",
+      CASCADE_ORDER => "MIDDLE",
       CLOCK_DOMAINS => "COMMON",
       EN_ECC_PIPE => "FALSE",
       EN_ECC_READ => "FALSE",
@@ -3268,36 +1101,35 @@ begin
       IS_RST_INVERTED => '0',
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
+      PROG_EMPTY_THRESH => 10,
       PROG_FULL_THRESH => 10,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[3]_2\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[3]_2\(35 downto 32),
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[4]_3\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[4]_3\(35 downto 32),
+      CASNXTEMPTY => emp_4,
+      CASNXTRDEN => re_4,
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp_0(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(5),
+      CASPRVEMPTY => emp_3,
+      CASPRVRDEN => re_3,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
       DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
@@ -3360,8 +1192,15 @@ begin
       DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
       DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
       DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -3370,11 +1209,11 @@ begin
       ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => emp(0),
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
       FULL => \gf36e2_inst.sngfifo36e2_n_4\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      PROGEMPTY => pe(5),
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
       PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
@@ -3391,13 +1230,13 @@ begin
       RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
       RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[19]\,
+      RDEN => '0',
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
       RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[19]\,
+      REGCE => '0',
       RST => \out\(0),
       RSTREG => \out\(0),
-      SBITERR => sbiterr_col(5),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
       SLEEP => '0',
       WRCLK => rd_clk,
       WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
@@ -3423,30 +1262,26 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_14\ is
+entity \FIFO_10_builtin_prim__parameterized0_2\ is
   port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp : in STD_LOGIC_VECTOR ( 0 to 0 );
+    emp_5 : out STD_LOGIC;
+    re_4 : out STD_LOGIC;
+    \d[5]_4\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_5 : in STD_LOGIC;
+    emp_4 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
-    \dout[15]\ : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    \d[4]_3\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_14\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_14\;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_2\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized0_2\;
 
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_14\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_2\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
@@ -3513,8 +1348,16 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_14\ is
   signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -3524,6 +1367,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_14\ is
   signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
@@ -3534,6 +1378,7 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_14\ is
   signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
@@ -3545,19 +1390,17 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_14\ is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 4 to 4 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
 \gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
     generic map(
-      CASCADE_ORDER => "LAST",
+      CASCADE_ORDER => "MIDDLE",
       CLOCK_DOMAINS => "COMMON",
       EN_ECC_PIPE => "FALSE",
       EN_ECC_READ => "FALSE",
@@ -3570,36 +1413,35 @@ begin
       IS_RST_INVERTED => '0',
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
+      PROG_EMPTY_THRESH => 10,
       PROG_FULL_THRESH => 10,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[4]_3\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[4]_3\(35 downto 32),
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[5]_4\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[5]_4\(35 downto 32),
+      CASNXTEMPTY => emp_5,
+      CASNXTRDEN => re_5,
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(4),
+      CASPRVEMPTY => emp_4,
+      CASPRVRDEN => re_4,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
       DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
@@ -3662,8 +1504,15 @@ begin
       DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
       DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
       DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -3672,11 +1521,11 @@ begin
       ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => rd_clk_0(0),
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
       FULL => \gf36e2_inst.sngfifo36e2_n_4\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      PROGEMPTY => pe(4),
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
       PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
@@ -3693,13 +1542,13 @@ begin
       RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
       RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[15]\,
+      RDEN => '0',
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
       RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[15]\,
+      REGCE => '0',
       RST => \out\(0),
       RSTREG => \out\(0),
-      SBITERR => sbiterr_col(4),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
       SLEEP => '0',
       WRCLK => rd_clk,
       WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
@@ -3725,28 +1574,650 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_16\ is
+entity \FIFO_10_builtin_prim__parameterized0_3\ is
   port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    emp_6 : out STD_LOGIC;
+    re_5 : out STD_LOGIC;
+    \d[6]_5\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_6 : in STD_LOGIC;
+    emp_5 : in STD_LOGIC;
+    rd_clk : in STD_LOGIC;
+    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \d[5]_4\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_3\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized0_3\;
+
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_3\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_11\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
+begin
+\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
+    generic map(
+      CASCADE_ORDER => "MIDDLE",
+      CLOCK_DOMAINS => "COMMON",
+      EN_ECC_PIPE => "FALSE",
+      EN_ECC_READ => "FALSE",
+      EN_ECC_WRITE => "FALSE",
+      FIRST_WORD_FALL_THROUGH => "TRUE",
+      INIT => X"000000000000000000",
+      IS_RDCLK_INVERTED => '0',
+      IS_RDEN_INVERTED => '0',
+      IS_RSTREG_INVERTED => '0',
+      IS_RST_INVERTED => '0',
+      IS_WRCLK_INVERTED => '0',
+      IS_WREN_INVERTED => '0',
+      PROG_EMPTY_THRESH => 10,
+      PROG_FULL_THRESH => 10,
+      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
+      RSTREG_PRIORITY => "REGCE",
+      SLEEP_ASYNC => "FALSE",
+      SRVAL => X"000000000000000000",
+      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
+      WRITE_WIDTH => 36
+    )
+        port map (
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[5]_4\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[5]_4\(35 downto 32),
+      CASDOMUX => '0',
+      CASDOMUXEN => '1',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[6]_5\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[6]_5\(35 downto 32),
+      CASNXTEMPTY => emp_6,
+      CASNXTRDEN => re_6,
+      CASOREGIMUX => '0',
+      CASOREGIMUXEN => '1',
+      CASPRVEMPTY => emp_5,
+      CASPRVRDEN => re_5,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
+      DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
+      DINP(7 downto 0) => B"00000000",
+      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
+      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
+      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
+      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
+      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
+      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
+      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
+      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
+      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
+      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
+      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
+      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
+      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
+      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
+      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
+      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
+      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
+      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
+      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
+      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
+      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
+      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
+      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
+      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
+      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
+      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
+      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
+      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
+      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
+      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
+      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
+      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
+      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
+      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
+      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
+      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
+      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
+      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
+      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
+      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
+      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
+      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
+      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
+      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
+      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
+      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
+      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
+      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
+      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
+      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
+      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
+      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
+      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
+      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
+      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
+      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
+      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
+      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
+      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
+      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
+      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
+      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
+      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
+      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
+      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
+      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
+      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
+      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
+      FULL => \gf36e2_inst.sngfifo36e2_n_4\,
+      INJECTDBITERR => '0',
+      INJECTSBITERR => '0',
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
+      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
+      RDCLK => rd_clk,
+      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
+      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
+      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
+      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
+      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
+      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
+      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
+      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
+      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
+      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
+      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
+      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
+      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
+      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
+      RDEN => '0',
+      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
+      RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
+      REGCE => '0',
+      RST => \out\(0),
+      RSTREG => \out\(0),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
+      SLEEP => '0',
+      WRCLK => rd_clk,
+      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
+      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
+      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
+      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
+      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
+      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
+      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
+      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
+      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
+      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
+      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
+      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
+      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
+      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
+      WREN => '0',
+      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
+      WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \FIFO_10_builtin_prim__parameterized0_4\ is
+  port (
+    emp_7 : out STD_LOGIC;
+    re_6 : out STD_LOGIC;
+    \d[7]_6\ : out STD_LOGIC_VECTOR ( 35 downto 0 );
+    re_7 : in STD_LOGIC;
+    emp_6 : in STD_LOGIC;
+    rd_clk : in STD_LOGIC;
+    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \d[6]_5\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_4\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized0_4\;
+
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_4\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_11\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_164\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_165\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_166\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_167\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_2\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_3\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_9\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
+begin
+\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
+    generic map(
+      CASCADE_ORDER => "MIDDLE",
+      CLOCK_DOMAINS => "COMMON",
+      EN_ECC_PIPE => "FALSE",
+      EN_ECC_READ => "FALSE",
+      EN_ECC_WRITE => "FALSE",
+      FIRST_WORD_FALL_THROUGH => "TRUE",
+      INIT => X"000000000000000000",
+      IS_RDCLK_INVERTED => '0',
+      IS_RDEN_INVERTED => '0',
+      IS_RSTREG_INVERTED => '0',
+      IS_RST_INVERTED => '0',
+      IS_WRCLK_INVERTED => '0',
+      IS_WREN_INVERTED => '0',
+      PROG_EMPTY_THRESH => 10,
+      PROG_FULL_THRESH => 10,
+      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
+      RSTREG_PRIORITY => "REGCE",
+      SLEEP_ASYNC => "FALSE",
+      SRVAL => X"000000000000000000",
+      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
+      WRITE_WIDTH => 36
+    )
+        port map (
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[6]_5\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[6]_5\(35 downto 32),
+      CASDOMUX => '0',
+      CASDOMUXEN => '1',
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31 downto 0) => \d[7]_6\(31 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3 downto 0) => \d[7]_6\(35 downto 32),
+      CASNXTEMPTY => emp_7,
+      CASNXTRDEN => re_7,
+      CASOREGIMUX => '0',
+      CASOREGIMUXEN => '1',
+      CASPRVEMPTY => emp_6,
+      CASPRVRDEN => re_6,
+      DBITERR => \gf36e2_inst.sngfifo36e2_n_2\,
+      DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
+      DINP(7 downto 0) => B"00000000",
+      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
+      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
+      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
+      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
+      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
+      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
+      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
+      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
+      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
+      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
+      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
+      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
+      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
+      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
+      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
+      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
+      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
+      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
+      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
+      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
+      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
+      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
+      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
+      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
+      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
+      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
+      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
+      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
+      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
+      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
+      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
+      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
+      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
+      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
+      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
+      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
+      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
+      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
+      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
+      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
+      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
+      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
+      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
+      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
+      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
+      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
+      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
+      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
+      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
+      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
+      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
+      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
+      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
+      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
+      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
+      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
+      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
+      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
+      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
+      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
+      DOUT(3) => \gf36e2_inst.sngfifo36e2_n_164\,
+      DOUT(2) => \gf36e2_inst.sngfifo36e2_n_165\,
+      DOUT(1) => \gf36e2_inst.sngfifo36e2_n_166\,
+      DOUT(0) => \gf36e2_inst.sngfifo36e2_n_167\,
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
+      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
+      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
+      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
+      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
+      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
+      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
+      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
+      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
+      EMPTY => \gf36e2_inst.sngfifo36e2_n_3\,
+      FULL => \gf36e2_inst.sngfifo36e2_n_4\,
+      INJECTDBITERR => '0',
+      INJECTSBITERR => '0',
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
+      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
+      RDCLK => rd_clk,
+      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
+      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
+      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
+      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
+      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
+      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
+      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
+      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
+      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
+      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
+      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
+      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
+      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
+      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
+      RDEN => '0',
+      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
+      RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
+      REGCE => '0',
+      RST => \out\(0),
+      RSTREG => \out\(0),
+      SBITERR => \gf36e2_inst.sngfifo36e2_n_9\,
+      SLEEP => '0',
+      WRCLK => rd_clk,
+      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
+      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
+      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
+      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
+      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
+      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
+      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
+      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
+      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
+      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
+      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
+      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
+      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
+      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
+      WREN => '0',
+      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
+      WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity \FIFO_10_builtin_prim__parameterized1\ is
+  port (
+    re_7 : out STD_LOGIC;
     empty : out STD_LOGIC;
-    emp_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    emp_7 : in STD_LOGIC;
     rd_clk : in STD_LOGIC;
-    \dout[11]\ : in STD_LOGIC;
+    rd_en : in STD_LOGIC;
     \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    empty_0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    empty_1 : in STD_LOGIC
+    \d[7]_6\ : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_16\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_16\;
+  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized1\ : entity is "builtin_prim";
+end \FIFO_10_builtin_prim__parameterized1\;
 
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_16\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \^emp\ : STD_LOGIC_VECTOR ( 0 to 0 );
+architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized1\ is
+  signal CASDOUT : STD_LOGIC_VECTOR ( 63 downto 32 );
+  signal CASDOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal DOUTP : STD_LOGIC_VECTOR ( 7 downto 4 );
+  signal dbiterr_i : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
@@ -3788,39 +2259,19 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_16\ is
   signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_172\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_173\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_174\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_175\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_180\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_181\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_182\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_183\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
@@ -3851,29 +2302,42 @@ architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_16\ is
   signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_5\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_72\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_73\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_74\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_75\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_76\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_77\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_78\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_79\ : STD_LOGIC;
   signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal \gf36e2_inst.sngfifo36e2_n_80\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_81\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_82\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_83\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_84\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_85\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_86\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_87\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_88\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_89\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_90\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_91\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_92\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_93\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_94\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_95\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_96\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_97\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_98\ : STD_LOGIC;
+  signal \gf36e2_inst.sngfifo36e2_n_99\ : STD_LOGIC;
+  signal sbiterr_i : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
 begin
-  emp(0) <= \^emp\(0);
-empty_INST_0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => \^emp\(0),
-      I1 => empty_0(2),
-      I2 => empty_0(0),
-      I3 => empty_0(1),
-      I4 => empty_1,
-      O => empty
-    );
 \gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
     generic map(
       CASCADE_ORDER => "LAST",
@@ -3881,7 +2345,7 @@ empty_INST_0: unisim.vcomponents.LUT5
       EN_ECC_PIPE => "FALSE",
       EN_ECC_READ => "FALSE",
       EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
+      FIRST_WORD_FALL_THROUGH => "FALSE",
       INIT => X"000000000000000000",
       IS_RDCLK_INVERTED => '0',
       IS_RDEN_INVERTED => '0',
@@ -3889,36 +2353,69 @@ empty_INST_0: unisim.vcomponents.LUT5
       IS_RST_INVERTED => '0',
       IS_WRCLK_INVERTED => '0',
       IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
+      PROG_EMPTY_THRESH => 5,
       PROG_FULL_THRESH => 10,
       RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
+      READ_WIDTH => 36,
+      REGISTER_MODE => "UNREGISTERED",
       RSTREG_PRIORITY => "REGCE",
       SLEEP_ASYNC => "FALSE",
       SRVAL => X"000000000000000000",
       WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
+      WRITE_WIDTH => 36
     )
         port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
+      CASDIN(63 downto 32) => B"00000000000000000000000000000000",
+      CASDIN(31 downto 0) => \d[7]_6\(31 downto 0),
+      CASDINP(7 downto 4) => B"0000",
+      CASDINP(3 downto 0) => \d[7]_6\(35 downto 32),
       CASDOMUX => '0',
       CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
+      CASDOUT(63 downto 32) => CASDOUT(63 downto 32),
+      CASDOUT(31) => \gf36e2_inst.sngfifo36e2_n_72\,
+      CASDOUT(30) => \gf36e2_inst.sngfifo36e2_n_73\,
+      CASDOUT(29) => \gf36e2_inst.sngfifo36e2_n_74\,
+      CASDOUT(28) => \gf36e2_inst.sngfifo36e2_n_75\,
+      CASDOUT(27) => \gf36e2_inst.sngfifo36e2_n_76\,
+      CASDOUT(26) => \gf36e2_inst.sngfifo36e2_n_77\,
+      CASDOUT(25) => \gf36e2_inst.sngfifo36e2_n_78\,
+      CASDOUT(24) => \gf36e2_inst.sngfifo36e2_n_79\,
+      CASDOUT(23) => \gf36e2_inst.sngfifo36e2_n_80\,
+      CASDOUT(22) => \gf36e2_inst.sngfifo36e2_n_81\,
+      CASDOUT(21) => \gf36e2_inst.sngfifo36e2_n_82\,
+      CASDOUT(20) => \gf36e2_inst.sngfifo36e2_n_83\,
+      CASDOUT(19) => \gf36e2_inst.sngfifo36e2_n_84\,
+      CASDOUT(18) => \gf36e2_inst.sngfifo36e2_n_85\,
+      CASDOUT(17) => \gf36e2_inst.sngfifo36e2_n_86\,
+      CASDOUT(16) => \gf36e2_inst.sngfifo36e2_n_87\,
+      CASDOUT(15) => \gf36e2_inst.sngfifo36e2_n_88\,
+      CASDOUT(14) => \gf36e2_inst.sngfifo36e2_n_89\,
+      CASDOUT(13) => \gf36e2_inst.sngfifo36e2_n_90\,
+      CASDOUT(12) => \gf36e2_inst.sngfifo36e2_n_91\,
+      CASDOUT(11) => \gf36e2_inst.sngfifo36e2_n_92\,
+      CASDOUT(10) => \gf36e2_inst.sngfifo36e2_n_93\,
+      CASDOUT(9) => \gf36e2_inst.sngfifo36e2_n_94\,
+      CASDOUT(8) => \gf36e2_inst.sngfifo36e2_n_95\,
+      CASDOUT(7) => \gf36e2_inst.sngfifo36e2_n_96\,
+      CASDOUT(6) => \gf36e2_inst.sngfifo36e2_n_97\,
+      CASDOUT(5) => \gf36e2_inst.sngfifo36e2_n_98\,
+      CASDOUT(4) => \gf36e2_inst.sngfifo36e2_n_99\,
       CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
       CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
       CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
       CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
+      CASDOUTP(7 downto 4) => CASDOUTP(7 downto 4),
+      CASDOUTP(3) => \gf36e2_inst.sngfifo36e2_n_172\,
+      CASDOUTP(2) => \gf36e2_inst.sngfifo36e2_n_173\,
+      CASDOUTP(1) => \gf36e2_inst.sngfifo36e2_n_174\,
+      CASDOUTP(0) => \gf36e2_inst.sngfifo36e2_n_175\,
       CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
       CASNXTRDEN => '0',
       CASOREGIMUX => '0',
       CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp_0(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(3),
+      CASPRVEMPTY => emp_7,
+      CASPRVRDEN => re_7,
+      DBITERR => dbiterr_i,
       DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
       DINP(7 downto 0) => B"00000000",
       DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
@@ -3953,36 +2450,12 @@ empty_INST_0: unisim.vcomponents.LUT5
       DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
       DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
       DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
+      DOUT(31 downto 0) => dout(31 downto 0),
+      DOUTP(7 downto 4) => DOUTP(7 downto 4),
+      DOUTP(3) => \gf36e2_inst.sngfifo36e2_n_180\,
+      DOUTP(2) => \gf36e2_inst.sngfifo36e2_n_181\,
+      DOUTP(1) => \gf36e2_inst.sngfifo36e2_n_182\,
+      DOUTP(0) => \gf36e2_inst.sngfifo36e2_n_183\,
       ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
       ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
       ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
@@ -3991,11 +2464,11 @@ empty_INST_0: unisim.vcomponents.LUT5
       ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
       ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
       ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => \^emp\(0),
+      EMPTY => empty,
       FULL => \gf36e2_inst.sngfifo36e2_n_4\,
       INJECTDBITERR => '0',
       INJECTSBITERR => '0',
-      PROGEMPTY => pe(3),
+      PROGEMPTY => \gf36e2_inst.sngfifo36e2_n_5\,
       PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
       RDCLK => rd_clk,
       RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
@@ -4012,921 +2485,13 @@ empty_INST_0: unisim.vcomponents.LUT5
       RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
       RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
       RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[11]\,
+      RDEN => rd_en,
       RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
       RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[11]\,
+      REGCE => rd_en,
       RST => \out\(0),
       RSTREG => \out\(0),
-      SBITERR => sbiterr_col(3),
-      SLEEP => '0',
-      WRCLK => rd_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => '0',
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_18\ is
-  port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    \dout[7]\ : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_18\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_18\;
-
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_18\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_11\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "LAST",
-      CLOCK_DOMAINS => "COMMON",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
-      PROG_FULL_THRESH => 10,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp_0(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(2),
-      DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => emp(0),
-      FULL => \gf36e2_inst.sngfifo36e2_n_4\,
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => pe(2),
-      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[7]\,
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[7]\,
-      RST => \out\(0),
-      RSTREG => \out\(0),
-      SBITERR => sbiterr_col(2),
-      SLEEP => '0',
-      WRCLK => rd_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => '0',
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_20\ is
-  port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    dout_3_sp_1 : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_20\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_20\;
-
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_20\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal dout_3_sn_1 : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_11\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-  dout_3_sn_1 <= dout_3_sp_1;
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "LAST",
-      CLOCK_DOMAINS => "COMMON",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
-      PROG_FULL_THRESH => 10,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp_0(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(1),
-      DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => emp(0),
-      FULL => \gf36e2_inst.sngfifo36e2_n_4\,
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => pe(1),
-      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => dout_3_sn_1,
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => dout_3_sn_1,
-      RST => \out\(0),
-      RSTREG => \out\(0),
-      SBITERR => sbiterr_col(1),
-      SLEEP => '0',
-      WRCLK => rd_clk,
-      WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
-      WRCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_27\,
-      WRCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_28\,
-      WRCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_29\,
-      WRCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_30\,
-      WRCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_31\,
-      WRCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_32\,
-      WRCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_33\,
-      WRCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_34\,
-      WRCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_35\,
-      WRCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_36\,
-      WRCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_37\,
-      WRCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_38\,
-      WRCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_39\,
-      WREN => '0',
-      WRERR => \gf36e2_inst.sngfifo36e2_n_10\,
-      WRRSTBUSY => \gf36e2_inst.sngfifo36e2_n_11\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \FIFO_10_builtin_prim__parameterized0_8\ is
-  port (
-    re : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    emp : in STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk : in STD_LOGIC;
-    \dout[27]\ : in STD_LOGIC;
-    \out\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    CASDOUT : in STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \FIFO_10_builtin_prim__parameterized0_8\ : entity is "builtin_prim";
-end \FIFO_10_builtin_prim__parameterized0_8\;
-
-architecture STRUCTURE of \FIFO_10_builtin_prim__parameterized0_8\ is
-  signal CASDOUT_0 : STD_LOGIC_VECTOR ( 63 downto 4 );
-  signal dbiterr_col : STD_LOGIC_VECTOR ( 7 to 7 );
-  signal \gf36e2_inst.sngfifo36e2_n_0\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_10\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_100\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_101\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_102\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_103\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_104\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_105\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_106\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_107\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_108\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_109\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_11\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_110\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_111\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_112\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_113\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_114\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_115\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_116\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_117\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_118\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_119\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_12\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_120\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_121\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_122\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_123\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_124\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_125\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_126\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_127\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_128\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_129\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_13\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_130\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_131\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_132\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_133\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_134\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_135\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_136\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_137\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_138\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_139\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_14\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_140\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_141\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_142\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_143\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_144\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_145\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_146\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_147\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_148\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_149\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_15\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_150\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_151\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_152\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_153\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_154\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_155\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_156\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_157\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_158\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_159\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_16\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_160\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_161\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_162\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_163\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_17\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_18\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_184\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_185\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_186\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_187\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_188\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_189\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_19\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_190\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_191\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_20\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_21\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_22\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_23\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_24\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_25\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_26\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_27\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_28\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_29\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_30\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_31\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_32\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_33\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_34\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_35\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_36\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_37\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_38\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_39\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_4\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_6\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_7\ : STD_LOGIC;
-  signal \gf36e2_inst.sngfifo36e2_n_8\ : STD_LOGIC;
-  signal pe : STD_LOGIC_VECTOR ( 7 to 7 );
-  signal sbiterr_col : STD_LOGIC_VECTOR ( 7 to 7 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\ : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute box_type : string;
-  attribute box_type of \gf36e2_inst.sngfifo36e2\ : label is "PRIMITIVE";
-begin
-\gf36e2_inst.sngfifo36e2\: unisim.vcomponents.FIFO36E2
-    generic map(
-      CASCADE_ORDER => "LAST",
-      CLOCK_DOMAINS => "COMMON",
-      EN_ECC_PIPE => "FALSE",
-      EN_ECC_READ => "FALSE",
-      EN_ECC_WRITE => "FALSE",
-      FIRST_WORD_FALL_THROUGH => "TRUE",
-      INIT => X"000000000000000000",
-      IS_RDCLK_INVERTED => '0',
-      IS_RDEN_INVERTED => '0',
-      IS_RSTREG_INVERTED => '0',
-      IS_RST_INVERTED => '0',
-      IS_WRCLK_INVERTED => '0',
-      IS_WREN_INVERTED => '0',
-      PROG_EMPTY_THRESH => 6,
-      PROG_FULL_THRESH => 10,
-      RDCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      READ_WIDTH => 4,
-      REGISTER_MODE => "REGISTERED",
-      RSTREG_PRIORITY => "REGCE",
-      SLEEP_ASYNC => "FALSE",
-      SRVAL => X"000000000000000000",
-      WRCOUNT_TYPE => "EXTENDED_DATACOUNT",
-      WRITE_WIDTH => 4
-    )
-        port map (
-      CASDIN(63 downto 4) => B"000000000000000000000000000000000000000000000000000000000000",
-      CASDIN(3 downto 0) => CASDOUT(3 downto 0),
-      CASDINP(7 downto 0) => B"00000000",
-      CASDOMUX => '0',
-      CASDOMUXEN => '1',
-      CASDOUT(63 downto 4) => CASDOUT_0(63 downto 4),
-      CASDOUT(3) => \gf36e2_inst.sngfifo36e2_n_100\,
-      CASDOUT(2) => \gf36e2_inst.sngfifo36e2_n_101\,
-      CASDOUT(1) => \gf36e2_inst.sngfifo36e2_n_102\,
-      CASDOUT(0) => \gf36e2_inst.sngfifo36e2_n_103\,
-      CASDOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_CASDOUTP_UNCONNECTED\(7 downto 0),
-      CASNXTEMPTY => \gf36e2_inst.sngfifo36e2_n_0\,
-      CASNXTRDEN => '0',
-      CASOREGIMUX => '0',
-      CASOREGIMUXEN => '1',
-      CASPRVEMPTY => emp(0),
-      CASPRVRDEN => re(0),
-      DBITERR => dbiterr_col(7),
-      DIN(63 downto 0) => B"0000000000000000000000000000000000000000000000000000000000000000",
-      DINP(7 downto 0) => B"00000000",
-      DOUT(63) => \gf36e2_inst.sngfifo36e2_n_104\,
-      DOUT(62) => \gf36e2_inst.sngfifo36e2_n_105\,
-      DOUT(61) => \gf36e2_inst.sngfifo36e2_n_106\,
-      DOUT(60) => \gf36e2_inst.sngfifo36e2_n_107\,
-      DOUT(59) => \gf36e2_inst.sngfifo36e2_n_108\,
-      DOUT(58) => \gf36e2_inst.sngfifo36e2_n_109\,
-      DOUT(57) => \gf36e2_inst.sngfifo36e2_n_110\,
-      DOUT(56) => \gf36e2_inst.sngfifo36e2_n_111\,
-      DOUT(55) => \gf36e2_inst.sngfifo36e2_n_112\,
-      DOUT(54) => \gf36e2_inst.sngfifo36e2_n_113\,
-      DOUT(53) => \gf36e2_inst.sngfifo36e2_n_114\,
-      DOUT(52) => \gf36e2_inst.sngfifo36e2_n_115\,
-      DOUT(51) => \gf36e2_inst.sngfifo36e2_n_116\,
-      DOUT(50) => \gf36e2_inst.sngfifo36e2_n_117\,
-      DOUT(49) => \gf36e2_inst.sngfifo36e2_n_118\,
-      DOUT(48) => \gf36e2_inst.sngfifo36e2_n_119\,
-      DOUT(47) => \gf36e2_inst.sngfifo36e2_n_120\,
-      DOUT(46) => \gf36e2_inst.sngfifo36e2_n_121\,
-      DOUT(45) => \gf36e2_inst.sngfifo36e2_n_122\,
-      DOUT(44) => \gf36e2_inst.sngfifo36e2_n_123\,
-      DOUT(43) => \gf36e2_inst.sngfifo36e2_n_124\,
-      DOUT(42) => \gf36e2_inst.sngfifo36e2_n_125\,
-      DOUT(41) => \gf36e2_inst.sngfifo36e2_n_126\,
-      DOUT(40) => \gf36e2_inst.sngfifo36e2_n_127\,
-      DOUT(39) => \gf36e2_inst.sngfifo36e2_n_128\,
-      DOUT(38) => \gf36e2_inst.sngfifo36e2_n_129\,
-      DOUT(37) => \gf36e2_inst.sngfifo36e2_n_130\,
-      DOUT(36) => \gf36e2_inst.sngfifo36e2_n_131\,
-      DOUT(35) => \gf36e2_inst.sngfifo36e2_n_132\,
-      DOUT(34) => \gf36e2_inst.sngfifo36e2_n_133\,
-      DOUT(33) => \gf36e2_inst.sngfifo36e2_n_134\,
-      DOUT(32) => \gf36e2_inst.sngfifo36e2_n_135\,
-      DOUT(31) => \gf36e2_inst.sngfifo36e2_n_136\,
-      DOUT(30) => \gf36e2_inst.sngfifo36e2_n_137\,
-      DOUT(29) => \gf36e2_inst.sngfifo36e2_n_138\,
-      DOUT(28) => \gf36e2_inst.sngfifo36e2_n_139\,
-      DOUT(27) => \gf36e2_inst.sngfifo36e2_n_140\,
-      DOUT(26) => \gf36e2_inst.sngfifo36e2_n_141\,
-      DOUT(25) => \gf36e2_inst.sngfifo36e2_n_142\,
-      DOUT(24) => \gf36e2_inst.sngfifo36e2_n_143\,
-      DOUT(23) => \gf36e2_inst.sngfifo36e2_n_144\,
-      DOUT(22) => \gf36e2_inst.sngfifo36e2_n_145\,
-      DOUT(21) => \gf36e2_inst.sngfifo36e2_n_146\,
-      DOUT(20) => \gf36e2_inst.sngfifo36e2_n_147\,
-      DOUT(19) => \gf36e2_inst.sngfifo36e2_n_148\,
-      DOUT(18) => \gf36e2_inst.sngfifo36e2_n_149\,
-      DOUT(17) => \gf36e2_inst.sngfifo36e2_n_150\,
-      DOUT(16) => \gf36e2_inst.sngfifo36e2_n_151\,
-      DOUT(15) => \gf36e2_inst.sngfifo36e2_n_152\,
-      DOUT(14) => \gf36e2_inst.sngfifo36e2_n_153\,
-      DOUT(13) => \gf36e2_inst.sngfifo36e2_n_154\,
-      DOUT(12) => \gf36e2_inst.sngfifo36e2_n_155\,
-      DOUT(11) => \gf36e2_inst.sngfifo36e2_n_156\,
-      DOUT(10) => \gf36e2_inst.sngfifo36e2_n_157\,
-      DOUT(9) => \gf36e2_inst.sngfifo36e2_n_158\,
-      DOUT(8) => \gf36e2_inst.sngfifo36e2_n_159\,
-      DOUT(7) => \gf36e2_inst.sngfifo36e2_n_160\,
-      DOUT(6) => \gf36e2_inst.sngfifo36e2_n_161\,
-      DOUT(5) => \gf36e2_inst.sngfifo36e2_n_162\,
-      DOUT(4) => \gf36e2_inst.sngfifo36e2_n_163\,
-      DOUT(3 downto 0) => dout(3 downto 0),
-      DOUTP(7 downto 0) => \NLW_gf36e2_inst.sngfifo36e2_DOUTP_UNCONNECTED\(7 downto 0),
-      ECCPARITY(7) => \gf36e2_inst.sngfifo36e2_n_184\,
-      ECCPARITY(6) => \gf36e2_inst.sngfifo36e2_n_185\,
-      ECCPARITY(5) => \gf36e2_inst.sngfifo36e2_n_186\,
-      ECCPARITY(4) => \gf36e2_inst.sngfifo36e2_n_187\,
-      ECCPARITY(3) => \gf36e2_inst.sngfifo36e2_n_188\,
-      ECCPARITY(2) => \gf36e2_inst.sngfifo36e2_n_189\,
-      ECCPARITY(1) => \gf36e2_inst.sngfifo36e2_n_190\,
-      ECCPARITY(0) => \gf36e2_inst.sngfifo36e2_n_191\,
-      EMPTY => rd_clk_0(0),
-      FULL => \gf36e2_inst.sngfifo36e2_n_4\,
-      INJECTDBITERR => '0',
-      INJECTSBITERR => '0',
-      PROGEMPTY => pe(7),
-      PROGFULL => \gf36e2_inst.sngfifo36e2_n_6\,
-      RDCLK => rd_clk,
-      RDCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_12\,
-      RDCOUNT(12) => \gf36e2_inst.sngfifo36e2_n_13\,
-      RDCOUNT(11) => \gf36e2_inst.sngfifo36e2_n_14\,
-      RDCOUNT(10) => \gf36e2_inst.sngfifo36e2_n_15\,
-      RDCOUNT(9) => \gf36e2_inst.sngfifo36e2_n_16\,
-      RDCOUNT(8) => \gf36e2_inst.sngfifo36e2_n_17\,
-      RDCOUNT(7) => \gf36e2_inst.sngfifo36e2_n_18\,
-      RDCOUNT(6) => \gf36e2_inst.sngfifo36e2_n_19\,
-      RDCOUNT(5) => \gf36e2_inst.sngfifo36e2_n_20\,
-      RDCOUNT(4) => \gf36e2_inst.sngfifo36e2_n_21\,
-      RDCOUNT(3) => \gf36e2_inst.sngfifo36e2_n_22\,
-      RDCOUNT(2) => \gf36e2_inst.sngfifo36e2_n_23\,
-      RDCOUNT(1) => \gf36e2_inst.sngfifo36e2_n_24\,
-      RDCOUNT(0) => \gf36e2_inst.sngfifo36e2_n_25\,
-      RDEN => \dout[27]\,
-      RDERR => \gf36e2_inst.sngfifo36e2_n_7\,
-      RDRSTBUSY => \gf36e2_inst.sngfifo36e2_n_8\,
-      REGCE => \dout[27]\,
-      RST => \out\(0),
-      RSTREG => \out\(0),
-      SBITERR => sbiterr_col(7),
+      SBITERR => sbiterr_i,
       SLEEP => '0',
       WRCLK => rd_clk,
       WRCOUNT(13) => \gf36e2_inst.sngfifo36e2_n_26\,
@@ -4954,664 +2519,44 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_builtin_extdepth is
   port (
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
+    empty : out STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    dout_3_sp_1 : in STD_LOGIC
+    wr_en : in STD_LOGIC;
+    din : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    rd_en : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth : entity is "builtin_extdepth";
 end FIFO_10_builtin_extdepth;
 
 architecture STRUCTURE of FIFO_10_builtin_extdepth is
-  signal \d[1]_0\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal dout_3_sn_1 : STD_LOGIC;
-  signal emp_0 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-  dout_3_sn_1 <= dout_3_sp_1;
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_19
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_0\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp_0(0) => emp_0(1),
-      ful(0) => ful(0),
-      rd_clk => rd_clk,
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_20\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_0\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      dout_3_sp_1 => dout_3_sn_1,
-      emp(0) => emp(0),
-      emp_0(0) => emp_0(1),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_0 is
-  port (
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[7]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_0 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_0;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_0 is
-  signal \d[1]_1\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp_0 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_17
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_1\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp_0(0) => emp_0(1),
-      ful(0) => ful(0),
-      rd_clk => rd_clk,
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_18\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_1\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[7]\ => \dout[7]\,
-      emp(0) => emp(0),
-      emp_0(0) => emp_0(1),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_1 is
-  port (
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    full : out STD_LOGIC;
-    empty : out STD_LOGIC;
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[11]\ : in STD_LOGIC;
-    full_0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    full_1 : in STD_LOGIC;
-    empty_0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    empty_1 : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_1 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_1;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_1 is
-  signal \d[1]_2\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp_0 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_15
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_2\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp_0(0) => emp_0(1),
-      ful(0) => ful(0),
-      full => full,
-      full_0(2 downto 0) => full_0(2 downto 0),
-      full_1 => full_1,
-      rd_clk => rd_clk,
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_16\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_2\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[11]\ => \dout[11]\,
-      emp(0) => emp(0),
-      emp_0(0) => emp_0(1),
-      empty => empty,
-      empty_0(2 downto 0) => empty_0(2 downto 0),
-      empty_1 => empty_1,
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_2 is
-  port (
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[15]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_2 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_2;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_2 is
-  signal \d[1]_3\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_13
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_3\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp(0) => emp(1),
-      rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_0(0),
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_14\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_3\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[15]\ => \dout[15]\,
-      emp(0) => emp(1),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_1(0),
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_3 is
-  port (
-    ful : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    emp : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[19]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_3 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_3;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_3 is
-  signal \d[1]_4\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp_0 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_11
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_4\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp_0(0) => emp_0(1),
-      ful(0) => ful(0),
-      rd_clk => rd_clk,
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_12\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_4\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[19]\ => \dout[19]\,
-      emp(0) => emp(0),
-      emp_0(0) => emp_0(1),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_4 is
-  port (
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wr_tmp : out STD_LOGIC;
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_en_0 : out STD_LOGIC;
-    rd_clk_0 : out STD_LOGIC;
-    rd_clk_1 : out STD_LOGIC;
-    full : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    empty : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    rd_en : in STD_LOGIC;
-    wr_en : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_4 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_4;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_4 is
-  signal \d[1]_5\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp_0 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_9
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_5\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp_0(0) => emp_0(1),
-      full(6 downto 0) => full(6 downto 0),
-      rd_clk => rd_clk,
-      rd_clk_0 => rd_clk_1,
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_en => wr_en,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_10\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_5\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      emp_0(0) => emp_0(1),
-      empty(6 downto 0) => empty(6 downto 0),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      rd_clk_0 => rd_clk_0,
-      rd_en => rd_en,
-      rd_en_0 => rd_en_0,
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_5 is
-  port (
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[27]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_5 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_5;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_5 is
-  signal \d[1]_6\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute async_reg : string;
-  attribute async_reg of srst_qr : signal is "true";
-  attribute msgon : string;
-  attribute msgon of srst_qr : signal is "true";
-  attribute ASYNC_REG_boolean : boolean;
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[0]\ : label is std.standard.true;
-  attribute KEEP : string;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[0]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[0]\ : label is "true";
-  attribute ASYNC_REG_boolean of \gbi8s_srst.srst_qr_reg[1]\ : label is std.standard.true;
-  attribute KEEP of \gbi8s_srst.srst_qr_reg[1]\ : label is "yes";
-  attribute msgon of \gbi8s_srst.srst_qr_reg[1]\ : label is "true";
-begin
-\gbi8s_srst.srst_qr_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst,
-      Q => srst_qr(0),
-      R => '0'
-    );
-\gbi8s_srst.srst_qr_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '1'
-    )
-        port map (
-      C => rd_clk,
-      CE => '1',
-      D => srst_qr(0),
-      Q => srst_qr(1),
-      R => '0'
-    );
-\gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim_7
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_6\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp(0) => emp(1),
-      rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_0(0),
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
-    );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_8\
-     port map (
-      CASDOUT(3 downto 0) => \d[1]_6\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[27]\ => \dout[27]\,
-      emp(0) => emp(1),
-      \out\(0) => srst_qr(1),
-      rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_1(0),
-      re(0) => re(1)
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity FIFO_10_builtin_extdepth_6 is
-  port (
-    rd_clk_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    wrst_busy_i : out STD_LOGIC_VECTOR ( 0 to 0 );
-    rd_clk_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    rd_clk : in STD_LOGIC;
-    srst : in STD_LOGIC;
-    wr_clk : in STD_LOGIC;
-    wr_tmp : in STD_LOGIC;
-    din : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \dout[31]\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth_6 : entity is "builtin_extdepth";
-end FIFO_10_builtin_extdepth_6;
-
-architecture STRUCTURE of FIFO_10_builtin_extdepth_6 is
-  signal \d[1]_7\ : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal emp : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal re : STD_LOGIC_VECTOR ( 1 to 1 );
+  signal \d[1]_0\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[2]_1\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[3]_2\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[4]_3\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[5]_4\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[6]_5\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal \d[7]_6\ : STD_LOGIC_VECTOR ( 35 downto 0 );
+  signal emp_1 : STD_LOGIC;
+  signal emp_2 : STD_LOGIC;
+  signal emp_3 : STD_LOGIC;
+  signal emp_4 : STD_LOGIC;
+  signal emp_5 : STD_LOGIC;
+  signal emp_6 : STD_LOGIC;
+  signal emp_7 : STD_LOGIC;
+  signal re_1 : STD_LOGIC;
+  signal re_2 : STD_LOGIC;
+  signal re_3 : STD_LOGIC;
+  signal re_4 : STD_LOGIC;
+  signal re_5 : STD_LOGIC;
+  signal re_6 : STD_LOGIC;
+  signal re_7 : STD_LOGIC;
   signal srst_qr : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute async_reg : string;
   attribute async_reg of srst_qr : signal is "true";
@@ -5650,28 +2595,94 @@ begin
     );
 \gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim\: entity work.FIFO_10_builtin_prim
      port map (
-      CASDOUT(3 downto 0) => \d[1]_7\(3 downto 0),
-      din(3 downto 0) => din(3 downto 0),
-      emp(0) => emp(1),
+      \d[1]_0\(35 downto 0) => \d[1]_0\(35 downto 0),
+      din(31 downto 0) => din(31 downto 0),
+      emp_1 => emp_1,
+      full => full,
       rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_0(0),
-      re(0) => re(1),
-      rrst_busy_i(0) => rrst_busy_i(0),
+      rd_rst_busy => rd_rst_busy,
+      re_1 => re_1,
       srst => srst,
       wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(0)
+      wr_en => wr_en,
+      wr_rst_busy => wr_rst_busy
     );
-\gmult_prim.gbi_chain.gp1[2].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0\
+\gmult_prim.gbi_chain.gp1[2].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0\
      port map (
-      CASDOUT(3 downto 0) => \d[1]_7\(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      \dout[31]\ => \dout[31]\,
-      emp(0) => emp(1),
+      \d[1]_0\(35 downto 0) => \d[1]_0\(35 downto 0),
+      \d[2]_1\(35 downto 0) => \d[2]_1\(35 downto 0),
+      emp_1 => emp_1,
+      emp_2 => emp_2,
       \out\(0) => srst_qr(1),
       rd_clk => rd_clk,
-      rd_clk_0(0) => rd_clk_1(0),
-      re(0) => re(1)
+      re_1 => re_1,
+      re_2 => re_2
+    );
+\gmult_prim.gbi_chain.gp1[3].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_0\
+     port map (
+      \d[2]_1\(35 downto 0) => \d[2]_1\(35 downto 0),
+      \d[3]_2\(35 downto 0) => \d[3]_2\(35 downto 0),
+      emp_2 => emp_2,
+      emp_3 => emp_3,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      re_2 => re_2,
+      re_3 => re_3
+    );
+\gmult_prim.gbi_chain.gp1[4].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_1\
+     port map (
+      \d[3]_2\(35 downto 0) => \d[3]_2\(35 downto 0),
+      \d[4]_3\(35 downto 0) => \d[4]_3\(35 downto 0),
+      emp_3 => emp_3,
+      emp_4 => emp_4,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      re_3 => re_3,
+      re_4 => re_4
+    );
+\gmult_prim.gbi_chain.gp1[5].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_2\
+     port map (
+      \d[4]_3\(35 downto 0) => \d[4]_3\(35 downto 0),
+      \d[5]_4\(35 downto 0) => \d[5]_4\(35 downto 0),
+      emp_4 => emp_4,
+      emp_5 => emp_5,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      re_4 => re_4,
+      re_5 => re_5
+    );
+\gmult_prim.gbi_chain.gp1[6].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_3\
+     port map (
+      \d[5]_4\(35 downto 0) => \d[5]_4\(35 downto 0),
+      \d[6]_5\(35 downto 0) => \d[6]_5\(35 downto 0),
+      emp_5 => emp_5,
+      emp_6 => emp_6,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      re_5 => re_5,
+      re_6 => re_6
+    );
+\gmult_prim.gbi_chain.gp1[7].gbi_middle.mid_inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized0_4\
+     port map (
+      \d[6]_5\(35 downto 0) => \d[6]_5\(35 downto 0),
+      \d[7]_6\(35 downto 0) => \d[7]_6\(35 downto 0),
+      emp_6 => emp_6,
+      emp_7 => emp_7,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      re_6 => re_6,
+      re_7 => re_7
+    );
+\gmult_prim.gbi_chain.gp1[8].gbi_last.inst_prim\: entity work.\FIFO_10_builtin_prim__parameterized1\
+     port map (
+      \d[7]_6\(35 downto 0) => \d[7]_6\(35 downto 0),
+      dout(31 downto 0) => dout(31 downto 0),
+      emp_7 => emp_7,
+      empty => empty,
+      \out\(0) => srst_qr(1),
+      rd_clk => rd_clk,
+      rd_en => rd_en,
+      re_7 => re_7
     );
 end STRUCTURE;
 library IEEE;
@@ -5680,205 +2691,37 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_builtin_top is
   port (
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_rst_busy : out STD_LOGIC;
-    rd_rst_busy : out STD_LOGIC;
     full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
+    wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_en : in STD_LOGIC
+    rd_en : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_builtin_top : entity is "builtin_top";
 end FIFO_10_builtin_top;
 
 architecture STRUCTURE of FIFO_10_builtin_top is
-  signal emp : STD_LOGIC_VECTOR ( 8 downto 1 );
-  signal ful : STD_LOGIC_VECTOR ( 8 downto 1 );
-  signal rd_rst_busy_INST_0_i_1_n_0 : STD_LOGIC;
-  signal rrst_busy_i : STD_LOGIC_VECTOR ( 8 downto 1 );
-  signal \rst_val_sym.gextw_sym[6].inst_extd_n_7\ : STD_LOGIC;
-  signal \rst_val_sym.gextw_sym[6].inst_extd_n_8\ : STD_LOGIC;
-  signal \rst_val_sym.gextw_sym[6].inst_extd_n_9\ : STD_LOGIC;
-  signal wr_rst_busy_INST_0_i_1_n_0 : STD_LOGIC;
-  signal wr_tmp : STD_LOGIC;
-  signal wrst_busy_i : STD_LOGIC_VECTOR ( 8 downto 1 );
 begin
-rd_rst_busy_INST_0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => rrst_busy_i(3),
-      I1 => rrst_busy_i(4),
-      I2 => rrst_busy_i(1),
-      I3 => rrst_busy_i(2),
-      I4 => rd_rst_busy_INST_0_i_1_n_0,
-      O => rd_rst_busy
-    );
-rd_rst_busy_INST_0_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => rrst_busy_i(6),
-      I1 => rrst_busy_i(5),
-      I2 => rrst_busy_i(8),
-      I3 => rrst_busy_i(7),
-      O => rd_rst_busy_INST_0_i_1_n_0
-    );
 \rst_val_sym.gextw_sym[1].inst_extd\: entity work.FIFO_10_builtin_extdepth
      port map (
-      din(3 downto 0) => din(3 downto 0),
-      dout(3 downto 0) => dout(3 downto 0),
-      dout_3_sp_1 => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      emp(0) => emp(1),
-      ful(0) => ful(1),
-      rd_clk => rd_clk,
-      rrst_busy_i(0) => rrst_busy_i(1),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(1)
-    );
-\rst_val_sym.gextw_sym[2].inst_extd\: entity work.FIFO_10_builtin_extdepth_0
-     port map (
-      din(3 downto 0) => din(7 downto 4),
-      dout(3 downto 0) => dout(7 downto 4),
-      \dout[7]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      emp(0) => emp(2),
-      ful(0) => ful(2),
-      rd_clk => rd_clk,
-      rrst_busy_i(0) => rrst_busy_i(2),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(2)
-    );
-\rst_val_sym.gextw_sym[3].inst_extd\: entity work.FIFO_10_builtin_extdepth_1
-     port map (
-      din(3 downto 0) => din(11 downto 8),
-      dout(3 downto 0) => dout(11 downto 8),
-      \dout[11]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      emp(0) => emp(3),
+      din(31 downto 0) => din(31 downto 0),
+      dout(31 downto 0) => dout(31 downto 0),
       empty => empty,
-      empty_0(2) => emp(4),
-      empty_0(1 downto 0) => emp(2 downto 1),
-      empty_1 => \rst_val_sym.gextw_sym[6].inst_extd_n_8\,
-      ful(0) => ful(3),
       full => full,
-      full_0(2) => ful(4),
-      full_0(1 downto 0) => ful(2 downto 1),
-      full_1 => \rst_val_sym.gextw_sym[6].inst_extd_n_9\,
       rd_clk => rd_clk,
-      rrst_busy_i(0) => rrst_busy_i(3),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(3)
-    );
-\rst_val_sym.gextw_sym[4].inst_extd\: entity work.FIFO_10_builtin_extdepth_2
-     port map (
-      din(3 downto 0) => din(15 downto 12),
-      dout(3 downto 0) => dout(15 downto 12),
-      \dout[15]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      rd_clk => rd_clk,
-      rd_clk_0(0) => ful(4),
-      rd_clk_1(0) => emp(4),
-      rrst_busy_i(0) => rrst_busy_i(4),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(4)
-    );
-\rst_val_sym.gextw_sym[5].inst_extd\: entity work.FIFO_10_builtin_extdepth_3
-     port map (
-      din(3 downto 0) => din(19 downto 16),
-      dout(3 downto 0) => dout(19 downto 16),
-      \dout[19]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      emp(0) => emp(5),
-      ful(0) => ful(5),
-      rd_clk => rd_clk,
-      rrst_busy_i(0) => rrst_busy_i(5),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(5)
-    );
-\rst_val_sym.gextw_sym[6].inst_extd\: entity work.FIFO_10_builtin_extdepth_4
-     port map (
-      din(3 downto 0) => din(23 downto 20),
-      dout(3 downto 0) => dout(23 downto 20),
-      empty(6 downto 5) => emp(8 downto 7),
-      empty(4 downto 0) => emp(5 downto 1),
-      full(6 downto 5) => ful(8 downto 7),
-      full(4 downto 0) => ful(5 downto 1),
-      rd_clk => rd_clk,
-      rd_clk_0 => \rst_val_sym.gextw_sym[6].inst_extd_n_8\,
-      rd_clk_1 => \rst_val_sym.gextw_sym[6].inst_extd_n_9\,
       rd_en => rd_en,
-      rd_en_0 => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      rrst_busy_i(0) => rrst_busy_i(6),
+      rd_rst_busy => rd_rst_busy,
       srst => srst,
       wr_clk => wr_clk,
       wr_en => wr_en,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(6)
-    );
-\rst_val_sym.gextw_sym[7].inst_extd\: entity work.FIFO_10_builtin_extdepth_5
-     port map (
-      din(3 downto 0) => din(27 downto 24),
-      dout(3 downto 0) => dout(27 downto 24),
-      \dout[27]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      rd_clk => rd_clk,
-      rd_clk_0(0) => ful(7),
-      rd_clk_1(0) => emp(7),
-      rrst_busy_i(0) => rrst_busy_i(7),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(7)
-    );
-\rst_val_sym.gextw_sym[8].inst_extd\: entity work.FIFO_10_builtin_extdepth_6
-     port map (
-      din(3 downto 0) => din(31 downto 28),
-      dout(3 downto 0) => dout(31 downto 28),
-      \dout[31]\ => \rst_val_sym.gextw_sym[6].inst_extd_n_7\,
-      rd_clk => rd_clk,
-      rd_clk_0(0) => ful(8),
-      rd_clk_1(0) => emp(8),
-      rrst_busy_i(0) => rrst_busy_i(8),
-      srst => srst,
-      wr_clk => wr_clk,
-      wr_tmp => wr_tmp,
-      wrst_busy_i(0) => wrst_busy_i(8)
-    );
-wr_rst_busy_INST_0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => wrst_busy_i(3),
-      I1 => wrst_busy_i(4),
-      I2 => wrst_busy_i(1),
-      I3 => wrst_busy_i(2),
-      I4 => wr_rst_busy_INST_0_i_1_n_0,
-      O => wr_rst_busy
-    );
-wr_rst_busy_INST_0_i_1: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => wrst_busy_i(6),
-      I1 => wrst_busy_i(5),
-      I2 => wrst_busy_i(8),
-      I3 => wrst_busy_i(7),
-      O => wr_rst_busy_INST_0_i_1_n_0
+      wr_rst_busy => wr_rst_busy
     );
 end STRUCTURE;
 library IEEE;
@@ -5887,17 +2730,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_fifo_generator_v13_2_5_builtin is
   port (
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_rst_busy : out STD_LOGIC;
-    rd_rst_busy : out STD_LOGIC;
     full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
+    wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_en : in STD_LOGIC
+    rd_en : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_fifo_generator_v13_2_5_builtin : entity is "fifo_generator_v13_2_5_builtin";
@@ -5910,7 +2753,7 @@ architecture STRUCTURE of FIFO_10_fifo_generator_v13_2_5_builtin is
   attribute msgon : string;
   attribute msgon of srst_q : signal is "true";
 begin
-i_0: unisim.vcomponents.LUT1
+\gbi.bii_0\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"2"
     )
@@ -5918,7 +2761,7 @@ i_0: unisim.vcomponents.LUT1
       I0 => '1',
       O => srst_q(1)
     );
-i_1: unisim.vcomponents.LUT1
+\gbi.bii_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"2"
     )
@@ -5947,17 +2790,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_fifo_generator_top is
   port (
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_rst_busy : out STD_LOGIC;
-    rd_rst_busy : out STD_LOGIC;
     full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
+    wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_en : in STD_LOGIC
+    rd_en : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_fifo_generator_top : entity is "fifo_generator_top";
@@ -5986,17 +2829,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity FIFO_10_fifo_generator_v13_2_5_synth is
   port (
-    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_rst_busy : out STD_LOGIC;
-    rd_rst_busy : out STD_LOGIC;
     full : out STD_LOGIC;
+    rd_rst_busy : out STD_LOGIC;
+    wr_rst_busy : out STD_LOGIC;
     empty : out STD_LOGIC;
-    rd_en : in STD_LOGIC;
+    dout : out STD_LOGIC_VECTOR ( 31 downto 0 );
     rd_clk : in STD_LOGIC;
     srst : in STD_LOGIC;
     wr_clk : in STD_LOGIC;
+    wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    wr_en : in STD_LOGIC
+    rd_en : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of FIFO_10_fifo_generator_v13_2_5_synth : entity is "fifo_generator_v13_2_5_synth";
@@ -6037,12 +2880,12 @@ entity FIFO_10_fifo_generator_v13_2_5 is
     din : in STD_LOGIC_VECTOR ( 31 downto 0 );
     wr_en : in STD_LOGIC;
     rd_en : in STD_LOGIC;
-    prog_empty_thresh : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    prog_empty_thresh_assert : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    prog_empty_thresh_negate : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    prog_full_thresh : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    prog_full_thresh_assert : in STD_LOGIC_VECTOR ( 13 downto 0 );
-    prog_full_thresh_negate : in STD_LOGIC_VECTOR ( 13 downto 0 );
+    prog_empty_thresh : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    prog_empty_thresh_assert : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    prog_empty_thresh_negate : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    prog_full_thresh : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    prog_full_thresh_assert : in STD_LOGIC_VECTOR ( 12 downto 0 );
+    prog_full_thresh_negate : in STD_LOGIC_VECTOR ( 12 downto 0 );
     int_clk : in STD_LOGIC;
     injectdbiterr : in STD_LOGIC;
     injectsbiterr : in STD_LOGIC;
@@ -6056,9 +2899,9 @@ entity FIFO_10_fifo_generator_v13_2_5 is
     almost_empty : out STD_LOGIC;
     valid : out STD_LOGIC;
     underflow : out STD_LOGIC;
-    data_count : out STD_LOGIC_VECTOR ( 13 downto 0 );
-    rd_data_count : out STD_LOGIC_VECTOR ( 13 downto 0 );
-    wr_data_count : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    data_count : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    rd_data_count : out STD_LOGIC_VECTOR ( 12 downto 0 );
+    wr_data_count : out STD_LOGIC_VECTOR ( 12 downto 0 );
     prog_full : out STD_LOGIC;
     prog_empty : out STD_LOGIC;
     sbiterr : out STD_LOGIC;
@@ -6312,7 +3155,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_COUNT_TYPE : integer;
   attribute C_COUNT_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_DATA_COUNT_WIDTH : integer;
-  attribute C_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 14;
+  attribute C_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 13;
   attribute C_DEFAULT_VALUE : string;
   attribute C_DEFAULT_VALUE of FIFO_10_fifo_generator_v13_2_5 : entity is "BlankString";
   attribute C_DIN_WIDTH : integer;
@@ -6480,11 +3323,11 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_POWER_SAVING_MODE : integer;
   attribute C_POWER_SAVING_MODE of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_PRELOAD_LATENCY : integer;
-  attribute C_PRELOAD_LATENCY of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
+  attribute C_PRELOAD_LATENCY of FIFO_10_fifo_generator_v13_2_5 : entity is 1;
   attribute C_PRELOAD_REGS : integer;
-  attribute C_PRELOAD_REGS of FIFO_10_fifo_generator_v13_2_5 : entity is 1;
+  attribute C_PRELOAD_REGS of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_PRIM_FIFO_TYPE : string;
-  attribute C_PRIM_FIFO_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is "8kx4";
+  attribute C_PRIM_FIFO_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is "1kx36";
   attribute C_PRIM_FIFO_TYPE_AXIS : string;
   attribute C_PRIM_FIFO_TYPE_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is "1kx18";
   attribute C_PRIM_FIFO_TYPE_RACH : string;
@@ -6498,7 +3341,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_PRIM_FIFO_TYPE_WRCH : string;
   attribute C_PRIM_FIFO_TYPE_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is "512x36";
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 6;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 5;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS : integer;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH : integer;
@@ -6512,7 +3355,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH : integer;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 1022;
   attribute C_PROG_EMPTY_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 7;
+  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 6;
   attribute C_PROG_EMPTY_TYPE : integer;
   attribute C_PROG_EMPTY_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_PROG_EMPTY_TYPE_AXIS : integer;
@@ -6528,7 +3371,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_PROG_EMPTY_TYPE_WRCH : integer;
   attribute C_PROG_EMPTY_TYPE_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 16382;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 8184;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS : integer;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH : integer;
@@ -6542,7 +3385,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH : integer;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 1023;
   attribute C_PROG_FULL_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_FULL_THRESH_NEGATE_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 16381;
+  attribute C_PROG_FULL_THRESH_NEGATE_VAL of FIFO_10_fifo_generator_v13_2_5 : entity is 8183;
   attribute C_PROG_FULL_TYPE : integer;
   attribute C_PROG_FULL_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_PROG_FULL_TYPE_AXIS : integer;
@@ -6562,13 +3405,13 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_RDCH_TYPE : integer;
   attribute C_RDCH_TYPE of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_RD_DATA_COUNT_WIDTH : integer;
-  attribute C_RD_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 14;
+  attribute C_RD_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 13;
   attribute C_RD_DEPTH : integer;
-  attribute C_RD_DEPTH of FIFO_10_fifo_generator_v13_2_5 : entity is 16384;
+  attribute C_RD_DEPTH of FIFO_10_fifo_generator_v13_2_5 : entity is 8192;
   attribute C_RD_FREQ : integer;
   attribute C_RD_FREQ of FIFO_10_fifo_generator_v13_2_5 : entity is 200;
   attribute C_RD_PNTR_WIDTH : integer;
-  attribute C_RD_PNTR_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 14;
+  attribute C_RD_PNTR_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 13;
   attribute C_REG_SLICE_MODE_AXIS : integer;
   attribute C_REG_SLICE_MODE_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_REG_SLICE_MODE_RACH : integer;
@@ -6610,7 +3453,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_USE_ECC_WRCH : integer;
   attribute C_USE_ECC_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_USE_EMBEDDED_REG : integer;
-  attribute C_USE_EMBEDDED_REG of FIFO_10_fifo_generator_v13_2_5 : entity is 1;
+  attribute C_USE_EMBEDDED_REG of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_USE_FIFO16_FLAGS : integer;
   attribute C_USE_FIFO16_FLAGS of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_USE_FWFT_DATA_COUNT : integer;
@@ -6628,9 +3471,9 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_WR_ACK_LOW : integer;
   attribute C_WR_ACK_LOW of FIFO_10_fifo_generator_v13_2_5 : entity is 0;
   attribute C_WR_DATA_COUNT_WIDTH : integer;
-  attribute C_WR_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 14;
+  attribute C_WR_DATA_COUNT_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 13;
   attribute C_WR_DEPTH : integer;
-  attribute C_WR_DEPTH of FIFO_10_fifo_generator_v13_2_5 : entity is 16384;
+  attribute C_WR_DEPTH of FIFO_10_fifo_generator_v13_2_5 : entity is 8192;
   attribute C_WR_DEPTH_AXIS : integer;
   attribute C_WR_DEPTH_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is 1024;
   attribute C_WR_DEPTH_RACH : integer;
@@ -6646,7 +3489,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_WR_FREQ : integer;
   attribute C_WR_FREQ of FIFO_10_fifo_generator_v13_2_5 : entity is 160;
   attribute C_WR_PNTR_WIDTH : integer;
-  attribute C_WR_PNTR_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 14;
+  attribute C_WR_PNTR_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 13;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
   attribute C_WR_PNTR_WIDTH_AXIS of FIFO_10_fifo_generator_v13_2_5 : entity is 10;
   attribute C_WR_PNTR_WIDTH_RACH : integer;
@@ -6851,7 +3694,6 @@ begin
   axis_wr_data_count(2) <= \<const0>\;
   axis_wr_data_count(1) <= \<const0>\;
   axis_wr_data_count(0) <= \<const0>\;
-  data_count(13) <= \<const0>\;
   data_count(12) <= \<const0>\;
   data_count(11) <= \<const0>\;
   data_count(10) <= \<const0>\;
@@ -7093,7 +3935,6 @@ begin
   overflow <= \<const0>\;
   prog_empty <= \<const0>\;
   prog_full <= \<const0>\;
-  rd_data_count(13) <= \<const0>\;
   rd_data_count(12) <= \<const0>\;
   rd_data_count(11) <= \<const0>\;
   rd_data_count(10) <= \<const0>\;
@@ -7190,7 +4031,6 @@ begin
   underflow <= \<const0>\;
   valid <= \<const0>\;
   wr_ack <= \<const0>\;
-  wr_data_count(13) <= \<const0>\;
   wr_data_count(12) <= \<const0>\;
   wr_data_count(11) <= \<const0>\;
   wr_data_count(10) <= \<const0>\;
@@ -7335,7 +4175,7 @@ architecture STRUCTURE of FIFO_10 is
   signal NLW_U0_axis_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_U0_axis_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal NLW_U0_axis_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal NLW_U0_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal NLW_U0_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal NLW_U0_m_axi_araddr_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_U0_m_axi_arburst_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_m_axi_arcache_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -7368,7 +4208,7 @@ architecture STRUCTURE of FIFO_10 is
   signal NLW_U0_m_axis_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_U0_m_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_U0_m_axis_tuser_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal NLW_U0_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal NLW_U0_rd_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal NLW_U0_s_axi_bid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_U0_s_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_s_axi_buser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -7376,7 +4216,7 @@ architecture STRUCTURE of FIFO_10 is
   signal NLW_U0_s_axi_rid_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_U0_s_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_U0_s_axi_ruser_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal NLW_U0_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 13 downto 0 );
+  signal NLW_U0_wr_data_count_UNCONNECTED : STD_LOGIC_VECTOR ( 12 downto 0 );
   attribute C_ADD_NGC_CONSTRAINT : integer;
   attribute C_ADD_NGC_CONSTRAINT of U0 : label is 0;
   attribute C_APPLICATION_TYPE_AXIS : integer;
@@ -7432,7 +4272,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_COUNT_TYPE : integer;
   attribute C_COUNT_TYPE of U0 : label is 0;
   attribute C_DATA_COUNT_WIDTH : integer;
-  attribute C_DATA_COUNT_WIDTH of U0 : label is 14;
+  attribute C_DATA_COUNT_WIDTH of U0 : label is 13;
   attribute C_DEFAULT_VALUE : string;
   attribute C_DEFAULT_VALUE of U0 : label is "BlankString";
   attribute C_DIN_WIDTH : integer;
@@ -7600,11 +4440,11 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_POWER_SAVING_MODE : integer;
   attribute C_POWER_SAVING_MODE of U0 : label is 0;
   attribute C_PRELOAD_LATENCY : integer;
-  attribute C_PRELOAD_LATENCY of U0 : label is 0;
+  attribute C_PRELOAD_LATENCY of U0 : label is 1;
   attribute C_PRELOAD_REGS : integer;
-  attribute C_PRELOAD_REGS of U0 : label is 1;
+  attribute C_PRELOAD_REGS of U0 : label is 0;
   attribute C_PRIM_FIFO_TYPE : string;
-  attribute C_PRIM_FIFO_TYPE of U0 : label is "8kx4";
+  attribute C_PRIM_FIFO_TYPE of U0 : label is "1kx36";
   attribute C_PRIM_FIFO_TYPE_AXIS : string;
   attribute C_PRIM_FIFO_TYPE_AXIS of U0 : label is "1kx18";
   attribute C_PRIM_FIFO_TYPE_RACH : string;
@@ -7618,7 +4458,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_PRIM_FIFO_TYPE_WRCH : string;
   attribute C_PRIM_FIFO_TYPE_WRCH of U0 : label is "512x36";
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of U0 : label is 6;
+  attribute C_PROG_EMPTY_THRESH_ASSERT_VAL of U0 : label is 5;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS : integer;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS of U0 : label is 1022;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH : integer;
@@ -7632,7 +4472,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH : integer;
   attribute C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH of U0 : label is 1022;
   attribute C_PROG_EMPTY_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of U0 : label is 7;
+  attribute C_PROG_EMPTY_THRESH_NEGATE_VAL of U0 : label is 6;
   attribute C_PROG_EMPTY_TYPE : integer;
   attribute C_PROG_EMPTY_TYPE of U0 : label is 0;
   attribute C_PROG_EMPTY_TYPE_AXIS : integer;
@@ -7648,7 +4488,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_PROG_EMPTY_TYPE_WRCH : integer;
   attribute C_PROG_EMPTY_TYPE_WRCH of U0 : label is 0;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL : integer;
-  attribute C_PROG_FULL_THRESH_ASSERT_VAL of U0 : label is 16382;
+  attribute C_PROG_FULL_THRESH_ASSERT_VAL of U0 : label is 8184;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS : integer;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_AXIS of U0 : label is 1023;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_RACH : integer;
@@ -7662,7 +4502,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH : integer;
   attribute C_PROG_FULL_THRESH_ASSERT_VAL_WRCH of U0 : label is 1023;
   attribute C_PROG_FULL_THRESH_NEGATE_VAL : integer;
-  attribute C_PROG_FULL_THRESH_NEGATE_VAL of U0 : label is 16381;
+  attribute C_PROG_FULL_THRESH_NEGATE_VAL of U0 : label is 8183;
   attribute C_PROG_FULL_TYPE : integer;
   attribute C_PROG_FULL_TYPE of U0 : label is 0;
   attribute C_PROG_FULL_TYPE_AXIS : integer;
@@ -7682,13 +4522,13 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_RDCH_TYPE : integer;
   attribute C_RDCH_TYPE of U0 : label is 0;
   attribute C_RD_DATA_COUNT_WIDTH : integer;
-  attribute C_RD_DATA_COUNT_WIDTH of U0 : label is 14;
+  attribute C_RD_DATA_COUNT_WIDTH of U0 : label is 13;
   attribute C_RD_DEPTH : integer;
-  attribute C_RD_DEPTH of U0 : label is 16384;
+  attribute C_RD_DEPTH of U0 : label is 8192;
   attribute C_RD_FREQ : integer;
   attribute C_RD_FREQ of U0 : label is 200;
   attribute C_RD_PNTR_WIDTH : integer;
-  attribute C_RD_PNTR_WIDTH of U0 : label is 14;
+  attribute C_RD_PNTR_WIDTH of U0 : label is 13;
   attribute C_REG_SLICE_MODE_AXIS : integer;
   attribute C_REG_SLICE_MODE_AXIS of U0 : label is 0;
   attribute C_REG_SLICE_MODE_RACH : integer;
@@ -7730,7 +4570,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_USE_ECC_WRCH : integer;
   attribute C_USE_ECC_WRCH of U0 : label is 0;
   attribute C_USE_EMBEDDED_REG : integer;
-  attribute C_USE_EMBEDDED_REG of U0 : label is 1;
+  attribute C_USE_EMBEDDED_REG of U0 : label is 0;
   attribute C_USE_FIFO16_FLAGS : integer;
   attribute C_USE_FIFO16_FLAGS of U0 : label is 0;
   attribute C_USE_FWFT_DATA_COUNT : integer;
@@ -7748,9 +4588,9 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_WR_ACK_LOW : integer;
   attribute C_WR_ACK_LOW of U0 : label is 0;
   attribute C_WR_DATA_COUNT_WIDTH : integer;
-  attribute C_WR_DATA_COUNT_WIDTH of U0 : label is 14;
+  attribute C_WR_DATA_COUNT_WIDTH of U0 : label is 13;
   attribute C_WR_DEPTH : integer;
-  attribute C_WR_DEPTH of U0 : label is 16384;
+  attribute C_WR_DEPTH of U0 : label is 8192;
   attribute C_WR_DEPTH_AXIS : integer;
   attribute C_WR_DEPTH_AXIS of U0 : label is 1024;
   attribute C_WR_DEPTH_RACH : integer;
@@ -7766,7 +4606,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_WR_FREQ : integer;
   attribute C_WR_FREQ of U0 : label is 160;
   attribute C_WR_PNTR_WIDTH : integer;
-  attribute C_WR_PNTR_WIDTH of U0 : label is 14;
+  attribute C_WR_PNTR_WIDTH of U0 : label is 13;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
   attribute C_WR_PNTR_WIDTH_AXIS of U0 : label is 10;
   attribute C_WR_PNTR_WIDTH_RACH : integer;
@@ -7879,7 +4719,7 @@ U0: entity work.FIFO_10_fifo_generator_v13_2_5
       backup => '0',
       backup_marker => '0',
       clk => '0',
-      data_count(13 downto 0) => NLW_U0_data_count_UNCONNECTED(13 downto 0),
+      data_count(12 downto 0) => NLW_U0_data_count_UNCONNECTED(12 downto 0),
       dbiterr => NLW_U0_dbiterr_UNCONNECTED,
       din(31 downto 0) => din(31 downto 0),
       dout(31 downto 0) => dout(31 downto 0),
@@ -7946,15 +4786,15 @@ U0: entity work.FIFO_10_fifo_generator_v13_2_5
       m_axis_tvalid => NLW_U0_m_axis_tvalid_UNCONNECTED,
       overflow => NLW_U0_overflow_UNCONNECTED,
       prog_empty => NLW_U0_prog_empty_UNCONNECTED,
-      prog_empty_thresh(13 downto 0) => B"00000000000000",
-      prog_empty_thresh_assert(13 downto 0) => B"00000000000000",
-      prog_empty_thresh_negate(13 downto 0) => B"00000000000000",
+      prog_empty_thresh(12 downto 0) => B"0000000000000",
+      prog_empty_thresh_assert(12 downto 0) => B"0000000000000",
+      prog_empty_thresh_negate(12 downto 0) => B"0000000000000",
       prog_full => NLW_U0_prog_full_UNCONNECTED,
-      prog_full_thresh(13 downto 0) => B"00000000000000",
-      prog_full_thresh_assert(13 downto 0) => B"00000000000000",
-      prog_full_thresh_negate(13 downto 0) => B"00000000000000",
+      prog_full_thresh(12 downto 0) => B"0000000000000",
+      prog_full_thresh_assert(12 downto 0) => B"0000000000000",
+      prog_full_thresh_negate(12 downto 0) => B"0000000000000",
       rd_clk => rd_clk,
-      rd_data_count(13 downto 0) => NLW_U0_rd_data_count_UNCONNECTED(13 downto 0),
+      rd_data_count(12 downto 0) => NLW_U0_rd_data_count_UNCONNECTED(12 downto 0),
       rd_en => rd_en,
       rd_rst => '0',
       rd_rst_busy => rd_rst_busy,
@@ -8023,7 +4863,7 @@ U0: entity work.FIFO_10_fifo_generator_v13_2_5
       valid => NLW_U0_valid_UNCONNECTED,
       wr_ack => NLW_U0_wr_ack_UNCONNECTED,
       wr_clk => wr_clk,
-      wr_data_count(13 downto 0) => NLW_U0_wr_data_count_UNCONNECTED(13 downto 0),
+      wr_data_count(12 downto 0) => NLW_U0_wr_data_count_UNCONNECTED(12 downto 0),
       wr_en => wr_en,
       wr_rst => '0',
       wr_rst_busy => wr_rst_busy

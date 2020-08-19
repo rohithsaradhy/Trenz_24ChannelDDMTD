@@ -22,6 +22,7 @@ set_param chipscope.maxJobs 3
 set_param power.BramSDPPropagationFix 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xczu2cg-sfvc784-1-e
 
 set_param project.singleFileAddWarning.threshold 0

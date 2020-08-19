@@ -39,7 +39,7 @@ module main(
 
   //AXIS Interface port  
   parameter integer C_M_AXIS_TDATA_WIDTH	= 32;
-  parameter integer C_M_START_COUNT	= 32;
+  parameter integer C_M_START_COUNT	=32;
 	
   wire [C_M_AXIS_TDATA_WIDTH-1 : 0] TDATA;
   wire  [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] TSTRB;
@@ -75,10 +75,10 @@ module main(
   integer counter_clkbeat=0;
   reg odd=0;
   assign clk_ref=TCLK;
-  always @(posedge TCLK)
+  always @(posedge clk_ref)
   begin
   
-  // //100k subs
+//  100k subs
   // counter_clkbeat<=counter_clkbeat+1;
   // if(counter_clkbeat == 100000/2) begin
   //    beat_0_q1<=~beat_0_q1;
@@ -170,11 +170,13 @@ module main(
 //DDMTD Sampler1
 
 
-
-  wire [C_M_AXIS_TDATA_WIDTH-1 : 0] tdata1;
+  wire tclk1;
+  wire resetn1;
+  wire[C_M_AXIS_TDATA_WIDTH-1 : 0] tdata1;
   wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] tstrb1;
   wire tlast1;
   wire tvalid1;
+  wire tready1;
   wire enable_read_logic1;
 
   
@@ -182,8 +184,7 @@ module main(
  DDMTD_Sampler
 #(
     .DATA_WIDTH(C_M_AXIS_TDATA_WIDTH),
-    .C_M_START_COUNT(C_M_START_COUNT),
-    .FIFO_DEPTH(10)
+    .C_M_START_COUNT(C_M_START_COUNT)
  )
   DDMTD1
  (
@@ -202,9 +203,8 @@ module main(
      .M_AXIS_TDATA(tdata1),  
      .M_AXIS_TSTRB(tstrb1),
      .M_AXIS_TLAST(tlast1),
-     .M_AXIS_TREADY(TREADY),
+     .M_AXIS_TREADY(tready1),
      .enable_read_logic(enable_read_logic1)
-
 
  );
 
@@ -212,7 +212,10 @@ module main(
 
 
 
+
 //DDMTD Sampler2
+  wire tclk2;
+  wire resetn2;
   wire[C_M_AXIS_TDATA_WIDTH-1 : 0] tdata2;
   wire [(C_M_AXIS_TDATA_WIDTH/8)-1 : 0] tstrb2;
   wire tlast2;
@@ -225,8 +228,7 @@ module main(
  DDMTD_Sampler
 #(
     .DATA_WIDTH(C_M_AXIS_TDATA_WIDTH),
-    .C_M_START_COUNT(C_M_START_COUNT),
-    .FIFO_DEPTH(10)
+    .C_M_START_COUNT(C_M_START_COUNT)
  )
   DDMTD2
  (
@@ -245,7 +247,7 @@ module main(
      .M_AXIS_TDATA(tdata2),  
      .M_AXIS_TSTRB(tstrb2),
      .M_AXIS_TLAST(tlast2),
-     .M_AXIS_TREADY(TREADY),
+     .M_AXIS_TREADY(tready2),
      .enable_read_logic(enable_read_logic2)
 
  );
@@ -258,55 +260,55 @@ module main(
 
 
 
+
+
+reg [2:0] switch_neg = 0;
+reg [2:0] switch_pos = 0;
+
+
+always @(negedge TCLK) switch_neg <= ({GPIO[3],GPIO[2],GPIO[1]});
+always @(posedge TCLK) switch_pos <= ({GPIO[3],GPIO[2],GPIO[1]});
+
 //  Multiplexer
-assign TDATA   = (GPIO[1]==1'b0) ? tdata1  : 
-                 (GPIO[1]==1'b1) ? tdata2  : 32'b0;
+
+assign TDATA   = (switch_neg==3'b000) ? 0  :
+                 (switch_neg==3'b001) ? tdata1 :
+                 (switch_neg==3'b010) ? tdata2 : 32'b0;
 
 
-assign TSTRB   = (GPIO[1]==1'b0) ? tstrb1  : 
-                 (GPIO[1]==1'b1) ? tstrb2  : 32'hffffffff;      
+assign TSTRB   = (switch_neg==3'b000) ? 0  :
+                 (switch_neg==3'b001) ? tstrb1  :  
+                 (switch_neg==3'b010) ? tstrb2  : 32'hffffffff;      
 
-assign TVALID  = (GPIO[1]==1'b0) ? tvalid1 : 
-                 (GPIO[1]==1'b1) ? tvalid2 : 0;
+assign TVALID  = (switch_neg==3'b000) ? 0   :
+                 (switch_neg==3'b001) ? tvalid1 :  
+                 (switch_neg==3'b010) ? tvalid2 : 0;
 
-assign TLAST   = (GPIO[1]==1'b0) ? tlast1  : 
-                 (GPIO[1]==1'b1) ? tlast2  : 0;
+assign TLAST   = (switch_neg==3'b000) ? 0   :
+                 (switch_neg==3'b001) ? tlast1  :  
+                 (switch_neg==3'b010) ? tlast2  : 0;
+
+assign enable_read_logic1 = (switch_pos==3'b001) ? 1 : 0;
+assign enable_read_logic2 = (switch_pos==3'b010) ? 1 : 0;
+assign tready1 = (switch_pos==3'b001) ? TREADY : 0;
+assign tready2 = (switch_pos==3'b010) ? TREADY : 0;
 
 
-assign enable_read_logic1 = (GPIO[1]==1'b0) ? 1 : 0;
-assign enable_read_logic2 = (GPIO[1]==1'b1) ? 1 : 0;
+
+// assign tclk1 = (switch_neg==3'b001) ? TCLK : 0;
+// assign tclk2 = (switch_neg==3'b010) ? TCLK : 0;
+
+// assign tclk1 = TCLK; 
+// assign tclk2 = TCLK; 
+
+
+// assign resetn1 = (switch_neg==3'b001) ? RESETN : 0;
+// assign resetn2 = (switch_neg==3'b010) ? RESETN : 0;
 
 
 
 
 
-// always @(GPIO[3:1])
-// begin
-//     case (GPIO[3:1])
-//       3'b000  :  begin 
-//         TDATA<=tdata1;
-//         TSTRB<=tstrb1;
-//         TVALID<=tvalid1;
-//         tready1<=TREADY;
-//         tready2<=0;
-//       end
-//       3'b001  : begin
-//         TDATA<=tdata2;
-//         TSTRB<=tstrb2;
-//         TVALID<=tvalid2;
-//         tready2<=TREADY;
-//         tready1<=0;
-//       end
-//       default : begin 
-//         TDATA<=tdata1;
-//         TSTRB<=tstrb1;
-//         TVALID<=tvalid1;
-//         tready1<=TREADY;
-//         tready2<=0;
-//       end 
-//   endcase
-
-// end
 
 
 
@@ -318,9 +320,9 @@ assign enable_read_logic2 = (GPIO[1]==1'b1) ? 1 : 0;
           .CLK_400(CLK_400),
           .En(1'b0), // Enable this and disable AXI_En for data_transfer IP to generate MAXIS Data. For debugging
           .AXI_En(1'b1), //Enable this for data_transfer IP passthrough
-          .TDATA(TDATA),
-          .TLAST(TLAST),
-          .TSTRB(TSTRB),
+          .TDATA (TDATA),
+          .TLAST (TLAST),
+          .TSTRB (TSTRB),
           .TVALID(TVALID),
           .TREADY(TREADY),
           .gpio_rtl_tri_o(GPIO));

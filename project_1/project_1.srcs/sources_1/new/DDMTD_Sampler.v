@@ -23,8 +23,7 @@
 module DDMTD_Sampler
 #(
     parameter integer DATA_WIDTH = 32,
-    parameter integer C_M_START_COUNT	= 32,
-    parameter integer FIFO_DEPTH = 10
+    parameter integer C_M_START_COUNT	= 32
  )
  (
     // Inputs for the sampling logic
@@ -61,6 +60,8 @@ wire empty;
 
 assign M_AXIS_TSTRB = {(DATA_WIDTH/8){1'b1}};
 
+
+wire ARESETN;
 assign ARESETN = M_AXIS_ARESETN;
 
 reg temp_mem=0;
@@ -85,10 +86,12 @@ end
 reg sampleGeneratorEnR=0;
 reg [7:0] afterResetCycleCounterR=0;
 
+
+
 always @(posedge M_AXIS_ACLK)
     if( ! ARESETN )begin
         sampleGeneratorEnR <=0;
-        afterResetCycleCounterR <=0;		
+        afterResetCycleCounterR <=0;	
     end
     else if(enable_read_logic)   begin
         afterResetCycleCounterR <= afterResetCycleCounterR + 1;
@@ -98,6 +101,7 @@ always @(posedge M_AXIS_ACLK)
     end
 	
 
+
 //M_AXIS_TVALID circuit
 reg  		tValidR=0;
 assign M_AXIS_TVALID = tValidR;
@@ -106,8 +110,8 @@ always @(negedge M_AXIS_ACLK)
     if( ! ARESETN )begin
         tValidR <=0;
     end
-    else if (sampleGeneratorEnR)
-            tValidR <= 1;
+    else if (sampleGeneratorEnR&&enable_read_logic) tValidR <= 1;
+            
 
 
 
@@ -188,7 +192,7 @@ always @(negedge M_AXIS_ACLK)
     //M_AXIS_TLAST LOGIC
     // The Current page size is 4096 bytes which 1024 32bit words // modified
     // So we trigger TLAST on 1024th word
-    parameter integer WORDS_TO_SEND = 1000; 
+    parameter integer WORDS_TO_SEND = 1024; 
     integer counter_TLAST =0;
     reg tlast=0;
     always @(negedge M_AXIS_ACLK)begin

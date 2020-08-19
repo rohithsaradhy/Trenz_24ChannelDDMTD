@@ -6006,3 +6006,504 @@ launch_runs impl_1 -to_step write_bitstream -jobs 11
 Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
 [Tue Aug 18 14:46:36 2020] Launched impl_1...
 Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 14:56:16 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 14:56:16 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 15:08:16 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 15:08:16 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 15:19:58 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 15:19:58 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 15:21:38 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 15:21:38 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 15:38:00 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 15:38:00 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 15:56:09 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 15:56:09 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 16:08:05 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 16:08:05 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 20:14:52 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:14:52 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 20:32:45 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:32:45 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 20:34:13 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:34:13 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.10 . Memory (MB): peak = 13950.926 ; gain = 0.000 ; free physical = 6097 ; free virtual = 23500
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.92 . Memory (MB): peak = 13950.926 ; gain = 0.000 ; free physical = 5890 ; free virtual = 23294
+Restored from archive | CPU: 0.990000 secs | Memory: 6.127769 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.92 . Memory (MB): peak = 13950.926 ; gain = 0.000 ; free physical = 5890 ; free virtual = 23294
+refresh_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 13950.926 ; gain = 0.000 ; free physical = 5862 ; free virtual = 23266
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -jobs 11
+[Tue Aug 18 20:44:37 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:44:37 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+close_design
+reset_run impl_1
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Distributed_RAM} CONFIG.Use_Embedded_Registers {false} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.Read_Clock_Frequency {1} CONFIG.Write_Clock_Frequency {1} CONFIG.Full_Threshold_Assert_Value {16383} CONFIG.Full_Threshold_Negate_Value {16382} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+reset_run FIFO_10_synth_1
+launch_runs -jobs 11 FIFO_10_synth_1
+[Tue Aug 18 20:54:47 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 20:55:09 2020] Launched FIFO_10_synth_1, synth_1...
+Run output will be captured here:
+FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:55:09 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property -dict [list CONFIG.Enable_Reset_Synchronization {true}] [get_ips FIFO_10]
+reset_run synth_1
+launch_runs impl_1 -jobs 11
+[Tue Aug 18 20:59:28 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 20:59:28 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 21:09:48 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 21:09:48 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run impl_1
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Enable_Safety_Circuit {true}] [get_ips FIFO_10]
+reset_run synth_1
+reset_run FIFO_10_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+[Tue Aug 18 21:18:18 2020] Launched FIFO_10_synth_1, synth_1...
+Run output will be captured here:
+FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 21:18:18 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 14050.871 ; gain = 0.000 ; free physical = 5055 ; free virtual = 22975
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Reset_Type {Synchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Full_Threshold_Assert_Value {16382} CONFIG.Full_Threshold_Negate_Value {16381} CONFIG.Empty_Threshold_Assert_Value {6} CONFIG.Empty_Threshold_Negate_Value {7} CONFIG.Enable_Safety_Circuit {false}] [get_ips FIFO_10]
+reset_run FIFO_10_synth_1
+reset_run synth_1
+launch_runs impl_1 -jobs 11
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+[Tue Aug 18 22:10:03 2020] Launched FIFO_10_synth_1, synth_1...
+Run output will be captured here:
+FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 22:10:03 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 14100.898 ; gain = 0.000 ; free physical = 4740 ; free virtual = 22923
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 22:17:51 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.Read_Clock_Frequency {1} CONFIG.Write_Clock_Frequency {1} CONFIG.Full_Threshold_Assert_Value {16383} CONFIG.Full_Threshold_Negate_Value {16382} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5} CONFIG.Enable_Safety_Circuit {true}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP FIFO_10, cache-ID = 52c95b2d2c7bd94e; cache size = 80.632 MB.
+catch { [ delete_ip_run [get_ips -all FIFO_10] ] }
+INFO: [Project 1-386] Moving file '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci' from fileset 'FIFO_10' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci'
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property needs_refresh false [get_runs synth_1]
+set_property needs_refresh false [get_runs impl_1]
+set_property needs_refresh false [get_runs clk_wiz_0_synth_1]
+set_property needs_refresh false [get_runs design_1_zynq_ultra_ps_e_0_0_synth_1]
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Reset_Type {Synchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Read_Clock_Frequency {200} CONFIG.Write_Clock_Frequency {160} CONFIG.Full_Threshold_Assert_Value {16382} CONFIG.Full_Threshold_Negate_Value {16381} CONFIG.Empty_Threshold_Assert_Value {6} CONFIG.Empty_Threshold_Negate_Value {7} CONFIG.Enable_Safety_Circuit {false}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+launch_runs -jobs 11 FIFO_10_synth_1
+[Tue Aug 18 22:25:23 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run FIFO_10_synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 22:26:26 2020] Launched FIFO_10_synth_1, synth_1...
+Run output will be captured here:
+FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 22:26:26 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 14221.953 ; gain = 6.000 ; free physical = 4469 ; free virtual = 22662
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 22:47:36 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 22:47:36 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 23:18:36 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 23:18:36 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 23:33:09 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 23:33:09 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Block_RAM} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.Read_Clock_Frequency {1} CONFIG.Write_Clock_Frequency {1} CONFIG.Full_Threshold_Assert_Value {16383} CONFIG.Full_Threshold_Negate_Value {16382} CONFIG.Empty_Threshold_Assert_Value {4} CONFIG.Empty_Threshold_Negate_Value {5} CONFIG.Enable_Safety_Circuit {true}] [get_ips FIFO_10]
+reset_run synth_1
+reset_run FIFO_10_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+[Tue Aug 18 23:50:28 2020] Launched FIFO_10_synth_1, synth_1...
+Run output will be captured here:
+FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 23:50:28 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Tue Aug 18 23:59:24 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Tue Aug 18 23:59:24 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 00:06:40 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 00:06:40 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property -dict [list CONFIG.Fifo_Implementation {Independent_Clocks_Builtin_FIFO} CONFIG.Performance_Options {Standard_FIFO} CONFIG.Input_Depth {8192} CONFIG.Output_Depth {8192} CONFIG.Reset_Type {Synchronous_Reset} CONFIG.Full_Flags_Reset_Value {0} CONFIG.Data_Count_Width {13} CONFIG.Write_Data_Count_Width {13} CONFIG.Read_Data_Count_Width {13} CONFIG.Read_Clock_Frequency {200} CONFIG.Write_Clock_Frequency {160} CONFIG.Full_Threshold_Assert_Value {8184} CONFIG.Full_Threshold_Negate_Value {8183} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6} CONFIG.Enable_Safety_Circuit {false}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+reset_run FIFO_10_synth_1
+launch_runs -jobs 11 FIFO_10_synth_1
+[Wed Aug 19 00:14:15 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_1/project_1.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.c_s2mm_burst_size {32}] [get_bd_cells axi_dma_0]
+endgroup
+save_bd_design
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: Endpoint Slave READ_WRITE_MODE is WRITE_ONLY. To prevent illegal transaction from master to slave enable SUPPORTS_DECERR for S00_Entry through Advanced Properties.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M00_AXI'. A default connection has been created.
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block data_transfer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a153064d6d76ce; cache size = 81.969 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Wed Aug 19 00:19:14 2020] Launched design_1_axi_dma_0_0_synth_1, design_1_axi_smc_0_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_dma_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_dma_0_0_synth_1/runme.log
+design_1_axi_smc_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_smc_0_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 00:19:14 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:24 . Memory (MB): peak = 14819.246 ; gain = 0.000 ; free physical = 3578 ; free virtual = 22087
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 12:34:15 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 12:34:15 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 12:50:29 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 12:50:29 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property is_enabled true [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 12:51:32 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 12:51:32 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 13:16:57 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 13:16:57 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 13:33:26 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 13:33:26 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+set_property is_enabled false [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/FIFOs_Ultrascale.v]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 13:45:47 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 13:45:47 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.c_s2mm_burst_size {256}] [get_bd_cells axi_dma_0]
+endgroup
+save_bd_design
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+reset_run design_1_axi_dma_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: Endpoint Slave READ_WRITE_MODE is WRITE_ONLY. To prevent illegal transaction from master to slave enable SUPPORTS_DECERR for S00_Entry through Advanced Properties.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M00_AXI'. A default connection has been created.
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block data_transfer_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c2a153064d6d76ce; cache size = 88.272 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_dma_0_0, cache-ID = d9fa74b912160e97; cache size = 88.272 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_0, cache-ID = f1be0c43ac539414; cache size = 88.272 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Wed Aug 19 13:58:03 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 13:58:03 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 16024.836 ; gain = 0.000 ; free physical = 3043 ; free virtual = 20020
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 13:59:29 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 13:59:29 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 14:15:09 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 14:15:09 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 14:25:06 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 14:25:06 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 14:34:41 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 14:34:41 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 15:23:28 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 15:23:28 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 15:38:39 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 15:38:39 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 15:40:07 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 15:40:07 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 15:53:17 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 15:53:17 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 15:59:41 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 15:59:41 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:09:35 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:09:35 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:19:30 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:19:30 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:28:10 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:28:10 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:34:24 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:34:24 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:41:01 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:41:01 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:48:36 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:48:36 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:57:42 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:57:42 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 16:59:15 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 16:59:15 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 17:12:42 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 17:12:42 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.12 . Memory (MB): peak = 17630.621 ; gain = 0.000 ; free physical = 3790 ; free virtual = 20890
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Netlist 29-17] Analyzing 58 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Common 17-344] 'open_run' was cancelled
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 11
+[Wed Aug 19 17:34:10 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
+[Wed Aug 19 17:34:11 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
