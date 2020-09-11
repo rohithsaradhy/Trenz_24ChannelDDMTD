@@ -1,0 +1,322 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Aug 27 11:42:47 2020
+# Process ID: 30066
+# Current directory: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1
+# Command line: vivado -log clock_pll.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clock_pll.tcl
+# Log file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/clock_pll.vds
+# Journal file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/vivado.jou
+#-----------------------------------------------------------
+source clock_pll.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/vivado/ip_repo/AXIS_distributor_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top clock_pll -part xczu2cg-sfvc784-1-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30186 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2293.949 ; gain = 0.000 ; free physical = 11327 ; free virtual = 23134
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'clock_pll' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll.v:71]
+INFO: [Synth 8-6157] synthesizing module 'clock_pll_clk_wiz' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_clk_wiz.v:69]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:32952]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:32952]
+INFO: [Synth 8-6157] synthesizing module 'PLLE4_ADV' [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61659]
+	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKIN_PERIOD bound to: 6.250000 - type: double 
+	Parameter CLKOUT0_DIVIDE bound to: 6 - type: integer 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUTPHY_MODE bound to: VCO_2X - type: string 
+	Parameter COMPENSATION bound to: AUTO - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKFBIN_INVERTED bound to: 1'b0 
+	Parameter IS_CLKIN_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER bound to: 0.010000 - type: double 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'PLLE4_ADV' (2#1) [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:61659]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'clock_pll_clk_wiz' (4#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_clk_wiz.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'clock_pll' (5#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll.v:71]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2348.758 ; gain = 54.809 ; free physical = 11377 ; free virtual = 23197
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2351.727 ; gain = 57.777 ; free physical = 11376 ; free virtual = 23196
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2351.727 ; gain = 57.777 ; free physical = 11376 ; free virtual = 23196
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2363.633 ; gain = 0.000 ; free physical = 11378 ; free virtual = 23197
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll_board.xdc] for cell 'inst'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/clock_pll/clock_pll.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/clock_pll_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/clock_pll_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2452.445 ; gain = 0.000 ; free physical = 11338 ; free virtual = 23147
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2452.445 ; gain = 0.000 ; free physical = 11338 ; free virtual = 23148
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2452.445 ; gain = 158.496 ; free physical = 11361 ; free virtual = 23191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2452.445 ; gain = 158.496 ; free physical = 11361 ; free virtual = 23191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2452.445 ; gain = 158.496 ; free physical = 11361 ; free virtual = 23191
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2452.445 ; gain = 158.496 ; free physical = 11357 ; free virtual = 23188
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 2452.445 ; gain = 158.496 ; free physical = 11342 ; free virtual = 23194
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 2954.844 ; gain = 660.895 ; free physical = 11229 ; free virtual = 22721
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 2954.844 ; gain = 660.895 ; free physical = 11229 ; free virtual = 22721
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:59 . Memory (MB): peak = 2963.859 ; gain = 669.910 ; free physical = 11228 ; free virtual = 22720
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |PLLE4_ADV |     1|
+|3     |IBUFDS    |     1|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |     4|
+|2     |  inst   |clock_pll_clk_wiz |     4|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.734 ; gain = 684.785 ; free physical = 11203 ; free virtual = 22697
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:53 . Memory (MB): peak = 2978.734 ; gain = 584.066 ; free physical = 11244 ; free virtual = 22738
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2978.742 ; gain = 684.785 ; free physical = 11244 ; free virtual = 22738
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2978.742 ; gain = 0.000 ; free physical = 11238 ; free virtual = 22731
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance inst/plle4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3001.547 ; gain = 0.000 ; free physical = 11253 ; free virtual = 22748
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:21 . Memory (MB): peak = 3001.547 ; gain = 1527.031 ; free physical = 11377 ; free virtual = 22872
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3001.547 ; gain = 0.000 ; free physical = 11377 ; free virtual = 22872
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/clock_pll.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP clock_pll, cache-ID = 1425cf1b504fc3b2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3001.547 ; gain = 0.000 ; free physical = 11334 ; free virtual = 22840
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/clock_pll.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file clock_pll_utilization_synth.rpt -pb clock_pll_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 27 11:44:21 2020...

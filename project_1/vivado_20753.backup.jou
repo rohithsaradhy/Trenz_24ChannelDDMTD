@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Sep  6 01:01:09 2020
+# Process ID: 20753
+# Current directory: /home/rsaradhy/Work/trenz/vivado/project_1
+# Command line: vivado project_1.xpr
+# Log file: /home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+# Journal file: /home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_1.xpr
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC PROPAGATED CONFIG.c_m_axi_s2mm_data_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_dma_0]
+set_property -dict [list CONFIG.c_include_mm2s_dre {1} CONFIG.c_include_s2mm_dre {1} CONFIG.c_s2mm_burst_size {64}] [get_bd_cells axi_dma_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S]
+delete_bd_objs [get_bd_intf_nets data_transfer_0_M_AXIS]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+save_bd_design
+reset_run synth_1
+reset_run design_1_axi_dma_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.c_sg_length_width {23} CONFIG.c_include_mm2s_dre {0} CONFIG.c_include_s2mm_dre {0} CONFIG.c_s2mm_burst_size {16}] [get_bd_cells axi_dma_0]
+endgroup
+save_bd_design
+reset_run synth_1
+reset_run design_1_axi_dma_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
+connect_bd_intf_net [get_bd_intf_pins data_transfer_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1

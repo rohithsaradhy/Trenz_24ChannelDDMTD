@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ns
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -75,36 +75,54 @@ module testbench_DDMTDSampler(
 
 
 
- DDMTD_Sampler
-#(
-    .DATA_WIDTH(32),
-    .C_M_START_COUNT(32),
-    .FIFO_DEPTH(10)
- )
-  DDMTD1
- (
-    // Inputs for the sampling logic
-    .enable_sampling_logic(enable_sampling_logic),
-    .clk_ref(clk_ref),
-    .clk_beat(clk_beat),
-    .external_counter(external_counter),
-    .reset(reset),
+  integer counter_clkbeat=0;
+  reg odd=0;
+  reg beat_0_q1=0,beat_1_q1=0;
+  always @(posedge clk_ref)
+  begin
+  
+  // 100k subs
+  counter_clkbeat<=counter_clkbeat+1;
+  if(counter_clkbeat == 100000/2) begin
+     beat_0_q1<=~beat_0_q1;
+     beat_1_q1<=~beat_1_q1;
+     counter_clkbeat <=0;
+  end
+   end
+    
 
 
-    // Fifo chain to AXIS
-     .M_AXIS_ACLK(M_AXIS_ACLK),
-     .M_AXIS_ARESETN(M_AXIS_ARESETN), //RESET when low.
-     .M_AXIS_TVALID(M_AXIS_TVALID),
-     .M_AXIS_TDATA(M_AXIS_TDATA),
-     .M_AXIS_TSTRB(M_AXIS_TSTRB),
-     .M_AXIS_TLAST(M_AXIS_TLAST),
-     .M_AXIS_TREADY(M_AXIS_TREADY),
-     .enable_read_logic(enable_read_logic)
 
- );
+//  DDMTD_Sampler
+// #(
+//     .DATA_WIDTH(32),
+//     .C_M_START_COUNT(32),
+//     .FIFO_DEPTH(10)
+//  )
+//   DDMTD1
+//  (
+//     // Inputs for the sampling logic
+//     .enable_sampling_logic(enable_sampling_logic),
+//     .clk_ref(clk_ref),
+//     .clk_beat(clk_beat),
+//     .external_counter(external_counter),
+//     .reset(reset),
+
+
+//     // Fifo chain to AXIS
+//      .M_AXIS_ACLK(M_AXIS_ACLK),
+//      .M_AXIS_ARESETN(M_AXIS_ARESETN), //RESET when low.
+//      .M_AXIS_TVALID(M_AXIS_TVALID),
+//      .M_AXIS_TDATA(M_AXIS_TDATA),
+//      .M_AXIS_TSTRB(M_AXIS_TSTRB),
+//      .M_AXIS_TLAST(M_AXIS_TLAST),
+//      .M_AXIS_TREADY(M_AXIS_TREADY),
+//      .enable_read_logic(enable_read_logic)
+
+//  );
  
- assign write_en = DDMTD1.write_en;
+//  assign write_en = DDMTD1.write_en;
 
- wire empty = DDMTD1.empty;
+//  wire empty = DDMTD1.empty;
  
 endmodule

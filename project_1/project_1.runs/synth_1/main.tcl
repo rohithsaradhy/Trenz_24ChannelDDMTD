@@ -23,6 +23,9 @@ set_param power.BramSDPPropagationFix 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
 set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xczu2cg-sfvc784-1-e
 
 set_param project.singleFileAddWarning.threshold 0
@@ -46,6 +49,9 @@ read_verilog -library xil_defaultlib {
   /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v
   /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
   /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v
+  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/sychronizer.v
+  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Array.v
+  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/Hard_Sync_Chain.v
 }
 add_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0_ooc.xdc]
@@ -59,11 +65,19 @@ set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/tr
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_rst_ps8_0_100M_0/design_1_rst_ps8_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/bd_afc3_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/bd_afc3_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/bd_afc3_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/bd_afc3_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/bd_afc3_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/bd_afc3_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/bd_afc3_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/bd_afc3_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_11/bd_afc3_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_12/bd_afc3_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_13/bd_afc3_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_14/bd_afc3_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_15/bd_afc3_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/bd_afc3_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_17/bd_afc3_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
@@ -73,7 +87,6 @@ set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/tr
 
 read_ip -quiet /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

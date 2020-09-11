@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Wed Aug 19 17:38:42 2020
+| Date         : Fri Sep 11 05:41:03 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file main_methodology_drc_routed.rpt -pb main_methodology_drc_routed.pb -rpx main_methodology_drc_routed.rpx
 | Design       : main
@@ -23,12 +23,33 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 0
-+------+----------+-------------+------------+
-| Rule | Severity | Description | Violations |
-+------+----------+-------------+------------+
-+------+----------+-------------+------------+
+             Violations found: 4
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay | 4          |
++-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on BEAT0_Q1_N relative to clock(s) CLK_REF_N
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on BEAT0_Q1_P relative to clock(s) CLK_REF_N
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on BEAT1_Q1_N relative to clock(s) CLK_REF_N
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on BEAT1_Q1_P relative to clock(s) CLK_REF_N
+Related violations: <none>
+
 

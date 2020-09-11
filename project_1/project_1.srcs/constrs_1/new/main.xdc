@@ -1,15 +1,15 @@
-set_property PACKAGE_PIN H1 [get_ports {x0[0]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {x0[0]}]
-set_property PACKAGE_PIN J1 [get_ports {x1[0]}]
-set_property IOSTANDARD LVCMOS18 [get_ports {x1[0]}]
+#set_property PACKAGE_PIN H1 [get_ports {x0[0]}]
+#set_property IOSTANDARD LVCMOS18 [get_ports {x0[0]}]
+#set_property PACKAGE_PIN J1 [get_ports {x1[0]}]
+#set_property IOSTANDARD LVCMOS18 [get_ports {x1[0]}]
 
 
 #FPGA_CLK SMA ==> U304 ==> pin68/pin66 of JB301 ==> B66_L14_GC of FPGA ==>
-set_property PACKAGE_PIN D5 [get_ports {CLK_REF_N}]
+set_property PACKAGE_PIN C4 [get_ports {CLK_REF_N}]
 set_property IOSTANDARD LVDS [get_ports {CLK_REF_N}]
-set_property PACKAGE_PIN E5 [get_ports {CLK_REF_P}]
+set_property PACKAGE_PIN D4 [get_ports {CLK_REF_P}]
 set_property IOSTANDARD LVDS [get_ports {CLK_REF_P}]
-create_clock -period 1.500 -name CLK_REF_N -waveform {0.000 0.750} -add [get_ports CLK_REF_N]
+create_clock -period 6.25 -name CLK_REF_N -waveform {0.000 3.125} -add [get_ports CLK_REF_P]
 
 
 #========================
@@ -46,3 +46,4 @@ set_property IOSTANDARD LVDS [get_ports {BEAT1_Q2_P}]
 set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
 
 
+# set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets my_design/net[0].tready]

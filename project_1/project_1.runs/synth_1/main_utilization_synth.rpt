@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Wed Aug 19 17:35:43 2020
+| Date         : Fri Sep 11 05:33:28 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  216 |     0 |     47232 |  0.46 |
-|   LUT as Logic          |  216 |     0 |     47232 |  0.46 |
+| CLB LUTs*               | 2038 |     0 |     47232 |  4.31 |
+|   LUT as Logic          | 2038 |     0 |     47232 |  4.31 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           |  131 |     0 |     94464 |  0.14 |
-|   Register as Flip Flop |  131 |     0 |     94464 |  0.14 |
+| CLB Registers           | 1937 |     0 |     94464 |  2.05 |
+|   Register as Flip Flop | 1937 |     0 |     94464 |  2.05 |
 |   Register as Latch     |    0 |     0 |     94464 |  0.00 |
-| CARRY8                  |   24 |     0 |      8820 |  0.27 |
+| CARRY8                  |  346 |     0 |      8820 |  3.92 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
 | F8 Muxes                |    0 |     0 |     17640 |  0.00 |
 | F9 Muxes                |    0 |     0 |      8820 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 131   |          Yes |       Reset |            - |
+| 1937  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -80,12 +80,11 @@ Table of Contents
 3. ARITHMETIC
 -------------
 
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |    1 |     0 |       240 |  0.42 |
-|   DSP48E2 only |    1 |       |           |       |
-+----------------+------+-------+-----------+-------+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |       240 |  0.00 |
++-----------+------+-------+-----------+-------+
 
 
 4. I/O
@@ -94,7 +93,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |    0 |     0 |       252 |  0.00 |
+| Bonded IOB |   10 |     0 |       252 |  3.97 |
 +------------+------+-------+-----------+-------+
 
 
@@ -104,8 +103,8 @@ Table of Contents
 +----------------------+------+-------+-----------+-------+
 |       Site Type      | Used | Fixed | Available | Util% |
 +----------------------+------+-------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    0 |     0 |       196 |  0.00 |
-|   BUFGCE             |    0 |     0 |        88 |  0.00 |
+| GLOBAL CLOCK BUFFERs |    1 |     0 |       196 |  0.51 |
+|   BUFGCE             |    1 |     0 |        88 |  1.14 |
 |   BUFGCE_DIV         |    0 |     0 |        12 |  0.00 |
 |   BUFG_PS            |    0 |     0 |        72 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |        24 |  0.00 |
@@ -145,19 +144,21 @@ Table of Contents
 8. Primitives
 -------------
 
-+----------+------+---------------------+
-| Ref Name | Used | Functional Category |
-+----------+------+---------------------+
-| FDRE     |  131 |            Register |
-| LUT5     |  102 |                 CLB |
-| LUT2     |  102 |                 CLB |
-| LUT6     |   32 |                 CLB |
-| CARRY8   |   24 |                 CLB |
-| LUT3     |   21 |                 CLB |
-| LUT4     |    8 |                 CLB |
-| LUT1     |    7 |                 CLB |
-| DSP48E2  |    1 |          Arithmetic |
-+----------+------+---------------------+
++-----------+------+---------------------+
+|  Ref Name | Used | Functional Category |
++-----------+------+---------------------+
+| FDRE      | 1937 |            Register |
+| LUT4      |  896 |                 CLB |
+| LUT2      |  894 |                 CLB |
+| CARRY8    |  346 |                 CLB |
+| LUT6      |  319 |                 CLB |
+| LUT3      |  211 |                 CLB |
+| LUT5      |  131 |                 CLB |
+| LUT1      |   78 |                 CLB |
+| IBUFCTRL  |    5 |              Others |
+| DIFFINBUF |    5 |                 I/O |
+| BUFGCE    |    1 |               Clock |
++-----------+------+---------------------+
 
 
 9. Black Boxes
@@ -166,7 +167,7 @@ Table of Contents
 +------------------------------+------+
 |           Ref Name           | Used |
 +------------------------------+------+
-| FIFO_10                      |    2 |
+| FIFO_10                      |   24 |
 | design_1_zynq_ultra_ps_e_0_0 |    1 |
 | design_1_xbar_0              |    1 |
 | design_1_rst_ps8_0_100M_0    |    1 |

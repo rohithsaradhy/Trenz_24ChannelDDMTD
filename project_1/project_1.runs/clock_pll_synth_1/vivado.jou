@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Aug 27 11:42:47 2020
+# Process ID: 30066
+# Current directory: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1
+# Command line: vivado -log clock_pll.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clock_pll.tcl
+# Log file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/clock_pll.vds
+# Journal file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/clock_pll_synth_1/vivado.jou
+#-----------------------------------------------------------
+source clock_pll.tcl -notrace

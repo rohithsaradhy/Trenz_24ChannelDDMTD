@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: Rohith 
 // 
 // Create Date: 08/12/2020 08:00:43 AM
 // Design Name: 
@@ -53,9 +53,8 @@ module DDMTD_Sampler
 
  );
 
-wire full;
-wire empty;
-
+wire full,empty;
+wire prog_empty;
 
 
 assign M_AXIS_TSTRB = {(DATA_WIDTH/8){1'b1}};
@@ -79,6 +78,15 @@ always @(negedge clk_ref) begin
 end
 
 
+//Saving values of edge
+reg  beat_edge = 0;
+always @(negedge clk_ref)
+begin
+    beat_edge<=clk_beat;
+end
+
+wire [31:0] DATA_IN;
+assign DATA_IN = {beat_edge,external_counter[30:0]};
 
 
 // MAXIS
@@ -93,7 +101,7 @@ always @(posedge M_AXIS_ACLK)
         sampleGeneratorEnR <=0;
         afterResetCycleCounterR <=0;	
     end
-    else if(enable_read_logic)   begin
+    else if(M_AXIS_TREADY)   begin
         afterResetCycleCounterR <= afterResetCycleCounterR + 1;
         if (afterResetCycleCounterR == C_M_START_COUNT) begin
             sampleGeneratorEnR <=1;
@@ -102,16 +110,43 @@ always @(posedge M_AXIS_ACLK)
 	
 
 
+
+
 //M_AXIS_TVALID circuit
 reg  		tValidR=0;
-assign M_AXIS_TVALID = tValidR;
 
 always @(negedge M_AXIS_ACLK)
     if( ! ARESETN )begin
         tValidR <=0;
     end
-    else if (sampleGeneratorEnR&&enable_read_logic) tValidR <= 1;
+    else if (sampleGeneratorEnR) tValidR <= 1;
             
+
+//Valid only after 500 cycles of clk_ref after empty is deasserted
+reg data_in_fifo = 0;
+parameter DATA_IN_FIFO_THRESHOLD = 500;
+
+integer data_in_fifo_counter=0;
+always @(posedge clk_ref)
+begin
+    if(reset | prog_empty)
+    begin
+        data_in_fifo <= 0;
+        data_in_fifo_counter <= 0;
+    end
+    else 
+    begin
+        if(write_en) data_in_fifo_counter <= data_in_fifo_counter +1;
+        if(data_in_fifo_counter >= DATA_IN_FIFO_THRESHOLD) data_in_fifo <=1;
+    end
+end
+
+    
+assign M_AXIS_TVALID = tValidR & data_in_fifo ;
+
+
+
+
 
 
 
@@ -155,12 +190,12 @@ always @(negedge M_AXIS_ACLK)
     // FIFOs_Ultrascale  
     // #(
     //  .data_width(36),
-    //  .num_fifo(FIFO_DEPTH)
+    //  .num_fifo(10)
     // )
     // FIFOs_Ultrascale_1(
     
     
-    // .read_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic),
+    // .read_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic | reset),
     // .write_en(write_en),
     // .data_in(external_counter),
     // .data_out(M_AXIS_TDATA),
@@ -173,17 +208,20 @@ always @(negedge M_AXIS_ACLK)
 
 
 
-   // wire full,empty;
+
     FIFO_10 FIFO_10_inst (
     .srst(reset),
-    .wr_clk(clk_ref),
-    .rd_clk(~M_AXIS_ACLK),
-    .din(external_counter),
+
+    .clk(clk_ref),
+    // .wr_clk(clk_ref),
+    // .rd_clk(~M_AXIS_ACLK),
+    .din(DATA_IN),
     .wr_en(write_en),
-    .rd_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic),
+    .rd_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic | reset),
     .dout(M_AXIS_TDATA),
     .full(full),
-    .empty(empty)
+    .empty(empty),
+    .prog_empty(prog_empty)
     // wr_rst_busy,
     // rd_rst_busy
     );
@@ -192,7 +230,7 @@ always @(negedge M_AXIS_ACLK)
     //M_AXIS_TLAST LOGIC
     // The Current page size is 4096 bytes which 1024 32bit words // modified
     // So we trigger TLAST on 1024th word
-    parameter integer WORDS_TO_SEND = 1024; 
+    parameter integer WORDS_TO_SEND = 8000; 
     integer counter_TLAST =0;
     reg tlast=0;
     always @(negedge M_AXIS_ACLK)begin
@@ -206,8 +244,11 @@ always @(negedge M_AXIS_ACLK)
             end
         end 
     end
-    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:empty;
 
+    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:prog_empty;
+    
+    
+    
 
 
 

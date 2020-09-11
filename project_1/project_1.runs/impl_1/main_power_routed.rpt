@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Aug 19 17:38:47 2020
+| Date             : Fri Sep 11 05:41:12 2020
 | Host             : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.922        |
+| Total On-Chip Power (W)  | 2.233        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.615        |
-| Device Static (W)        | 0.307        |
+| Dynamic (W)              | 1.923        |
+| Device Static (W)        | 0.310        |
 | Effective TJA (C/W)      | 2.4          |
-| Max Ambient (C)          | 95.5         |
-| Junction Temperature (C) | 29.5         |
+| Max Ambient (C)          | 94.7         |
+| Junction Temperature (C) | 30.3         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.021 |        5 |       --- |             --- |
-| CLB Logic                |     0.016 |     6306 |       --- |             --- |
-|   LUT as Distributed RAM |     0.010 |      152 |     28800 |            0.53 |
-|   LUT as Logic           |     0.005 |     1837 |     47232 |            3.89 |
-|   LUT as Shift Register  |    <0.001 |      144 |     28800 |            0.50 |
-|   Register               |    <0.001 |     3135 |     94464 |            3.32 |
-|   CARRY8                 |    <0.001 |       38 |      8820 |            0.43 |
-|   Others                 |     0.000 |      280 |       --- |             --- |
-| Signals                  |     0.006 |     5215 |       --- |             --- |
-| Block RAM                |     0.016 |     18.5 |       150 |           12.33 |
-| DSPs                     |    <0.001 |        1 |       240 |            0.42 |
-| PS8                      |     1.556 |        1 |       --- |             --- |
-| Static Power             |     0.307 |          |           |                 |
-|   PS Static              |     0.093 |          |           |                 |
-|   PL Static              |     0.214 |          |           |                 |
-| Total                    |     1.922 |          |           |                 |
+| Clocks                   |     0.073 |        3 |       --- |             --- |
+| CLB Logic                |     0.091 |    43203 |       --- |             --- |
+|   LUT as Distributed RAM |     0.070 |     1650 |     28800 |            5.73 |
+|   LUT as Logic           |     0.017 |    12359 |     47232 |           26.17 |
+|   CARRY8                 |     0.002 |      611 |      8820 |            6.93 |
+|   Register               |     0.002 |    23418 |     94464 |           24.79 |
+|   LUT as Shift Register  |    <0.001 |      171 |     28800 |            0.59 |
+|   BUFG                   |    <0.001 |        8 |        24 |           33.33 |
+|   Others                 |     0.000 |     1097 |       --- |             --- |
+| Signals                  |     0.033 |    30949 |       --- |             --- |
+| Block RAM                |     0.165 |    112.5 |       150 |           75.00 |
+| I/O                      |     0.006 |        6 |       252 |            2.38 |
+| PS8                      |     1.554 |        1 |       --- |             --- |
+| Static Power             |     0.310 |          |           |                 |
+|   PS Static              |     0.094 |          |           |                 |
+|   PL Static              |     0.216 |          |           |                 |
+| Total                    |     2.233 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,11 +78,11 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.121 |       0.070 |      0.052 |
-| Vccint_io       |       0.850 |     0.027 |       0.000 |      0.027 |
-| Vccbram         |       0.850 |     0.001 |       0.001 |      0.001 |
+| Vccint          |       0.850 |     0.473 |       0.419 |      0.054 |
+| Vccint_io       |       0.850 |     0.028 |       0.001 |      0.027 |
+| Vccbram         |       0.850 |     0.009 |       0.008 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
-| Vccaux_io       |       1.800 |     0.025 |       0.000 |      0.025 |
+| Vccaux_io       |       1.800 |     0.028 |       0.003 |      0.025 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -90,10 +91,10 @@ Table of Contents
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
-| VCC_PSINTFP     |       0.850 |     0.379 |       0.352 |      0.028 |
-| VCC_PSINTLP     |       0.850 |     0.284 |       0.277 |      0.007 |
+| VCC_PSINTFP     |       0.850 |     0.379 |       0.351 |      0.028 |
+| VCC_PSINTLP     |       0.850 |     0.283 |       0.276 |      0.007 |
 | VPS_MGTRAVCC    |       0.850 |     0.001 |       0.000 |      0.001 |
-| VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.004 |
+| VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.005 |
 | VCC_PSPLL       |       1.200 |     0.054 |       0.052 |      0.002 |
 | VPS_MGTRAVTT    |       1.800 |     0.001 |       0.000 |      0.001 |
 | VCCO_PSDDR_504  |       1.200 |     0.401 |       0.367 |      0.034 |
@@ -111,17 +112,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                               |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
-| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                   |                                                                                                            |
-|                             |            |                                                |                                                                                                            |
-| Overall confidence level    | Medium     |                                                |                                                                                                            |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -145,11 +146,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+----------+------------------------------------------------------------------+-----------------+
-| Clock    | Domain                                                           | Constraint (ns) |
-+----------+------------------------------------------------------------------+-----------------+
-| clk_pl_0 | my_design/design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0] |             5.0 |
-+----------+------------------------------------------------------------------+-----------------+
++-----------+-----------+-----------------+
+| Clock     | Domain    | Constraint (ns) |
++-----------+-----------+-----------------+
+| CLK_REF_N | CLK_REF_P |             6.2 |
++-----------+-----------+-----------------+
 
 
 3. Detailed Reports
@@ -158,23 +159,69 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------------+-----------+
-| Name                    | Power (W) |
-+-------------------------+-----------+
-| main                    |     1.615 |
-|   DDMTD1                |     0.007 |
-|     FIFO_10_inst        |     0.007 |
-|       U0                |     0.007 |
-|   DDMTD2                |     0.007 |
-|     FIFO_10_inst        |     0.007 |
-|       U0                |     0.007 |
-|   my_design             |     1.601 |
-|     design_1_i          |     1.601 |
-|       axi_dma_0         |     0.012 |
-|       axi_gpio_0        |     0.002 |
-|       axi_smc           |     0.019 |
-|       ps8_0_axi_periph  |     0.010 |
-|       zynq_ultra_ps_e_0 |     1.557 |
-+-------------------------+-----------+
++----------------------------+-----------+
+| Name                       | Power (W) |
++----------------------------+-----------+
+| main                       |     1.923 |
+|   DDMTD_Array_inst         |     0.184 |
+|     ddmtd_inst[0].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[10].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[11].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[12].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[13].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[14].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[15].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[16].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[17].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[18].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[19].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[1].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[20].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[21].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[22].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[23].DDMTD_i |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[2].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[3].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[4].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[5].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[6].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[7].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[8].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|     ddmtd_inst[9].DDMTD_i  |     0.008 |
+|       FIFO_10_inst         |     0.007 |
+|   IBUFGDS_BEAT0Q1          |     0.002 |
+|   IBUFGDS_BEAT1Q1          |     0.002 |
+|   IBUFGDS_CLK_REF          |     0.002 |
+|   my_design                |     1.732 |
+|     design_1_i             |     1.732 |
+|       axi_dma_0            |     0.036 |
+|       axi_gpio_0           |     0.001 |
+|       axi_smc              |     0.133 |
+|       ps8_0_axi_periph     |     0.007 |
+|       zynq_ultra_ps_e_0    |     1.555 |
++----------------------------+-----------+
 
 

@@ -1,0 +1,1400 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 19310
+License: Customer
+
+Current time: 	Fri Sep 04 06:28:23 CDT 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 5.4.0-42-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 300 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/vivado/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Xilinx/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-19310-rsaradhy-acer
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 966 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 974 MB. GUI used memory: 54 MB. Current time: 9/4/20, 6:28:25 AM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+107761kb) [00:00:13]
+// [Engine Memory]: 1,008 MB (+905497kb) [00:00:13]
+// [GUI Memory]: 113 MB (+2850kb) [00:00:13]
+// [Engine Memory]: 1,075 MB (+17224kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2225 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/vivado/ip_repo/AXIS_distributor_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'. 
+// [GUI Memory]: 136 MB (+18153kb) [00:00:15]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 6682.016 ; gain = 204.016 ; free physical = 15849 ; free virtual = 23177 
+// Project name: project_1; location: /home/rsaradhy/Work/trenz/vivado/project_1; part: xczu2cg-sfvc784-1-e
+// [Engine Memory]: 1,154 MB (+26535kb) [00:00:16]
+dismissDialog("Open Project"); // bB (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,205 MB. GUI used memory: 130 MB. Current time: 9/4/20, 6:29:30 AM CDT
+// [Engine Memory]: 1,221 MB (+9995kb) [00:01:18]
+// Elapsed time: 89 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Fri Sep  4 06:30:04 2020] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Fri Sep  4 06:30:04 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,226 MB. GUI used memory: 73 MB. Current time: 9/4/20, 6:30:05 AM CDT
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 468 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,230 MB. GUI used memory: 75 MB. Current time: 9/4/20, 7:00:05 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,230 MB. GUI used memory: 68 MB. Current time: 9/4/20, 7:30:05 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,188 MB. GUI used memory: 53 MB. Current time: 9/4/20, 8:00:05 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,188 MB. GUI used memory: 68 MB. Current time: 9/4/20, 8:30:05 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,188 MB. GUI used memory: 68 MB. Current time: 9/4/20, 9:00:05 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,188 MB. GUI used memory: 67 MB. Current time: 9/4/20, 9:30:06 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,188 MB. GUI used memory: 68 MB. Current time: 9/4/20, 10:00:06 AM CDT
+// Elapsed time: 12380 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// 'bD' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // bB (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectCheckBox((HResource) null, "Enable Read Channel", true); // g (o, r): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,256 MB. GUI used memory: 74 MB. Current time: 9/4/20, 10:04:31 AM CDT
+// Tcl Command: 'set_property -dict [list CONFIG.c_include_mm2s {1}] [get_bd_cells axi_dma_0]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.c_include_mm2s {1}] [get_bd_cells axi_dma_0] 
+// Tcl Message: endgroup 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 991, 800, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// [Engine Memory]: 1,419 MB (+143107kb) [03:36:18]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cr)
+// Tcl Message: save_bd_design 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_axi_dma_0_0_synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 5 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cr)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source:  /axi_dma_0/m_axi_mm2s_aclk  ERROR: [BD 41-1031] Hdl Generation failed for the IP Integrator design /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd  ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Vivado 12-4756] Launch of runs aborted due to earlier errors while preparing sub-designs for run execution.  
+// bB (cr):  Generate Bitstream : addNotify
+// aZ (cr): Launch Run Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (aZ)
+dismissDialog("Launch Run Critical Messages"); // aZ (cr)
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (cu, cr)
+// w (cr): Run Connection Automation: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (w)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+dismissDialog("Run Connection Automation"); // w (cr)
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Run Connection Automation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/CLK_IN (160 MHz)} Clk_xbar {/CLK_IN (160 MHz)} Master {/axi_dma_0/M_AXI_MM2S} Slave {/zynq_ultra_ps_e_0/S_AXI_HPC0_FPD} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_LOW> is being mapped into address space </axi_dma_0/Data_MM2S> at <0x0000_0000 [ 2G ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_QSPI> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xC000_0000 [ 512M ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xFF00_0000 [ 16M ]> 
+// Tcl Message: INFO: [BD 41-1051] The usage register of slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM does not match the usage memory of address space /axi_dma_0/Data_MM2S and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space. 
+// Tcl Message: Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_MM2S. 
+dismissDialog("Run Connection Automation"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,317 MB. GUI used memory: 73 MB. Current time: 9/4/20, 10:04:51 AM CDT
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+// Elapsed time: 14 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// bB (cr):  Undo : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/CLK_IN (160 MHz)} Clk_xbar {/CLK_IN (160 MHz)} Master {/axi_dma_0/M_AXI_MM2S} Slave {/zynq_ultra_ps_e_0/S_AXI_HPC0_FPD} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_MM2S]' 
+// Tcl Message: Including slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM> into address space </axi_dma_0/Data_MM2S>. 
+dismissDialog("Undo"); // bB (cr)
+// Elapsed time: 19 seconds
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (cu, cr)
+// w (cr): Run Connection Automation: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (w)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_LOCK_CHANGE
+dismissDialog("Run Connection Automation"); // w (cr)
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/CLK_IN (160 MHz)} Clk_xbar {/CLK_IN (160 MHz)} Master {/axi_dma_0/M_AXI_MM2S} Slave {/zynq_ultra_ps_e_0/S_AXI_HPC0_FPD} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] 
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Run Connection Automation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_LOW> is being mapped into address space </axi_dma_0/Data_MM2S> at <0x0000_0000 [ 2G ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_QSPI> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xC000_0000 [ 512M ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM> is being mapped into address space </axi_dma_0/Data_MM2S> at <0xFF00_0000 [ 16M ]> 
+// Tcl Message: INFO: [BD 41-1051] The usage register of slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM does not match the usage memory of address space /axi_dma_0/Data_MM2S and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space. 
+// Tcl Message: Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_MM2S. 
+dismissDialog("Run Connection Automation"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): No Implementation Results Available: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// [Engine Memory]: 1,502 MB (+13121kb) [03:37:21]
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_axi_smc_0_synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 3 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,368 MB. GUI used memory: 74 MB. Current time: 9/4/20, 10:05:46 AM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block data_transfer_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c4c25c0fe93f46e3; cache size = 220.695 MB. INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Sep  4 10:05:54 2020] Launched design_1_axi_dma_0_0_synth_1, design_1_axi_smc_0_synth_1, synth_1... Run output will be captured here: design_1_axi_dma_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_dma_0_0_synth_1/runme.log design_1_axi_smc_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_smc_0_synth_1/runme.log synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Fri Sep  4 10:05:54 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:17 ; elapsed = 00:00:15 . Memory (MB): peak = 7255.809 ; gain = 85.023 ; free physical = 5100 ; free virtual = 18438 
+// Elapsed time: 15 seconds
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,536 MB. GUI used memory: 77 MB. Current time: 9/4/20, 10:08:26 AM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 149 MB (+6382kb) [03:40:58]
+// [GUI Memory]: 167 MB (+10489kb) [03:41:57]
+// Elapsed time: 269 seconds
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL (aI, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,559 MB. GUI used memory: 105 MB. Current time: 9/4/20, 10:10:26 AM CDT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,559 MB. GUI used memory: 106 MB. Current time: 9/4/20, 10:40:26 AM CDT
+// Elapsed time: 1810 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // af (cr)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Z (cr): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (Q, Z): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (Z)
+dismissDialog("Export Hardware"); // Z (cr)
+// bB (cr):  Export Hardware : addNotify
+// Tcl Message: write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa 
+// Tcl Message: INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ... 
+// Tcl Message: INFO: [Hsi 55-2053] elapsed time for repository (/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/embeddedsw) loading 0 seconds 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,661 MB. GUI used memory: 106 MB. Current time: 9/4/20, 10:40:51 AM CDT
+// Tcl Message: INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa 
+// Tcl Message: write_hw_platform: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 7330.855 ; gain = 75.047 ; free physical = 4728 ; free virtual = 18244 
+// [Engine Memory]: 1,661 MB (+87519kb) [04:12:38]
+// Elapsed time: 14 seconds
+dismissDialog("Export Hardware"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,661 MB. GUI used memory: 103 MB. Current time: 9/4/20, 11:10:51 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,661 MB. GUI used memory: 102 MB. Current time: 9/4/20, 11:40:51 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,661 MB. GUI used memory: 102 MB. Current time: 9/4/20, 12:10:51 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,661 MB. GUI used memory: 102 MB. Current time: 9/4/20, 12:40:51 PM CDT
+// Elapsed time: 8260 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // af (cr)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PROJECT, "New..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+// f (cr): New Project: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, f)
+dismissDialog("New Project"); // f (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,662 MB. GUI used memory: 103 MB. Current time: 9/4/20, 1:10:51 PM CDT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 815 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 1079 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Elapsed time: 19 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 535, 306, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "fifo"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0, "AXI-Stream FIFO", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI-Stream FIFO", 0, "AXI-Stream FIFO", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// Tcl Message: startgroup 
+// bB (cr):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_fifo_mm_s:4.2 axi_fifo_mm_s_0 
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bB (cr)
+// [Engine Memory]: 1,886 MB (+148766kb) [07:02:34]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,886 MB. GUI used memory: 108 MB. Current time: 9/4/20, 1:30:51 PM CDT
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: delete_bd_objs [get_bd_cells axi_fifo_mm_s_0] 
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 494, 313, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "fifo"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1, "AXI4-Stream Data FIFO", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI4-Stream Data FIFO", 1, "AXI4-Stream Data FIFO", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:2.0 axis_data_fifo_0 
+// Tcl Message: endgroup 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins axis_data_fifo_0/S_AXIS] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn] 
+// PAPropertyPanels.initPanels (rst_ps8_0_100M_peripheral_aresetn) elapsed time: 0.2s
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_ports CLK_IN] [get_bd_pins axis_data_fifo_0/s_axis_aclk] 
+// Elapsed time: 25 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 3 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bB)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 874, 763, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("HStatusBar_ProgressStatusItem_Cancel", "Cancel"); // NullButton (ag, cr)
+// Tcl Message: INFO: [Common 17-365] Interrupt caught but 'launch_runs' cannot be canceled. Please wait for command to finish. 
+// TclEventType: FILE_SET_CHANGE
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 851, 800, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 1341, 781, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 . INFO: [BD 41-1171] User-interrupt detected : Generation halted successfully for IP Integrator design /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Common 17-681] Processing pending cancel. 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: FILE_SET_CHANGE
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 912, 815, 1864, 903, false, false, false, true, false); // go (i, cr) - Popup Trigger
+// Elapsed time: 32 seconds
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 954, 763, 1864, 910, false, false, false, true, false); // go (i, cr) - Popup Trigger
+selectMenuItem(PAResourceQtoS.SystemBuilderMenu_ADD_IP, "Add IP..."); // ai (ao, cr)
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "concat"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 0, "Concat", 0, false); // L (O, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 0); // L (O, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 0, "Concat", 0, false, false, false, false, false, true); // L (O, ResizableWindow) - Double Click
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: startgroup 
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 
+// Tcl Message: endgroup 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets axi_dma_0_s2mm_introut] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In1] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0] 
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// [GUI Memory]: 176 MB (+865kb) [07:04:28]
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
+// Tcl Command: 'validate_bd_design'
+// TclEventType: RSB_PARAM_PROP
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: validate_bd_design 
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Validate Design : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_PARAM_PROP
+// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 7666.020 ; gain = 0.000 ; free physical = 5627 ; free virtual = 22671 
+// Elapsed time: 10 seconds
+dismissDialog("Validate Design"); // bB (cr)
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): No Implementation Results Available: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_zynq_ultra_ps_e_0_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_xbar_0_synth_1 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run design_1_axi_smc_0_synth_1 
+// f (cr): Launch Runs: addNotify
+// Elapsed time: 193 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (f)
+// 'cw' command handler elapsed time: 196 seconds
+dismissDialog("Launch Runs"); // f (cr)
+// Elapsed time: 652 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// f (cr): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RSB_SAVE_DIAGRAM
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run. 
+// Tcl Message: VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// Tcl Message: INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose. 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block data_transfer_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 . 
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,971 MB. GUI used memory: 105 MB. Current time: 9/4/20, 1:47:41 PM CDT
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 7751.059 ; gain = 0.000 ; free physical = 5456 ; free virtual = 22605 
+// Elapsed time: 32 seconds
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 187 MB (+2333kb) [07:21:44]
+// [GUI Memory]: 204 MB (+7905kb) [07:22:46]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 549 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,886 MB. GUI used memory: 107 MB. Current time: 9/4/20, 2:17:41 PM CDT
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+// Elapsed time: 1685 seconds
+selectCheckBox((HResource) null, "Enable Scatter Gather Engine", true); // g (o, r): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// Tcl Command: 'set_property -dict [list CONFIG.c_include_sg {1}] [get_bd_cells axi_dma_0]'
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: startgroup 
+// Tcl Message: set_property -dict [list CONFIG.c_include_sg {1}] [get_bd_cells axi_dma_0] 
+// Tcl Message: endgroup 
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+// [Engine Memory]: 2,031 MB (+53185kb) [07:56:49]
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (al)
+dismissDialog("Save Project"); // al (cr)
+selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (cu, cr)
+// w (cr): Run Connection Automation: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (w)
+// TclEventType: XGUI_UPDATE_GUI_ELEMENT
+dismissDialog("Run Connection Automation"); // w (cr)
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Run Connection Automation : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/CLK_IN (160 MHz)} Clk_xbar {/CLK_IN (160 MHz)} Master {/axi_dma_0/M_AXI_SG} Slave {/zynq_ultra_ps_e_0/S_AXI_HPC0_FPD} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_SG] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_CONNECTION_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: XGUI_RESET_GUI_ELEMENT
+// Tcl Message: Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_DDR_LOW> is being mapped into address space </axi_dma_0/Data_SG> at <0x0000_0000 [ 2G ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_QSPI> is being mapped into address space </axi_dma_0/Data_SG> at <0xC000_0000 [ 512M ]> Slave segment </zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM> is being mapped into address space </axi_dma_0/Data_SG> at <0xFF00_0000 [ 16M ]> 
+// Tcl Message: INFO: [BD 41-1051] The usage register of slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM does not match the usage memory of address space /axi_dma_0/Data_SG and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space. 
+// Tcl Message: Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP0/HPC0_LPS_OCM from address space /axi_dma_0/Data_SG. 
+dismissDialog("Run Connection Automation"); // bB (cr)
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// r (cr): Re-customize IP: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bB (cr):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// A (cr): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bB (cr)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,928 MB. GUI used memory: 109 MB. Current time: 9/4/20, 2:25:21 PM CDT
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 3 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// TclEventType: FILE_SET_CHANGE
+// bB (cr):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI 
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd>  VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_NEW
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block data_transfer_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef 
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_auto_pc_0, cache-ID = c4c25c0fe93f46e3; cache size = 240.512 MB. INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Sep  4 14:25:40 2020] Launched design_1_axi_dma_0_0_synth_1, design_1_axi_smc_0_synth_1, synth_1... Run output will be captured here: design_1_axi_dma_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_dma_0_0_synth_1/runme.log design_1_axi_smc_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_smc_0_synth_1/runme.log synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Fri Sep  4 14:25:40 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:21 ; elapsed = 00:00:17 . Memory (MB): peak = 7795.059 ; gain = 0.000 ; free physical = 6431 ; free virtual = 22598 
+// Elapsed time: 17 seconds
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 2,108 MB. GUI used memory: 121 MB. Current time: 9/4/20, 2:38:56 PM CDT

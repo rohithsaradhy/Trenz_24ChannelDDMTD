@@ -22,6 +22,10 @@ set_param chipscope.maxJobs 3
 set_param power.BramSDPPropagationFix 1
 set_param power.enableUnconnectedCarry8PinPower 1
 set_param power.enableCarry8RouteBelPower 1
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xczu2cg-sfvc784-1-e
@@ -45,7 +49,6 @@ set_property ip_output_repo /home/rsaradhy/Work/trenz/vivado/project_1/project_1
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc]
-set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

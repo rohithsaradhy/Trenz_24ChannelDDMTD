@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Aug 19 17:35:47 2020
-# Process ID: 17446
+# Start of session at: Fri Sep 11 05:33:33 2020
+# Process ID: 20194
 # Current directory: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1
 # Command line: vivado -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
 # Log file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main.vdi
@@ -18,7 +18,7 @@ Command: link_design -top main -part xczu2cg-sfvc784-1-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
-INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.dcp' for cell 'DDMTD1/FIFO_10_inst'
+INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.dcp' for cell 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst'
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp' for cell 'my_design/design_1_i/axi_dma_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.dcp' for cell 'my_design/design_1_i/axi_gpio_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.dcp' for cell 'my_design/design_1_i/axi_smc'
@@ -27,8 +27,8 @@ INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivad
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.dcp' for cell 'my_design/design_1_i/zynq_ultra_ps_e_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.dcp' for cell 'my_design/design_1_i/ps8_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'my_design/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2326.918 ; gain = 0.000 ; free physical = 2788 ; free virtual = 19865
-INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.46 ; elapsed = 00:00:00.46 . Memory (MB): peak = 2328.953 ; gain = 0.000 ; free physical = 7811 ; free virtual = 13973
+INFO: [Netlist 29-17] Analyzing 979 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -51,52 +51,126 @@ Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sour
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc] for cell 'my_design/design_1_i/axi_gpio_0/U0'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'my_design/design_1_i/axi_gpio_0/U0'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc] for cell 'my_design/design_1_i/axi_gpio_0/U0'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD1/FIFO_10_inst/U0'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD1/FIFO_10_inst/U0'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD2/FIFO_10_inst/U0'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD2/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst/U0'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst/U0'
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst/U0'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc]
-WARNING: [Vivado 12-584] No ports matched 'x0[0]'. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:1]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:1]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'x0[0]'. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:2]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'x1[0]'. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'x1[0]'. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc:4]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc]
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'my_design/design_1_i/axi_dma_0/U0'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'my_design/design_1_i/axi_dma_0/U0'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc] for cell 'DDMTD1/FIFO_10_inst/U0'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc] for cell 'DDMTD1/FIFO_10_inst/U0'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc] for cell 'DDMTD2/FIFO_10_inst/U0'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10_clocks.xdc] for cell 'DDMTD2/FIFO_10_inst/U0'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[2].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[2].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory'
 Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 30 load pin(s).
-WARNING: [Opt 31-421] The CLOCK_DOMAINS attribute on FIFO cell DDMTD1/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v8_fifo.fblk/rst_val_sym.gextw_sym[1].inst_extd/gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim/gf36e2_inst.sngfifo36e2 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the FIFO
-WARNING: [Opt 31-421] The CLOCK_DOMAINS attribute on FIFO cell DDMTD2/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v8_fifo.fblk/rst_val_sym.gextw_sym[1].inst_extd/gmult_prim.gbi_chain.gp1[1].gbi_top.top_inst_prim/gf36e2_inst.sngfifo36e2 has been changed from INDEPENDENT to COMMON to match the clocking topology used for the FIFO
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2526.727 ; gain = 0.000 ; free physical = 2673 ; free virtual = 19747
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory'
+Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+Finished Sourcing Tcl File [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2612.254 ; gain = 0.000 ; free physical = 7633 ; free virtual = 13794
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 29 instances were transformed.
-  DSP48E1 => DSP48E2 (inverted pins: CLK) (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 1 instance 
-  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 28 instances
+  A total of 232 instances were transformed.
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 5 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 221 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 3 instances
 
-20 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+20 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2526.727 ; gain = 1027.465 ; free physical = 2673 ; free virtual = 19747
+link_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 2612.254 ; gain = 1111.957 ; free physical = 7633 ; free virtual = 13794
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
@@ -107,63 +181,63 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2526.727 ; gain = 0.000 ; free physical = 2658 ; free virtual = 19740
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2612.254 ; gain = 0.000 ; free physical = 7609 ; free virtual = 13772
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 16197ff5e
+Ending Cache Timing Information Task | Checksum: 1d122a4a3
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2736.250 ; gain = 209.523 ; free physical = 2412 ; free virtual = 19487
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2908.371 ; gain = 296.117 ; free physical = 7309 ; free virtual = 13471
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 18 inverter(s) to 627 load pin(s).
+INFO: [Opt 31-138] Pushed 19 inverter(s) to 6700 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: d0b6173e
+Phase 1 Retarget | Checksum: 1f9464133
 
-Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.46 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
-INFO: [Opt 31-389] Phase Retarget created 68 cells and removed 450 cells
-INFO: [Opt 31-1021] In phase Retarget, 10 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7205 ; free virtual = 13368
+INFO: [Opt 31-389] Phase Retarget created 947 cells and removed 2280 cells
+INFO: [Opt 31-1021] In phase Retarget, 66 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: b38c6094
+Phase 2 Constant propagation | Checksum: 1c0d0d940
 
-Time (s): cpu = 00:00:00.87 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2254 ; free virtual = 19332
-INFO: [Opt 31-389] Phase Constant propagation created 10 cells and removed 120 cells
-INFO: [Opt 31-1021] In phase Constant propagation, 13 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7206 ; free virtual = 13369
+INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 3239 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 72 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 1038e0acf
+Phase 3 Sweep | Checksum: 1ee49de93
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 684 cells
-INFO: [Opt 31-1021] In phase Sweep, 16 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7204 ; free virtual = 13367
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1200 cells
+INFO: [Opt 31-1021] In phase Sweep, 655 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 BUFG optimization
 INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Phase 4 BUFG optimization | Checksum: 1038e0acf
+Phase 4 BUFG optimization | Checksum: 1ee49de93
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7206 ; free virtual = 13368
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 1038e0acf
+Phase 5 Shift Register Optimization | Checksum: 1ee49de93
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7203 ; free virtual = 13366
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 1038e0acf
+Phase 6 Post Processing Netlist | Checksum: 1ee49de93
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7205 ; free virtual = 13368
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
-INFO: [Opt 31-1021] In phase Post Processing Netlist, 10 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 186 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
 =========================
 
@@ -171,63 +245,68 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              68  |             450  |                                             10  |
-|  Constant propagation         |              10  |             120  |                                             13  |
-|  Sweep                        |               0  |             684  |                                             16  |
+|  Retarget                     |             947  |            2280  |                                             66  |
+|  Constant propagation         |               5  |            3239  |                                             72  |
+|  Sweep                        |               0  |            1200  |                                            655  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
-|  Post Processing Netlist      |               0  |               0  |                                             10  |
+|  Post Processing Netlist      |               0  |               0  |                                            186  |
 -------------------------------------------------------------------------------------------------------------------------
 
 
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
-Ending Logic Optimization Task | Checksum: b8a56ed0
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7205 ; free virtual = 13368
+Ending Logic Optimization Task | Checksum: 14a24ee62
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2902.125 ; gain = 0.000 ; free physical = 2257 ; free virtual = 19335
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 3082.184 ; gain = 0.000 ; free physical = 7205 ; free virtual = 13368
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.011 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.402 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 3 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
-INFO: [Pwropt 34-201] Structural ODC has moved 2 WE to EN ports
-Number of BRAM Ports augmented: 2 newly gated: 2 Total Ports: 6
-Ending PowerOpt Patch Enables Task | Checksum: c3a8e740
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 96 BRAM(s) out of a total of 113 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 1 Total Ports: 226
+Ending PowerOpt Patch Enables Task | Checksum: dfa51c0c
 
-Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1303 ; free virtual = 18378
-Ending Power Optimization Task | Checksum: c3a8e740
+Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:00.56 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6132 ; free virtual = 12295
+Ending Power Optimization Task | Checksum: dfa51c0c
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:48 . Memory (MB): peak = 4551.766 ; gain = 1649.641 ; free physical = 1324 ; free virtual = 18399
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:55 . Memory (MB): peak = 5014.902 ; gain = 1932.719 ; free physical = 6182 ; free virtual = 12345
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: c3a8e740
+Ending Final Cleanup Task | Checksum: dfa51c0c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1324 ; free virtual = 18399
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6183 ; free virtual = 12346
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1324 ; free virtual = 18399
-Ending Netlist Obfuscation Task | Checksum: 1062cb129
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6183 ; free virtual = 12346
+Ending Netlist Obfuscation Task | Checksum: a612812c
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1324 ; free virtual = 18399
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6181 ; free virtual = 12343
 INFO: [Common 17-83] Releasing license: Implementation
-51 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+51 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:02 . Memory (MB): peak = 4551.766 ; gain = 2025.039 ; free physical = 1324 ; free virtual = 18399
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1314 ; free virtual = 18394
+opt_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:17 . Memory (MB): peak = 5014.902 ; gain = 2402.648 ; free physical = 6181 ; free virtual = 12343
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6181 ; free virtual = 12343
 INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6176 ; free virtual = 12343
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6185 ; free virtual = 12359
 INFO: [runtcl-4] Executing : report_drc -file main_drc_opted.rpt -pb main_drc_opted.pb -rpx main_drc_opted.rpx
 Command: report_drc -file main_drc_opted.rpt -pb main_drc_opted.pb -rpx main_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -251,43 +330,63 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1277 ; free virtual = 18360
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: b9d19dbe
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6171 ; free virtual = 12345
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 5c9d022b
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1277 ; free virtual = 18360
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1277 ; free virtual = 18360
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6171 ; free virtual = 12345
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6173 ; free virtual = 12347
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 104b7fbc3
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d95ac317
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.61 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1277 ; free virtual = 18360
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6117 ; free virtual = 12291
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1b881674e
+Phase 1.3 Build Placer Netlist Model | Checksum: 1980ec2bd
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1258 ; free virtual = 18344
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:10 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6059 ; free virtual = 12236
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1b881674e
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1980ec2bd
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1258 ; free virtual = 18344
-Phase 1 Placer Initialization | Checksum: 1b881674e
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:10 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6061 ; free virtual = 12238
+Phase 1 Placer Initialization | Checksum: 1980ec2bd
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1258 ; free virtual = 18344
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:10 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6059 ; free virtual = 12235
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 19f54f905
+Phase 2.1 Floorplanning | Checksum: 15ce40b6b
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1239 ; free virtual = 18321
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:20 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6025 ; free virtual = 12200
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 215 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 80 nets or cells. Created 0 new cell, deleted 80 existing cells and moved 0 existing cell
-INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-1018] Found 427 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 147 nets or cells. Created 0 new cell, deleted 147 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1022] Very high fanout net 'my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/wr_wea' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1408 to 89 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-1022] Very high fanout net 'my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/wr_wea' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1344 to 85 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net my_design/design_1_i/rst_ps8_0_100M/U0/peripheral_aresetn[0]. Replicated 7 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 7 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 7 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6008 ; free virtual = 12183
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en could not be optimized because driver DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
@@ -299,7 +398,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1227 ; free virtual = 18306
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5999 ; free virtual = 12173
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -308,81 +407,97 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |             80  |                    80  |           0  |           1  |  00:00:00  |
-|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |            0  |            147  |                   147  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            7  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |             80  |                    80  |           0  |           7  |  00:00:00  |
+|  Total                                            |            7  |            147  |                   148  |           0  |           8  |  00:00:01  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 181f9c76f
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 21e18efb0
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:07 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1227 ; free virtual = 18306
-Phase 2.2 Global Placement Core | Checksum: 1b6b29f61
+Time (s): cpu = 00:01:53 ; elapsed = 00:00:40 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5999 ; free virtual = 12174
+Phase 2.2 Global Placement Core | Checksum: 18700c346
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1226 ; free virtual = 18306
-Phase 2 Global Placement | Checksum: 1b6b29f61
+Time (s): cpu = 00:01:55 ; elapsed = 00:00:41 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6012 ; free virtual = 12187
+Phase 2 Global Placement | Checksum: 18700c346
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:07 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1228 ; free virtual = 18307
+Time (s): cpu = 00:01:55 ; elapsed = 00:00:41 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6022 ; free virtual = 12196
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1e5aa6dbf
+Phase 3.1 Commit Multi Column Macros | Checksum: 1288a6e02
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1228 ; free virtual = 18307
+Time (s): cpu = 00:01:58 ; elapsed = 00:00:42 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6021 ; free virtual = 12196
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 189c2d571
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 13920dc77
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:07 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1228 ; free virtual = 18307
+Time (s): cpu = 00:02:04 ; elapsed = 00:00:44 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6018 ; free virtual = 12193
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 179dc8b4a
+Phase 3.3 Area Swap Optimization | Checksum: 1189dcdf5
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1228 ; free virtual = 18307
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:45 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6018 ; free virtual = 12193
 
-Phase 3.4 Small Shape DP
+Phase 3.4 IO Cut Optimizer
+Phase 3.4 IO Cut Optimizer | Checksum: 10c5c208e
 
-Phase 3.4.1 Small Shape Clustering
-Phase 3.4.1 Small Shape Clustering | Checksum: 17493374e
+Time (s): cpu = 00:02:05 ; elapsed = 00:00:45 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6017 ; free virtual = 12192
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1227 ; free virtual = 18306
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 182fd7cb2
 
-Phase 3.4.2 Flow Legalize Slice Clusters
-Phase 3.4.2 Flow Legalize Slice Clusters | Checksum: 1bdc83596
+Time (s): cpu = 00:02:11 ; elapsed = 00:00:47 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6012 ; free virtual = 12187
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1226 ; free virtual = 18305
+Phase 3.6 Small Shape DP
 
-Phase 3.4.3 Slice Area Swap
-Phase 3.4.3 Slice Area Swap | Checksum: 19348d2e8
+Phase 3.6.1 Small Shape Clustering
+Phase 3.6.1 Small Shape Clustering | Checksum: 177ac402c
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1221 ; free virtual = 18300
+Time (s): cpu = 00:02:14 ; elapsed = 00:00:49 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5990 ; free virtual = 12164
 
-Phase 3.4.4 Commit Slice Clusters
-Phase 3.4.4 Commit Slice Clusters | Checksum: 157aa051f
+Phase 3.6.2 Flow Legalize Slice Clusters
+Phase 3.6.2 Flow Legalize Slice Clusters | Checksum: 12e09a0e1
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1220 ; free virtual = 18300
-Phase 3.4 Small Shape DP | Checksum: 157aa051f
+Time (s): cpu = 00:02:15 ; elapsed = 00:00:49 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5992 ; free virtual = 12167
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1222 ; free virtual = 18302
+Phase 3.6.3 Slice Area Swap
+Phase 3.6.3 Slice Area Swap | Checksum: 166ccbc7a
 
-Phase 3.5 Re-assign LUT pins
-Phase 3.5 Re-assign LUT pins | Checksum: 17fdd2361
+Time (s): cpu = 00:02:17 ; elapsed = 00:00:51 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5978 ; free virtual = 12153
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:08 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1225 ; free virtual = 18305
+Phase 3.6.4 Commit Slice Clusters
+Phase 3.6.4 Commit Slice Clusters | Checksum: 14d45c933
 
-Phase 3.6 Pipeline Register Optimization
-Phase 3.6 Pipeline Register Optimization | Checksum: 21ff5d587
+Time (s): cpu = 00:02:24 ; elapsed = 00:00:53 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5980 ; free virtual = 12155
+Phase 3.6 Small Shape DP | Checksum: 14d45c933
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:09 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1225 ; free virtual = 18305
-Phase 3 Detail Placement | Checksum: 21ff5d587
+Time (s): cpu = 00:02:24 ; elapsed = 00:00:53 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5991 ; free virtual = 12165
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:09 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1223 ; free virtual = 18303
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1a3135657
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:54 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5984 ; free virtual = 12158
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 214f304be
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:00:54 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5984 ; free virtual = 12159
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 168a18cfd
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5977 ; free virtual = 12152
+Phase 3 Detail Placement | Checksum: 168a18cfd
+
+Time (s): cpu = 00:02:50 ; elapsed = 00:01:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5971 ; free virtual = 12148
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -390,90 +505,382 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 1f473829c
+Post Placement Optimization Initialization | Checksum: 23ae83fc1
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 1f473829c
+INFO: [Place 46-33] Processed net my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/sig_cmd_stat_rst_user_reg_n_cdc_from_reg, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_s_ready_dup, inserted BUFG to drive 1162 loads.
+INFO: [Place 46-45] Replicated bufg driver my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/ENABLE_AXIS_SKID.I_INDET_BTT_SKID_BUF/sig_s_ready_dup_reg_replica
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_S2MM_MMAP_SKID_BUF/sig_s_ready_dup, inserted BUFG to drive 1153 loads.
+INFO: [Place 46-45] Replicated bufg driver my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_S2MM_MMAP_SKID_BUF/sig_s_ready_dup_reg_replica
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/m_sc_areset_r, inserted BUFG to drive 1204 loads.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/m_sc_areset_r, inserted BUFG to drive 1200 loads.
+INFO: [Place 46-45] Replicated bufg driver my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/m_sc_areset_r_reg_replica
+INFO: [Place 46-32] Processed net my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_rd_addrb/rd_addrb_incr, BUFG insertion was skipped because the netlist could not be updated.
+INFO: [Place 46-32] Processed net my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_rd_addrb/rd_addrb_incr, BUFG insertion was skipped because the netlist could not be updated.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_WR_DATA_CNTL/sig_m_valid_dup_reg[0], inserted BUFG to drive 1162 loads.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/inst/w_sreg/m_vector_i, inserted BUFG to drive 1153 loads.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_smc/inst/s00_entry_pipeline/s00_mmu/inst/w_sreg/skid_buffer[2176]_i_1_n_0, inserted BUFG to drive 1153 loads.
+INFO: [Place 46-35] Processed net my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_S2MM_MMAP_SKID_BUF/sig_data_reg_out[1023]_i_1__1_n_0, inserted BUFG to drive 1153 loads.
+INFO: [Place 46-56] BUFG insertion identified 11 candidate nets. Inserted BUFG: 8, Replicated BUFG Driver: 3, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 2.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 26151bb9d
 
-Time (s): cpu = 00:00:33 ; elapsed = 00:00:09 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1228 ; free virtual = 18307
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.200. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 29d6a2eb7
+Time (s): cpu = 00:03:18 ; elapsed = 00:01:11 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5951 ; free virtual = 12131
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.302. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 18ea48ddd
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:18 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1220 ; free virtual = 18299
-Phase 4.1 Post Commit Optimization | Checksum: 29d6a2eb7
+Time (s): cpu = 00:03:51 ; elapsed = 00:01:39 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5991 ; free virtual = 12169
+Phase 4.1 Post Commit Optimization | Checksum: 18ea48ddd
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:18 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1220 ; free virtual = 18299
+Time (s): cpu = 00:03:51 ; elapsed = 00:01:40 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5991 ; free virtual = 12170
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 29d6a2eb7
+Phase 4.2 Post Placement Cleanup | Checksum: 18ea48ddd
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:18 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1223 ; free virtual = 18303
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
+Time (s): cpu = 00:03:59 ; elapsed = 00:01:43 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5988 ; free virtual = 12167
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5984 ; free virtual = 12163
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 324d9579f
+Phase 4.3 Placer Reporting | Checksum: 194773f09
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:19 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
+Time (s): cpu = 00:04:01 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5984 ; free virtual = 12162
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
-Phase 4.4 Final Placement Cleanup | Checksum: 308087b47
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5985 ; free virtual = 12164
+Phase 4.4 Final Placement Cleanup | Checksum: 14b429243
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:19 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 308087b47
+Time (s): cpu = 00:04:01 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5986 ; free virtual = 12164
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 14b429243
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:19 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
-Ending Placer Task | Checksum: 24c0e1800
+Time (s): cpu = 00:04:01 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5986 ; free virtual = 12164
+Ending Placer Task | Checksum: 142e3ba0e
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:19 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1215 ; free virtual = 18294
+Time (s): cpu = 00:04:01 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5982 ; free virtual = 12160
 INFO: [Common 17-83] Releasing license: Implementation
-84 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+116 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:22 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1235 ; free virtual = 18314
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1235 ; free virtual = 18314
+place_design: Time (s): cpu = 00:04:06 ; elapsed = 00:01:49 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6020 ; free virtual = 12198
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 6021 ; free virtual = 12198
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1219 ; free virtual = 18311
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5946 ; free virtual = 12179
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5963 ; free virtual = 12162
 INFO: [runtcl-4] Executing : report_io -file main_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.21 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1212 ; free virtual = 18298
+report_io: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.25 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5937 ; free virtual = 12141
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_placed.rpt -pb main_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file main_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.13 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1229 ; free virtual = 18316
+report_control_sets: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.23 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5905 ; free virtual = 12130
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1206 ; free virtual = 18293
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5898 ; free virtual = 12091
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.205 | TNS=0.000 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1142aa090
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.249 | TNS=-4.400 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1097e1e82
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.56 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1197 ; free virtual = 18285
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.205 | TNS=0.000 |
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5888 ; free virtual = 12080
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.249 | TNS=-4.400 |
 
 Phase 2 DSP Register Optimization
-INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
-Phase 2 DSP Register Optimization | Checksum: 1142aa090
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1097e1e82
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.69 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1196 ; free virtual = 18284
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:03 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5885 ; free virtual = 12078
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.205 | TNS=0.000 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.205 | TNS=0.000 |
-Phase 3 Critical Path Optimization | Checksum: 1142aa090
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.249 | TNS=-4.400 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg
+INFO: [Physopt 32-81] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.246 | TNS=-4.316 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_replica
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_19.  Did not re-place instance my_design/FIFO_10_inst_i_1__19
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_19 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_19. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_19. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__19_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.227 | TNS=-3.598 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_2.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg
+INFO: [Physopt 32-81] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_2. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_2. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.221 | TNS=-3.346 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_2.  Did not re-place instance my_design/FIFO_10_inst_i_1__2
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_2 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_2. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__2_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.218 | TNS=-3.062 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_2_repN.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg_replica
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_7.  Did not re-place instance my_design/FIFO_10_inst_i_1__7
+INFO: [Physopt 32-571] Net my_design/internal_reset_reg_7 was not replicated.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_7. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__7_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.198 | TNS=-2.757 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_1.  Did not re-place instance my_design/FIFO_10_inst_i_1__1
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_1. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__1_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.196 | TNS=-2.107 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_0.  Did not re-place instance my_design/FIFO_10_inst_i_1__0
+INFO: [Physopt 32-571] Net my_design/internal_reset_reg_0 was not replicated.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_0. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__0_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.184 | TNS=-1.636 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_12.  Did not re-place instance my_design/FIFO_10_inst_i_1__12
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_12 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_12. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_12. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__12_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.173 | TNS=-1.479 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_20.  Did not re-place instance my_design/FIFO_10_inst_i_1__20
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_20 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_20. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_20. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__20_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.091 | TNS=-1.258 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_10.  Did not re-place instance my_design/FIFO_10_inst_i_1__10
+INFO: [Physopt 32-571] Net my_design/internal_reset_reg_10 was not replicated.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_10. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_10. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__10_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.088 | TNS=-1.191 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_4.  Did not re-place instance my_design/FIFO_10_inst_i_1__4
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_4. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__4_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.078 | TNS=-1.048 |
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/design_1_i_i_9
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_12. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__12_comp_1.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.071 | TNS=-0.953 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_5.  Did not re-place instance my_design/FIFO_10_inst_i_1__5
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_5 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_5. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__5_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.066 | TNS=-0.806 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_9.  Did not re-place instance my_design/FIFO_10_inst_i_1__9
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_9 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_9. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net my_design/enable_sampling_logic_reg was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-702] Processed net my_design/enable_sampling_logic_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/design_1_i_i_9
+INFO: [Physopt 32-134] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/data_in_fifo_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/design_1_i_i_40
+INFO: [Physopt 32-571] Net DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/data_in_fifo_reg_0 was not replicated.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/data_in_fifo_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg_0.  Re-placed instance DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/design_1_i_i_83
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.065 | TNS=-0.770 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/design_1_i_i_42
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/design_1_i_i_85
+INFO: [Physopt 32-134] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.063 | TNS=-0.542 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/tValidR_4.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/tValidR_reg
+INFO: [Physopt 32-81] Processed net DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/tValidR_4. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/tValidR_4. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.062 | TNS=-0.531 |
+INFO: [Physopt 32-663] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg_0.  Re-placed instance DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/design_1_i_i_83
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/tValidR_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.047 | TNS=-0.385 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/tValidR_10.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/tValidR_reg
+INFO: [Physopt 32-81] Processed net DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/tValidR_10. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/tValidR_10. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.041 | TNS=-0.167 |
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/design_1_i_i_85
+INFO: [Physopt 32-134] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CLK_REF_P. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_replica
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net my_design/internal_reset_reg_20.  Re-placed instance my_design/FIFO_10_inst_i_1__20_comp
+INFO: [Physopt 32-735] Processed net my_design/internal_reset_reg_20. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.035 | TNS=-0.126 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net my_design/internal_reset_reg_19.  Re-placed instance my_design/FIFO_10_inst_i_1__19_comp
+INFO: [Physopt 32-735] Processed net my_design/internal_reset_reg_19. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.034 | TNS=-0.096 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_17.  Did not re-place instance my_design/FIFO_10_inst_i_1__17
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_17. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-702] Processed net my_design/enable_sampling_logic_reg. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/design_1_i_i_9
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/design_1_i_i_42
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/design_1_i_i_85
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CLK_REF_P. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.034 | TNS=-0.096 |
+Phase 3 Critical Path Optimization | Checksum: 1097e1e82
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.71 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1196 ; free virtual = 18284
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1197 ; free virtual = 18285
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1197 ; free virtual = 18284
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.205 | TNS=0.000 |
+Time (s): cpu = 00:02:27 ; elapsed = 00:00:38 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5905 ; free virtual = 12104
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.034 | TNS=-0.096 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_replica
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_17.  Did not re-place instance my_design/FIFO_10_inst_i_1__17
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_17 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_17. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_17. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__17_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.014 | TNS=-0.048 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net my_design/internal_reset_reg_0.  Re-placed instance my_design/FIFO_10_inst_i_1__0_comp
+INFO: [Physopt 32-735] Processed net my_design/internal_reset_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.013 | TNS=-0.043 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_19.  Did not re-place instance my_design/FIFO_10_inst_i_1__19_comp
+INFO: [Physopt 32-81] Processed net my_design/internal_reset_reg_19. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net my_design/internal_reset_reg_19. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.011 | TNS=-0.035 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_6.  Did not re-place instance my_design/FIFO_10_inst_i_1__6
+INFO: [Physopt 32-572] Net my_design/internal_reset_reg_6 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_6. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__6_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.010 | TNS=-0.025 |
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_0.  Did not re-place instance my_design/FIFO_10_inst_i_1__0_comp
+INFO: [Physopt 32-81] Processed net my_design/internal_reset_reg_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net my_design/internal_reset_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.008 | TNS=-0.018 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_21.  Did not re-place instance my_design/FIFO_10_inst_i_1__21
+INFO: [Physopt 32-571] Net my_design/internal_reset_reg_21 was not replicated.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_21. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/enable_sampling_logic_reg.  Did not re-place instance my_design/FIFO_10_inst_i_2
+INFO: [Physopt 32-710] Processed net my_design/internal_reset_reg_21. Critical path length was reduced through logic transformation on cell my_design/FIFO_10_inst_i_1__21_comp.
+INFO: [Physopt 32-735] Processed net my_design/enable_sampling_logic_reg. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.007 | TNS=-0.012 |
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_1.  Did not re-place instance my_design/FIFO_10_inst_i_1__1_comp
+INFO: [Physopt 32-571] Net my_design/internal_reset_reg_1 was not replicated.
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/design_1_i_i_9
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/design_1_i_i_42
+INFO: [Physopt 32-572] Net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/design_1_i_i_85
+INFO: [Physopt 32-134] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CLK_REF_P. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/D[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_replica
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_18_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net my_design/internal_reset_reg_1.  Did not re-place instance my_design/FIFO_10_inst_i_1__1_comp
+INFO: [Physopt 32-702] Processed net my_design/internal_reset_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/design_1_i_i_9
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/TVALID. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/design_1_i_i_42
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/data_in_fifo_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/design_1_i_i_85
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/tValidR_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en.  Did not re-place instance DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/DEVICE_8SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2
+INFO: [Physopt 32-702] Processed net DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/tmp_ram_rd_en. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net CLK_REF_P. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.007 | TNS=-0.012 |
+Phase 4 Critical Path Optimization | Checksum: 1097e1e82
+
+Time (s): cpu = 00:03:12 ; elapsed = 00:00:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5904 ; free virtual = 12101
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5905 ; free virtual = 12101
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5903 ; free virtual = 12100
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.007 | TNS=-0.012 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -482,30 +889,35 @@ Summary of Physical Synthesis Optimizations
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
-|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
-|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.242  |          4.388  |            6  |              0  |                    26  |           0  |           2  |  00:00:43  |
+|  Total          |          0.242  |          4.388  |            6  |              0  |                    26  |           0  |           3  |  00:00:43  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1198 ; free virtual = 18286
-Ending Physical Synthesis Task | Checksum: 1142aa090
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5898 ; free virtual = 12092
+Ending Physical Synthesis Task | Checksum: 1097e1e82
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.93 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1198 ; free virtual = 18286
+Time (s): cpu = 00:03:15 ; elapsed = 00:00:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5898 ; free virtual = 12092
 INFO: [Common 17-83] Releasing license: Implementation
-98 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+375 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1204 ; free virtual = 18291
+phys_opt_design: Time (s): cpu = 00:03:35 ; elapsed = 00:00:52 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5919 ; free virtual = 12112
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5918 ; free virtual = 12112
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.26 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1180 ; free virtual = 18279
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5842 ; free virtual = 12093
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5903 ; free virtual = 12113
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xczu2cg'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xczu2cg'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
@@ -514,124 +926,163 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: e6ecfbd2 ConstDB: 0 ShapeSum: a2311546 RouteDB: 876f28e8
+Checksum: PlaceDB: 8de935b8 ConstDB: 0 ShapeSum: 1e28369e RouteDB: 929c97b4
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 79475d89
+Phase 1 Build RT Design | Checksum: 1045c1d33
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1043 ; free virtual = 18131
-Post Restoration Checksum: NetGraph: bd1b6cf0 NumContArr: 30a3d21e Constraints: 8a051475 Timing: 0
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:24 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5749 ; free virtual = 11959
+Post Restoration Checksum: NetGraph: b23a5ac3 NumContArr: 7d158596 Constraints: 703b6212 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 177c45383
+Phase 2.1 Create Timer | Checksum: 19f8b426b
 
-Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1046 ; free virtual = 18135
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5754 ; free virtual = 11963
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 177c45383
+Phase 2.2 Fix Topology Constraints | Checksum: 19f8b426b
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1006 ; free virtual = 18094
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5708 ; free virtual = 11918
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 177c45383
+Phase 2.3 Pre Route Cleanup | Checksum: 19f8b426b
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1006 ; free virtual = 18094
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5708 ; free virtual = 11918
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: 17ba271f4
+Phase 2.4 Global Clock Net Routing | Checksum: 11efb3b9f
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1020 ; free virtual = 18109
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5691 ; free virtual = 11901
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 1ae11e38b
+Phase 2.5 Update Timing | Checksum: 1d4670614
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1020 ; free virtual = 18108
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.225  | TNS=0.000  | WHS=-0.061 | THS=-1.458 |
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:35 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5674 ; free virtual = 11884
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.098  | TNS=0.000  | WHS=-0.079 | THS=-49.177|
 
-Phase 2 Router Initialization | Checksum: 2363b2d12
+Phase 2 Router Initialization | Checksum: 2a8644417
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:25 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1018 ; free virtual = 18111
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:40 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5663 ; free virtual = 11873
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0 %
-  Global Horizontal Routing Utilization  = 0 %
+  Global Vertical Routing Utilization    = 0.00107277 %
+  Global Horizontal Routing Utilization  = 0.00147754 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 5218
+  Number of Failed Nets               = 30948
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 4646
-  Number of Partially Routed Nets     = 572
-  Number of Node Overlaps             = 0
+  Number of Unrouted Nets             = 27888
+  Number of Partially Routed Nets     = 3060
+  Number of Node Overlaps             = 21
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 17eeab9c8
+Phase 3 Initial Routing | Checksum: 178c81f27
 
-Time (s): cpu = 00:00:35 ; elapsed = 00:00:26 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1004 ; free virtual = 18095
+Time (s): cpu = 00:01:36 ; elapsed = 00:00:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5656 ; free virtual = 11866
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 729
- Number of Nodes with overlaps = 35
- Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 5302
+ Number of Nodes with overlaps = 433
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.238  | TNS=0.000  | WHS=0.013  | THS=0.000  |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.162 | TNS=-0.586 | WHS=-0.023 | THS=-0.203 |
 
-Phase 4.1 Global Iteration 0 | Checksum: 300ecc863
+Phase 4.1 Global Iteration 0 | Checksum: 2759331e7
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1015 ; free virtual = 18103
+Time (s): cpu = 00:03:00 ; elapsed = 00:01:19 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5632 ; free virtual = 11842
 
-Phase 4.2 Additional Iteration for Hold
-Phase 4.2 Additional Iteration for Hold | Checksum: 2e7eb0ecb
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 99
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.159 | TNS=-0.979 | WHS=N/A    | THS=N/A    |
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1014 ; free virtual = 18102
-Phase 4 Rip-up And Reroute | Checksum: 2e7eb0ecb
+Phase 4.2 Global Iteration 1 | Checksum: 1890ac2ab
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1014 ; free virtual = 18102
+Time (s): cpu = 00:03:14 ; elapsed = 00:01:30 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5628 ; free virtual = 11841
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 71
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 1c11bc874
+
+Time (s): cpu = 00:03:23 ; elapsed = 00:01:38 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5639 ; free virtual = 11849
+
+Phase 4.4 Global Iteration 3
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.131 | TNS=-0.524 | WHS=N/A    | THS=N/A    |
+
+Phase 4.4 Global Iteration 3 | Checksum: d876e5bb
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:01:42 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5640 ; free virtual = 11850
+Phase 4 Rip-up And Reroute | Checksum: d876e5bb
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:01:42 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5640 ; free virtual = 11850
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 2879df77f
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1016 ; free virtual = 18104
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 15143f683
+
+Time (s): cpu = 00:03:38 ; elapsed = 00:01:45 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5644 ; free virtual = 11854
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=0.010  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 20369d752
+
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5640 ; free virtual = 11851
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 2879df77f
+Phase 5.2 Clock Skew Optimization | Checksum: 20369d752
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1016 ; free virtual = 18104
-Phase 5 Delay and Skew Optimization | Checksum: 2879df77f
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5640 ; free virtual = 11851
+Phase 5 Delay and Skew Optimization | Checksum: 20369d752
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1016 ; free virtual = 18104
+Time (s): cpu = 00:03:39 ; elapsed = 00:01:46 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5640 ; free virtual = 11850
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 2d5100ccb
+Phase 6.1.1 Update Timing | Checksum: 2375e24e0
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1015 ; free virtual = 18103
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.238  | TNS=0.000  | WHS=0.013  | THS=0.000  |
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5643 ; free virtual = 11853
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=0.010  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 2d5100ccb
+Phase 6.1 Hold Fix Iter | Checksum: 27ebe9c92
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1015 ; free virtual = 18103
-Phase 6 Post Hold Fix | Checksum: 2d5100ccb
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5642 ; free virtual = 11852
+Phase 6 Post Hold Fix | Checksum: 27ebe9c92
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1015 ; free virtual = 18103
+Time (s): cpu = 00:03:47 ; elapsed = 00:01:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5642 ; free virtual = 11852
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.69849 %
-  Global Horizontal Routing Utilization  = 0.85878 %
+  Global Vertical Routing Utilization    = 9.41531 %
+  Global Horizontal Routing Utilization  = 8.24813 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -641,46 +1092,107 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 298473895
+Congestion Report
+North Dir 1x1 Area, Max Cong = 80.2817%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 66.3507%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 74.0385%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 77.8846%, No Congested Regions.
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1014 ; free virtual = 18102
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 295bee01d
+
+Time (s): cpu = 00:03:48 ; elapsed = 00:01:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5641 ; free virtual = 11851
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 298473895
+Phase 8 Verifying routed nets | Checksum: 295bee01d
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1013 ; free virtual = 18101
+Time (s): cpu = 00:03:48 ; elapsed = 00:01:48 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5639 ; free virtual = 11849
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 298473895
+Phase 9 Depositing Routes | Checksum: 295bee01d
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1016 ; free virtual = 18104
+Time (s): cpu = 00:03:49 ; elapsed = 00:01:50 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5637 ; free virtual = 11847
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.238  | TNS=0.000  | WHS=0.013  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=0.010  | THS=0.000  |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 298473895
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 295bee01d
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1018 ; free virtual = 18106
+Time (s): cpu = 00:03:50 ; elapsed = 00:01:50 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5643 ; free virtual = 11853
+Time taken to check if laguna hold fix is required (in secs): 0
+
+Phase 11 Physical Synthesis in Router
+
+Phase 11.1 Physical Synthesis Initialization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=0.010 | THS=0.000 |
+Phase 11.1 Physical Synthesis Initialization | Checksum: 295bee01d
+
+Time (s): cpu = 00:04:14 ; elapsed = 00:01:55 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5633 ; free virtual = 11844
+
+Phase 11.2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.114 | TNS=-0.605 | WHS=0.010 | THS=0.000 |
+INFO: [Physopt 32-952] Improved path group WNS = -0.090. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.066. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.065. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.057. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.055. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.035. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.035. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.031. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.025. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.006. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/D[0].
+INFO: [Physopt 32-952] Improved path group WNS = -0.003. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-952] Improved path group WNS = -0.002. Path group: CLK_REF_N. Processed net: DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8].
+INFO: [Physopt 32-735] Processed net DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/D[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.008 | THS=0.000 |
+INFO: [Physopt 32-668] Current Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.008 | THS=0.000 |
+Phase 11.2 Critical Path Optimization | Checksum: 210091e1f
+
+Time (s): cpu = 00:04:21 ; elapsed = 00:01:57 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5616 ; free virtual = 11826
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5612 ; free virtual = 11825
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=0.003 | TNS=0.000 | WHS=0.008 | THS=0.000 |
+Phase 11 Physical Synthesis in Router | Checksum: 2491c26aa
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:01:58 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5612 ; free virtual = 11826
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:29 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1067 ; free virtual = 18155
-
-Routing Is Done.
+Time (s): cpu = 00:04:22 ; elapsed = 00:01:58 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5684 ; free virtual = 11898
 INFO: [Common 17-83] Releasing license: Implementation
-112 Infos, 9 Warnings, 4 Critical Warnings and 0 Errors encountered.
+413 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:32 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1067 ; free virtual = 18155
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1067 ; free virtual = 18155
+route_design: Time (s): cpu = 00:04:29 ; elapsed = 00:02:01 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5684 ; free virtual = 11898
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5684 ; free virtual = 11898
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.36 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 1038 ; free virtual = 18141
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5591 ; free virtual = 11871
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5668 ; free virtual = 11898
 INFO: [runtcl-4] Executing : report_drc -file main_drc_routed.rpt -pb main_drc_routed.pb -rpx main_drc_routed.rpx
 Command: report_drc -file main_drc_routed.rpt -pb main_drc_routed.pb -rpx main_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -693,6 +1205,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/main_methodology_drc_routed.rpt.
 report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:24 ; elapsed = 00:00:06 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5663 ; free virtual = 11893
 INFO: [runtcl-4] Executing : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 Command: report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -701,9 +1214,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-124 Infos, 10 Warnings, 4 Critical Warnings and 0 Errors encountered.
+425 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 990 ; free virtual = 18086
+report_power: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5600 ; free virtual = 11843
 INFO: [runtcl-4] Executing : report_route_status -file main_route_status.rpt -pb main_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file main_timing_summary_routed.rpt -pb main_timing_summary_routed.pb -rpx main_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
@@ -714,9 +1227,26 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file main_clock_utilizati
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file main_bus_skew_routed.rpt -pb main_bus_skew_routed.pb -rpx main_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Temperature grade: E, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[5].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[4].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[3].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[2].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[1].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_smc/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_REALIGNER.I_S2MM_REALIGNER/GEN_INCLUDE_SCATTER.I_S2MM_SCATTER/I_TSTRB_FIFO/USE_SYNC_FIFO.I_SYNC_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
 INFO: [Memdata 28-167] Found XPM memory block my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
 INFO: [Memdata 28-208] The XPM instance: <my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <my_design/design_1_i/axi_dma_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
 Command: write_bitstream -force main.bit
@@ -725,9 +1255,25 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: COUNTER_TC_MACRO_inst/genblk1_0.DSP48E_BL: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: COUNTER_TC_MACRO_inst/genblk1_0.DSP48E_BL: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 2 Advisories
+WARNING: [DRC RTSTAT-10] No routable loads: 168 net(s) have no routable loads. The problem bus(es) and/or net(s) are DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i... and (the first 15 of 168 listed).
+INFO: [DRC REQP-1934] RAMB18E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_16) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_10) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_11) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_12) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_13) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_14) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_15) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_3) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_4) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_5) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_6) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_7) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_8) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (my_design/design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_9) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings, 17 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -736,13 +1282,13 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 26365824 bits.
+Bitstream compression saved 17060544 bits.
 Writing bitstream ./main.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed Aug 19 17:39:08 2020. For additional details about this file, please refer to the WebTalk help file at /home/rsaradhy/Software/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Sep 11 05:41:44 2020. For additional details about this file, please refer to the WebTalk help file at /home/rsaradhy/Software/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-151 Infos, 10 Warnings, 4 Critical Warnings and 0 Errors encountered.
+484 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 4551.766 ; gain = 0.000 ; free physical = 967 ; free virtual = 18061
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 19 17:39:08 2020...
+write_bitstream: Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 5014.902 ; gain = 0.000 ; free physical = 5603 ; free virtual = 11851
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 11 05:41:45 2020...
