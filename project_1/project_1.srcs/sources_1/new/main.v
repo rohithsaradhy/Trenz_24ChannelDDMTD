@@ -43,18 +43,19 @@ module main(
 
 //  //CLK Configuration
   wire clk_ref;
-  IBUFGDS IBUFGDS_CLK_REF (.O(clk_ref), .I(CLK_REF_P), .IB(CLK_REF_N)); //good
+  wire clk_ref_320;
+  // IBUFGDS IBUFGDS_CLK_REF (.O(clk_ref), .I(CLK_REF_P), .IB(CLK_REF_N)); //good
  
 
-//   clock_pll clk_pll 
-//  (
-//   // Clock out ports
-//   .clk_out1(clk_ref),
-//   .clk_out2(TCLK),
-//  // Clock in ports
-//   .clk_in1_p(CLK_REF_P),
-//   .clk_in1_n(CLK_REF_N)
-//  );
+  clock_pll clk_pll 
+ (
+  // Clock out ports
+  .clk_out1(clk_ref),
+  .clk_out2(clk_ref_320),
+ // Clock in ports
+  .clk_in1_p(CLK_REF_P),
+  .clk_in1_n(CLK_REF_N)
+ );
 
 
 
@@ -307,7 +308,7 @@ module main(
   //AXIS Interface port  
   parameter integer DATA_WIDTH	= 32;
   parameter integer START_COUNT	=32;
-  parameter integer NUM_DDMTD	=8; //number of DDMTD in parallel
+  parameter integer NUM_DDMTD	=2; //number of DDMTD in parallel
 
   wire [DATA_WIDTH*NUM_DDMTD-1 : 0] TDATA;
   wire [(DATA_WIDTH*NUM_DDMTD/8)-1 : 0] TSTRB;
@@ -315,7 +316,7 @@ module main(
   wire TVALID;
   wire TREADY;
   wire TCLK;
-	assign TCLK = clk_ref;
+	assign TCLK = clk_ref_320;
   wire RESETN;
   
   // Each bit of this wire will be the clock

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Thu Aug 27 01:17:12 2020
+-- Date        : Sat Sep 12 22:11:17 2020
 -- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top design_1_xbar_0 -prefix
---               design_1_xbar_0_ design_1_xbar_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_sim_netlist.vhdl
 -- Design      : design_1_xbar_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -70,6 +70,8 @@ entity design_1_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 39 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 39 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_21_addr_arbiter_sasd";
 end design_1_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd;
 
 architecture STRUCTURE of design_1_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd is
@@ -106,38 +108,34 @@ architecture STRUCTURE of design_1_xbar_0_axi_crossbar_v2_1_21_addr_arbiter_sasd
   signal s_ready_i : STD_LOGIC;
   signal target_mi_enc : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \gen_axilite.s_axi_bvalid_i_i_3\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \gen_axilite.s_axi_rvalid_i_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \gen_no_arbiter.m_grant_hot_i[0]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \gen_no_arbiter.m_grant_hot_i[0]_i_4\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \gen_no_arbiter.s_ready_i[0]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \m_atarget_enc[0]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_atarget_enc[1]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_atarget_hot[0]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \m_atarget_hot[1]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_8\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_9\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[0]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axi_arvalid[1]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \m_axi_awvalid[1]_INST_0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \m_axi_bready[1]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_axi_wvalid[1]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \m_payload_i[34]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_1__0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \m_ready_d[1]_i_2\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \m_ready_d[2]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \m_ready_d[2]_i_5\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \m_ready_d[2]_i_6\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_ready_d[2]_i_7\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of m_valid_i_i_3 : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \s_arvalid_reg[0]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \s_awvalid_reg[0]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \s_axi_arready[0]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \s_axi_awready[0]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \s_axi_wready[0]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \gen_axilite.s_axi_bvalid_i_i_3\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \gen_axilite.s_axi_rvalid_i_i_2\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \gen_no_arbiter.m_grant_hot_i[0]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \gen_no_arbiter.m_grant_hot_i[0]_i_4\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \gen_no_arbiter.s_ready_i[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \m_atarget_enc[0]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_atarget_hot[0]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \m_atarget_hot[1]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_8\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_atarget_hot[2]_i_9\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[0]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \m_axi_arvalid[1]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[0]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \m_axi_awvalid[1]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[0]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_axi_wvalid[1]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_payload_i[34]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \m_ready_d[1]_i_1__0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \m_ready_d[1]_i_2\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \m_ready_d[2]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \m_ready_d[2]_i_7\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of m_valid_i_i_3 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s_arvalid_reg[0]_i_2\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \s_awvalid_reg[0]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \s_axi_arready[0]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \s_axi_awready[0]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \s_axi_rvalid[0]_INST_0\ : label is "soft_lutpair12";
 begin
   SR(0) <= \^sr\(0);
   aa_grant_rnw <= \^aa_grant_rnw\;
@@ -1632,6 +1630,8 @@ entity design_1_xbar_0_axi_crossbar_v2_1_21_decerr_slave is
     \gen_axilite.s_axi_awready_i_reg_0\ : in STD_LOGIC;
     \gen_axilite.s_axi_awready_i_reg_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_crossbar_v2_1_21_decerr_slave : entity is "axi_crossbar_v2_1_21_decerr_slave";
 end design_1_xbar_0_axi_crossbar_v2_1_21_decerr_slave;
 
 architecture STRUCTURE of design_1_xbar_0_axi_crossbar_v2_1_21_decerr_slave is
@@ -1804,6 +1804,8 @@ entity design_1_xbar_0_axi_crossbar_v2_1_21_splitter is
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_crossbar_v2_1_21_splitter : entity is "axi_crossbar_v2_1_21_splitter";
 end design_1_xbar_0_axi_crossbar_v2_1_21_splitter;
 
 architecture STRUCTURE of design_1_xbar_0_axi_crossbar_v2_1_21_splitter is
@@ -1935,6 +1937,8 @@ entity design_1_xbar_0_axi_register_slice_v2_1_20_axic_register_slice is
     \m_axi_rready[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_register_slice_v2_1_20_axic_register_slice : entity is "axi_register_slice_v2_1_20_axic_register_slice";
 end design_1_xbar_0_axi_register_slice_v2_1_20_axic_register_slice;
 
 architecture STRUCTURE of design_1_xbar_0_axi_register_slice_v2_1_20_axic_register_slice is
@@ -1982,10 +1986,10 @@ architecture STRUCTURE of design_1_xbar_0_axi_register_slice_v2_1_20_axic_regist
   signal \skid_buffer_reg_n_0_[9]\ : STD_LOGIC;
   signal \^sr_rvalid\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \m_axi_rready[1]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of m_valid_i_i_1 : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of s_ready_i_i_1 : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \skid_buffer[0]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \m_axi_rready[1]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of m_valid_i_i_1 : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of s_ready_i_i_1 : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \skid_buffer[0]_i_1\ : label is "soft_lutpair15";
 begin
   aa_rready <= \^aa_rready\;
   \m_payload_i_reg[34]_0\(34 downto 0) <= \^m_payload_i_reg[34]_0\(34 downto 0);
@@ -3140,6 +3144,8 @@ entity design_1_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 39 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 39 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd : entity is "axi_crossbar_v2_1_21_crossbar_sasd";
 end design_1_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd;
 
 architecture STRUCTURE of design_1_xbar_0_axi_crossbar_v2_1_21_crossbar_sasd is
@@ -3549,6 +3555,8 @@ entity design_1_xbar_0_axi_crossbar_v2_1_21_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of design_1_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_1_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of design_1_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is "axi_crossbar_v2_1_21_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of design_1_xbar_0_axi_crossbar_v2_1_21_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;
@@ -3963,7 +3971,7 @@ architecture STRUCTURE of design_1_xbar_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLKIF CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 160000000, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLKIF, FREQ_HZ 320000000, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, ASSOCIATED_BUSIF M00_AXI:M01_AXI:M02_AXI:M03_AXI:M04_AXI:M05_AXI:M06_AXI:M07_AXI:M08_AXI:M09_AXI:M10_AXI:M11_AXI:M12_AXI:M13_AXI:M14_AXI:M15_AXI:S00_AXI:S01_AXI:S02_AXI:S03_AXI:S04_AXI:S05_AXI:S06_AXI:S07_AXI:S08_AXI:S09_AXI:S10_AXI:S11_AXI:S12_AXI:S13_AXI:S14_AXI:S15_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RSTIF RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RSTIF, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 M00_AXI ARADDR [39:0] [39:0], xilinx.com:interface:aximm:1.0 M01_AXI ARADDR [39:0] [79:40]";
@@ -3979,7 +3987,7 @@ architecture STRUCTURE of design_1_xbar_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI BVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI BVALID [0:0] [1:1]";
   attribute X_INTERFACE_INFO of m_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI RDATA [31:0] [63:32]";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RREADY [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RREADY [0:0] [1:1]";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 160000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 160000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 320000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0, XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 320000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RRESP [1:0] [1:0], xilinx.com:interface:aximm:1.0 M01_AXI RRESP [1:0] [3:2]";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M00_AXI RVALID [0:0] [0:0], xilinx.com:interface:aximm:1.0 M01_AXI RVALID [0:0] [1:1]";
   attribute X_INTERFACE_INFO of m_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 M00_AXI WDATA [31:0] [31:0], xilinx.com:interface:aximm:1.0 M01_AXI WDATA [31:0] [63:32]";
@@ -3999,7 +4007,7 @@ architecture STRUCTURE of design_1_xbar_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RDATA";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 160000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S00_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 320000000, ID_WIDTH 0, ADDR_WIDTH 40, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_CLK_IN, NUM_READ_THREADS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RRESP";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S00_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S00_AXI WDATA";

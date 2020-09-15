@@ -109,26 +109,6 @@
 						"WVALID": { "actual": "s_axi_wvalid"}
 					}
 				},
-				"/m00_nodes/m00_aw_node/M_AXIS_ARB": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_sc_aclk"},
-						"ARESETN": { "actual": "s_sc_aresetn"},
-						"TDATA": { "actual": "m_axis_arb_tdata"},
-						"TREADY": { "actual": "m_axis_arb_tready"},
-						"TVALID": { "actual": "m_axis_arb_tvalid"}
-					}
-				},
-				"/m00_nodes/m00_w_node/S_AXIS_ARB": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "s_sc_aclk"},
-						"ARESETN": { "actual": "s_sc_aresetn"},
-						"TDATA": { "actual": "s_axis_arb_tdata"},
-						"TREADY": { "actual": "s_axis_arb_tready"},
-						"TVALID": { "actual": "s_axis_arb_tvalid"}
-					}
-				},
 				"/m00_sc2axi/M_AXI": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {

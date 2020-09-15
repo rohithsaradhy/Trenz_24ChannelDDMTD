@@ -116,10 +116,10 @@ always @(posedge M_AXIS_ACLK)
 reg  		tValidR=0;
 
 always @(negedge M_AXIS_ACLK)
-    if( ! ARESETN )begin
+    if( (! ARESETN) )begin
         tValidR <=0;
     end
-    else if (sampleGeneratorEnR) tValidR <= 1;
+    else if (sampleGeneratorEnR && M_AXIS_TREADY) tValidR <= 1;
             
 
 //Valid only after 500 cycles of clk_ref after empty is deasserted
@@ -129,7 +129,7 @@ parameter DATA_IN_FIFO_THRESHOLD = 500;
 integer data_in_fifo_counter=0;
 always @(posedge clk_ref)
 begin
-    if(reset | prog_empty)
+    if(reset | empty)
     begin
         data_in_fifo <= 0;
         data_in_fifo_counter <= 0;
@@ -212,16 +212,16 @@ assign M_AXIS_TVALID = tValidR & data_in_fifo ;
     FIFO_10 FIFO_10_inst (
     .srst(reset),
 
-    .clk(clk_ref),
-    // .wr_clk(clk_ref),
-    // .rd_clk(~M_AXIS_ACLK),
+    // .clk(clk_ref),
+    .wr_clk(clk_ref),
+    .rd_clk(~M_AXIS_ACLK),
     .din(DATA_IN),
     .wr_en(write_en),
     .rd_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic | reset),
     .dout(M_AXIS_TDATA),
     .full(full),
-    .empty(empty),
-    .prog_empty(prog_empty)
+    .empty(empty)
+    // .prog_empty(prog_empty)
     // wr_rst_busy,
     // rd_rst_busy
     );
@@ -245,7 +245,7 @@ assign M_AXIS_TVALID = tValidR & data_in_fifo ;
         end 
     end
 
-    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:prog_empty;
+    assign M_AXIS_TLAST = (counter_TLAST == WORDS_TO_SEND-2)?1:empty;
     
     
     

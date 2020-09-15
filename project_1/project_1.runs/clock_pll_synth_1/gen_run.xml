@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="clock_pll_synth_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1598546565">
+  <File Type="RDS-DCP" Name="clock_pll.dcp"/>
+  <File Type="RDS-RDS" Name="clock_pll.vds"/>
+  <File Type="PA-TCL" Name="clock_pll.tcl"/>
+  <File Type="RDS-UTIL" Name="clock_pll_utilization_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="clock_pll_reports.tcl"/>
   <File Type="RDS-UTIL-PB" Name="clock_pll_utilization_synth.pb"/>
-  <File Type="RDS-RDS" Name="clock_pll.vds"/>
-  <File Type="RDS-DCP" Name="clock_pll.dcp"/>
-  <File Type="RDS-UTIL" Name="clock_pll_utilization_synth.rpt"/>
-  <File Type="PA-TCL" Name="clock_pll.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clock_pll">
     <File Path="$PSRCDIR/sources_1/ip/clock_pll/clock_pll.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clock_pll.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -21,6 +28,13 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clock_pll">
     <File Path="$PSRCDIR/sources_1/ip/clock_pll/clock_pll.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/clock_pll.xcix">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

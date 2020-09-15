@@ -1,0 +1,9 @@
+srcscan starts
+=============== Using vdb files for VHDL std libs ===========
+INFO: The vhdl library search path for library "std" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/std" (VHDL-1505)
+INFO: The vhdl library search path for library "synopsys" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/synopsys" (VHDL-1505)
+INFO: The vhdl library search path for library "ieee" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/ieee" (VHDL-1505)
+INFO: The vhdl library search path for library "unimacro" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/unimacro" (VHDL-1505)
+INFO: The vhdl library search path for library "unisim" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/unisim" (VHDL-1505)
+INFO: The vhdl library search path for library "vl" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/vl" (VHDL-1505)
+INFO: The vhdl library search path for library "xpm" is now "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/precomp_hsv/vhdl/xpm" (VHDL-1505)

@@ -1,0 +1,626 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:39:14 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 9480
+License: Customer
+
+Current time: 	Sat Sep 12 22:42:41 CDT 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 5.4.0-47-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :0
+Screen size: 2560x1440
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 275 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rsaradhy
+User home directory: /home/rsaradhy
+User working directory: /home/rsaradhy/Work/trenz/vivado/project_1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/rsaradhy/Software/Xilinx/Vivado
+HDI_APPROOT: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+RDI_DATADIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: /home/rsaradhy/.Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/
+Vivado layouts directory: /home/rsaradhy/.Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.log
+Vivado journal file location: 	/home/rsaradhy/Work/trenz/vivado/project_1/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9480-rsaradhy-acer
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VITIS: 
+XILINX_VIVADO: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /home/rsaradhy/Software/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	214 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 979 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: project_1.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 966 MB. GUI used memory: 57 MB. Current time: 9/12/20, 10:42:43 PM CDT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 100 MB (+101888kb) [00:00:12]
+// [Engine Memory]: 1,024 MB (+922708kb) [00:00:12]
+// [GUI Memory]: 108 MB (+3144kb) [00:00:12]
+// [GUI Memory]: 113 MB (+478kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  2391 ms.
+// Tcl Message: open_project project_1.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/vivado/ip_repo/AXIS_distributor_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores/ip_repo'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'. 
+// [Engine Memory]: 1,080 MB (+4304kb) [00:00:14]
+// [GUI Memory]: 124 MB (+4704kb) [00:00:15]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 6643.879 ; gain = 184.332 ; free physical = 15932 ; free virtual = 27035 
+// Project name: project_1; location: /home/rsaradhy/Work/trenz/vivado/project_1; part: xczu2cg-sfvc784-1-e
+dismissDialog("Open Project"); // bB (cr)
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,307 MB (+181237kb) [00:00:17]
+// TclEventType: DG_GRAPH_STALE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// f (cr): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 130 MB (+82kb) [00:00:24]
+// TclEventType: RUN_MODIFY
+// bB (cr):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Sat Sep 12 22:42:57 2020] Launched design_1_axi_dma_0_0_synth_1, synth_1... Run output will be captured here: design_1_axi_dma_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_dma_0_0_synth_1/runme.log synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log 
+// TclEventType: RUN_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 1,158 MB. GUI used memory: 70 MB. Current time: 9/12/20, 10:42:58 PM CDT
+// Tcl Message: [Sat Sep 12 22:42:58 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 142 MB (+5723kb) [00:01:16]
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 154 MB (+5482kb) [00:01:20]
+// aj (cr): Synthesis Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 58 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// [GUI Memory]: 168 MB (+6033kb) [00:01:23]
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // aj (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,198 MB. GUI used memory: 82 MB. Current time: 9/12/20, 10:44:23 PM CDT
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Sat Sep 12 22:44:25 2020] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Sat Sep 12 22:44:25 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,224 MB. GUI used memory: 82 MB. Current time: 9/12/20, 10:44:48 PM CDT
+// bB (cr):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// f (cr): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (cr)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Sat Sep 12 22:44:54 2020] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Sat Sep 12 22:44:54 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 339 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// Elapsed time: 19 seconds
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aL (aI, cr)
+// Elapsed time: 378 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v)]", 2, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 4, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v)]", 4, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v)]", 5, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v)]", 5, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// TclEventType: LOAD_FEATURE
+// r (cr): Re-customize IP: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,260 MB. GUI used memory: 107 MB. Current time: 9/12/20, 10:57:18 PM CDT
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectComboBox("Write Depth (Input_Depth)", "65536", 7); // E (E, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.Input_Depth {65536} CONFIG.Output_Depth {65536} CONFIG.Data_Count_Width {16} CONFIG.Write_Data_Count_Width {16} CONFIG.Read_Data_Count_Width {16} CONFIG.Full_Threshold_Assert_Value {65528} CONFIG.Full_Threshold_Negate_Value {65526} CONFIG.Empty_Threshold_Assert_Value {16} CONFIG.Empty_Threshold_Negate_Value {17}] [get_ips FIFO_10] 
+// aI (cr): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// [Engine Memory]: 1,457 MB (+88652kb) [00:14:58]
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,308 MB. GUI used memory: 104 MB. Current time: 9/12/20, 10:57:33 PM CDT
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bB (cr):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all FIFO_10] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run FIFO_10_synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs -jobs 12 FIFO_10_synth_1 
+// Tcl Message: [Sat Sep 12 22:57:34 2020] Launched FIFO_10_synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bB)
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+dismissDialog("Managing Output Products"); // bB (cr)
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Sat Sep 12 22:57:45 2020] Launched FIFO_10_synth_1, synth_1... Run output will be captured here: FIFO_10_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Sat Sep 12 22:57:45 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 178 MB (+1965kb) [00:17:31]
+// [GUI Memory]: 188 MB (+1206kb) [00:17:41]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 515 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+selectCodeEditor("DDMTD_Sampler.v", 266, 621); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,545 MB (+16203kb) [00:24:31]
+// Elapsed time: 41 seconds
+selectButton(PAResourceAtoD.AbstractFileView_RELOAD, "Reload"); // h (ds, cr)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_LAUNCH
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// Tcl Message: [Sat Sep 12 23:07:12 2020] Launched synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log [Sat Sep 12 23:07:12 2020] Launched impl_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 128 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 2); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Summary", 3); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 2); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Basic", 0); // bh (E, r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Bitstream Generation Completed: addNotify
+// Elapsed time: 590 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Bitstream Generation Completed"); // aj (cr)
+// Elapsed time: 327 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 2); // bh (E, r)
+// Elapsed time: 36 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// [GUI Memory]: 200 MB (+2427kb) [00:42:55]
+applyEscape(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, (String) null); // B (F, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 130 MB. Current time: 9/12/20, 11:27:33 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2196 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 123 MB. Current time: 9/12/20, 11:57:33 PM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2182 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1060 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2270 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 12:27:33 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 12:57:33 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 1:27:33 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 1:57:34 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 2:27:34 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 2:57:34 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 3:27:34 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,409 MB. GUI used memory: 122 MB. Current time: 9/13/20, 3:57:34 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  1054 ms.
+// Elapsed time: 17302 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectComboBox("Write Depth (Input_Depth)", "8192", 4); // E (E, r)
+selectCheckBox((HResource) null, "Low Latency", false); // g (o, r): FALSE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: set_property -dict [list CONFIG.Input_Depth {8192} CONFIG.Output_Depth {8192} CONFIG.Data_Count_Width {13} CONFIG.Write_Data_Count_Width {13} CONFIG.Read_Data_Count_Width {13} CONFIG.Full_Threshold_Assert_Value {8184} CONFIG.Full_Threshold_Negate_Value {8183} CONFIG.Empty_Threshold_Assert_Value {5} CONFIG.Empty_Threshold_Negate_Value {6} CONFIG.enable_low_latency {false} CONFIG.use_dout_register {false}] [get_ips FIFO_10] 
+// aI (cr): Generate Output Products: addNotify
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bB (cr):  Managing Output Products : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] 
+// Tcl Message: INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'... INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'... 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all FIFO_10] } 
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run FIFO_10_synth_1 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs -jobs 12 FIFO_10_synth_1 
+// Tcl Message: [Sun Sep 13 04:14:07 2020] Launched FIFO_10_synth_1... Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/FIFO_10_synth_1/runme.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,473 MB. GUI used memory: 138 MB. Current time: 9/13/20, 4:14:24 AM CDT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 42 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, main (main.v), DDMTD_Array_inst : DDMTD_Array (DDMTD_Array.v), ddmtd_inst[0].DDMTD_i : DDMTD_Sampler (DDMTD_Sampler.v), FIFO_10_inst : FIFO_10 (FIFO_10.xci)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_RECUSTOMIZE_CORE
+// r (cr): Re-customize IP: addNotify
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Native Ports", 1); // bh (E, r)
+selectTab(PAResourceEtoH.HACGCTabbedPane_TABBED_PANE, (HResource) null, "Status Flags", 2); // bh (E, r)
+selectComboBox("Programmable Empty Type (Programmable_Empty_Type)", "Single Programmable Empty Threshold Constant", 1); // E (E, r)
+setText("Empty Threshold Assert Value", "100"); // D (bi, r)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cr)
+// [GUI Memory]: 213 MB (+3592kb) [05:32:39]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 229 MB (+5082kb) [05:34:29]
+// [GUI Memory]: 243 MB (+2804kb) [05:34:51]
+// WARNING: HEventQueue.dispatchEvent() is taking  2164 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 151 MB. Current time: 9/13/20, 4:44:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 5:14:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 5:44:24 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2280 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 6:14:24 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2136 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 6:44:24 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2146 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 7:14:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 7:44:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 8:14:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 8:44:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 9:14:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 9:44:24 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 10:14:25 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 10:44:24 AM CDT
+// WARNING: HEventQueue.dispatchEvent() is taking  2235 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 11:14:25 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 11:44:25 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 12:14:25 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 150 MB. Current time: 9/13/20, 12:44:25 PM CDT

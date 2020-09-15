@@ -122,183 +122,6 @@ if { $nRet != 0 } {
 ##################################################################
 
 
-# Hierarchical cell: switchboards
-proc create_hier_cell_switchboards { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_switchboards() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_AR
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_AW
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_B
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_R
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M00_SC_W
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M01_SC_B
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M01_SC_R
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M02_SC_B
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M02_SC_R
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_AR
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_AW
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_B
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_R
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S00_SC_W
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_AR
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_AW
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S01_SC_W
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S02_SC_AR
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S02_SC_AW
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S02_SC_W
-
-
-  # Create pins
-  create_bd_pin -dir I -type clk aclk
-  create_bd_pin -dir I -type rst aresetn
-
-  # Create instance: ar_switchboard, and set properties
-  set ar_switchboard [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_switchboard:1.0 ar_switchboard ]
-  set_property -dict [ list \
-   CONFIG.M00_S00_CONNECTIVITY {1} \
-   CONFIG.M00_S01_CONNECTIVITY {0} \
-   CONFIG.M00_S02_CONNECTIVITY {0} \
-   CONFIG.M_PIPELINES {1} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {3} \
-   CONFIG.S_LATENCY {0} \
-   CONFIG.S_PIPELINES {0} \
- ] $ar_switchboard
-
-  # Create instance: aw_switchboard, and set properties
-  set aw_switchboard [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_switchboard:1.0 aw_switchboard ]
-  set_property -dict [ list \
-   CONFIG.M00_S00_CONNECTIVITY {1} \
-   CONFIG.M00_S01_CONNECTIVITY {0} \
-   CONFIG.M00_S02_CONNECTIVITY {0} \
-   CONFIG.M_PIPELINES {1} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {3} \
-   CONFIG.PAYLD_WIDTH {170} \
-   CONFIG.S_LATENCY {0} \
-   CONFIG.S_PIPELINES {0} \
- ] $aw_switchboard
-
-  # Create instance: b_switchboard, and set properties
-  set b_switchboard [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_switchboard:1.0 b_switchboard ]
-  set_property -dict [ list \
-   CONFIG.M00_S00_CONNECTIVITY {1} \
-   CONFIG.M01_S00_CONNECTIVITY {0} \
-   CONFIG.M02_S00_CONNECTIVITY {0} \
-   CONFIG.M_PIPELINES {1} \
-   CONFIG.NUM_MI {3} \
-   CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {7} \
-   CONFIG.S_LATENCY {0} \
-   CONFIG.S_PIPELINES {0} \
- ] $b_switchboard
-
-  # Create instance: r_switchboard, and set properties
-  set r_switchboard [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_switchboard:1.0 r_switchboard ]
-  set_property -dict [ list \
-   CONFIG.M00_S00_CONNECTIVITY {1} \
-   CONFIG.M01_S00_CONNECTIVITY {0} \
-   CONFIG.M02_S00_CONNECTIVITY {0} \
-   CONFIG.M_PIPELINES {1} \
-   CONFIG.NUM_MI {3} \
-   CONFIG.NUM_SI {1} \
-   CONFIG.S_LATENCY {0} \
-   CONFIG.S_PIPELINES {0} \
- ] $r_switchboard
-
-  # Create instance: w_switchboard, and set properties
-  set w_switchboard [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_switchboard:1.0 w_switchboard ]
-  set_property -dict [ list \
-   CONFIG.M00_S00_CONNECTIVITY {1} \
-   CONFIG.M00_S01_CONNECTIVITY {0} \
-   CONFIG.M00_S02_CONNECTIVITY {0} \
-   CONFIG.M_PIPELINES {1} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {3} \
-   CONFIG.PAYLD_WIDTH {1168} \
-   CONFIG.S_LATENCY {0} \
-   CONFIG.S_PIPELINES {0} \
- ] $w_switchboard
-
-  # Create interface connections
-  connect_bd_intf_net -intf_net S00_SC_AR_1 [get_bd_intf_pins S00_SC_AR] [get_bd_intf_pins ar_switchboard/S00_SC]
-  connect_bd_intf_net -intf_net S00_SC_AW_1 [get_bd_intf_pins S00_SC_AW] [get_bd_intf_pins aw_switchboard/S00_SC]
-  connect_bd_intf_net -intf_net S00_SC_B_1 [get_bd_intf_pins S00_SC_B] [get_bd_intf_pins b_switchboard/S00_SC]
-  connect_bd_intf_net -intf_net S00_SC_R_1 [get_bd_intf_pins S00_SC_R] [get_bd_intf_pins r_switchboard/S00_SC]
-  connect_bd_intf_net -intf_net S00_SC_W_1 [get_bd_intf_pins S00_SC_W] [get_bd_intf_pins w_switchboard/S00_SC]
-  connect_bd_intf_net -intf_net S01_SC_AR_1 [get_bd_intf_pins S01_SC_AR] [get_bd_intf_pins ar_switchboard/S01_SC]
-  connect_bd_intf_net -intf_net S01_SC_AW_1 [get_bd_intf_pins S01_SC_AW] [get_bd_intf_pins aw_switchboard/S01_SC]
-  connect_bd_intf_net -intf_net S01_SC_W_1 [get_bd_intf_pins S01_SC_W] [get_bd_intf_pins w_switchboard/S01_SC]
-  connect_bd_intf_net -intf_net S02_SC_AR_1 [get_bd_intf_pins S02_SC_AR] [get_bd_intf_pins ar_switchboard/S02_SC]
-  connect_bd_intf_net -intf_net S02_SC_AW_1 [get_bd_intf_pins S02_SC_AW] [get_bd_intf_pins aw_switchboard/S02_SC]
-  connect_bd_intf_net -intf_net S02_SC_W_1 [get_bd_intf_pins S02_SC_W] [get_bd_intf_pins w_switchboard/S02_SC]
-  connect_bd_intf_net -intf_net ar_switchboard_M00_SC [get_bd_intf_pins M00_SC_AR] [get_bd_intf_pins ar_switchboard/M00_SC]
-  connect_bd_intf_net -intf_net aw_switchboard_M00_SC [get_bd_intf_pins M00_SC_AW] [get_bd_intf_pins aw_switchboard/M00_SC]
-  connect_bd_intf_net -intf_net b_switchboard_M00_SC [get_bd_intf_pins M00_SC_B] [get_bd_intf_pins b_switchboard/M00_SC]
-  connect_bd_intf_net -intf_net b_switchboard_M01_SC [get_bd_intf_pins M01_SC_B] [get_bd_intf_pins b_switchboard/M01_SC]
-  connect_bd_intf_net -intf_net b_switchboard_M02_SC [get_bd_intf_pins M02_SC_B] [get_bd_intf_pins b_switchboard/M02_SC]
-  connect_bd_intf_net -intf_net r_switchboard_M00_SC [get_bd_intf_pins M00_SC_R] [get_bd_intf_pins r_switchboard/M00_SC]
-  connect_bd_intf_net -intf_net r_switchboard_M01_SC [get_bd_intf_pins M01_SC_R] [get_bd_intf_pins r_switchboard/M01_SC]
-  connect_bd_intf_net -intf_net r_switchboard_M02_SC [get_bd_intf_pins M02_SC_R] [get_bd_intf_pins r_switchboard/M02_SC]
-  connect_bd_intf_net -intf_net w_switchboard_M00_SC [get_bd_intf_pins M00_SC_W] [get_bd_intf_pins w_switchboard/M00_SC]
-
-  # Create port connections
-  connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins ar_switchboard/aclk] [get_bd_pins aw_switchboard/aclk] [get_bd_pins b_switchboard/aclk] [get_bd_pins r_switchboard/aclk] [get_bd_pins w_switchboard/aclk]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
 # Hierarchical cell: s00_nodes
 proc create_hier_cell_s00_nodes { parentCell nameHier } {
 
@@ -361,44 +184,44 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.CHANNEL {3} \
    CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {128} \
-   CONFIG.M01_NUM_BYTES {128} \
-   CONFIG.M02_NUM_BYTES {128} \
-   CONFIG.M03_NUM_BYTES {128} \
-   CONFIG.M04_NUM_BYTES {128} \
-   CONFIG.M05_NUM_BYTES {128} \
-   CONFIG.M06_NUM_BYTES {128} \
-   CONFIG.M07_NUM_BYTES {128} \
-   CONFIG.M08_NUM_BYTES {128} \
-   CONFIG.M09_NUM_BYTES {128} \
-   CONFIG.M10_NUM_BYTES {128} \
-   CONFIG.M11_NUM_BYTES {128} \
-   CONFIG.M12_NUM_BYTES {128} \
-   CONFIG.M13_NUM_BYTES {128} \
-   CONFIG.M14_NUM_BYTES {128} \
-   CONFIG.M15_NUM_BYTES {128} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
-   CONFIG.M_PIPELINE {0} \
+   CONFIG.M00_NUM_BYTES {16} \
+   CONFIG.M01_NUM_BYTES {16} \
+   CONFIG.M02_NUM_BYTES {16} \
+   CONFIG.M03_NUM_BYTES {16} \
+   CONFIG.M04_NUM_BYTES {16} \
+   CONFIG.M05_NUM_BYTES {16} \
+   CONFIG.M06_NUM_BYTES {16} \
+   CONFIG.M07_NUM_BYTES {16} \
+   CONFIG.M08_NUM_BYTES {16} \
+   CONFIG.M09_NUM_BYTES {16} \
+   CONFIG.M10_NUM_BYTES {16} \
+   CONFIG.M11_NUM_BYTES {16} \
+   CONFIG.M12_NUM_BYTES {16} \
+   CONFIG.M13_NUM_BYTES {16} \
+   CONFIG.M14_NUM_BYTES {16} \
+   CONFIG.M15_NUM_BYTES {16} \
+   CONFIG.MAX_PAYLD_BYTES {16} \
+   CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
    CONFIG.PAYLD_WIDTH {170} \
-   CONFIG.S00_NUM_BYTES {128} \
-   CONFIG.S01_NUM_BYTES {128} \
-   CONFIG.S02_NUM_BYTES {128} \
-   CONFIG.S03_NUM_BYTES {128} \
-   CONFIG.S04_NUM_BYTES {128} \
-   CONFIG.S05_NUM_BYTES {128} \
-   CONFIG.S06_NUM_BYTES {128} \
-   CONFIG.S07_NUM_BYTES {128} \
-   CONFIG.S08_NUM_BYTES {128} \
-   CONFIG.S09_NUM_BYTES {128} \
-   CONFIG.S10_NUM_BYTES {128} \
-   CONFIG.S11_NUM_BYTES {128} \
-   CONFIG.S12_NUM_BYTES {128} \
-   CONFIG.S13_NUM_BYTES {128} \
-   CONFIG.S14_NUM_BYTES {128} \
-   CONFIG.S15_NUM_BYTES {128} \
+   CONFIG.S00_NUM_BYTES {8} \
+   CONFIG.S01_NUM_BYTES {8} \
+   CONFIG.S02_NUM_BYTES {8} \
+   CONFIG.S03_NUM_BYTES {8} \
+   CONFIG.S04_NUM_BYTES {8} \
+   CONFIG.S05_NUM_BYTES {8} \
+   CONFIG.S06_NUM_BYTES {8} \
+   CONFIG.S07_NUM_BYTES {8} \
+   CONFIG.S08_NUM_BYTES {8} \
+   CONFIG.S09_NUM_BYTES {8} \
+   CONFIG.S10_NUM_BYTES {8} \
+   CONFIG.S11_NUM_BYTES {8} \
+   CONFIG.S12_NUM_BYTES {8} \
+   CONFIG.S13_NUM_BYTES {8} \
+   CONFIG.S14_NUM_BYTES {8} \
+   CONFIG.S15_NUM_BYTES {8} \
    CONFIG.SC_ROUTE_WIDTH {1} \
    CONFIG.USER_WIDTH {0} \
  ] $s00_aw_node
@@ -411,46 +234,45 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.CHANNEL {4} \
    CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {128} \
-   CONFIG.M01_NUM_BYTES {128} \
-   CONFIG.M02_NUM_BYTES {128} \
-   CONFIG.M03_NUM_BYTES {128} \
-   CONFIG.M04_NUM_BYTES {128} \
-   CONFIG.M05_NUM_BYTES {128} \
-   CONFIG.M06_NUM_BYTES {128} \
-   CONFIG.M07_NUM_BYTES {128} \
-   CONFIG.M08_NUM_BYTES {128} \
-   CONFIG.M09_NUM_BYTES {128} \
-   CONFIG.M10_NUM_BYTES {128} \
-   CONFIG.M11_NUM_BYTES {128} \
-   CONFIG.M12_NUM_BYTES {128} \
-   CONFIG.M13_NUM_BYTES {128} \
-   CONFIG.M14_NUM_BYTES {128} \
-   CONFIG.M15_NUM_BYTES {128} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
+   CONFIG.M00_NUM_BYTES {8} \
+   CONFIG.M01_NUM_BYTES {8} \
+   CONFIG.M02_NUM_BYTES {8} \
+   CONFIG.M03_NUM_BYTES {8} \
+   CONFIG.M04_NUM_BYTES {8} \
+   CONFIG.M05_NUM_BYTES {8} \
+   CONFIG.M06_NUM_BYTES {8} \
+   CONFIG.M07_NUM_BYTES {8} \
+   CONFIG.M08_NUM_BYTES {8} \
+   CONFIG.M09_NUM_BYTES {8} \
+   CONFIG.M10_NUM_BYTES {8} \
+   CONFIG.M11_NUM_BYTES {8} \
+   CONFIG.M12_NUM_BYTES {8} \
+   CONFIG.M13_NUM_BYTES {8} \
+   CONFIG.M14_NUM_BYTES {8} \
+   CONFIG.M15_NUM_BYTES {8} \
+   CONFIG.MAX_PAYLD_BYTES {16} \
    CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {7} \
-   CONFIG.S00_NUM_BYTES {128} \
-   CONFIG.S01_NUM_BYTES {128} \
-   CONFIG.S02_NUM_BYTES {128} \
-   CONFIG.S03_NUM_BYTES {128} \
-   CONFIG.S04_NUM_BYTES {128} \
-   CONFIG.S05_NUM_BYTES {128} \
-   CONFIG.S06_NUM_BYTES {128} \
-   CONFIG.S07_NUM_BYTES {128} \
-   CONFIG.S08_NUM_BYTES {128} \
-   CONFIG.S09_NUM_BYTES {128} \
-   CONFIG.S10_NUM_BYTES {128} \
-   CONFIG.S11_NUM_BYTES {128} \
-   CONFIG.S12_NUM_BYTES {128} \
-   CONFIG.S13_NUM_BYTES {128} \
-   CONFIG.S14_NUM_BYTES {128} \
-   CONFIG.S15_NUM_BYTES {128} \
-   CONFIG.SC_ROUTE_WIDTH {3} \
-   CONFIG.S_LATENCY {1} \
+   CONFIG.PAYLD_WIDTH {5} \
+   CONFIG.S00_NUM_BYTES {16} \
+   CONFIG.S01_NUM_BYTES {16} \
+   CONFIG.S02_NUM_BYTES {16} \
+   CONFIG.S03_NUM_BYTES {16} \
+   CONFIG.S04_NUM_BYTES {16} \
+   CONFIG.S05_NUM_BYTES {16} \
+   CONFIG.S06_NUM_BYTES {16} \
+   CONFIG.S07_NUM_BYTES {16} \
+   CONFIG.S08_NUM_BYTES {16} \
+   CONFIG.S09_NUM_BYTES {16} \
+   CONFIG.S10_NUM_BYTES {16} \
+   CONFIG.S11_NUM_BYTES {16} \
+   CONFIG.S12_NUM_BYTES {16} \
+   CONFIG.S13_NUM_BYTES {16} \
+   CONFIG.S14_NUM_BYTES {16} \
+   CONFIG.S15_NUM_BYTES {16} \
+   CONFIG.SC_ROUTE_WIDTH {1} \
    CONFIG.USER_WIDTH {0} \
  ] $s00_b_node
 
@@ -462,44 +284,44 @@ proc create_hier_cell_s00_nodes { parentCell nameHier } {
    CONFIG.ADDR_WIDTH {64} \
    CONFIG.CHANNEL {1} \
    CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {128} \
-   CONFIG.M01_NUM_BYTES {128} \
-   CONFIG.M02_NUM_BYTES {128} \
-   CONFIG.M03_NUM_BYTES {128} \
-   CONFIG.M04_NUM_BYTES {128} \
-   CONFIG.M05_NUM_BYTES {128} \
-   CONFIG.M06_NUM_BYTES {128} \
-   CONFIG.M07_NUM_BYTES {128} \
-   CONFIG.M08_NUM_BYTES {128} \
-   CONFIG.M09_NUM_BYTES {128} \
-   CONFIG.M10_NUM_BYTES {128} \
-   CONFIG.M11_NUM_BYTES {128} \
-   CONFIG.M12_NUM_BYTES {128} \
-   CONFIG.M13_NUM_BYTES {128} \
-   CONFIG.M14_NUM_BYTES {128} \
-   CONFIG.M15_NUM_BYTES {128} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
-   CONFIG.M_PIPELINE {0} \
+   CONFIG.M00_NUM_BYTES {16} \
+   CONFIG.M01_NUM_BYTES {16} \
+   CONFIG.M02_NUM_BYTES {16} \
+   CONFIG.M03_NUM_BYTES {16} \
+   CONFIG.M04_NUM_BYTES {16} \
+   CONFIG.M05_NUM_BYTES {16} \
+   CONFIG.M06_NUM_BYTES {16} \
+   CONFIG.M07_NUM_BYTES {16} \
+   CONFIG.M08_NUM_BYTES {16} \
+   CONFIG.M09_NUM_BYTES {16} \
+   CONFIG.M10_NUM_BYTES {16} \
+   CONFIG.M11_NUM_BYTES {16} \
+   CONFIG.M12_NUM_BYTES {16} \
+   CONFIG.M13_NUM_BYTES {16} \
+   CONFIG.M14_NUM_BYTES {16} \
+   CONFIG.M15_NUM_BYTES {16} \
+   CONFIG.MAX_PAYLD_BYTES {16} \
+   CONFIG.M_SEND_PIPELINE {0} \
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_OUTSTANDING {16} \
    CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {1168} \
-   CONFIG.S00_NUM_BYTES {128} \
-   CONFIG.S01_NUM_BYTES {128} \
-   CONFIG.S02_NUM_BYTES {128} \
-   CONFIG.S03_NUM_BYTES {128} \
-   CONFIG.S04_NUM_BYTES {128} \
-   CONFIG.S05_NUM_BYTES {128} \
-   CONFIG.S06_NUM_BYTES {128} \
-   CONFIG.S07_NUM_BYTES {128} \
-   CONFIG.S08_NUM_BYTES {128} \
-   CONFIG.S09_NUM_BYTES {128} \
-   CONFIG.S10_NUM_BYTES {128} \
-   CONFIG.S11_NUM_BYTES {128} \
-   CONFIG.S12_NUM_BYTES {128} \
-   CONFIG.S13_NUM_BYTES {128} \
-   CONFIG.S14_NUM_BYTES {128} \
-   CONFIG.S15_NUM_BYTES {128} \
+   CONFIG.PAYLD_WIDTH {160} \
+   CONFIG.S00_NUM_BYTES {8} \
+   CONFIG.S01_NUM_BYTES {8} \
+   CONFIG.S02_NUM_BYTES {8} \
+   CONFIG.S03_NUM_BYTES {8} \
+   CONFIG.S04_NUM_BYTES {8} \
+   CONFIG.S05_NUM_BYTES {8} \
+   CONFIG.S06_NUM_BYTES {8} \
+   CONFIG.S07_NUM_BYTES {8} \
+   CONFIG.S08_NUM_BYTES {8} \
+   CONFIG.S09_NUM_BYTES {8} \
+   CONFIG.S10_NUM_BYTES {8} \
+   CONFIG.S11_NUM_BYTES {8} \
+   CONFIG.S12_NUM_BYTES {8} \
+   CONFIG.S13_NUM_BYTES {8} \
+   CONFIG.S14_NUM_BYTES {8} \
+   CONFIG.S15_NUM_BYTES {8} \
    CONFIG.SC_ROUTE_WIDTH {1} \
    CONFIG.USER_BITS_PER_BYTE {0} \
  ] $s00_w_node
@@ -570,6 +392,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   set s00_mmu [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_mmu:1.0 s00_mmu ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {64} \
+   CONFIG.ENABLE_PIPELINING {0} \
    CONFIG.ID_WIDTH {0} \
    CONFIG.IS_CASCADED {0} \
    CONFIG.MSC000_ROUTE {0b1} \
@@ -578,7 +401,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_SEG {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
-   CONFIG.RDATA_WIDTH {1024} \
+   CONFIG.RDATA_WIDTH {64} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
    CONFIG.SEG000_SECURE_READ {0} \
@@ -595,12 +418,14 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.SEG001_SUPPORTS_READ {1} \
    CONFIG.SEG001_SUPPORTS_WRITE {1} \
    CONFIG.SUPPORTS_NARROW {0} \
+   CONFIG.SUPPORTS_READ_DECERR {0} \
+   CONFIG.SUPPORTS_WRITE_DECERR {0} \
    CONFIG.S_AWUSER_WIDTH {0} \
    CONFIG.S_BUSER_WIDTH {0} \
    CONFIG.S_PROTOCOL {AXI4} \
    CONFIG.S_RUSER_WIDTH {0} \
    CONFIG.S_WUSER_WIDTH {0} \
-   CONFIG.WDATA_WIDTH {1024} \
+   CONFIG.WDATA_WIDTH {64} \
  ] $s00_mmu
 
   # Create instance: s00_si_converter, and set properties
@@ -623,7 +448,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_SEG {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.NUM_WRITE_THREADS {1} \
-   CONFIG.RDATA_WIDTH {1024} \
+   CONFIG.RDATA_WIDTH {64} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SEP000_PROTOCOL {AXI4} \
    CONFIG.SEP000_RDATA_WIDTH {128} \
@@ -634,7 +459,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.SUPPORTS_NARROW {0} \
    CONFIG.S_RUSER_BITS_PER_BYTE {0} \
    CONFIG.S_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WDATA_WIDTH {1024} \
+   CONFIG.WDATA_WIDTH {64} \
  ] $s00_si_converter
 
   # Create instance: s00_transaction_regulator, and set properties
@@ -646,13 +471,13 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.MEP_IDENTIFIER_WIDTH {1} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
-   CONFIG.RDATA_WIDTH {1024} \
+   CONFIG.RDATA_WIDTH {64} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SEP_ROUTE_WIDTH {1} \
    CONFIG.SUPPORTS_READ_DEADLOCK {0} \
    CONFIG.SUPPORTS_WRITE_DEADLOCK {1} \
    CONFIG.S_ID_WIDTH {0} \
-   CONFIG.WDATA_WIDTH {1024} \
+   CONFIG.WDATA_WIDTH {64} \
  ] $s00_transaction_regulator
 
   # Create interface connections
@@ -664,229 +489,6 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   # Create port connections
   connect_bd_net -net aclk_1 [get_bd_pins aclk] [get_bd_pins s00_mmu/aclk] [get_bd_pins s00_si_converter/aclk] [get_bd_pins s00_transaction_regulator/aclk]
   connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins s00_mmu/aresetn] [get_bd_pins s00_si_converter/aresetn] [get_bd_pins s00_transaction_regulator/aresetn]
-
-  # Restore current instance
-  current_bd_instance $oldCurInst
-}
-
-# Hierarchical cell: m00_nodes
-proc create_hier_cell_m00_nodes { parentCell nameHier } {
-
-  variable script_folder
-
-  if { $parentCell eq "" || $nameHier eq "" } {
-     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_m00_nodes() - Empty argument(s)!"}
-     return
-  }
-
-  # Get object for parentCell
-  set parentObj [get_bd_cells $parentCell]
-  if { $parentObj == "" } {
-     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
-     return
-  }
-
-  # Make sure parentObj is hier blk
-  set parentType [get_property TYPE $parentObj]
-  if { $parentType ne "hier" } {
-     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
-     return
-  }
-
-  # Save current instance; Restore later
-  set oldCurInst [current_bd_instance .]
-
-  # Set parent object as current
-  current_bd_instance $parentObj
-
-  # Create cell and set as current instance
-  set hier_obj [create_bd_cell -type hier $nameHier]
-  current_bd_instance $hier_obj
-
-  # Create interface pins
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_AW
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_B
-
-  create_bd_intf_pin -mode Master -vlnv xilinx.com:interface:sc_rtl:1.0 M_SC_W
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_AW
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_B
-
-  create_bd_intf_pin -mode Slave -vlnv xilinx.com:interface:sc_rtl:1.0 S_SC_W
-
-
-  # Create pins
-  create_bd_pin -dir I -type clk m_axi_aclk
-  create_bd_pin -dir I -type rst m_axi_aresetn
-  create_bd_pin -dir I -type clk s_axi_aclk
-  create_bd_pin -dir I -type rst s_axi_aresetn
-
-  # Create instance: m00_aw_node, and set properties
-  set m00_aw_node [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_node:1.0 m00_aw_node ]
-  set_property -dict [ list \
-   CONFIG.ACLK_RELATIONSHIP {1} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.CHANNEL {3} \
-   CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {16} \
-   CONFIG.M01_NUM_BYTES {16} \
-   CONFIG.M02_NUM_BYTES {16} \
-   CONFIG.M03_NUM_BYTES {16} \
-   CONFIG.M04_NUM_BYTES {16} \
-   CONFIG.M05_NUM_BYTES {16} \
-   CONFIG.M06_NUM_BYTES {16} \
-   CONFIG.M07_NUM_BYTES {16} \
-   CONFIG.M08_NUM_BYTES {16} \
-   CONFIG.M09_NUM_BYTES {16} \
-   CONFIG.M10_NUM_BYTES {16} \
-   CONFIG.M11_NUM_BYTES {16} \
-   CONFIG.M12_NUM_BYTES {16} \
-   CONFIG.M13_NUM_BYTES {16} \
-   CONFIG.M14_NUM_BYTES {16} \
-   CONFIG.M15_NUM_BYTES {16} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
-   CONFIG.M_SEND_PIPELINE {0} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
-   CONFIG.NUM_SI {3} \
-   CONFIG.PAYLD_WIDTH {170} \
-   CONFIG.S00_NUM_BYTES {128} \
-   CONFIG.S01_NUM_BYTES {128} \
-   CONFIG.S02_NUM_BYTES {128} \
-   CONFIG.S03_NUM_BYTES {128} \
-   CONFIG.S04_NUM_BYTES {128} \
-   CONFIG.S05_NUM_BYTES {128} \
-   CONFIG.S06_NUM_BYTES {128} \
-   CONFIG.S07_NUM_BYTES {128} \
-   CONFIG.S08_NUM_BYTES {128} \
-   CONFIG.S09_NUM_BYTES {128} \
-   CONFIG.S10_NUM_BYTES {128} \
-   CONFIG.S11_NUM_BYTES {128} \
-   CONFIG.S12_NUM_BYTES {128} \
-   CONFIG.S13_NUM_BYTES {128} \
-   CONFIG.S14_NUM_BYTES {128} \
-   CONFIG.S15_NUM_BYTES {128} \
-   CONFIG.SC_ROUTE_WIDTH {1} \
-   CONFIG.S_LATENCY {1} \
-   CONFIG.USER_WIDTH {0} \
- ] $m00_aw_node
-
-  # Create instance: m00_b_node, and set properties
-  set m00_b_node [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_node:1.0 m00_b_node ]
-  set_property -dict [ list \
-   CONFIG.ACLK_RELATIONSHIP {1} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.CHANNEL {4} \
-   CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {128} \
-   CONFIG.M01_NUM_BYTES {128} \
-   CONFIG.M02_NUM_BYTES {128} \
-   CONFIG.M03_NUM_BYTES {128} \
-   CONFIG.M04_NUM_BYTES {128} \
-   CONFIG.M05_NUM_BYTES {128} \
-   CONFIG.M06_NUM_BYTES {128} \
-   CONFIG.M07_NUM_BYTES {128} \
-   CONFIG.M08_NUM_BYTES {128} \
-   CONFIG.M09_NUM_BYTES {128} \
-   CONFIG.M10_NUM_BYTES {128} \
-   CONFIG.M11_NUM_BYTES {128} \
-   CONFIG.M12_NUM_BYTES {128} \
-   CONFIG.M13_NUM_BYTES {128} \
-   CONFIG.M14_NUM_BYTES {128} \
-   CONFIG.M15_NUM_BYTES {128} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
-   CONFIG.M_PIPELINE {0} \
-   CONFIG.NUM_MI {3} \
-   CONFIG.NUM_OUTSTANDING {16} \
-   CONFIG.NUM_SI {1} \
-   CONFIG.PAYLD_WIDTH {7} \
-   CONFIG.S00_NUM_BYTES {16} \
-   CONFIG.S01_NUM_BYTES {16} \
-   CONFIG.S02_NUM_BYTES {16} \
-   CONFIG.S03_NUM_BYTES {16} \
-   CONFIG.S04_NUM_BYTES {16} \
-   CONFIG.S05_NUM_BYTES {16} \
-   CONFIG.S06_NUM_BYTES {16} \
-   CONFIG.S07_NUM_BYTES {16} \
-   CONFIG.S08_NUM_BYTES {16} \
-   CONFIG.S09_NUM_BYTES {16} \
-   CONFIG.S10_NUM_BYTES {16} \
-   CONFIG.S11_NUM_BYTES {16} \
-   CONFIG.S12_NUM_BYTES {16} \
-   CONFIG.S13_NUM_BYTES {16} \
-   CONFIG.S14_NUM_BYTES {16} \
-   CONFIG.S15_NUM_BYTES {16} \
-   CONFIG.SC_ROUTE_WIDTH {3} \
-   CONFIG.USER_WIDTH {0} \
- ] $m00_b_node
-
-  # Create instance: m00_w_node, and set properties
-  set m00_w_node [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_node:1.0 m00_w_node ]
-  set_property -dict [ list \
-   CONFIG.ACLK_RELATIONSHIP {1} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.CHANNEL {1} \
-   CONFIG.ID_WIDTH {1} \
-   CONFIG.M00_NUM_BYTES {16} \
-   CONFIG.M01_NUM_BYTES {16} \
-   CONFIG.M02_NUM_BYTES {16} \
-   CONFIG.M03_NUM_BYTES {16} \
-   CONFIG.M04_NUM_BYTES {16} \
-   CONFIG.M05_NUM_BYTES {16} \
-   CONFIG.M06_NUM_BYTES {16} \
-   CONFIG.M07_NUM_BYTES {16} \
-   CONFIG.M08_NUM_BYTES {16} \
-   CONFIG.M09_NUM_BYTES {16} \
-   CONFIG.M10_NUM_BYTES {16} \
-   CONFIG.M11_NUM_BYTES {16} \
-   CONFIG.M12_NUM_BYTES {16} \
-   CONFIG.M13_NUM_BYTES {16} \
-   CONFIG.M14_NUM_BYTES {16} \
-   CONFIG.M15_NUM_BYTES {16} \
-   CONFIG.MAX_PAYLD_BYTES {128} \
-   CONFIG.M_SEND_PIPELINE {0} \
-   CONFIG.NUM_MI {1} \
-   CONFIG.NUM_OUTSTANDING {16} \
-   CONFIG.NUM_SI {3} \
-   CONFIG.PAYLD_WIDTH {1168} \
-   CONFIG.S00_NUM_BYTES {128} \
-   CONFIG.S01_NUM_BYTES {128} \
-   CONFIG.S02_NUM_BYTES {128} \
-   CONFIG.S03_NUM_BYTES {128} \
-   CONFIG.S04_NUM_BYTES {128} \
-   CONFIG.S05_NUM_BYTES {128} \
-   CONFIG.S06_NUM_BYTES {128} \
-   CONFIG.S07_NUM_BYTES {128} \
-   CONFIG.S08_NUM_BYTES {128} \
-   CONFIG.S09_NUM_BYTES {128} \
-   CONFIG.S10_NUM_BYTES {128} \
-   CONFIG.S11_NUM_BYTES {128} \
-   CONFIG.S12_NUM_BYTES {128} \
-   CONFIG.S13_NUM_BYTES {128} \
-   CONFIG.S14_NUM_BYTES {128} \
-   CONFIG.S15_NUM_BYTES {128} \
-   CONFIG.SC_ROUTE_WIDTH {1} \
-   CONFIG.S_LATENCY {1} \
-   CONFIG.USER_BITS_PER_BYTE {0} \
-   CONFIG.USER_WIDTH {0} \
- ] $m00_w_node
-
-  # Create interface connections
-  connect_bd_intf_net -intf_net S_SC_AW_1 [get_bd_intf_pins S_SC_AW] [get_bd_intf_pins m00_aw_node/S_SC]
-  connect_bd_intf_net -intf_net S_SC_B_1 [get_bd_intf_pins S_SC_B] [get_bd_intf_pins m00_b_node/S_SC]
-  connect_bd_intf_net -intf_net S_SC_W_1 [get_bd_intf_pins S_SC_W] [get_bd_intf_pins m00_w_node/S_SC]
-  connect_bd_intf_net -intf_net m00_aw_node_M_AXIS_ARB [get_bd_intf_pins m00_aw_node/M_AXIS_ARB] [get_bd_intf_pins m00_w_node/S_AXIS_ARB]
-  connect_bd_intf_net -intf_net m00_aw_node_M_SC [get_bd_intf_pins M_SC_AW] [get_bd_intf_pins m00_aw_node/M_SC]
-  connect_bd_intf_net -intf_net m00_b_node_M_SC [get_bd_intf_pins M_SC_B] [get_bd_intf_pins m00_b_node/M_SC]
-  connect_bd_intf_net -intf_net m00_w_node_M_SC [get_bd_intf_pins M_SC_W] [get_bd_intf_pins m00_w_node/M_SC]
-
-  # Create port connections
-  connect_bd_net -net m_axi_aclk_1 [get_bd_pins m_axi_aclk] [get_bd_pins m00_aw_node/m_sc_aclk] [get_bd_pins m00_b_node/s_sc_aclk] [get_bd_pins m00_w_node/m_sc_aclk]
-  connect_bd_net -net m_axi_aresetn_1 [get_bd_pins m_axi_aresetn] [get_bd_pins m00_aw_node/m_sc_aresetn] [get_bd_pins m00_b_node/s_sc_aresetn] [get_bd_pins m00_w_node/m_sc_aresetn]
-  connect_bd_net -net s_axi_aclk_1 [get_bd_pins s_axi_aclk] [get_bd_pins m00_aw_node/s_sc_aclk] [get_bd_pins m00_b_node/m_sc_aclk] [get_bd_pins m00_w_node/s_sc_aclk]
-  connect_bd_net -net s_axi_aresetn_1 [get_bd_pins s_axi_aresetn] [get_bd_pins m00_aw_node/s_sc_aresetn] [get_bd_pins m00_b_node/m_sc_aresetn] [get_bd_pins m00_w_node/s_sc_aresetn]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -940,6 +542,7 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
   set m00_exit [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_exit:1.0 m00_exit ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {49} \
+   CONFIG.ENABLE_PIPELINING {0} \
    CONFIG.HAS_BURST {1} \
    CONFIG.HAS_LOCK {0} \
    CONFIG.IS_CASCADED {0} \
@@ -949,7 +552,7 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
    CONFIG.M_AWUSER_WIDTH {0} \
    CONFIG.M_BUSER_WIDTH {0} \
    CONFIG.M_ID_WIDTH {0} \
-   CONFIG.M_MAX_BURST_LENGTH {256} \
+   CONFIG.M_MAX_BURST_LENGTH {128} \
    CONFIG.M_PROTOCOL {AXI4} \
    CONFIG.M_RUSER_BITS_PER_BYTE {0} \
    CONFIG.M_RUSER_WIDTH {0} \
@@ -960,9 +563,9 @@ proc create_hier_cell_m00_exit_pipeline { parentCell nameHier } {
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RDATA_WIDTH {128} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
-   CONFIG.SSC000_ROUTE {0b001} \
-   CONFIG.SSC001_ROUTE {0b000} \
-   CONFIG.SSC_ROUTE_WIDTH {3} \
+   CONFIG.SSC000_ROUTE {0b1} \
+   CONFIG.SSC001_ROUTE {0b0} \
+   CONFIG.SSC_ROUTE_WIDTH {1} \
    CONFIG.S_ID_WIDTH {1} \
    CONFIG.WDATA_WIDTH {128} \
  ] $m00_exit
@@ -1020,10 +623,6 @@ proc create_hier_cell_clk_map { parentCell nameHier } {
   create_bd_pin -dir O -from 0 -to 0 -type rst M00_ARESETN
   create_bd_pin -dir O -type clk S00_ACLK
   create_bd_pin -dir O -from 0 -to 0 -type rst S00_ARESETN
-  create_bd_pin -dir O -type clk S01_ACLK
-  create_bd_pin -dir O -from 0 -to 0 -type rst S01_ARESETN
-  create_bd_pin -dir O -type clk S02_ACLK
-  create_bd_pin -dir O -from 0 -to 0 -type rst S02_ARESETN
   create_bd_pin -dir I -type clk aclk
   create_bd_pin -dir I -type rst aresetn
   create_bd_pin -dir O -type rst aresetn_out
@@ -1041,10 +640,10 @@ proc create_hier_cell_clk_map { parentCell nameHier } {
  ] $psr_aclk
 
   # Create port connections
-  connect_bd_net -net clk_map_aclk_net [get_bd_pins M00_ACLK] [get_bd_pins S00_ACLK] [get_bd_pins S01_ACLK] [get_bd_pins S02_ACLK] [get_bd_pins aclk] [get_bd_pins swbd_aclk] [get_bd_pins psr_aclk/slowest_sync_clk]
+  connect_bd_net -net clk_map_aclk_net [get_bd_pins M00_ACLK] [get_bd_pins S00_ACLK] [get_bd_pins aclk] [get_bd_pins swbd_aclk] [get_bd_pins psr_aclk/slowest_sync_clk]
   connect_bd_net -net clk_map_aresetn_net [get_bd_pins aresetn] [get_bd_pins psr_aclk/aux_reset_in]
   connect_bd_net -net one_dout [get_bd_pins one/dout] [get_bd_pins psr_aclk/ext_reset_in]
-  connect_bd_net -net psr_aclk_interconnect_aresetn [get_bd_pins M00_ARESETN] [get_bd_pins S00_ARESETN] [get_bd_pins S01_ARESETN] [get_bd_pins S02_ARESETN] [get_bd_pins swbd_aresetn] [get_bd_pins psr_aclk/interconnect_aresetn]
+  connect_bd_net -net psr_aclk_interconnect_aresetn [get_bd_pins M00_ARESETN] [get_bd_pins S00_ARESETN] [get_bd_pins swbd_aresetn] [get_bd_pins psr_aclk/interconnect_aresetn]
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -1086,7 +685,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set M00_AXI [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M00_AXI ]
   set_property -dict [ list \
-   CONFIG.MAX_BURST_LENGTH {256} \
+   CONFIG.MAX_BURST_LENGTH {128} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
    CONFIG.RUSER_BITS_PER_BYTE {0} \
@@ -1100,23 +699,11 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_WRITE_OUTSTANDING {16} \
    ] $S00_AXI
 
-  set S01_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S01_AXI ]
-  set_property -dict [ list \
-   CONFIG.NUM_READ_OUTSTANDING {16} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   ] $S01_AXI
-
-  set S02_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S02_AXI ]
-  set_property -dict [ list \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   ] $S02_AXI
-
 
   # Create ports
   set aclk [ create_bd_port -dir I -type clk aclk ]
   set_property -dict [ list \
-   CONFIG.ASSOCIATED_BUSIF {M00_AXI:S00_AXI:S01_AXI:S02_AXI} \
+   CONFIG.ASSOCIATED_BUSIF {M00_AXI:S00_AXI} \
  ] $aclk
   set aresetn [ create_bd_port -dir I -type rst aresetn ]
   set_property -dict [ list \
@@ -1128,9 +715,6 @@ proc create_root_design { parentCell } {
 
   # Create instance: m00_exit_pipeline
   create_hier_cell_m00_exit_pipeline [current_bd_instance .] m00_exit_pipeline
-
-  # Create instance: m00_nodes
-  create_hier_cell_m00_nodes [current_bd_instance .] m00_nodes
 
   # Create instance: m00_sc2axi, and set properties
   set m00_sc2axi [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_sc2axi:1.0 m00_sc2axi ]
@@ -1146,11 +730,11 @@ proc create_root_design { parentCell } {
    CONFIG.SC_AWUSER_WIDTH {0} \
    CONFIG.SC_BUSER_WIDTH {0} \
    CONFIG.SC_ID_WIDTH {1} \
-   CONFIG.SC_RDATA_WIDTH {1024} \
+   CONFIG.SC_RDATA_WIDTH {128} \
    CONFIG.SC_RUSER_BITS_PER_BYTE {0} \
-   CONFIG.SC_WDATA_WIDTH {1024} \
+   CONFIG.SC_WDATA_WIDTH {128} \
    CONFIG.SC_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.SSC_ROUTE_WIDTH {3} \
+   CONFIG.SSC_ROUTE_WIDTH {1} \
  ] $m00_sc2axi
 
   # Create instance: s00_axi2sc, and set properties
@@ -1158,8 +742,8 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.AXI_ADDR_WIDTH {64} \
    CONFIG.AXI_ID_WIDTH {1} \
-   CONFIG.AXI_RDATA_WIDTH {1024} \
-   CONFIG.AXI_WDATA_WIDTH {1024} \
+   CONFIG.AXI_RDATA_WIDTH {64} \
+   CONFIG.AXI_WDATA_WIDTH {64} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
    CONFIG.SC_ADDR_WIDTH {64} \
@@ -1167,11 +751,11 @@ proc create_root_design { parentCell } {
    CONFIG.SC_AWUSER_WIDTH {0} \
    CONFIG.SC_BUSER_WIDTH {0} \
    CONFIG.SC_ID_WIDTH {1} \
-   CONFIG.SC_RDATA_WIDTH {1024} \
+   CONFIG.SC_RDATA_WIDTH {128} \
    CONFIG.SC_RUSER_BITS_PER_BYTE {0} \
-   CONFIG.SC_WDATA_WIDTH {1024} \
+   CONFIG.SC_WDATA_WIDTH {128} \
    CONFIG.SC_WUSER_BITS_PER_BYTE {0} \
-   CONFIG.SSC_ROUTE_WIDTH {3} \
+   CONFIG.SSC_ROUTE_WIDTH {1} \
  ] $s00_axi2sc
 
   # Create instance: s00_entry_pipeline
@@ -1180,26 +764,17 @@ proc create_root_design { parentCell } {
   # Create instance: s00_nodes
   create_hier_cell_s00_nodes [current_bd_instance .] s00_nodes
 
-  # Create instance: switchboards
-  create_hier_cell_switchboards [current_bd_instance .] switchboards
-
   # Create interface connections
   connect_bd_intf_net -intf_net S00_AXI_1 [get_bd_intf_ports S00_AXI] [get_bd_intf_pins s00_entry_pipeline/s_axi]
   connect_bd_intf_net -intf_net S_SC_AW_1 [get_bd_intf_pins s00_axi2sc/M_SC_AW] [get_bd_intf_pins s00_nodes/S_SC_AW]
-  connect_bd_intf_net -intf_net S_SC_AW_2 [get_bd_intf_pins m00_nodes/S_SC_AW] [get_bd_intf_pins switchboards/M00_SC_AW]
-  connect_bd_intf_net -intf_net S_SC_B_1 [get_bd_intf_pins s00_nodes/S_SC_B] [get_bd_intf_pins switchboards/M00_SC_B]
-  connect_bd_intf_net -intf_net S_SC_B_2 [get_bd_intf_pins m00_nodes/S_SC_B] [get_bd_intf_pins m00_sc2axi/M_SC_B]
+  connect_bd_intf_net -intf_net S_SC_B_1 [get_bd_intf_pins m00_sc2axi/M_SC_B] [get_bd_intf_pins s00_nodes/S_SC_B]
   connect_bd_intf_net -intf_net S_SC_W_1 [get_bd_intf_pins s00_axi2sc/M_SC_W] [get_bd_intf_pins s00_nodes/S_SC_W]
-  connect_bd_intf_net -intf_net S_SC_W_2 [get_bd_intf_pins m00_nodes/S_SC_W] [get_bd_intf_pins switchboards/M00_SC_W]
   connect_bd_intf_net -intf_net m00_exit_pipeline_m_axi [get_bd_intf_ports M00_AXI] [get_bd_intf_pins m00_exit_pipeline/m_axi]
-  connect_bd_intf_net -intf_net m00_nodes_M_SC_AW [get_bd_intf_pins m00_nodes/M_SC_AW] [get_bd_intf_pins m00_sc2axi/S_SC_AW]
-  connect_bd_intf_net -intf_net m00_nodes_M_SC_B [get_bd_intf_pins m00_nodes/M_SC_B] [get_bd_intf_pins switchboards/S00_SC_B]
-  connect_bd_intf_net -intf_net m00_nodes_M_SC_W [get_bd_intf_pins m00_nodes/M_SC_W] [get_bd_intf_pins m00_sc2axi/S_SC_W]
   connect_bd_intf_net -intf_net m00_sc2axi_M_AXI [get_bd_intf_pins m00_exit_pipeline/s_axi] [get_bd_intf_pins m00_sc2axi/M_AXI]
   connect_bd_intf_net -intf_net s00_entry_pipeline_m_axi [get_bd_intf_pins s00_axi2sc/S_AXI] [get_bd_intf_pins s00_entry_pipeline/m_axi]
-  connect_bd_intf_net -intf_net s00_nodes_M_SC_AW [get_bd_intf_pins s00_nodes/M_SC_AW] [get_bd_intf_pins switchboards/S00_SC_AW]
+  connect_bd_intf_net -intf_net s00_nodes_M_SC_AW [get_bd_intf_pins m00_sc2axi/S_SC_AW] [get_bd_intf_pins s00_nodes/M_SC_AW]
   connect_bd_intf_net -intf_net s00_nodes_M_SC_B [get_bd_intf_pins s00_axi2sc/S_SC_B] [get_bd_intf_pins s00_nodes/M_SC_B]
-  connect_bd_intf_net -intf_net s00_nodes_M_SC_W [get_bd_intf_pins s00_nodes/M_SC_W] [get_bd_intf_pins switchboards/S00_SC_W]
+  connect_bd_intf_net -intf_net s00_nodes_M_SC_W [get_bd_intf_pins m00_sc2axi/S_SC_W] [get_bd_intf_pins s00_nodes/M_SC_W]
 
   # Create port connections
   connect_bd_net -net aclk_1 [get_bd_pins clk_map/S00_ACLK] [get_bd_pins s00_axi2sc/aclk] [get_bd_pins s00_entry_pipeline/aclk] [get_bd_pins s00_nodes/s_sc_clk]
@@ -1207,10 +782,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net aresetn_1 [get_bd_ports aresetn] [get_bd_pins clk_map/aresetn]
   connect_bd_net -net aresetn_2 [get_bd_pins clk_map/S00_ARESETN] [get_bd_pins s00_entry_pipeline/aresetn] [get_bd_pins s00_nodes/s_sc_resetn]
   connect_bd_net -net aresetn_net -boundary_type upper [get_bd_pins clk_map/aresetn_out]
-  connect_bd_net -net clk_map_M00_ACLK [get_bd_pins clk_map/M00_ACLK] [get_bd_pins m00_exit_pipeline/aclk] [get_bd_pins m00_nodes/m_axi_aclk] [get_bd_pins m00_sc2axi/aclk]
-  connect_bd_net -net m_axi_aresetn_1 [get_bd_pins clk_map/M00_ARESETN] [get_bd_pins m00_exit_pipeline/aresetn] [get_bd_pins m00_nodes/m_axi_aresetn]
-  connect_bd_net -net swbd_aclk_net [get_bd_pins clk_map/swbd_aclk] [get_bd_pins m00_nodes/s_axi_aclk] [get_bd_pins s00_nodes/m_sc_clk] [get_bd_pins switchboards/aclk]
-  connect_bd_net -net swbd_aresetn_net [get_bd_pins clk_map/swbd_aresetn] [get_bd_pins m00_nodes/s_axi_aresetn] [get_bd_pins s00_nodes/m_sc_resetn] [get_bd_pins switchboards/aresetn]
+  connect_bd_net -net m_sc_clk_1 [get_bd_pins clk_map/M00_ACLK] [get_bd_pins m00_exit_pipeline/aclk] [get_bd_pins m00_sc2axi/aclk] [get_bd_pins s00_nodes/m_sc_clk]
+  connect_bd_net -net m_sc_resetn_1 [get_bd_pins clk_map/M00_ARESETN] [get_bd_pins m00_exit_pipeline/aresetn] [get_bd_pins s00_nodes/m_sc_resetn]
+  connect_bd_net -net swbd_aclk_net -boundary_type upper [get_bd_pins clk_map/swbd_aclk]
+  connect_bd_net -net swbd_aresetn_net -boundary_type upper [get_bd_pins clk_map/swbd_aresetn]
 
   # Create address segments
 

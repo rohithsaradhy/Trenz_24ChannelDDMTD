@@ -20,17 +20,13 @@ vlog -work xilinx_vip -64 -incr -sv -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L zy
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xpm -64 -incr -sv -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_6 -L xilinx_vip "+incdir+../../../ipstatic" "+incdir+/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
+vlog -work xpm -64 -incr -sv -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_6 -L xilinx_vip "+incdir+../../../../project_1.srcs/sources_1/ip/clock_pll" "+incdir+/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 
 vcom -work xpm -64 -93 \
 "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhd" \
-
-vlog -work xil_defaultlib -64 -incr "+incdir+../../../ipstatic" "+incdir+/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
-"../../../../project_1.srcs/sources_1/ip/clock_pll/clock_pll_clk_wiz.v" \
-"../../../../project_1.srcs/sources_1/ip/clock_pll/clock_pll.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

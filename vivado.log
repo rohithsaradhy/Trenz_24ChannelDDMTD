@@ -2,164 +2,227 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jun 25 20:55:59 2020
-# Process ID: 9484
+# Start of session at: Mon Sep 14 07:03:04 2020
+# Process ID: 31159
 # Current directory: /home/rsaradhy/Work/trenz/vivado
-# Command line: vivado
+# Command line: vivado project_2_bram/project_2_bram.xpr
 # Log file: /home/rsaradhy/Work/trenz/vivado/vivado.log
 # Journal file: /home/rsaradhy/Work/trenz/vivado/vivado.jou
 #-----------------------------------------------------------
 start_gui
-source ../tcl/create_project.tcl
-# start_gui
-# create_project project_1 /home/rsaradhy/Work/trenz/vivado/project_1 -part xczu2cg-sfvc784-1-e
+open_project project_2_bram/project_2_bram.xpr
+Scanning sources...
+Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip'.
-create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 6603.680 ; gain = 134.645 ; free physical = 11228 ; free virtual = 14174
-# set_property board_part trenz.biz:te0820_2cg_1e:part0:2.0 [current_project]
-# create_bd_design "design_1"
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
-# startgroup
-# create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 zynq_ultra_ps_e_0
-# endgroup
-# apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells zynq_ultra_ps_e_0]
-# connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
-# validate_bd_design
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 6631.102 ; gain = 174.188 ; free physical = 13055 ; free virtual = 27391
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_bram' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_1.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_6 -L xilinx_vip -prj testbench_bram_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+xelab -wto bc1609509efa4702b69ce62fbb48968d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_bram_behav xil_defaultlib.testbench_bram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto bc1609509efa4702b69ce62fbb48968d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_bram_behav xil_defaultlib.testbench_bram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_bram_behav -key {Behavioral:sim_1:Functional:testbench_bram} -tclbatch {testbench_bram.tcl} -protoinst "protoinst_files/bd_6f02.protoinst" -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_6f02.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_6f02.protoinst for the following reason(s):
+There are no instances of module "bd_6f02" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source testbench_bram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_bram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 6846.531 ; gain = 75.422 ; free physical = 12936 ; free virtual = 27285
 update_compile_order -fileset sources_1
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-set_property  ip_repo_paths  /home/rsaradhy/Work/trenz/mycores [current_project]
-update_ip_catalog
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/rsaradhy/Work/trenz/mycores'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
-endgroup
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'testbench_bram' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim/sc_xtlm_design_1_axi_smc_1.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L axi_vip_v1_1_6 -L smartconnect_v1_0 -L zynq_ultra_ps_e_vip_v1_0_6 -L xilinx_vip -prj testbench_bram_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_bram
+INFO: [VRFC 10-2458] undeclared symbol CLK, assumed default net type wire [/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v:32]
+WARNING: [VRFC 10-2938] 'CLK' is already implicitly declared on line 32 [/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v:82]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+xelab -wto bc1609509efa4702b69ce62fbb48968d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_bram_behav xil_defaultlib.testbench_bram xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/rsaradhy/Software/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto bc1609509efa4702b69ce62fbb48968d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_bram_behav xil_defaultlib.testbench_bram xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.testbench_bram
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_bram_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "testbench_bram_behav -key {Behavioral:sim_1:Functional:testbench_bram} -tclbatch {testbench_bram.tcl} -protoinst "protoinst_files/bd_6f02.protoinst" -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/bd_6f02.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/bd_6f02.protoinst for the following reason(s):
+There are no instances of module "bd_6f02" in the design.
+
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+WARNING: [Wavedata 42-558] Couldn't load one or more protocol instances from protoinst file protoinst_files/design_1.protoinst for the following reason(s):
+There are no instances of module "design_1" in the design.
+
+Time resolution is 1 ps
+source testbench_bram.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_bram_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 6858.504 ; gain = 11.973 ; free physical = 12870 ; free virtual = 27214
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:zynq_ultra_ps_e:3.3 - zynq_ultra_ps_e_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps8_0_200M
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_0_bram
+Successfully read diagram <design_1> from BD file </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd>
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [Vivado 12-8217] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream/PDI before doing hardware export.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+reset_run synth_1
+reset_run design_1_axi_bram_ctrl_0_bram_7_synth_1
+reset_run design_1_axi_bram_ctrl_0_11_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_200M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_1, cache-ID = 6a3037bad2a6d854; cache size = 69.449 MB.
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Mon Sep 14 07:32:47 2020] Launched design_1_axi_bram_ctrl_0_bram_7_synth_1, design_1_axi_bram_ctrl_0_11_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_bram_7_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_bram_7_synth_1/runme.log
+design_1_axi_bram_ctrl_0_11_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_11_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 07:32:47 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 7191.535 ; gain = 76.543 ; free physical = 12091 ; free virtual = 26605
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+write_hw_platform: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 7211.535 ; gain = 20.000 ; free physical = 11848 ; free virtual = 26735
 WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
-set_property screensize {566 182} [get_bd_cells zynq_ultra_ps_e_0]
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
 startgroup
-set_property -dict [list CONFIG.PSU__USE__S_AXI_GP2 {1}] [get_bd_cells zynq_ultra_ps_e_0]
+set_property -dict [list CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ {100}] [get_bd_cells zynq_ultra_ps_e_0]
 endgroup
-set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_include_stscntrl_strm {0} CONFIG.c_include_mm2s {0}] [get_bd_cells axi_dma_0]
-set_property location {1 94 319} [get_bd_cells axi_dma_0]
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+save_bd_design
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
 INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-Slave segment </axi_dma_0/S_AXI_LITE/Reg> is being mapped into address space </zynq_ultra_ps_e_0/Data> at <0x8000_0000 [ 64K ]>
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_S2MM} Slave {/zynq_ultra_ps_e_0/S_AXI_HP0_FPD} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins zynq_ultra_ps_e_0/S_AXI_HP0_FPD]
-Slave segment </zynq_ultra_ps_e_0/SAXIGP2/HP0_DDR_LOW> is being mapped into address space </axi_dma_0/Data_S2MM> at <0x0000_0000 [ 2G ]>
-Slave segment </zynq_ultra_ps_e_0/SAXIGP2/HP0_QSPI> is being mapped into address space </axi_dma_0/Data_S2MM> at <0xC000_0000 [ 512M ]>
-Slave segment </zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM> is being mapped into address space </axi_dma_0/Data_S2MM> at <0xFF00_0000 [ 16M ]>
-INFO: [BD 41-1051] The usage register of slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM does not match the usage memory of address space /axi_dma_0/Data_S2MM and will be excluded. Use the include_bd_addr_seg command to override this precaution and make the slave segment visible within this address space.
-Excluding slave segment /zynq_ultra_ps_e_0/SAXIGP2/HP0_LPS_OCM from address space /axi_dma_0/Data_S2MM.
-endgroup
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
-endgroup
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-set_property -dict [list CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_0]
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
-INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl
-INFO: [board_rule 100-100] connect_bd_intf_net /gpio_rtl /axi_gpio_0/GPIO
-WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_gpio_0/GPIO. Users may need to specify the location constraint manually.
-apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Master {/zynq_ultra_ps_e_0/M_AXI_HPM0_LPD} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/ps8_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
-Slave segment </axi_gpio_0/S_AXI/Reg> is being mapped into address space </zynq_ultra_ps_e_0/Data> at <0x8001_0000 [ 64K ]>
-endgroup
-regenerate_bd_layout -routing
-set_property location {2 654 -48} [get_bd_cells axi_gpio_0]
-regenerate_bd_layout -routing
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
-regenerate_bd_layout
-startgroup
-create_bd_cell -type ip -vlnv user.org:user:sample_generator:1.0 sample_generator_0
-endgroup
-set_property location {1 189 55} [get_bd_cells sample_generator_0]
-connect_bd_intf_net [get_bd_intf_pins sample_generator_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
-set_property location {4 1370 326} [get_bd_cells rst_ps8_0_100M]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/zynq_ultra_ps_e_0/pl_clk0 (100 MHz)} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins sample_generator_0/m_axis_aclk]
-connect_bd_net [get_bd_pins sample_generator_0/s_axis_aresetn] [get_bd_pins rst_ps8_0_100M/peripheral_aresetn]
-connect_bd_net [get_bd_pins sample_generator_0/s_axis_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
-startgroup
-create_bd_port -dir I -from 7 -to 0 FrameSize
-connect_bd_net [get_bd_pins /sample_generator_0/FrameSize] [get_bd_ports FrameSize]
-endgroup
-startgroup
-create_bd_port -dir I En
-connect_bd_net [get_bd_pins /sample_generator_0/En] [get_bd_ports En]
-endgroup
-startgroup
-create_bd_port -dir I AXI_En
-connect_bd_net [get_bd_pins /sample_generator_0/AXI_En] [get_bd_ports AXI_En]
-endgroup
-make_wrapper -files [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: Endpoint Slave READ_WRITE_MODE is WRITE_ONLY. To prevent illegal transaction from master to slave enable SUPPORTS_DECERR for S00_Entry through Advanced Properties.
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/sample_generator_0/s_axis_tvalid
-
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-make_wrapper: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7236.090 ; gain = 132.660 ; free physical = 10709 ; free virtual = 13686
-add_files -norecurse /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-make_wrapper -files [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/sample_generator_0/s_axis_tvalid
-
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-create_bd_port -dir O -type clk CLK
-set_property location {-90 68} [get_bd_ports CLK]
-connect_bd_net [get_bd_ports CLK] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
-set_property location {-43 71} [get_bd_ports CLK]
-make_wrapper -files [get_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd] -top
-INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-WARNING: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_0: Endpoint Slave READ_WRITE_MODE is WRITE_ONLY. To prevent illegal transaction from master to slave enable SUPPORTS_DECERR for S00_Entry through Advanced Properties.
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /ps8_0_axi_periph/s00_couplers/auto_pc/S_AXI(0) and /zynq_ultra_ps_e_0/M_AXI_HPM0_LPD(16)
-WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
-WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /zynq_ultra_ps_e_0/S_AXI_HP0_FPD(1) and /axi_smc/M00_AXI(0)
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/sample_generator_0/s_axis_tvalid
-
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-file mkdir /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new
-close [ open /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v w ]
-add_files /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 11
-INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/sample_generator_0/s_axis_tvalid
-
-Wrote  : </home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd> 
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/sim/design_1.v
-VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_0: 
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(13) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [xilinx.com:ip:zynq_ultra_ps_e:3.3-0] design_1_zynq_ultra_ps_e_0_1: 
 Changes in your design (including the PCW configuration settings) are not automatically exported from Vivado to Xilinx's SDK, Petalinux or Yocto.
 This is by design to avoid disrupting existing embedded development efforts. To have any changes of your design taking effect in the embedded software flow please export your
 design by going through Vivado's main menu, click on File, then Export finally select Export Hardware, please ensure you click on the Include BitStream option.
@@ -167,64 +230,361 @@ The auto-generated HDF file is all you need to import in Xilinx's SDK, Petalinux
 For more information, please consult PG201, section: Exporting PCW Settings to Embedded Software Flows
 INFO: [PSU-0] Address Range of DDR (0x7ff00000 to 0x7fffffff) is reserved by PMU for internal purpose.
 WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_HPM0_LPD'. A default connection has been created.
-WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0_FPD'. A default connection has been created.
 INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/xbar .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_100M .
 WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S00_AXI'. A default connection has been created.
 WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M00_AXI'. A default connection has been created.
-Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0.hwh
-Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/hw_handoff/design_1_axi_smc_0_bd.tcl
-Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/design_1_axi_smc_0.hwdef
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M01_AXI'. A default connection has been created.
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_200M .
 INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
-INFO: [BD 41-1029] Generation completed for the IP Integrator block sample_generator_0 .
-WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
-INFO: [BD 41-1029] Generation completed for the IP Integrator block ps8_0_axi_periph/s00_couplers/auto_pc .
-Exporting to file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
-Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
-Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.hwdef
 INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
-[Thu Jun 25 21:09:34 2020] Launched design_1_auto_pc_0_synth_1, design_1_axi_dma_0_0_synth_1, design_1_zynq_ultra_ps_e_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_xbar_0_synth_1, design_1_rst_ps8_0_100M_0_synth_1, design_1_sample_generator_0_0_synth_1, design_1_axi_smc_0_synth_1, synth_1...
+[Mon Sep 14 08:06:40 2020] Launched design_1_axi_bram_ctrl_0_11_synth_1, design_1_zynq_ultra_ps_e_0_1_synth_1, design_1_axi_smc_1_synth_1, design_1_rst_ps8_0_200M_0_synth_1, synth_1...
 Run output will be captured here:
-design_1_auto_pc_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_auto_pc_0_synth_1/runme.log
-design_1_axi_dma_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_dma_0_0_synth_1/runme.log
-design_1_zynq_ultra_ps_e_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_zynq_ultra_ps_e_0_0_synth_1/runme.log
-design_1_axi_gpio_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_gpio_0_0_synth_1/runme.log
-design_1_xbar_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_xbar_0_synth_1/runme.log
-design_1_rst_ps8_0_100M_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_rst_ps8_0_100M_0_synth_1/runme.log
-design_1_sample_generator_0_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_sample_generator_0_0_synth_1/runme.log
-design_1_axi_smc_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/design_1_axi_smc_0_synth_1/runme.log
-synth_1: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/runme.log
-[Thu Jun 25 21:09:34 2020] Launched impl_1...
-Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/impl_1/runme.log
-launch_runs: Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 7960.797 ; gain = 138.055 ; free physical = 10480 ; free virtual = 13641
-open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
-regenerate_bd_layout -routing
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
-INFO: [Hsi 55-2053] elapsed time for repository (/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/embeddedsw) loading 0 seconds
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 7960.797 ; gain = 0.000 ; free physical = 2236 ; free virtual = 12328
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 7960.797 ; gain = 0.000 ; free physical = 8678 ; free virtual = 12543
+design_1_axi_bram_ctrl_0_11_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_11_synth_1/runme.log
+design_1_zynq_ultra_ps_e_0_1_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_zynq_ultra_ps_e_0_1_synth_1/runme.log
+design_1_axi_smc_1_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_smc_1_synth_1/runme.log
+design_1_rst_ps8_0_200M_0_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_rst_ps8_0_200M_0_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 08:06:40 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:47 ; elapsed = 00:00:40 . Memory (MB): peak = 7474.117 ; gain = 85.008 ; free physical = 10991 ; free virtual = 26364
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 08:20:16 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 08:20:16 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] design_1_axi_bram_ctrl_0_11: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] design_1_axi_bram_ctrl_0_11: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+startgroup
+set_property -dict [list CONFIG.DATA_WIDTH {256} CONFIG.ECC_TYPE {0}] [get_bd_cells axi_bram_ctrl_0]
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-2] design_1_axi_bram_ctrl_0_11: In IP Integrator, please note that memory depth value gets calculated based on the Data Width of the IP and Address range selected in the Address Editor.Incase a validation error occured on the range of this parameter, please check if the selected Data width and the Address Range are valid. For valid Data width and memory depth values, please refer to the AXI BRAM Controller Product Guide.
+INFO: [xilinx.com:ip:axi_bram_ctrl:4.1-1] design_1_axi_bram_ctrl_0_11: In IP Integrator, The Maximum address range supported is 2G. Selecting the address range more than 2G in the address editor may resets the value of Memory depth to default value (1024). please refer to the AXI BRAM Controller Product Guide.
+endgroup
+validate_bd_design
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 72
 INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 7960.797 ; gain = 0.000 ; free physical = 8585 ; free virtual = 12545
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+ERROR: [BD 41-241] Message from IP propagation TCL of /axi_bram_ctrl_0_bram: set_property error: Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:13 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10800 ; free virtual = 26148
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+delete_bd_objs [get_bd_intf_nets BRAM_PORTB_0_1]
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+startgroup
+set_property -dict [list CONFIG.SINGLE_PORT_BRAM {0}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
+validate_bd_design
 INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 7960.797 ; gain = 0.000 ; free physical = 853 ; free virtual = 11669
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
-WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa ...
-INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_1/main.xsa
-write_hw_platform: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 7960.797 ; gain = 0.000 ; free physical = 513 ; free virtual = 10580
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10758 ; free virtual = 26104
+delete_bd_objs [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTB]
+connect_bd_intf_net [get_bd_intf_ports BRAM_PORTB_0] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+startgroup
+set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+validate_bd_design
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 72
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+ERROR: [BD 41-241] Message from IP propagation TCL of /axi_bram_ctrl_0_bram: set_property error: Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10786 ; free virtual = 26135
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+delete_bd_objs [get_bd_intf_nets BRAM_PORTB_0_1] [get_bd_intf_ports BRAM_PORTB_0]
+validate_bd_design
+ERROR: [IP_Flow 19-3461] Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+ERROR: [IP_Flow 19-3478] Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+INFO: [IP_Flow 19-3438] Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ERROR: [BD 41-1273] Error running post_propagate TCL procedure: ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+    ::xilinx.com_ip_blk_mem_gen_8.4::post_propagate Line 72
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+ERROR: [BD 41-241] Message from IP propagation TCL of /axi_bram_ctrl_0_bram: set_property error: Value '32' is out of the range for parameter 'Write Width B(Write_Width_B)' for BD Cell 'axi_bram_ctrl_0_bram' . Valid values are - 64, 128, 256, 512, 1024
+Validation failed for parameter 'Read Width B(Read_Width_B)' with value '256' for BD Cell 'axi_bram_ctrl_0_bram'. The ratio between two data widths must not exceed 4:1 when byte writes are enabled
+Validation failed for parameter 'Disable Collision Warnings(Disable_Collision_Warnings)' with value 'false' for BD Cell 'axi_bram_ctrl_0_bram'. User configuration exceeds BRAM count in the selected device 1
+Customization errors found on 'axi_bram_ctrl_0_bram'. Restoring to previous valid configuration.
+
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10782 ; free virtual = 26128
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+startgroup
+set_property -dict [list CONFIG.SINGLE_PORT_BRAM {0}] [get_bd_cells axi_bram_ctrl_0]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTB] [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10778 ; free virtual = 26124
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+startgroup
+set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_0]
+delete_bd_objs [get_bd_intf_nets axi_bram_ctrl_0_BRAM_PORTB]
+endgroup
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10777 ; free virtual = 26122
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_bram_ctrl_0_bram/BRAM_PORTB]
+endgroup
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 7684.215 ; gain = 0.000 ; free physical = 10766 ; free virtual = 26112
+save_bd_design
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+reset_run design_1_axi_bram_ctrl_0_bram_7_synth_1
+reset_run design_1_axi_bram_ctrl_0_11_synth_1
+reset_run design_1_axi_smc_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(14) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(14) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M01_AXI'. A default connection has been created.
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_200M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Mon Sep 14 08:29:41 2020] Launched design_1_axi_bram_ctrl_0_bram_7_synth_1, design_1_axi_bram_ctrl_0_11_synth_1, design_1_axi_smc_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_bram_7_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_bram_7_synth_1/runme.log
+design_1_axi_bram_ctrl_0_11_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_11_synth_1/runme.log
+design_1_axi_smc_1_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_smc_1_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 08:29:41 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 7697.219 ; gain = 0.000 ; free physical = 10818 ; free virtual = 26119
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 08:41:41 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 08:41:41 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.Programmable_Full_Type {Single_Programmable_Full_Threshold_Constant} CONFIG.Full_Threshold_Assert_Value {500} CONFIG.Full_Threshold_Negate_Value {499} CONFIG.Programmable_Empty_Type {No_Programmable_Empty_Threshold} CONFIG.Empty_Threshold_Assert_Value {6} CONFIG.Empty_Threshold_Negate_Value {7}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+launch_runs -jobs 12 FIFO_10_synth_1
+[Mon Sep 14 09:21:20 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd}
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+set_property range 32K [get_bd_addr_segs {zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_0_Mem0}]
+validate_bd_design
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /axi_bram_ctrl_0/S_AXI(0) and /axi_smc/M01_AXI(16)
+validate_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 9033.207 ; gain = 0.000 ; free physical = 9969 ; free virtual = 25801
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+save_bd_design
+Wrote  : </home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd> 
+reset_run synth_1
+reset_run design_1_axi_bram_ctrl_0_bram_7_synth_1
+reset_run design_1_axi_bram_ctrl_0_11_synth_1
+reset_run design_1_axi_smc_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </axi_bram_ctrl_0_bram> to default.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(15) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/axi_bram_ctrl_0_bram/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(15) - Only lower order bits will be connected.
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block zynq_ultra_ps_e_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M00_AXI'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M01_AXI'. A default connection has been created.
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/hw_handoff/design_1_axi_smc_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/bd_0/synth/design_1_axi_smc_1.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps8_0_200M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0_bram .
+Exporting to file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-5642] Done with IP cache export for multiple IPs
+[Mon Sep 14 09:34:06 2020] Launched design_1_axi_bram_ctrl_0_bram_7_synth_1, design_1_axi_bram_ctrl_0_11_synth_1, design_1_axi_smc_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_bram_7_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_bram_7_synth_1/runme.log
+design_1_axi_bram_ctrl_0_11_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_bram_ctrl_0_11_synth_1/runme.log
+design_1_axi_smc_1_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_smc_1_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 09:34:07 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 9289.332 ; gain = 0.000 ; free physical = 9912 ; free virtual = 25696
+reset_run impl_1 -prev_step 
+write_hw_platform -fixed -force  -file /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa ...
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
+write_hw_platform: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 9441.406 ; gain = 0.000 ; free physical = 9775 ; free virtual = 25692
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 09:44:22 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 09:44:22 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 09:46:29 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 09:46:29 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+WARNING: [IP_Flow 19-465] param 'READ_LATENCY' already exists. Ignoring.
+WARNING: [IP_Flow 19-465] param 'RD_CMD_OPTIMIZATION' already exists. Ignoring.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 10:11:49 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 10:11:49 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 10:20:46 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 10:20:46 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 10:28:18 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 10:28:18 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+set_property -dict [list CONFIG.Read_Clock_Frequency {100} CONFIG.Write_Clock_Frequency {100}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+reset_run FIFO_10_synth_1
+launch_runs -jobs 12 FIFO_10_synth_1
+[Mon Sep 14 10:44:59 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run FIFO_10_synth_1
+set_property -dict [list CONFIG.Programmable_Empty_Type {Single_Programmable_Empty_Threshold_Constant} CONFIG.Empty_Threshold_Assert_Value {100} CONFIG.Empty_Threshold_Negate_Value {101}] [get_ips FIFO_10]
+generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FIFO_10'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FIFO_10'...
+catch { config_ip_cache -export [get_ips -all FIFO_10] }
+export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -no_script -sync -force -quiet
+launch_runs -jobs 12 FIFO_10_synth_1
+[Mon Sep 14 10:46:43 2020] Launched FIFO_10_synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/FIFO_10_synth_1/runme.log
+export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10.xci] -directory /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 10:48:47 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 10:48:47 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Mon Sep 14 10:50:02 2020] Launched synth_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Mon Sep 14 10:50:02 2020] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log

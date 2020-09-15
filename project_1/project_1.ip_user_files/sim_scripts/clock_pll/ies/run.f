@@ -18,10 +18,6 @@
   "/home/rsaradhy/Software/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../../project_1.srcs/sources_1/ip/clock_pll/clock_pll_clk_wiz.v" \
-  "../../../../project_1.srcs/sources_1/ip/clock_pll/clock_pll.v" \
--endlib
--makelib ies_lib/xil_defaultlib \
   glbl.v
 -endlib
 

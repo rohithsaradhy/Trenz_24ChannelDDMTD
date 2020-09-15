@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench_bram
+INFO: [VRFC 10-2458] undeclared symbol CLK, assumed default net type wire [/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v:32]
+WARNING: [VRFC 10-2938] 'CLK' is already implicitly declared on line 32 [/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sim_1/new/testbench_bram.v:82]

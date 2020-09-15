@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1599820171">
+<GenRun Id="impl_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1599970032">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="main.drc"/>
   <File Type="BG-BGN" Name="main.bgn"/>
@@ -182,9 +182,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -195,8 +193,13 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="FIFO_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_data_transfer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps8_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_zynq_ultra_ps_e_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="FIFO_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_data_transfer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="clock_pll"/>
 </GenRun>

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Fri Sep 11 04:24:42 2020
+//Date        : Sat Sep 12 22:39:39 2020
 //Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -25,15 +25,15 @@ module design_1
     gpio_rtl_0_tri_i,
     gpio_rtl_tri_o);
   input AXI_En;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) output CLK;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_IN CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_IN, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) input CLK_IN;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 320000000, INSERT_VIP 0, PHASE 0.000" *) output CLK;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_IN CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_IN, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 320000000, INSERT_VIP 0, PHASE 0.000" *) input CLK_IN;
   input En;
   input [7:0]FrameSize;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output [0:0]RST;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.TDATA DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.TDATA, LAYERED_METADATA undef" *) input [1023:0]TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.TDATA DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.TDATA, LAYERED_METADATA undef" *) input [63:0]TDATA;
   input TLAST;
   output TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.TSTRB DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.TSTRB, LAYERED_METADATA undef" *) input [127:0]TSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 DATA.TSTRB DATA" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DATA.TSTRB, LAYERED_METADATA undef" *) input [7:0]TSTRB;
   input TVALID;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl_0 TRI_I" *) input [31:0]gpio_rtl_0_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl TRI_O" *) output [31:0]gpio_rtl_tri_o;
@@ -41,9 +41,9 @@ module design_1
   wire AXI_En_1;
   wire En_1;
   wire [7:0]FrameSize_1;
-  wire [1023:0]TDATA_1;
+  wire [63:0]TDATA_1;
   wire TLAST_1;
-  wire [127:0]TSTRB_1;
+  wire [7:0]TSTRB_1;
   wire TVALID_1;
   wire [63:0]axi_dma_0_M_AXI_S2MM_AWADDR;
   wire [1:0]axi_dma_0_M_AXI_S2MM_AWBURST;
@@ -56,10 +56,10 @@ module design_1
   wire axi_dma_0_M_AXI_S2MM_BREADY;
   wire [1:0]axi_dma_0_M_AXI_S2MM_BRESP;
   wire axi_dma_0_M_AXI_S2MM_BVALID;
-  wire [1023:0]axi_dma_0_M_AXI_S2MM_WDATA;
+  wire [63:0]axi_dma_0_M_AXI_S2MM_WDATA;
   wire axi_dma_0_M_AXI_S2MM_WLAST;
   wire axi_dma_0_M_AXI_S2MM_WREADY;
-  wire [127:0]axi_dma_0_M_AXI_S2MM_WSTRB;
+  wire [7:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
   wire axi_dma_0_s2mm_introut;
   wire [31:0]axi_gpio_0_GPIO2_TRI_I;
@@ -82,7 +82,7 @@ module design_1
   wire axi_smc_M00_AXI_WREADY;
   wire [15:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [1023:0]data_transfer_0_M_AXIS_TDATA;
+  wire [63:0]data_transfer_0_M_AXIS_TDATA;
   wire data_transfer_0_M_AXIS_TLAST;
   wire data_transfer_0_M_AXIS_TREADY;
   wire data_transfer_0_M_AXIS_TVALID;
@@ -162,14 +162,13 @@ module design_1
   wire zynq_ultra_ps_e_0_pl_resetn0;
 
   assign AXI_En_1 = AXI_En;
-  assign CLK = zynq_ultra_ps_e_0_pl_clk0;
   assign En_1 = En;
   assign FrameSize_1 = FrameSize[7:0];
   assign RST[0] = rst_ps8_0_100M_peripheral_aresetn;
-  assign TDATA_1 = TDATA[1023:0];
+  assign TDATA_1 = TDATA[63:0];
   assign TLAST_1 = TLAST;
   assign TREADY = data_transfer_0_TREADY;
-  assign TSTRB_1 = TSTRB[127:0];
+  assign TSTRB_1 = TSTRB[7:0];
   assign TVALID_1 = TVALID;
   assign axi_gpio_0_GPIO2_TRI_I = gpio_rtl_0_tri_i[31:0];
   assign gpio_rtl_tri_o[31:0] = axi_gpio_0_GPIO_TRI_O;
@@ -212,7 +211,7 @@ module design_1
         .s_axi_lite_wready(ps8_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps8_0_axi_periph_M00_AXI_WVALID),
         .s_axis_s2mm_tdata(data_transfer_0_M_AXIS_TDATA),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
         .s_axis_s2mm_tlast(data_transfer_0_M_AXIS_TLAST),
         .s_axis_s2mm_tready(data_transfer_0_M_AXIS_TREADY),
         .s_axis_s2mm_tvalid(data_transfer_0_M_AXIS_TVALID));
@@ -275,40 +274,6 @@ module design_1
         .S00_AXI_wready(axi_dma_0_M_AXI_S2MM_WREADY),
         .S00_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .S00_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
-        .S01_AXI_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S01_AXI_arburst({1'b0,1'b1}),
-        .S01_AXI_arcache({1'b0,1'b0,1'b1,1'b1}),
-        .S01_AXI_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S01_AXI_arlock(1'b0),
-        .S01_AXI_arprot({1'b0,1'b0,1'b0}),
-        .S01_AXI_arqos({1'b0,1'b0,1'b0,1'b0}),
-        .S01_AXI_arsize({1'b0,1'b1,1'b0}),
-        .S01_AXI_arvalid(1'b0),
-        .S01_AXI_rready(1'b0),
-        .S02_AXI_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_arburst({1'b0,1'b1}),
-        .S02_AXI_arcache({1'b0,1'b0,1'b1,1'b1}),
-        .S02_AXI_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_arlock(1'b0),
-        .S02_AXI_arprot({1'b0,1'b0,1'b0}),
-        .S02_AXI_arqos({1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_arsize({1'b0,1'b1,1'b0}),
-        .S02_AXI_arvalid(1'b0),
-        .S02_AXI_awaddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_awburst({1'b0,1'b1}),
-        .S02_AXI_awcache({1'b0,1'b0,1'b1,1'b1}),
-        .S02_AXI_awlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_awlock(1'b0),
-        .S02_AXI_awprot({1'b0,1'b0,1'b0}),
-        .S02_AXI_awqos({1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_awsize({1'b0,1'b1,1'b0}),
-        .S02_AXI_awvalid(1'b0),
-        .S02_AXI_bready(1'b0),
-        .S02_AXI_rready(1'b0),
-        .S02_AXI_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .S02_AXI_wlast(1'b0),
-        .S02_AXI_wstrb({1'b1,1'b1,1'b1,1'b1}),
-        .S02_AXI_wvalid(1'b0),
         .aclk(zynq_ultra_ps_e_0_pl_clk0),
         .aresetn(rst_ps8_0_100M_peripheral_aresetn));
   design_1_data_transfer_0_0 data_transfer_0
@@ -453,39 +418,39 @@ module design_1
         .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .pl_ps_irq0(axi_dma_0_s2mm_introut),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0),
-        .saxigp0_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp0_arburst({1'b0,1'b1}),
-        .saxigp0_arcache({1'b0,1'b0,1'b1,1'b1}),
-        .saxigp0_arid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp0_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp0_arlock(1'b0),
-        .saxigp0_arprot({1'b0,1'b0,1'b0}),
-        .saxigp0_arqos({1'b0,1'b0,1'b0,1'b0}),
-        .saxigp0_arsize({1'b1,1'b0,1'b0}),
-        .saxigp0_aruser(1'b0),
-        .saxigp0_arvalid(1'b0),
-        .saxigp0_awaddr(axi_smc_M00_AXI_AWADDR),
-        .saxigp0_awburst(axi_smc_M00_AXI_AWBURST),
-        .saxigp0_awcache(axi_smc_M00_AXI_AWCACHE),
-        .saxigp0_awid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .saxigp0_awlen(axi_smc_M00_AXI_AWLEN),
-        .saxigp0_awlock(axi_smc_M00_AXI_AWLOCK),
-        .saxigp0_awprot(axi_smc_M00_AXI_AWPROT),
-        .saxigp0_awqos(axi_smc_M00_AXI_AWQOS),
-        .saxigp0_awready(axi_smc_M00_AXI_AWREADY),
-        .saxigp0_awsize(axi_smc_M00_AXI_AWSIZE),
-        .saxigp0_awuser(1'b0),
-        .saxigp0_awvalid(axi_smc_M00_AXI_AWVALID),
-        .saxigp0_bready(axi_smc_M00_AXI_BREADY),
-        .saxigp0_bresp(axi_smc_M00_AXI_BRESP),
-        .saxigp0_bvalid(axi_smc_M00_AXI_BVALID),
-        .saxigp0_rready(1'b0),
-        .saxigp0_wdata(axi_smc_M00_AXI_WDATA),
-        .saxigp0_wlast(axi_smc_M00_AXI_WLAST),
-        .saxigp0_wready(axi_smc_M00_AXI_WREADY),
-        .saxigp0_wstrb(axi_smc_M00_AXI_WSTRB),
-        .saxigp0_wvalid(axi_smc_M00_AXI_WVALID),
-        .saxihpc0_fpd_aclk(zynq_ultra_ps_e_0_pl_clk0));
+        .saxigp2_araddr({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .saxigp2_arburst({1'b0,1'b1}),
+        .saxigp2_arcache({1'b0,1'b0,1'b1,1'b1}),
+        .saxigp2_arid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .saxigp2_arlen({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .saxigp2_arlock(1'b0),
+        .saxigp2_arprot({1'b0,1'b0,1'b0}),
+        .saxigp2_arqos({1'b0,1'b0,1'b0,1'b0}),
+        .saxigp2_arsize({1'b1,1'b0,1'b0}),
+        .saxigp2_aruser(1'b0),
+        .saxigp2_arvalid(1'b0),
+        .saxigp2_awaddr(axi_smc_M00_AXI_AWADDR),
+        .saxigp2_awburst(axi_smc_M00_AXI_AWBURST),
+        .saxigp2_awcache(axi_smc_M00_AXI_AWCACHE),
+        .saxigp2_awid({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .saxigp2_awlen(axi_smc_M00_AXI_AWLEN),
+        .saxigp2_awlock(axi_smc_M00_AXI_AWLOCK),
+        .saxigp2_awprot(axi_smc_M00_AXI_AWPROT),
+        .saxigp2_awqos(axi_smc_M00_AXI_AWQOS),
+        .saxigp2_awready(axi_smc_M00_AXI_AWREADY),
+        .saxigp2_awsize(axi_smc_M00_AXI_AWSIZE),
+        .saxigp2_awuser(1'b0),
+        .saxigp2_awvalid(axi_smc_M00_AXI_AWVALID),
+        .saxigp2_bready(axi_smc_M00_AXI_BREADY),
+        .saxigp2_bresp(axi_smc_M00_AXI_BRESP),
+        .saxigp2_bvalid(axi_smc_M00_AXI_BVALID),
+        .saxigp2_rready(1'b0),
+        .saxigp2_wdata(axi_smc_M00_AXI_WDATA),
+        .saxigp2_wlast(axi_smc_M00_AXI_WLAST),
+        .saxigp2_wready(axi_smc_M00_AXI_WREADY),
+        .saxigp2_wstrb(axi_smc_M00_AXI_WSTRB),
+        .saxigp2_wvalid(axi_smc_M00_AXI_WVALID),
+        .saxihp0_fpd_aclk(zynq_ultra_ps_e_0_pl_clk0));
 endmodule
 
 module design_1_ps8_0_axi_periph_0

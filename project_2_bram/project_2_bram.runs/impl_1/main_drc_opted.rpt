@@ -1,0 +1,517 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Tue Sep 15 09:28:01 2020
+| Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+| Command      : report_drc -file main_drc_opted.rpt -pb main_drc_opted.pb -rpx main_drc_opted.rpx
+| Design       : main
+| Device       : xczu2cg-sfvc784-1-e
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 96
++-----------+----------+--------------------------------------------+------------+
+| Rule      | Severity | Description                                | Violations |
++-----------+----------+--------------------------------------------+------------+
+| REQP-1774 | Warning  | RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32 | 48         |
+| REQP-1776 | Warning  | RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72 | 48         |
++-----------+----------+--------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+REQP-1774#1 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#2 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#3 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#4 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#5 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#6 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#7 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#8 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#9 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#10 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#11 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#12 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#13 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#14 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#15 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#16 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#17 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#18 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#19 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#20 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#21 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#22 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#23 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#24 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#25 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#26 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#27 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#28 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#29 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#30 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#31 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#32 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#33 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#34 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#35 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#36 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#37 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#38 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#39 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#40 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#41 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#42 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#43 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#44 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#45 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#46 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#47 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1774#48 Warning
+RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#1 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#2 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#3 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#4 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#5 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#6 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#7 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#8 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#9 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#10 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#11 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#12 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#13 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#14 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#15 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#16 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#17 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#18 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#19 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#20 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#21 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#22 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#23 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#24 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#25 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#26 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#27 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#28 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#29 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#30 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#31 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#32 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#33 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#34 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#35 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#36 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#37 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#38 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#39 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#40 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#41 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#42 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#43 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#44 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#45 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#46 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#47 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+REQP-1776#48 Warning
+RAMB36E2_WRITE_WIDTH_B_18_doesnt_use_WEB72  
+The RAMB36E2 cell desing_ins/design_1_i/axi_bram_ctrl_0_bram2/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_B set to 18. The WEBWE[7:2] pins should not be connected to active signal.
+Related violations: <none>
+
+

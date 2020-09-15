@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Sep 11 05:31:31 2020
-# Process ID: 18928
+# Start of session at: Sat Sep 12 23:07:14 2020
+# Process ID: 15393
 # Current directory: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1
 # Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
 # Log file: /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/main.vds
@@ -20,75 +20,77 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
 INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19327 
+INFO: Helper process launched with PID 15627 
 WARNING: [Synth 8-2507] parameter declaration becomes local in DDMTD_Sampler with formal parameter declaration list [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:127]
 WARNING: [Synth 8-2507] parameter declaration becomes local in DDMTD_Sampler with formal parameter declaration list [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:233]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2325.695 ; gain = 0.000 ; free physical = 7560 ; free virtual = 13731
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2325.695 ; gain = 0.000 ; free physical = 13861 ; free virtual = 25064
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'main' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v:23]
 	Parameter RESET_COUNT bound to: 1000000 - type: integer 
 	Parameter RESET_RUN bound to: 950000 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter START_COUNT bound to: 32 - type: integer 
-	Parameter NUM_DDMTD bound to: 24 - type: integer 
+	Parameter NUM_DDMTD bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'clock_pll' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/clock_pll_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clock_pll' (1#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/clock_pll_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'IBUFGDS' [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33416]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter DIFF_TERM bound to: FALSE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
 	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS' (1#1) [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33416]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFGDS' (2#1) [/home/rsaradhy/Software/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:33416]
 INFO: [Synth 8-6157] synthesizing module 'DDMTD_Array' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Array.v:23]
-	Parameter NUM_DDMTD bound to: 24 - type: integer 
+	Parameter NUM_DDMTD bound to: 2 - type: integer 
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'DDMTD_Sampler' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:23]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_START_COUNT bound to: 32 - type: integer 
-	Parameter DATA_IN_FIFO_THRESHOLD bound to: 500 - type: integer 
-	Parameter WORDS_TO_SEND bound to: 8000 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'FIFO_10' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/FIFO_10_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'FIFO_10' (2#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/FIFO_10_stub.v:6]
+	Parameter DATA_IN_FIFO_THRESHOLD bound to: 1000 - type: integer 
+	Parameter WORDS_TO_SEND bound to: 32000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'FIFO_10' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/FIFO_10_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FIFO_10' (3#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/FIFO_10_stub.v:6]
 WARNING: [Synth 8-7023] instance 'FIFO_10_inst' of module 'FIFO_10' has 11 connections declared, but only 9 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:212]
-INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Sampler' (3#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Array' (4#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Array.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Sampler' (4#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Sampler.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DDMTD_Array' (5#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/DDMTD_Array.v:23]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (5#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 43 connections declared, but only 41 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:177]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (6#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (7#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_axi_smc_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_0' has 86 connections declared, but only 72 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:241]
-INFO: [Synth 8-6157] synthesizing module 'design_1_data_transfer_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_data_transfer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_data_transfer_0_0' (8#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_data_transfer_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'data_transfer_0' of module 'design_1_data_transfer_0_0' has 15 connections declared, but only 14 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:314]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:491]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1025]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (9#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1025]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1150]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (10#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1150]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1282]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (11#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (12#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1282]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (13#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:984]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (14#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:491]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (15#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:408]
-INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (16#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-18928-rsaradhy-acer/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 82 connections declared, but only 73 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:415]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (17#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (18#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-7023] instance 'my_design' of module 'design_1_wrapper' has 13 connections declared, but only 10 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v:361]
-INFO: [Synth 8-6155] done synthesizing module 'main' (19#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (6#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 43 connections declared, but only 41 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:176]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (7#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (8#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_data_transfer_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_data_transfer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_data_transfer_0_0' (9#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_data_transfer_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'data_transfer_0' of module 'design_1_data_transfer_0_0' has 15 connections declared, but only 14 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:279]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps8_0_axi_periph_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:456]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QJIMLI' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:990]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QJIMLI' (10#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:990]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1D3SAH3' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1115]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1D3SAH3' (11#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1115]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1A7ZMW4' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1247]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (12#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1A7ZMW4' (13#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:1247]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (14#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:949]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps8_0_axi_periph_0' (15#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:456]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps8_0_100M_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps8_0_100M_0' (16#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_rst_ps8_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_100M' of module 'design_1_rst_ps8_0_100M_0' has 10 connections declared, but only 6 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:373]
+INFO: [Synth 8-6157] synthesizing module 'design_1_zynq_ultra_ps_e_0_0' [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_zynq_ultra_ps_e_0_0' (17#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/realtime/design_1_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'design_1_zynq_ultra_ps_e_0_0' has 82 connections declared, but only 73 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:380]
+WARNING: [Synth 8-3848] Net CLK in module/entity design_1 does not have driver. [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (18#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (19#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7023] instance 'my_design' of module 'design_1_wrapper' has 13 connections declared, but only 10 given [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v:362]
+INFO: [Synth 8-6155] done synthesizing module 'main' (20#1) [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/new/main.v:23]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1A7ZMW4 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1A7ZMW4 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_1D3SAH3 has unconnected port M_ACLK
@@ -105,9 +107,10 @@ WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port M01_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design design_1 has unconnected port CLK
 WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port external_counter[31]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2364.629 ; gain = 38.934 ; free physical = 7610 ; free virtual = 13778
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2360.629 ; gain = 34.934 ; free physical = 13899 ; free virtual = 25103
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -120,13 +123,13 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2380.473 ; gain = 54.777 ; free physical = 7613 ; free virtual = 13781
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2376.473 ; gain = 50.777 ; free physical = 13904 ; free virtual = 25104
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2380.473 ; gain = 54.777 ; free physical = 7613 ; free virtual = 13781
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2376.473 ; gain = 50.777 ; free physical = 13904 ; free virtual = 25104
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2392.379 ; gain = 0.000 ; free physical = 7605 ; free virtual = 13773
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2388.379 ; gain = 0.000 ; free physical = 13901 ; free virtual = 25101
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -148,56 +151,14 @@ Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sour
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_data_transfer_0_0/design_1_data_transfer_0_0/design_1_data_transfer_0_0_in_context.xdc] for cell 'my_design/design_1_i/data_transfer_0'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'my_design/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'my_design/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc] for cell 'clk_pll'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2542.223 ; gain = 0.000 ; free physical = 13810 ; free virtual = 25013
+Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc] for cell 'clk_pll'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst'
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst'
-Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst'
-Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/sources_1/ip/FIFO_10/FIFO_10/FIFO_10_in_context.xdc] for cell 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst'
 Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc]
-create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2555.191 ; gain = 2.969 ; free physical = 7532 ; free virtual = 13692
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.srcs/constrs_1/new/main.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
@@ -205,39 +166,15 @@ Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synt
 Finished Parsing XDC File [/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2555.191 ; gain = 0.000 ; free physical = 7533 ; free virtual = 13692
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.223 ; gain = 0.000 ; free physical = 13806 ; free virtual = 25008
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 5 instances were transformed.
-  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 5 instances
+  A total of 4 instances were transformed.
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2555.191 ; gain = 0.000 ; free physical = 7533 ; free virtual = 13692
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[0].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[10].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[11].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[12].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[13].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[14].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[15].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[16].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[17].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[18].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[19].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[1].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[20].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[21].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[22].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[23].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[2].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[3].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[4].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[5].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[6].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[7].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[8].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'DDMTD_Array_inst/ddmtd_inst[9].DDMTD_i/FIFO_10_inst' at clock pin 'clk' is different from the actual clock period '6.250', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'my_design/design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '6.250', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2542.223 ; gain = 0.000 ; free physical = 13806 ; free virtual = 25008
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'my_design/design_1_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '3.125', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2558.160 ; gain = 232.465 ; free physical = 7618 ; free virtual = 13777
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2545.191 ; gain = 219.496 ; free physical = 13878 ; free virtual = 25082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -245,11 +182,15 @@ Start Loading Part and Timing Information
 Loading part: xczu2cg-sfvc784-1-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 2558.160 ; gain = 232.465 ; free physical = 7618 ; free virtual = 13777
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2545.191 ; gain = 219.496 ; free physical = 13878 ; free virtual = 25082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_REF_N. (constraint file  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_REF_N. (constraint file  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for CLK_REF_P. (constraint file  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for CLK_REF_P. (constraint file  /home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/.Xil/Vivado-15393-rsaradhy-acer/clock_pll/clock_pll/clock_pll_in_context.xdc, line 7).
 Applied set_property DONT_TOUCH = true for my_design/design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for my_design/design_1_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for my_design/design_1_i/axi_dma_0. (constraint file  auto generated constraint, line ).
@@ -260,35 +201,14 @@ Applied set_property DONT_TOUCH = true for my_design/design_1_i/axi_smc. (constr
 Applied set_property DONT_TOUCH = true for my_design/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for my_design/design_1_i/data_transfer_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for my_design/design_1_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_pll. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[0].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[1].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[2].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[3].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[4].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[5].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[6].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[7].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[8].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[9].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[10].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[11].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[12].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[13].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[14].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[15].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[16].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[17].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[18].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[19].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[20].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[21].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[22].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for DDMTD_Array_inst/\ddmtd_inst[23].DDMTD_i /FIFO_10_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2558.160 ; gain = 232.465 ; free physical = 7617 ; free virtual = 13776
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 2545.191 ; gain = 219.496 ; free physical = 13878 ; free virtual = 25083
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2558.160 ; gain = 232.465 ; free physical = 7601 ; free virtual = 13761
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 2545.191 ; gain = 219.496 ; free physical = 13870 ; free virtual = 25075
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -301,15 +221,15 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 26    
-	   2 Input      8 Bit       Adders := 24    
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      8 Bit       Adders := 2     
 +---Registers : 
 	               32 Bit    Registers := 2     
-	                8 Bit    Registers := 24    
-	                1 Bit    Registers := 146   
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 26    
-	   2 Input      1 Bit        Muxes := 96    
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 8     
 	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -329,248 +249,6 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 2     
 	   3 Input      1 Bit        Muxes := 1     
 Module DDMTD_Sampler__xdcDup__1 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__2 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__3 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__4 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__5 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__6 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__7 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__8 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__9 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__10 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__11 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__12 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__13 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__14 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__15 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__16 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__17 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__18 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__19 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__20 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__21 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__22 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 1     
-+---Registers : 
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
-Module DDMTD_Sampler__xdcDup__23 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
@@ -614,32 +292,9 @@ WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port M01_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
-WARNING: [Synth 8-3331] design DDMTD_Sampler has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__23 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__22 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__21 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__20 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__19 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__18 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__17 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__16 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__15 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__14 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__13 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__12 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__11 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__10 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__9 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__8 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__7 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__6 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__5 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__4 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__3 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__2 has unconnected port external_counter[31]
-WARNING: [Synth 8-3331] design DDMTD_Sampler__xdcDup__1 has unconnected port external_counter[31]
+WARNING: [Synth 8-3331] design design_1 has unconnected port CLK
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 2558.160 ; gain = 232.465 ; free physical = 7568 ; free virtual = 13738
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2545.191 ; gain = 219.496 ; free physical = 13847 ; free virtual = 25053
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -651,13 +306,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:14 . Memory (MB): peak = 3021.949 ; gain = 696.254 ; free physical = 6935 ; free virtual = 13110
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:00 . Memory (MB): peak = 3008.855 ; gain = 683.160 ; free physical = 13345 ; free virtual = 24553
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:19 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6867 ; free virtual = 13039
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 3033.887 ; gain = 708.191 ; free physical = 13334 ; free virtual = 24543
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -669,7 +324,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:21 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6858 ; free virtual = 13030
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 3041.895 ; gain = 716.199 ; free physical = 13330 ; free virtual = 24539
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -733,13 +388,13 @@ WARNING: [Synth 8-3295] tying undriven pin my_design/design_1_i:gpio_rtl_0_tri_i
 WARNING: [Synth 8-3295] tying undriven pin my_design/design_1_i:gpio_rtl_0_tri_i[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin my_design/design_1_i:gpio_rtl_0_tri_i[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:24 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6862 ; free virtual = 13034
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:24 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6862 ; free virtual = 13034
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -758,25 +413,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6863 ; free virtual = 13035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6863 ; free virtual = 13035
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6863 ; free virtual = 13035
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6863 ; free virtual = 13035
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -786,15 +441,16 @@ Report BlackBoxes:
 +------+-----------------------------+----------+
 |      |BlackBox name                |Instances |
 +------+-----------------------------+----------+
-|1     |FIFO_10                      |        24|
-|2     |design_1_xbar_0              |         1|
-|3     |design_1_auto_pc_0           |         1|
-|4     |design_1_axi_dma_0_0         |         1|
-|5     |design_1_axi_gpio_0_0        |         1|
-|6     |design_1_axi_smc_0           |         1|
-|7     |design_1_data_transfer_0_0   |         1|
-|8     |design_1_rst_ps8_0_100M_0    |         1|
-|9     |design_1_zynq_ultra_ps_e_0_0 |         1|
+|1     |clock_pll                    |         1|
+|2     |FIFO_10                      |         2|
+|3     |design_1_xbar_0              |         1|
+|4     |design_1_auto_pc_0           |         1|
+|5     |design_1_axi_dma_0_0         |         1|
+|6     |design_1_axi_gpio_0_0        |         1|
+|7     |design_1_axi_smc_0           |         1|
+|8     |design_1_data_transfer_0_0   |         1|
+|9     |design_1_rst_ps8_0_100M_0    |         1|
+|10    |design_1_zynq_ultra_ps_e_0_0 |         1|
 +------+-----------------------------+----------+
 
 Report Cell Usage: 
@@ -802,109 +458,64 @@ Report Cell Usage:
 |      |Cell                         |Count |
 +------+-----------------------------+------+
 |1     |FIFO_10                      |     1|
-|2     |FIFO_10__24                  |     1|
-|3     |FIFO_10__25                  |     1|
-|4     |FIFO_10__26                  |     1|
-|5     |FIFO_10__27                  |     1|
-|6     |FIFO_10__28                  |     1|
-|7     |FIFO_10__29                  |     1|
-|8     |FIFO_10__30                  |     1|
-|9     |FIFO_10__31                  |     1|
-|10    |FIFO_10__32                  |     1|
-|11    |FIFO_10__33                  |     1|
-|12    |FIFO_10__34                  |     1|
-|13    |FIFO_10__35                  |     1|
-|14    |FIFO_10__36                  |     1|
-|15    |FIFO_10__37                  |     1|
-|16    |FIFO_10__38                  |     1|
-|17    |FIFO_10__39                  |     1|
-|18    |FIFO_10__40                  |     1|
-|19    |FIFO_10__41                  |     1|
-|20    |FIFO_10__42                  |     1|
-|21    |FIFO_10__43                  |     1|
-|22    |FIFO_10__44                  |     1|
-|23    |FIFO_10__45                  |     1|
-|24    |FIFO_10__46                  |     1|
-|25    |design_1_auto_pc_0           |     1|
-|26    |design_1_axi_dma_0_0         |     1|
-|27    |design_1_axi_gpio_0_0        |     1|
-|28    |design_1_axi_smc_0           |     1|
-|29    |design_1_data_transfer_0_0   |     1|
-|30    |design_1_rst_ps8_0_100M_0    |     1|
-|31    |design_1_xbar_0              |     1|
-|32    |design_1_zynq_ultra_ps_e_0_0 |     1|
-|33    |BUFG                         |     1|
-|34    |CARRY8                       |   346|
-|35    |LUT1                         |    78|
-|36    |LUT2                         |   894|
-|37    |LUT3                         |   211|
-|38    |LUT4                         |   896|
-|39    |LUT5                         |   131|
-|40    |LUT6                         |   319|
-|41    |FDRE                         |  1937|
-|42    |IBUFGDS                      |     5|
+|2     |FIFO_10__2                   |     1|
+|3     |clock_pll                    |     1|
+|4     |design_1_auto_pc_0           |     1|
+|5     |design_1_axi_dma_0_0         |     1|
+|6     |design_1_axi_gpio_0_0        |     1|
+|7     |design_1_axi_smc_0           |     1|
+|8     |design_1_data_transfer_0_0   |     1|
+|9     |design_1_rst_ps8_0_100M_0    |     1|
+|10    |design_1_xbar_0              |     1|
+|11    |design_1_zynq_ultra_ps_e_0_0 |     1|
+|12    |CARRY8                       |    38|
+|13    |LUT1                         |    11|
+|14    |LUT2                         |   100|
+|15    |LUT3                         |    22|
+|16    |LUT4                         |    16|
+|17    |LUT5                         |    24|
+|18    |LUT6                         |    90|
+|19    |FDRE                         |   213|
+|20    |IBUFGDS                      |     4|
 +------+-----------------------------+------+
 
 Report Instance Areas: 
-+------+-----------------------------+----------------------------+------+
-|      |Instance                     |Module                      |Cells |
-+------+-----------------------------+----------------------------+------+
-|1     |top                          |                            |  9444|
-|2     |  DDMTD_Array_inst           |DDMTD_Array                 |  5531|
-|3     |    \ddmtd_inst[0].DDMTD_i   |DDMTD_Sampler__xdcDup__1    |   232|
-|4     |    \ddmtd_inst[10].DDMTD_i  |DDMTD_Sampler__xdcDup__11   |   230|
-|5     |    \ddmtd_inst[11].DDMTD_i  |DDMTD_Sampler__xdcDup__12   |   231|
-|6     |    \ddmtd_inst[12].DDMTD_i  |DDMTD_Sampler__xdcDup__13   |   231|
-|7     |    \ddmtd_inst[13].DDMTD_i  |DDMTD_Sampler__xdcDup__14   |   232|
-|8     |    \ddmtd_inst[14].DDMTD_i  |DDMTD_Sampler__xdcDup__15   |   230|
-|9     |    \ddmtd_inst[15].DDMTD_i  |DDMTD_Sampler__xdcDup__16   |   232|
-|10    |    \ddmtd_inst[16].DDMTD_i  |DDMTD_Sampler__xdcDup__17   |   229|
-|11    |    \ddmtd_inst[17].DDMTD_i  |DDMTD_Sampler__xdcDup__18   |   231|
-|12    |    \ddmtd_inst[18].DDMTD_i  |DDMTD_Sampler__xdcDup__19   |   229|
-|13    |    \ddmtd_inst[19].DDMTD_i  |DDMTD_Sampler__xdcDup__20   |   229|
-|14    |    \ddmtd_inst[1].DDMTD_i   |DDMTD_Sampler__xdcDup__2    |   231|
-|15    |    \ddmtd_inst[20].DDMTD_i  |DDMTD_Sampler__xdcDup__21   |   232|
-|16    |    \ddmtd_inst[21].DDMTD_i  |DDMTD_Sampler__xdcDup__22   |   230|
-|17    |    \ddmtd_inst[22].DDMTD_i  |DDMTD_Sampler__xdcDup__23   |   229|
-|18    |    \ddmtd_inst[23].DDMTD_i  |DDMTD_Sampler               |   230|
-|19    |    \ddmtd_inst[2].DDMTD_i   |DDMTD_Sampler__xdcDup__3    |   230|
-|20    |    \ddmtd_inst[3].DDMTD_i   |DDMTD_Sampler__xdcDup__4    |   234|
-|21    |    \ddmtd_inst[4].DDMTD_i   |DDMTD_Sampler__xdcDup__5    |   230|
-|22    |    \ddmtd_inst[5].DDMTD_i   |DDMTD_Sampler__xdcDup__6    |   229|
-|23    |    \ddmtd_inst[6].DDMTD_i   |DDMTD_Sampler__xdcDup__7    |   231|
-|24    |    \ddmtd_inst[7].DDMTD_i   |DDMTD_Sampler__xdcDup__8    |   231|
-|25    |    \ddmtd_inst[8].DDMTD_i   |DDMTD_Sampler__xdcDup__9    |   229|
-|26    |    \ddmtd_inst[9].DDMTD_i   |DDMTD_Sampler__xdcDup__10   |   229|
-|27    |  my_design                  |design_1_wrapper            |  3780|
-|28    |    design_1_i               |design_1                    |  3738|
-|29    |      ps8_0_axi_periph       |design_1_ps8_0_axi_periph_0 |   496|
-|30    |        s00_couplers         |s00_couplers_imp_1A7ZMW4    |   201|
-+------+-----------------------------+----------------------------+------+
++------+----------------------------+----------------------------+------+
+|      |Instance                    |Module                      |Cells |
++------+----------------------------+----------------------------+------+
+|1     |top                         |                            |  2091|
+|2     |  DDMTD_Array_inst          |DDMTD_Array                 |   453|
+|3     |    \ddmtd_inst[0].DDMTD_i  |DDMTD_Sampler__xdcDup__1    |   235|
+|4     |    \ddmtd_inst[1].DDMTD_i  |DDMTD_Sampler               |   218|
+|5     |  my_design                 |design_1_wrapper            |  1505|
+|6     |    design_1_i              |design_1                    |  1499|
+|7     |      ps8_0_axi_periph      |design_1_ps8_0_axi_periph_0 |   496|
+|8     |        s00_couplers        |s00_couplers_imp_1A7ZMW4    |   201|
++------+----------------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.910 ; gain = 802.215 ; free physical = 6863 ; free virtual = 13035
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.832 ; gain = 722.137 ; free physical = 13312 ; free virtual = 24521
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 70 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:13 . Memory (MB): peak = 3127.910 ; gain = 624.527 ; free physical = 6902 ; free virtual = 13074
-Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:25 . Memory (MB): peak = 3127.918 ; gain = 802.215 ; free physical = 6902 ; free virtual = 13074
+Synthesis finished with 0 errors, 0 critical warnings and 47 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:53 . Memory (MB): peak = 3047.832 ; gain = 553.418 ; free physical = 13351 ; free virtual = 24560
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:01:04 . Memory (MB): peak = 3047.840 ; gain = 722.137 ; free physical = 13351 ; free virtual = 24560
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3127.918 ; gain = 0.000 ; free physical = 6973 ; free virtual = 13145
-INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3047.840 ; gain = 0.000 ; free physical = 13419 ; free virtual = 24629
+INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.801 ; gain = 0.000 ; free physical = 6921 ; free virtual = 13093
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3103.629 ; gain = 0.000 ; free physical = 13365 ; free virtual = 24572
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6 instances were transformed.
-  BUFG => BUFGCE: 1 instance 
-  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 5 instances
+  A total of 4 instances were transformed.
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:43 . Memory (MB): peak = 3171.801 ; gain = 1691.352 ; free physical = 7087 ; free virtual = 13259
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3171.801 ; gain = 0.000 ; free physical = 7087 ; free virtual = 13259
+synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:01:21 . Memory (MB): peak = 3103.629 ; gain = 1621.180 ; free physical = 13503 ; free virtual = 24707
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3103.629 ; gain = 0.000 ; free physical = 13503 ; free virtual = 24707
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/rsaradhy/Work/trenz/vivado/project_1/project_1.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Sep 11 05:33:29 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 12 23:08:47 2020...

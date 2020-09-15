@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Fri Sep 11 05:41:12 2020
+| Date             : Sat Sep 12 23:13:06 2020
 | Host             : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.233        |
+| Total On-Chip Power (W)  | 2.157        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.923        |
-| Device Static (W)        | 0.310        |
+| Dynamic (W)              | 1.848        |
+| Device Static (W)        | 0.309        |
 | Effective TJA (C/W)      | 2.4          |
-| Max Ambient (C)          | 94.7         |
-| Junction Temperature (C) | 30.3         |
+| Max Ambient (C)          | 94.9         |
+| Junction Temperature (C) | 30.1         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.073 |        3 |       --- |             --- |
-| CLB Logic                |     0.091 |    43203 |       --- |             --- |
-|   LUT as Distributed RAM |     0.070 |     1650 |     28800 |            5.73 |
-|   LUT as Logic           |     0.017 |    12359 |     47232 |           26.17 |
-|   CARRY8                 |     0.002 |      611 |      8820 |            6.93 |
-|   Register               |     0.002 |    23418 |     94464 |           24.79 |
-|   LUT as Shift Register  |    <0.001 |      171 |     28800 |            0.59 |
-|   BUFG                   |    <0.001 |        8 |        24 |           33.33 |
-|   Others                 |     0.000 |     1097 |       --- |             --- |
-| Signals                  |     0.033 |    30949 |       --- |             --- |
-| Block RAM                |     0.165 |    112.5 |       150 |           75.00 |
+| Clocks                   |     0.063 |        5 |       --- |             --- |
+| CLB Logic                |     0.032 |     9933 |       --- |             --- |
+|   LUT as Distributed RAM |     0.019 |      176 |     28800 |            0.61 |
+|   LUT as Logic           |     0.011 |     3442 |     47232 |            7.29 |
+|   LUT as Shift Register  |     0.002 |      177 |     28800 |            0.61 |
+|   Register               |    <0.001 |     4540 |     94464 |            4.81 |
+|   CARRY8                 |    <0.001 |       59 |      8820 |            0.67 |
+|   Others                 |     0.000 |      530 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |      128 |     70560 |            0.18 |
+| Signals                  |     0.020 |     8199 |       --- |             --- |
+| Block RAM                |     0.113 |    132.5 |       150 |           88.33 |
+| PLL                      |     0.053 |        1 |       --- |             --- |
 | I/O                      |     0.006 |        6 |       252 |            2.38 |
-| PS8                      |     1.554 |        1 |       --- |             --- |
-| Static Power             |     0.310 |          |           |                 |
+| PS8                      |     1.560 |        1 |       --- |             --- |
+| Static Power             |     0.309 |          |           |                 |
 |   PS Static              |     0.094 |          |           |                 |
 |   PL Static              |     0.216 |          |           |                 |
-| Total                    |     2.233 |          |           |                 |
+| Total                    |     2.157 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,10 +79,10 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.473 |       0.419 |      0.054 |
+| Vccint          |       0.850 |     0.323 |       0.268 |      0.054 |
 | Vccint_io       |       0.850 |     0.028 |       0.001 |      0.027 |
-| Vccbram         |       0.850 |     0.009 |       0.008 |      0.001 |
-| Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
+| Vccbram         |       0.850 |     0.001 |       0.000 |      0.001 |
+| Vccaux          |       1.800 |     0.077 |       0.029 |      0.048 |
 | Vccaux_io       |       1.800 |     0.028 |       0.003 |      0.025 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -91,8 +92,8 @@ Table of Contents
 | Vcco12          |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vcco10          |       1.000 |     0.000 |       0.000 |      0.000 |
 | Vccadc          |       1.800 |     0.008 |       0.000 |      0.008 |
-| VCC_PSINTFP     |       0.850 |     0.379 |       0.351 |      0.028 |
-| VCC_PSINTLP     |       0.850 |     0.283 |       0.276 |      0.007 |
+| VCC_PSINTFP     |       0.850 |     0.382 |       0.354 |      0.028 |
+| VCC_PSINTLP     |       0.850 |     0.287 |       0.279 |      0.007 |
 | VPS_MGTRAVCC    |       0.850 |     0.001 |       0.000 |      0.001 |
 | VCC_PSINTFP_DDR |       0.850 |     0.597 |       0.592 |      0.005 |
 | VCC_PSPLL       |       1.200 |     0.054 |       0.052 |      0.002 |
@@ -146,11 +147,13 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------+-----------+-----------------+
-| Clock     | Domain    | Constraint (ns) |
-+-----------+-----------+-----------------+
-| CLK_REF_N | CLK_REF_P |             6.2 |
-+-----------+-----------+-----------------+
++--------------------+---------------------------------+-----------------+
+| Clock              | Domain                          | Constraint (ns) |
++--------------------+---------------------------------+-----------------+
+| CLK_REF_P          | CLK_REF_P                       |             6.2 |
+| clk_out1_clock_pll | clk_pll/inst/clk_out1_clock_pll |             6.2 |
+| clk_out2_clock_pll | clk_pll/inst/clk_out2_clock_pll |             3.1 |
++--------------------+---------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -159,69 +162,27 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+----------------------------+-----------+
-| Name                       | Power (W) |
-+----------------------------+-----------+
-| main                       |     1.923 |
-|   DDMTD_Array_inst         |     0.184 |
-|     ddmtd_inst[0].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[10].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[11].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[12].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[13].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[14].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[15].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[16].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[17].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[18].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[19].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[1].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[20].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[21].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[22].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[23].DDMTD_i |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[2].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[3].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[4].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[5].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[6].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[7].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[8].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|     ddmtd_inst[9].DDMTD_i  |     0.008 |
-|       FIFO_10_inst         |     0.007 |
-|   IBUFGDS_BEAT0Q1          |     0.002 |
-|   IBUFGDS_BEAT1Q1          |     0.002 |
-|   IBUFGDS_CLK_REF          |     0.002 |
-|   my_design                |     1.732 |
-|     design_1_i             |     1.732 |
-|       axi_dma_0            |     0.036 |
-|       axi_gpio_0           |     0.001 |
-|       axi_smc              |     0.133 |
-|       ps8_0_axi_periph     |     0.007 |
-|       zynq_ultra_ps_e_0    |     1.555 |
-+----------------------------+-----------+
++---------------------------+-----------+
+| Name                      | Power (W) |
++---------------------------+-----------+
+| main                      |     1.848 |
+|   DDMTD_Array_inst        |     0.127 |
+|     ddmtd_inst[0].DDMTD_i |     0.064 |
+|       FIFO_10_inst        |     0.062 |
+|     ddmtd_inst[1].DDMTD_i |     0.063 |
+|       FIFO_10_inst        |     0.062 |
+|   IBUFGDS_BEAT0Q1         |     0.002 |
+|   IBUFGDS_BEAT1Q1         |     0.002 |
+|   clk_pll                 |     0.055 |
+|     inst                  |     0.055 |
+|       clkin1_ibufds       |     0.002 |
+|   my_design               |     1.659 |
+|     design_1_i            |     1.659 |
+|       axi_dma_0           |     0.037 |
+|       axi_gpio_0          |     0.004 |
+|       axi_smc             |     0.037 |
+|       ps8_0_axi_periph    |     0.018 |
+|       zynq_ultra_ps_e_0   |     1.562 |
++---------------------------+-----------+
 
 

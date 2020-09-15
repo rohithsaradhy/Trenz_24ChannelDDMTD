@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Fri Sep 11 05:33:28 2020
+| Date         : Sat Sep 12 23:08:47 2020
 | Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               | 2038 |     0 |     47232 |  4.31 |
-|   LUT as Logic          | 2038 |     0 |     47232 |  4.31 |
+| CLB LUTs*               |  216 |     0 |     47232 |  0.46 |
+|   LUT as Logic          |  216 |     0 |     47232 |  0.46 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           | 1937 |     0 |     94464 |  2.05 |
-|   Register as Flip Flop | 1937 |     0 |     94464 |  2.05 |
+| CLB Registers           |  213 |     0 |     94464 |  0.23 |
+|   Register as Flip Flop |  213 |     0 |     94464 |  0.23 |
 |   Register as Latch     |    0 |     0 |     94464 |  0.00 |
-| CARRY8                  |  346 |     0 |      8820 |  3.92 |
+| CARRY8                  |   38 |     0 |      8820 |  0.43 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
 | F8 Muxes                |    0 |     0 |     17640 |  0.00 |
 | F9 Muxes                |    0 |     0 |      8820 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1937  |          Yes |       Reset |            - |
+| 213   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |   10 |     0 |       252 |  3.97 |
+| Bonded IOB |    8 |     0 |       252 |  3.17 |
 +------------+------+-------+-----------+-------+
 
 
@@ -103,8 +103,8 @@ Table of Contents
 +----------------------+------+-------+-----------+-------+
 |       Site Type      | Used | Fixed | Available | Util% |
 +----------------------+------+-------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    1 |     0 |       196 |  0.51 |
-|   BUFGCE             |    1 |     0 |        88 |  1.14 |
+| GLOBAL CLOCK BUFFERs |    0 |     0 |       196 |  0.00 |
+|   BUFGCE             |    0 |     0 |        88 |  0.00 |
 |   BUFGCE_DIV         |    0 |     0 |        12 |  0.00 |
 |   BUFG_PS            |    0 |     0 |        72 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |        24 |  0.00 |
@@ -147,17 +147,16 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 1937 |            Register |
-| LUT4      |  896 |                 CLB |
-| LUT2      |  894 |                 CLB |
-| CARRY8    |  346 |                 CLB |
-| LUT6      |  319 |                 CLB |
-| LUT3      |  211 |                 CLB |
-| LUT5      |  131 |                 CLB |
-| LUT1      |   78 |                 CLB |
-| IBUFCTRL  |    5 |              Others |
-| DIFFINBUF |    5 |                 I/O |
-| BUFGCE    |    1 |               Clock |
+| FDRE      |  213 |            Register |
+| LUT2      |  100 |                 CLB |
+| LUT6      |   90 |                 CLB |
+| CARRY8    |   38 |                 CLB |
+| LUT5      |   24 |                 CLB |
+| LUT3      |   22 |                 CLB |
+| LUT4      |   16 |                 CLB |
+| LUT1      |   11 |                 CLB |
+| IBUFCTRL  |    4 |              Others |
+| DIFFINBUF |    4 |                 I/O |
 +-----------+------+---------------------+
 
 
@@ -167,7 +166,7 @@ Table of Contents
 +------------------------------+------+
 |           Ref Name           | Used |
 +------------------------------+------+
-| FIFO_10                      |   24 |
+| FIFO_10                      |    2 |
 | design_1_zynq_ultra_ps_e_0_0 |    1 |
 | design_1_xbar_0              |    1 |
 | design_1_rst_ps8_0_100M_0    |    1 |
@@ -176,6 +175,7 @@ Table of Contents
 | design_1_axi_gpio_0_0        |    1 |
 | design_1_axi_dma_0_0         |    1 |
 | design_1_auto_pc_0           |    1 |
+| clock_pll                    |    1 |
 +------------------------------+------+
 
 

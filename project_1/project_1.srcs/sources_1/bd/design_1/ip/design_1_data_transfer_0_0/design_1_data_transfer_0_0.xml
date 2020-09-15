@@ -59,7 +59,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.TDATA_NUM_BYTES">8</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -131,7 +131,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ">160000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS.FREQ_HZ">320000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -233,7 +233,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.FREQ_HZ">160000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M_AXIS_CLK.FREQ_HZ">320000000</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -284,11 +284,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 08:13:32 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 13 03:08:35 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c7e8c81</spirit:value>
+            <spirit:value>9:b637b407</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -299,7 +299,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c7e8c81</spirit:value>
+            <spirit:value>9:b637b407</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -315,11 +315,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 09:24:46 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 13 03:36:25 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c7e8c81</spirit:value>
+            <spirit:value>9:b637b407</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -335,11 +335,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 08:13:32 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 13 03:08:35 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ee5d1e7b</spirit:value>
+            <spirit:value>9:1fbdfa32</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -355,11 +355,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 09:24:46 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 13 03:36:25 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:ee5d1e7b</spirit:value>
+            <spirit:value>9:1fbdfa32</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -373,11 +373,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Sep 11 09:26:30 UTC 2020</spirit:value>
+            <spirit:value>Sun Sep 13 03:41:26 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7c7e8c81</spirit:value>
+            <spirit:value>9:b637b407</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -431,7 +431,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) - 1)">255</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -461,7 +461,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -543,7 +543,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) - 1)">255</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) - 1)">63</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -560,7 +560,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">7</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -604,7 +604,7 @@
         <spirit:name>C_M_AXIS_TDATA_WIDTH</spirit:name>
         <spirit:displayName>C M AXIS TDATA WIDTH</spirit:displayName>
         <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:order="3" spirit:rangeType="long">256</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:order="3" spirit:rangeType="long">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M_AXIS_START_COUNT</spirit:name>
@@ -722,7 +722,7 @@
       <spirit:name>C_M_AXIS_TDATA_WIDTH</spirit:name>
       <spirit:displayName>C M AXIS TDATA WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_40181835" spirit:order="3">256</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_40181835" spirit:order="3">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M_AXIS_START_COUNT</spirit:name>

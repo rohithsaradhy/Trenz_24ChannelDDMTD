@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_2_bram.ip_user_files/bd/design_1/ip/design_1_axi_smc_1/bd_0/ip/ip_1/sim/bd_6f02_psr_aclk_0.vhd" \
+"../../../../project_2_bram.ip_user_files/bd/design_1/ip/design_1_rst_ps8_0_200M_0/sim/design_1_rst_ps8_0_200M_0.vhd" \
+"../../../../project_2_bram.ip_user_files/bd/design_1/ip/design_1_axi_gpio_0_0/sim/design_1_axi_gpio_0_0.vhd" \
+"../../../../project_2_bram.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_0_11/sim/design_1_axi_bram_ctrl_0_11.vhd" \
+
+# Do not sort compile order
+nosort

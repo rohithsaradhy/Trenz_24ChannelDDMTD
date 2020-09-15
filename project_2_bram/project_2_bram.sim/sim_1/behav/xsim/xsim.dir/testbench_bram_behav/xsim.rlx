@@ -1,0 +1,12 @@
+
+{ 
+    crc :  16555495576362522248  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto bc1609509efa4702b69ce62fbb48968d --incr --debug typical --relax --mt 8 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_bram_behav xil_defaultlib.testbench_bram xil_defaultlib.glbl" , 
+    buildDate : "Nov  6 2019" , 
+    buildTime : "21:42:20" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/testbench_bram_behav/xsimk\"   \"xsim.dir/testbench_bram_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/testbench_bram_behav/obj/xsim_1.lnx64.o\" -L\"/home/rsaradhy/Software/Xilinx/Vivado/2019.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

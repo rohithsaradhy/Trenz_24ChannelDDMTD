@@ -104,46 +104,46 @@ module design_1_zynq_ultra_ps_e_0_0 (
   output bit_as_bool maxigp2_rready,
   output bit [3 : 0] maxigp2_awqos,
   output bit [3 : 0] maxigp2_arqos,
-  input bit_as_bool saxihpc0_fpd_aclk,
-  input bit_as_bool saxigp0_aruser,
-  input bit_as_bool saxigp0_awuser,
-  input bit [5 : 0] saxigp0_awid,
-  input bit [48 : 0] saxigp0_awaddr,
-  input bit [7 : 0] saxigp0_awlen,
-  input bit [2 : 0] saxigp0_awsize,
-  input bit [1 : 0] saxigp0_awburst,
-  input bit_as_bool saxigp0_awlock,
-  input bit [3 : 0] saxigp0_awcache,
-  input bit [2 : 0] saxigp0_awprot,
-  input bit_as_bool saxigp0_awvalid,
-  output bit_as_bool saxigp0_awready,
-  input bit [127 : 0] saxigp0_wdata,
-  input bit [15 : 0] saxigp0_wstrb,
-  input bit_as_bool saxigp0_wlast,
-  input bit_as_bool saxigp0_wvalid,
-  output bit_as_bool saxigp0_wready,
-  output bit [5 : 0] saxigp0_bid,
-  output bit [1 : 0] saxigp0_bresp,
-  output bit_as_bool saxigp0_bvalid,
-  input bit_as_bool saxigp0_bready,
-  input bit [5 : 0] saxigp0_arid,
-  input bit [48 : 0] saxigp0_araddr,
-  input bit [7 : 0] saxigp0_arlen,
-  input bit [2 : 0] saxigp0_arsize,
-  input bit [1 : 0] saxigp0_arburst,
-  input bit_as_bool saxigp0_arlock,
-  input bit [3 : 0] saxigp0_arcache,
-  input bit [2 : 0] saxigp0_arprot,
-  input bit_as_bool saxigp0_arvalid,
-  output bit_as_bool saxigp0_arready,
-  output bit [5 : 0] saxigp0_rid,
-  output bit [127 : 0] saxigp0_rdata,
-  output bit [1 : 0] saxigp0_rresp,
-  output bit_as_bool saxigp0_rlast,
-  output bit_as_bool saxigp0_rvalid,
-  input bit_as_bool saxigp0_rready,
-  input bit [3 : 0] saxigp0_awqos,
-  input bit [3 : 0] saxigp0_arqos,
+  input bit_as_bool saxihp0_fpd_aclk,
+  input bit_as_bool saxigp2_aruser,
+  input bit_as_bool saxigp2_awuser,
+  input bit [5 : 0] saxigp2_awid,
+  input bit [48 : 0] saxigp2_awaddr,
+  input bit [7 : 0] saxigp2_awlen,
+  input bit [2 : 0] saxigp2_awsize,
+  input bit [1 : 0] saxigp2_awburst,
+  input bit_as_bool saxigp2_awlock,
+  input bit [3 : 0] saxigp2_awcache,
+  input bit [2 : 0] saxigp2_awprot,
+  input bit_as_bool saxigp2_awvalid,
+  output bit_as_bool saxigp2_awready,
+  input bit [127 : 0] saxigp2_wdata,
+  input bit [15 : 0] saxigp2_wstrb,
+  input bit_as_bool saxigp2_wlast,
+  input bit_as_bool saxigp2_wvalid,
+  output bit_as_bool saxigp2_wready,
+  output bit [5 : 0] saxigp2_bid,
+  output bit [1 : 0] saxigp2_bresp,
+  output bit_as_bool saxigp2_bvalid,
+  input bit_as_bool saxigp2_bready,
+  input bit [5 : 0] saxigp2_arid,
+  input bit [48 : 0] saxigp2_araddr,
+  input bit [7 : 0] saxigp2_arlen,
+  input bit [2 : 0] saxigp2_arsize,
+  input bit [1 : 0] saxigp2_arburst,
+  input bit_as_bool saxigp2_arlock,
+  input bit [3 : 0] saxigp2_arcache,
+  input bit [2 : 0] saxigp2_arprot,
+  input bit_as_bool saxigp2_arvalid,
+  output bit_as_bool saxigp2_arready,
+  output bit [5 : 0] saxigp2_rid,
+  output bit [127 : 0] saxigp2_rdata,
+  output bit [1 : 0] saxigp2_rresp,
+  output bit_as_bool saxigp2_rlast,
+  output bit_as_bool saxigp2_rvalid,
+  input bit_as_bool saxigp2_rready,
+  input bit [3 : 0] saxigp2_awqos,
+  input bit [3 : 0] saxigp2_arqos,
   input bit [0 : 0] pl_ps_irq0,
   output bit_as_bool pl_resetn0
 );
@@ -152,7 +152,7 @@ endmodule
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,pl_ps_irq0,pl_resetn0)
+module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihp0_fpd_aclk,saxigp2_aruser,saxigp2_awuser,saxigp2_awid,saxigp2_awaddr,saxigp2_awlen,saxigp2_awsize,saxigp2_awburst,saxigp2_awlock,saxigp2_awcache,saxigp2_awprot,saxigp2_awvalid,saxigp2_awready,saxigp2_wdata,saxigp2_wstrb,saxigp2_wlast,saxigp2_wvalid,saxigp2_wready,saxigp2_bid,saxigp2_bresp,saxigp2_bvalid,saxigp2_bready,saxigp2_arid,saxigp2_araddr,saxigp2_arlen,saxigp2_arsize,saxigp2_arburst,saxigp2_arlock,saxigp2_arcache,saxigp2_arprot,saxigp2_arvalid,saxigp2_arready,saxigp2_rid,saxigp2_rdata,saxigp2_rresp,saxigp2_rlast,saxigp2_rvalid,saxigp2_rready,saxigp2_awqos,saxigp2_arqos,pl_ps_irq0,pl_resetn0)
 (* integer foreign = "SystemC";
 *);
   input bit maxihpm0_lpd_aclk;
@@ -195,46 +195,46 @@ module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   output wire maxigp2_rready;
   output wire [3 : 0] maxigp2_awqos;
   output wire [3 : 0] maxigp2_arqos;
-  input bit saxihpc0_fpd_aclk;
-  input bit saxigp0_aruser;
-  input bit saxigp0_awuser;
-  input bit [5 : 0] saxigp0_awid;
-  input bit [48 : 0] saxigp0_awaddr;
-  input bit [7 : 0] saxigp0_awlen;
-  input bit [2 : 0] saxigp0_awsize;
-  input bit [1 : 0] saxigp0_awburst;
-  input bit saxigp0_awlock;
-  input bit [3 : 0] saxigp0_awcache;
-  input bit [2 : 0] saxigp0_awprot;
-  input bit saxigp0_awvalid;
-  output wire saxigp0_awready;
-  input bit [127 : 0] saxigp0_wdata;
-  input bit [15 : 0] saxigp0_wstrb;
-  input bit saxigp0_wlast;
-  input bit saxigp0_wvalid;
-  output wire saxigp0_wready;
-  output wire [5 : 0] saxigp0_bid;
-  output wire [1 : 0] saxigp0_bresp;
-  output wire saxigp0_bvalid;
-  input bit saxigp0_bready;
-  input bit [5 : 0] saxigp0_arid;
-  input bit [48 : 0] saxigp0_araddr;
-  input bit [7 : 0] saxigp0_arlen;
-  input bit [2 : 0] saxigp0_arsize;
-  input bit [1 : 0] saxigp0_arburst;
-  input bit saxigp0_arlock;
-  input bit [3 : 0] saxigp0_arcache;
-  input bit [2 : 0] saxigp0_arprot;
-  input bit saxigp0_arvalid;
-  output wire saxigp0_arready;
-  output wire [5 : 0] saxigp0_rid;
-  output wire [127 : 0] saxigp0_rdata;
-  output wire [1 : 0] saxigp0_rresp;
-  output wire saxigp0_rlast;
-  output wire saxigp0_rvalid;
-  input bit saxigp0_rready;
-  input bit [3 : 0] saxigp0_awqos;
-  input bit [3 : 0] saxigp0_arqos;
+  input bit saxihp0_fpd_aclk;
+  input bit saxigp2_aruser;
+  input bit saxigp2_awuser;
+  input bit [5 : 0] saxigp2_awid;
+  input bit [48 : 0] saxigp2_awaddr;
+  input bit [7 : 0] saxigp2_awlen;
+  input bit [2 : 0] saxigp2_awsize;
+  input bit [1 : 0] saxigp2_awburst;
+  input bit saxigp2_awlock;
+  input bit [3 : 0] saxigp2_awcache;
+  input bit [2 : 0] saxigp2_awprot;
+  input bit saxigp2_awvalid;
+  output wire saxigp2_awready;
+  input bit [127 : 0] saxigp2_wdata;
+  input bit [15 : 0] saxigp2_wstrb;
+  input bit saxigp2_wlast;
+  input bit saxigp2_wvalid;
+  output wire saxigp2_wready;
+  output wire [5 : 0] saxigp2_bid;
+  output wire [1 : 0] saxigp2_bresp;
+  output wire saxigp2_bvalid;
+  input bit saxigp2_bready;
+  input bit [5 : 0] saxigp2_arid;
+  input bit [48 : 0] saxigp2_araddr;
+  input bit [7 : 0] saxigp2_arlen;
+  input bit [2 : 0] saxigp2_arsize;
+  input bit [1 : 0] saxigp2_arburst;
+  input bit saxigp2_arlock;
+  input bit [3 : 0] saxigp2_arcache;
+  input bit [2 : 0] saxigp2_arprot;
+  input bit saxigp2_arvalid;
+  output wire saxigp2_arready;
+  output wire [5 : 0] saxigp2_rid;
+  output wire [127 : 0] saxigp2_rdata;
+  output wire [1 : 0] saxigp2_rresp;
+  output wire saxigp2_rlast;
+  output wire saxigp2_rvalid;
+  input bit saxigp2_rready;
+  input bit [3 : 0] saxigp2_awqos;
+  input bit [3 : 0] saxigp2_arqos;
   input bit [0 : 0] pl_ps_irq0;
   output wire pl_resetn0;
 endmodule
@@ -242,7 +242,7 @@ endmodule
 
 `ifdef RIVIERA
 (* SC_MODULE_EXPORT *)
-module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihpc0_fpd_aclk,saxigp0_aruser,saxigp0_awuser,saxigp0_awid,saxigp0_awaddr,saxigp0_awlen,saxigp0_awsize,saxigp0_awburst,saxigp0_awlock,saxigp0_awcache,saxigp0_awprot,saxigp0_awvalid,saxigp0_awready,saxigp0_wdata,saxigp0_wstrb,saxigp0_wlast,saxigp0_wvalid,saxigp0_wready,saxigp0_bid,saxigp0_bresp,saxigp0_bvalid,saxigp0_bready,saxigp0_arid,saxigp0_araddr,saxigp0_arlen,saxigp0_arsize,saxigp0_arburst,saxigp0_arlock,saxigp0_arcache,saxigp0_arprot,saxigp0_arvalid,saxigp0_arready,saxigp0_rid,saxigp0_rdata,saxigp0_rresp,saxigp0_rlast,saxigp0_rvalid,saxigp0_rready,saxigp0_awqos,saxigp0_arqos,pl_ps_irq0,pl_resetn0)
+module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awaddr,maxigp2_awlen,maxigp2_awsize,maxigp2_awburst,maxigp2_awlock,maxigp2_awcache,maxigp2_awprot,maxigp2_awvalid,maxigp2_awuser,maxigp2_awready,maxigp2_wdata,maxigp2_wstrb,maxigp2_wlast,maxigp2_wvalid,maxigp2_wready,maxigp2_bid,maxigp2_bresp,maxigp2_bvalid,maxigp2_bready,maxigp2_arid,maxigp2_araddr,maxigp2_arlen,maxigp2_arsize,maxigp2_arburst,maxigp2_arlock,maxigp2_arcache,maxigp2_arprot,maxigp2_arvalid,maxigp2_aruser,maxigp2_arready,maxigp2_rid,maxigp2_rdata,maxigp2_rresp,maxigp2_rlast,maxigp2_rvalid,maxigp2_rready,maxigp2_awqos,maxigp2_arqos,saxihp0_fpd_aclk,saxigp2_aruser,saxigp2_awuser,saxigp2_awid,saxigp2_awaddr,saxigp2_awlen,saxigp2_awsize,saxigp2_awburst,saxigp2_awlock,saxigp2_awcache,saxigp2_awprot,saxigp2_awvalid,saxigp2_awready,saxigp2_wdata,saxigp2_wstrb,saxigp2_wlast,saxigp2_wvalid,saxigp2_wready,saxigp2_bid,saxigp2_bresp,saxigp2_bvalid,saxigp2_bready,saxigp2_arid,saxigp2_araddr,saxigp2_arlen,saxigp2_arsize,saxigp2_arburst,saxigp2_arlock,saxigp2_arcache,saxigp2_arprot,saxigp2_arvalid,saxigp2_arready,saxigp2_rid,saxigp2_rdata,saxigp2_rresp,saxigp2_rlast,saxigp2_rvalid,saxigp2_rready,saxigp2_awqos,saxigp2_arqos,pl_ps_irq0,pl_resetn0)
   input bit maxihpm0_lpd_aclk;
   output wire [15 : 0] maxigp2_awid;
   output wire [39 : 0] maxigp2_awaddr;
@@ -283,46 +283,46 @@ module design_1_zynq_ultra_ps_e_0_0 (maxihpm0_lpd_aclk,maxigp2_awid,maxigp2_awad
   output wire maxigp2_rready;
   output wire [3 : 0] maxigp2_awqos;
   output wire [3 : 0] maxigp2_arqos;
-  input bit saxihpc0_fpd_aclk;
-  input bit saxigp0_aruser;
-  input bit saxigp0_awuser;
-  input bit [5 : 0] saxigp0_awid;
-  input bit [48 : 0] saxigp0_awaddr;
-  input bit [7 : 0] saxigp0_awlen;
-  input bit [2 : 0] saxigp0_awsize;
-  input bit [1 : 0] saxigp0_awburst;
-  input bit saxigp0_awlock;
-  input bit [3 : 0] saxigp0_awcache;
-  input bit [2 : 0] saxigp0_awprot;
-  input bit saxigp0_awvalid;
-  output wire saxigp0_awready;
-  input bit [127 : 0] saxigp0_wdata;
-  input bit [15 : 0] saxigp0_wstrb;
-  input bit saxigp0_wlast;
-  input bit saxigp0_wvalid;
-  output wire saxigp0_wready;
-  output wire [5 : 0] saxigp0_bid;
-  output wire [1 : 0] saxigp0_bresp;
-  output wire saxigp0_bvalid;
-  input bit saxigp0_bready;
-  input bit [5 : 0] saxigp0_arid;
-  input bit [48 : 0] saxigp0_araddr;
-  input bit [7 : 0] saxigp0_arlen;
-  input bit [2 : 0] saxigp0_arsize;
-  input bit [1 : 0] saxigp0_arburst;
-  input bit saxigp0_arlock;
-  input bit [3 : 0] saxigp0_arcache;
-  input bit [2 : 0] saxigp0_arprot;
-  input bit saxigp0_arvalid;
-  output wire saxigp0_arready;
-  output wire [5 : 0] saxigp0_rid;
-  output wire [127 : 0] saxigp0_rdata;
-  output wire [1 : 0] saxigp0_rresp;
-  output wire saxigp0_rlast;
-  output wire saxigp0_rvalid;
-  input bit saxigp0_rready;
-  input bit [3 : 0] saxigp0_awqos;
-  input bit [3 : 0] saxigp0_arqos;
+  input bit saxihp0_fpd_aclk;
+  input bit saxigp2_aruser;
+  input bit saxigp2_awuser;
+  input bit [5 : 0] saxigp2_awid;
+  input bit [48 : 0] saxigp2_awaddr;
+  input bit [7 : 0] saxigp2_awlen;
+  input bit [2 : 0] saxigp2_awsize;
+  input bit [1 : 0] saxigp2_awburst;
+  input bit saxigp2_awlock;
+  input bit [3 : 0] saxigp2_awcache;
+  input bit [2 : 0] saxigp2_awprot;
+  input bit saxigp2_awvalid;
+  output wire saxigp2_awready;
+  input bit [127 : 0] saxigp2_wdata;
+  input bit [15 : 0] saxigp2_wstrb;
+  input bit saxigp2_wlast;
+  input bit saxigp2_wvalid;
+  output wire saxigp2_wready;
+  output wire [5 : 0] saxigp2_bid;
+  output wire [1 : 0] saxigp2_bresp;
+  output wire saxigp2_bvalid;
+  input bit saxigp2_bready;
+  input bit [5 : 0] saxigp2_arid;
+  input bit [48 : 0] saxigp2_araddr;
+  input bit [7 : 0] saxigp2_arlen;
+  input bit [2 : 0] saxigp2_arsize;
+  input bit [1 : 0] saxigp2_arburst;
+  input bit saxigp2_arlock;
+  input bit [3 : 0] saxigp2_arcache;
+  input bit [2 : 0] saxigp2_arprot;
+  input bit saxigp2_arvalid;
+  output wire saxigp2_arready;
+  output wire [5 : 0] saxigp2_rid;
+  output wire [127 : 0] saxigp2_rdata;
+  output wire [1 : 0] saxigp2_rresp;
+  output wire saxigp2_rlast;
+  output wire saxigp2_rvalid;
+  input bit saxigp2_rready;
+  input bit [3 : 0] saxigp2_awqos;
+  input bit [3 : 0] saxigp2_arqos;
   input bit [0 : 0] pl_ps_irq0;
   output wire pl_resetn0;
 endmodule
