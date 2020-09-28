@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Tue Sep 15 09:34:33 2020
+| Date             : Mon Sep 21 13:35:23 2020
 | Host             : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.665        |
+| Total On-Chip Power (W)  | 2.703        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.353        |
+| Dynamic (W)              | 2.391        |
 | Device Static (W)        | 0.312        |
 | Effective TJA (C/W)      | 2.4          |
-| Max Ambient (C)          | 93.7         |
-| Junction Temperature (C) | 31.3         |
+| Max Ambient (C)          | 93.6         |
+| Junction Temperature (C) | 31.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.127 |        3 |       --- |             --- |
-| CLB Logic                |     0.314 |    35885 |       --- |             --- |
+| Clocks                   |     0.124 |        3 |       --- |             --- |
+| CLB Logic                |     0.315 |    35986 |       --- |             --- |
 |   LUT as Distributed RAM |     0.196 |     1968 |     28800 |            6.83 |
-|   LUT as Logic           |     0.089 |     8449 |     47232 |           17.89 |
+|   LUT as Logic           |     0.090 |     8479 |     47232 |           17.95 |
 |   LUT as Shift Register  |     0.016 |      955 |     28800 |            3.32 |
-|   Register               |     0.013 |    18468 |     94464 |           19.55 |
-|   CARRY8                 |    <0.001 |       22 |      8820 |            0.25 |
+|   Register               |     0.013 |    18536 |     94464 |           19.62 |
+|   CARRY8                 |    <0.001 |       26 |      8820 |            0.29 |
 |   BUFG                   |    <0.001 |        1 |        24 |            4.17 |
 |   Others                 |     0.000 |      718 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       13 |     70560 |            0.02 |
-| Signals                  |     0.184 |    25602 |       --- |             --- |
+| Signals                  |     0.181 |    25739 |       --- |             --- |
 | Block RAM                |     0.164 |       72 |       150 |           48.00 |
-| I/O                      |     0.006 |        6 |       252 |            2.38 |
+| I/O                      |     0.049 |       48 |       252 |           19.05 |
 | PS8                      |     1.558 |        1 |       --- |             --- |
 | Static Power             |     0.312 |          |           |                 |
 |   PS Static              |     0.095 |          |           |                 |
 |   PL Static              |     0.217 |          |           |                 |
-| Total                    |     2.665 |          |           |                 |
+| Total                    |     2.703 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,11 +79,11 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.970 |       0.914 |      0.056 |
-| Vccint_io       |       0.850 |     0.028 |       0.001 |      0.027 |
+| Vccint          |       0.850 |     0.965 |       0.909 |      0.056 |
+| Vccint_io       |       0.850 |     0.034 |       0.006 |      0.027 |
 | Vccbram         |       0.850 |     0.014 |       0.013 |      0.001 |
 | Vccaux          |       1.800 |     0.047 |       0.000 |      0.047 |
-| Vccaux_io       |       1.800 |     0.028 |       0.003 |      0.025 |
+| Vccaux_io       |       1.800 |     0.050 |       0.024 |      0.025 |
 | Vcco33          |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -163,21 +163,42 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| main                        |     2.353 |
+| main                        |     2.391 |
 |   DDMTD_Array_inst          |     0.013 |
-|   IBUFGDS_BEAT0Q1           |     0.002 |
-|   IBUFGDS_BEAT1Q1           |     0.002 |
+|   IBUFGDS_AQ0               |     0.002 |
+|   IBUFGDS_AQ1               |     0.002 |
+|   IBUFGDS_AQ2               |     0.002 |
+|   IBUFGDS_AQ3               |     0.002 |
+|   IBUFGDS_BQ0               |     0.002 |
+|   IBUFGDS_BQ1               |     0.002 |
+|   IBUFGDS_BQ2               |     0.002 |
+|   IBUFGDS_BQ3               |     0.002 |
 |   IBUFGDS_CLK_REF           |     0.002 |
-|   desing_ins                |     2.322 |
-|     design_1_i              |     2.322 |
-|       axi_bram_ctrl_0       |     0.019 |
-|       axi_bram_ctrl_0_bram  |     0.062 |
+|   IBUFGDS_CQ0               |     0.002 |
+|   IBUFGDS_CQ1               |     0.002 |
+|   IBUFGDS_CQ2               |     0.002 |
+|   IBUFGDS_CQ3               |     0.002 |
+|   IBUFGDS_DQ0               |     0.002 |
+|   IBUFGDS_DQ1               |     0.002 |
+|   IBUFGDS_DQ2               |     0.002 |
+|   IBUFGDS_DQ3               |     0.002 |
+|   IBUFGDS_EQ0               |     0.002 |
+|   IBUFGDS_EQ1               |     0.002 |
+|   IBUFGDS_EQ2               |     0.002 |
+|   IBUFGDS_EQ3               |     0.002 |
+|   IBUFGDS_FQ0               |     0.002 |
+|   IBUFGDS_FQ1               |     0.002 |
+|   IBUFGDS_FQ2               |     0.002 |
+|   desing_ins                |     2.317 |
+|     design_1_i              |     2.317 |
+|       axi_bram_ctrl_0       |     0.018 |
+|       axi_bram_ctrl_0_bram  |     0.060 |
 |       axi_bram_ctrl_0_bram1 |     0.056 |
 |       axi_bram_ctrl_0_bram2 |     0.055 |
-|       axi_bram_ctrl_1       |     0.019 |
+|       axi_bram_ctrl_1       |     0.018 |
 |       axi_bram_ctrl_2       |     0.019 |
 |       axi_gpio_0            |     0.001 |
-|       axi_smc               |     0.530 |
+|       axi_smc               |     0.529 |
 |       zynq_ultra_ps_e_0     |     1.560 |
 +-----------------------------+-----------+
 

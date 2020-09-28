@@ -23,14 +23,71 @@
 module main(
     input wire CLK_REF_P,
     input wire CLK_REF_N,
-    input wire BEAT0_Q1_P,
-    input wire BEAT0_Q1_N,
-    input wire BEAT0_Q2_P,
-    input wire BEAT0_Q2_N,
-    input wire BEAT1_Q1_P,
-    input wire BEAT1_Q1_N,
-    input wire BEAT1_Q2_P,
-    input wire BEAT1_Q2_N
+    // input wire BEAT0_Q1_P,
+    // input wire BEAT0_Q1_N,
+    // input wire BEAT0_Q2_P,
+    // input wire BEAT0_Q2_N,
+    // input wire BEAT1_Q1_P,
+    // input wire BEAT1_Q1_N,
+    // input wire BEAT1_Q2_P,
+    // input wire BEAT1_Q2_N
+
+    input wire AQ0_P,
+    input wire AQ0_N,
+    input wire AQ1_P,
+    input wire AQ1_N,
+    input wire AQ2_P,
+    input wire AQ2_N,
+    input wire AQ3_P,
+    input wire AQ3_N,
+    
+    input wire BQ0_P,
+    input wire BQ0_N,
+    input wire BQ1_P,
+    input wire BQ1_N,
+    input wire BQ2_P,
+    input wire BQ2_N,
+    input wire BQ3_P,
+    input wire BQ3_N,
+
+    input wire CQ0_P,
+    input wire CQ0_N,
+    input wire CQ1_P,
+    input wire CQ1_N,
+    input wire CQ2_P,
+    input wire CQ2_N,
+    input wire CQ3_P,
+    input wire CQ3_N,
+
+    input wire DQ0_P,
+    input wire DQ0_N,
+    input wire DQ1_P,
+    input wire DQ1_N,
+    input wire DQ2_P,
+    input wire DQ2_N,
+    input wire DQ3_P,
+    input wire DQ3_N,
+
+    input wire EQ0_P,
+    input wire EQ0_N,
+    input wire EQ1_P,
+    input wire EQ1_N,
+    input wire EQ2_P,
+    input wire EQ2_N,
+    input wire EQ3_P,
+    input wire EQ3_N,
+
+    input wire FQ0_P,
+    input wire FQ0_N,
+    input wire FQ1_P,
+    input wire FQ1_N,
+    input wire FQ2_P,
+    input wire FQ2_N,
+    input wire FQ3_P,
+    input wire FQ3_N
+
+
+
 
     );
     
@@ -41,45 +98,90 @@ module main(
 
    IBUFGDS IBUFGDS_CLK_REF (.O(clk_ref), .I(CLK_REF_P), .IB(CLK_REF_N)); //good
  
+
+   wire AQ0,AQ1,AQ2,AQ3;
+   IBUFGDS IBUFGDS_AQ0 (.O(AQ0), .I(AQ0_P), .IB(AQ0_N)); //good
+   IBUFGDS IBUFGDS_AQ1 (.O(AQ1), .I(AQ1_P), .IB(AQ1_N)); //good
+   IBUFGDS IBUFGDS_AQ2 (.O(AQ2), .I(AQ2_P), .IB(AQ2_N)); //good
+   IBUFGDS IBUFGDS_AQ3 (.O(AQ3), .I(AQ3_P), .IB(AQ3_N)); //good
+
+   wire BQ0,BQ1,BQ2,BQ3;
+   IBUFGDS IBUFGDS_BQ0 (.O(BQ0), .I(BQ0_P), .IB(BQ0_N)); //good
+   IBUFGDS IBUFGDS_BQ1 (.O(BQ1), .I(BQ1_P), .IB(BQ1_N)); //good
+   IBUFGDS IBUFGDS_BQ2 (.O(BQ2), .I(BQ2_P), .IB(BQ2_N)); //good
+   IBUFGDS IBUFGDS_BQ3 (.O(BQ3), .I(BQ3_P), .IB(BQ3_N)); //good
+
+
+   wire CQ0,CQ1,CQ2,CQ3;
+   IBUFGDS IBUFGDS_CQ0 (.O(CQ0), .I(CQ0_P), .IB(CQ0_N)); //good
+   IBUFGDS IBUFGDS_CQ1 (.O(CQ1), .I(CQ1_P), .IB(CQ1_N)); //good
+   IBUFGDS IBUFGDS_CQ2 (.O(CQ2), .I(CQ2_P), .IB(CQ2_N)); //good
+   IBUFGDS IBUFGDS_CQ3 (.O(CQ3), .I(CQ3_P), .IB(CQ3_N)); //
+   
+
+   wire DQ0,DQ1,DQ2,DQ3;
+   IBUFGDS IBUFGDS_DQ0 (.O(DQ0), .I(DQ0_P), .IB(DQ0_N)); //good
+   IBUFGDS IBUFGDS_DQ1 (.O(DQ1), .I(DQ1_P), .IB(DQ1_N)); //good
+   IBUFGDS IBUFGDS_DQ2 (.O(DQ2), .I(DQ2_P), .IB(DQ2_N)); //good
+   IBUFGDS IBUFGDS_DQ3 (.O(DQ3), .I(DQ3_P), .IB(DQ3_N)); //good
+
+
+   wire EQ0,EQ1,EQ2,EQ3;
+   IBUFGDS IBUFGDS_EQ0 (.O(EQ0), .I(EQ0_P), .IB(EQ0_N)); //good
+   IBUFGDS IBUFGDS_EQ1 (.O(EQ1), .I(EQ1_P), .IB(EQ1_N)); //good
+   IBUFGDS IBUFGDS_EQ2 (.O(EQ2), .I(EQ2_P), .IB(EQ2_N)); //good
+   IBUFGDS IBUFGDS_EQ3 (.O(EQ3), .I(EQ3_P), .IB(EQ3_N)); //good
+
+
+   wire FQ0,FQ1,FQ2,FQ3;
+   IBUFGDS IBUFGDS_FQ0 (.O(FQ0), .I(FQ0_P), .IB(FQ0_N)); //good
+   IBUFGDS IBUFGDS_FQ1 (.O(FQ1), .I(FQ1_P), .IB(FQ1_N)); //good
+   IBUFGDS IBUFGDS_FQ2 (.O(FQ2), .I(FQ2_P), .IB(FQ2_N)); //good
+   IBUFGDS IBUFGDS_FQ3 (.O(FQ3), .I(FQ3_P), .IB(FQ3_N)); //good
+
+
+
+
+
   
-  wire beat_0_q1,beat_0_q2,beat_1_q1,beat_1_q2;
-  IBUFGDS IBUFGDS_BEAT0Q1 (.O(beat_0_q1), .I(BEAT0_Q1_P), .IB(BEAT0_Q1_N)); //good
-  IBUFGDS IBUFGDS_BEAT0Q2 (.O(beat_0_q2), .I(BEAT0_Q2_P), .IB(BEAT0_Q2_N));
-  IBUFGDS IBUFGDS_BEAT1Q1 (.O(beat_1_q1), .I(BEAT1_Q1_P), .IB(BEAT1_Q1_N)); //good
-  IBUFGDS IBUFGDS_BEAT1Q2 (.O(beat_1_q2), .I(BEAT1_Q2_P), .IB(BEAT1_Q2_N));
+  // wire beat_0_q1,beat_0_q2,beat_1_q1,beat_1_q2;
+  // IBUFGDS IBUFGDS_BEAT0Q1 (.O(beat_0_q1), .I(BEAT0_Q1_P), .IB(BEAT0_Q1_N)); //good
+  // IBUFGDS IBUFGDS_BEAT0Q2 (.O(beat_0_q2), .I(BEAT0_Q2_P), .IB(BEAT0_Q2_N));
+  // IBUFGDS IBUFGDS_BEAT1Q1 (.O(beat_1_q1), .I(BEAT1_Q1_P), .IB(BEAT1_Q1_N)); //good
+  // IBUFGDS IBUFGDS_BEAT1Q2 (.O(beat_1_q2), .I(BEAT1_Q2_P), .IB(BEAT1_Q2_N));
 
 
 
-    // reg beat_0_q1=0;
-    // reg beat_1_q1=0;
+    reg beat_0_q1=0;
+    reg beat_1_q1=0;
 
-    // integer counter_clkbeat=0;
-    // reg odd=0;
-    // always @(posedge clk_ref)
-    // begin
+    integer counter_clkbeat=0;
+    reg odd=0;
+    always @(posedge clk_ref)
+    begin
 
-    //  // 100k subs
-    // counter_clkbeat<=counter_clkbeat+1;
-    // if(counter_clkbeat == 50000) begin
-    // beat_0_q1<=~beat_0_q1;
+     // 100k subs
+    counter_clkbeat<=counter_clkbeat+1;
+    if(counter_clkbeat == 50000) begin
+    beat_0_q1<=~beat_0_q1;
+    beat_1_q1<=~beat_1_q1;
+    counter_clkbeat <=0;
+    end
+
+    // if(counter_clkbeat%25000) begin
     // beat_1_q1<=~beat_1_q1;
-    // counter_clkbeat <=0;
     // end
-
-    // // if(counter_clkbeat%25000) begin
-    // // beat_1_q1<=~beat_1_q1;
-    // // end
-    // // odd or even
+    // odd or even
  
  
  
-    // // odd<=~odd;
-    // // if(odd) beat_0_q1<=~beat_0_q1;
-    // // else beat_1_q1<=~beat_1_q1;
+    // odd<=~odd;
+    // if(odd) beat_0_q1<=~beat_0_q1;
+    // else beat_1_q1<=~beat_1_q1;
 
 
 
-    // end
+    end
 
 
 
@@ -163,10 +265,11 @@ module main(
   
   // Each bit of this wire will be the clock
   wire [NUM_DDMTD-1:0]  clk_beat;
-  assign clk_beat = { beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,
-                      beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,
-                      beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,
-                      beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1,beat_1_q1,beat_0_q1 };
+  assign clk_beat =  { 
+                      beat_0_q1,FQ2,FQ1,FQ0,EQ3,EQ2,EQ1,EQ0,
+                      DQ3,DQ2,DQ1,DQ0,CQ3,CQ2,CQ1,CQ0,
+                      BQ3,BQ2,BQ1,BQ0,AQ3,AQ2,AQ1,AQ0 
+                     };
 
 
 

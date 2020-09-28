@@ -1578,3 +1578,11 @@ dismissDialog("Export Hardware"); // Z (cr)
 // Tcl Message: write_hw_platform: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 7548.488 ; gain = 0.000 ; free physical = 6951 ; free virtual = 21513 
 // Elapsed time: 18 seconds
 dismissDialog("Export Hardware"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 155 MB. Current time: 9/15/20, 10:05:36 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 152 MB. Current time: 9/15/20, 10:35:36 AM CDT
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  2062 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 153 MB. Current time: 9/15/20, 11:05:36 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 152 MB. Current time: 9/15/20, 11:35:36 AM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,926 MB. GUI used memory: 152 MB. Current time: 9/15/20, 12:05:36 PM CDT
+// TclEventType: FILE_SET_CHANGE

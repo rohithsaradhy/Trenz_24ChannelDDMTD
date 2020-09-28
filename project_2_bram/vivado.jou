@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Sep 15 09:02:41 2020
-# Process ID: 13837
+# Start of session at: Mon Sep 21 12:23:21 2020
+# Process ID: 8235
 # Current directory: /home/rsaradhy/Work/trenz/vivado/project_2_bram
 # Command line: vivado project_2_bram.xpr
 # Log file: /home/rsaradhy/Work/trenz/vivado/project_2_bram/vivado.log
@@ -12,91 +12,11 @@
 start_gui
 open_project project_2_bram.xpr
 update_compile_order -fileset sources_1
-open_bd_design {/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd}
-startgroup
-set_property -dict [list CONFIG.PSU__USE__M_AXI_GP0 {0} CONFIG.PSU__USE__M_AXI_GP1 {0} CONFIG.PSU__USE__M_AXI_GP2 {1} CONFIG.PSU__MAXIGP2__DATA_WIDTH {128}] [get_bd_cells zynq_ultra_ps_e_0]
-delete_bd_objs [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM0_FPD] [get_bd_intf_nets zynq_ultra_ps_e_0_M_AXI_HPM1_FPD]
-endgroup
-connect_bd_intf_net [get_bd_intf_pins zynq_ultra_ps_e_0/M_AXI_HPM0_LPD] [get_bd_intf_pins axi_smc/S00_AXI]
-startgroup
-set_property -dict [list CONFIG.NUM_SI {1}] [get_bd_cells axi_smc]
-endgroup
-startgroup
-set_property -dict [list CONFIG.NUM_CLKS {1}] [get_bd_cells axi_smc]
-endgroup
-connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_lpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
-set_property location {2 460 118} [get_bd_cells axi_bram_ctrl_0]
-set_property location {1 145 366} [get_bd_cells axi_bram_ctrl_0_bram1]
-validate_bd_design
-assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_0/S_AXI/Mem0 }]
-assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_1/S_AXI/Mem0 }]
-assign_bd_address [get_bd_addr_segs {axi_gpio_0/S_AXI/Reg }]
-validate_bd_design
-save_bd_design
+update_compile_order -fileset sources_1
+set_property source_mgmt_mode DisplayOnly [current_project]
 reset_run synth_1
-reset_run design_1_axi_smc_1_synth_1
-reset_run design_1_zynq_ultra_ps_e_0_1_synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
 reset_run synth_1
-reset_run design_1_axi_smc_1_synth_1
-copy_bd_objs /  [get_bd_cells {axi_bram_ctrl_0_bram1 axi_bram_ctrl_1}]
-startgroup
-set_property location {1 180 675} [get_bd_cells axi_bram_ctrl_0_bram2]
-set_property location {1 180 545} [get_bd_cells axi_bram_ctrl_2]
-endgroup
-connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_0_bram2/BRAM_PORTA] [get_bd_intf_pins axi_bram_ctrl_2/BRAM_PORTA]
-startgroup
-set_property -dict [list CONFIG.NUM_MI {4}] [get_bd_cells axi_smc]
-endgroup
-connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_2/S_AXI] [get_bd_intf_pins axi_smc/M03_AXI]
-set_property location {2 449 567} [get_bd_cells axi_bram_ctrl_2]
-connect_bd_net [get_bd_pins axi_bram_ctrl_2/s_axi_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0]
-connect_bd_net [get_bd_pins axi_bram_ctrl_2/s_axi_aresetn] [get_bd_pins rst_ps8_0_200M/peripheral_aresetn]
-startgroup
-make_bd_intf_pins_external  [get_bd_intf_pins axi_bram_ctrl_0_bram2/BRAM_PORTB]
-endgroup
-assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_2/S_AXI/Mem0 }]
-delete_bd_objs [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_gpio_0_Reg]
-assign_bd_address [get_bd_addr_segs {axi_gpio_0/S_AXI/Reg }]
-validate_bd_design
-regenerate_bd_layout -routing
-set_property location {1 162 473} [get_bd_cells axi_bram_ctrl_0_bram]
-set_property location {2 493 437} [get_bd_cells axi_bram_ctrl_0]
-set_property location {3 925 603} [get_bd_cells zynq_ultra_ps_e_0]
-set_property location {4 1361 804} [get_bd_cells axi_gpio_0]
-set_property location {4 1401 564} [get_bd_cells rst_ps8_0_200M]
-set_property location {3 1023 378} [get_bd_cells axi_smc]
-set_property location {3 908 714} [get_bd_cells zynq_ultra_ps_e_0]
-set_property location {4 1393 375} [get_bd_cells rst_ps8_0_200M]
-set_property location {4 1402 690} [get_bd_cells axi_gpio_0]
-regenerate_bd_layout -routing
-reset_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd]
-export_ip_user_files -of_objects  [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd] -sync -no_script -force -quiet
-delete_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd]
-delete_bd_objs [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_0_Mem0]
-delete_bd_objs [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_1_Mem0]
-exclude_bd_addr_seg [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_2_Mem0]
-include_bd_addr_seg [get_bd_addr_segs -excluded zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_2_Mem0]
-delete_bd_objs [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_bram_ctrl_2_Mem0]
-delete_bd_objs [get_bd_addr_segs zynq_ultra_ps_e_0/Data/SEG_axi_gpio_0_Reg]
-assign_bd_address
-make_wrapper -files [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd] -top
-generate_target all [get_files  /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd]
-catch { config_ip_cache -export [get_ips -all design_1_zynq_ultra_ps_e_0_1] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_smc_1] }
-catch { config_ip_cache -export [get_ips -all design_1_rst_ps8_0_200M_0] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_gpio_0_0] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_11] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_bram_7] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_12] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_bram_8] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_0_bram1_0] }
-catch { config_ip_cache -export [get_ips -all design_1_axi_bram_ctrl_1_0] }
-export_ip_user_files -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
-create_ip_run [get_files -of_objects [get_fileset sources_1] /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd]
-launch_runs -jobs 12 design_1_axi_smc_1_synth_1
-export_simulation -of_objects [get_files /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/design_1.bd] -directory /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/sim_scripts -ip_user_files_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files -ipstatic_source_dir /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/modelsim} {questa=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/questa} {ies=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/ies} {xcelium=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/xcelium} {vcs=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/vcs} {riviera=/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 wait_on_run impl_1
-write_hw_platform -fixed -force  -include_bit -file /home/rsaradhy/Work/trenz/vivado/project_2_bram/main.xsa
