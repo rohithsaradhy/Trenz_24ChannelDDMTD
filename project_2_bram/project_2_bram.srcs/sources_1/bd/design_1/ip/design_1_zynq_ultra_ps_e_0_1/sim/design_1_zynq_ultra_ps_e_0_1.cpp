@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -76,7 +76,7 @@ void design_1_zynq_ultra_ps_e_0_1::before_end_of_elaboration()
     M_AXI_HPM0_LPD_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "8");
     M_AXI_HPM0_LPD_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "8");
     M_AXI_HPM0_LPD_transactor_param_props.addLong("DATA_WIDTH", "128");
-    M_AXI_HPM0_LPD_transactor_param_props.addLong("FREQ_HZ", "300000000");
+    M_AXI_HPM0_LPD_transactor_param_props.addLong("FREQ_HZ", "160000000");
     M_AXI_HPM0_LPD_transactor_param_props.addLong("ID_WIDTH", "16");
     M_AXI_HPM0_LPD_transactor_param_props.addLong("ADDR_WIDTH", "40");
     M_AXI_HPM0_LPD_transactor_param_props.addLong("AWUSER_WIDTH", "16");

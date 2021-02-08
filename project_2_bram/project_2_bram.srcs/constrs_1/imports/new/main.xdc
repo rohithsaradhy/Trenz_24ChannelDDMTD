@@ -9,7 +9,7 @@ set_property PACKAGE_PIN C4 [get_ports {CLK_REF_N}]
 set_property IOSTANDARD LVDS [get_ports {CLK_REF_N}]
 set_property PACKAGE_PIN D4 [get_ports {CLK_REF_P}]
 set_property IOSTANDARD LVDS [get_ports {CLK_REF_P}]
-# create_clock -period 6.25 -name CLK_REF_N -waveform {0.000 3.125} -add [get_ports CLK_REF_P]
+ create_clock -period 6.25 -name CLK_REF_N -waveform {0.000 3.125} -add [get_ports CLK_REF_P]
 
 
 # #========================
@@ -123,77 +123,154 @@ set_property PACKAGE_PIN AF2  [get_ports {CQ3_N}]
 set_property IOSTANDARD LVDS  [get_ports {CQ3_N}]
 
 
-# FIREFLY_BOT  0 - DQ0: B3,A3 - JB302 52,54 - B64_L14 - FPGA AC4 (LVDS)
-set_property PACKAGE_PIN AC4 [get_ports {DQ0_P}]
-set_property IOSTANDARD LVDS [get_ports {DQ0_P}]
-set_property PACKAGE_PIN AC3 [get_ports {DQ0_N}]
-set_property IOSTANDARD LVDS [get_ports {DQ0_N}]
+# # FIREFLY_BOT  0 - DQ0: B3,A3 - JB302 52,54 - B64_L14 - FPGA AC4 (LVDS)
+# set_property PACKAGE_PIN AC4 [get_ports {DQ0_P}]
+# set_property IOSTANDARD LVDS [get_ports {DQ0_P}]
+# set_property PACKAGE_PIN AC3 [get_ports {DQ0_N}]
+# set_property IOSTANDARD LVDS [get_ports {DQ0_N}]
 
-# FIREFLY_BOT  1 - DQ1: B1,A1 - JB301 47,45 - B66_L17 - FPGA F8  (LVDS)
-set_property PACKAGE_PIN F8  [get_ports {DQ1_P}]
-set_property IOSTANDARD LVDS [get_ports {DQ1_P}]
-set_property PACKAGE_PIN E8  [get_ports {DQ1_N}]
-set_property IOSTANDARD LVDS [get_ports {DQ1_N}]
+# # FIREFLY_BOT  1 - DQ1: B1,A1 - JB301 47,45 - B66_L17 - FPGA F8  (LVDS)
+# set_property PACKAGE_PIN F8  [get_ports {DQ1_P}]
+# set_property IOSTANDARD LVDS [get_ports {DQ1_P}]
+# set_property PACKAGE_PIN E8  [get_ports {DQ1_N}]
+# set_property IOSTANDARD LVDS [get_ports {DQ1_N}]
 
-# FIREFLY_BOT  2 - DQ2: B7,A7 - JB301 95,93 - B66_L10 - FPGA B4  (LVDS)
-set_property PACKAGE_PIN B4  [get_ports {DQ2_P}]
-set_property IOSTANDARD LVDS [get_ports {DQ2_P}]
-set_property PACKAGE_PIN A4  [get_ports {DQ2_N}]
-set_property IOSTANDARD LVDS [get_ports {DQ2_N}]
+# # FIREFLY_BOT  2 - DQ2: B7,A7 - JB301 95,93 - B66_L10 - FPGA B4  (LVDS)
+# set_property PACKAGE_PIN B4  [get_ports {DQ2_P}]
+# set_property IOSTANDARD LVDS [get_ports {DQ2_P}]
+# set_property PACKAGE_PIN A4  [get_ports {DQ2_N}]
+# set_property IOSTANDARD LVDS [get_ports {DQ2_N}]
 
-# FIREFLY_BOT  3 - DQ3: B5,A5 - JB301 35,37 - B66_L18 - FPGA E9  (LVDS)
-set_property PACKAGE_PIN E9  [get_ports {DQ3_P}]
-set_property IOSTANDARD LVDS [get_ports {DQ3_P}]
-set_property PACKAGE_PIN D9  [get_ports {DQ3_N}]
-set_property IOSTANDARD LVDS [get_ports {DQ3_N}]
+# # FIREFLY_BOT  3 - DQ3: B5,A5 - JB301 35,37 - B66_L18 - FPGA E9  (LVDS)
+# set_property PACKAGE_PIN E9  [get_ports {DQ3_P}]
+# set_property IOSTANDARD LVDS [get_ports {DQ3_P}]
+# set_property PACKAGE_PIN D9  [get_ports {DQ3_N}]
+# set_property IOSTANDARD LVDS [get_ports {DQ3_N}]
 
-# FIREFLY_BOT  4 - EQ0: B3,A3 - JB301 42,44 - B66_L4  - FPGA G3  (LVDS)
-set_property PACKAGE_PIN G3  [get_ports {EQ0_P}]
-set_property IOSTANDARD LVDS [get_ports {EQ0_P}]
-set_property PACKAGE_PIN F3  [get_ports {EQ0_N}]
-set_property IOSTANDARD LVDS [get_ports {EQ0_N}]
+# # FIREFLY_BOT  4 - EQ0: B3,A3 - JB301 42,44 - B66_L4  - FPGA G3  (LVDS)
+# set_property PACKAGE_PIN G3  [get_ports {EQ0_P}]
+# set_property IOSTANDARD LVDS [get_ports {EQ0_P}]
+# set_property PACKAGE_PIN F3  [get_ports {EQ0_N}]
+# set_property IOSTANDARD LVDS [get_ports {EQ0_N}]
 
-# FIREFLY_BOT  5 - EQ1: B1,A1 - JB301 39,41 - B66_L16 - FPGA G8  (LVDS)
-set_property PACKAGE_PIN G8  [get_ports {EQ1_P}]
-set_property IOSTANDARD LVDS [get_ports {EQ1_P}]
-set_property PACKAGE_PIN F7  [get_ports {EQ1_N}]
-set_property IOSTANDARD LVDS [get_ports {EQ1_N}]
+# # FIREFLY_BOT  5 - EQ1: B1,A1 - JB301 39,41 - B66_L16 - FPGA G8  (LVDS)#
+# set_property PACKAGE_PIN G8  [get_ports {EQ1_P}]
+# set_property IOSTANDARD LVDS [get_ports {EQ1_P}]
+# set_property PACKAGE_PIN F7  [get_ports {EQ1_N}]
+# set_property IOSTANDARD LVDS [get_ports {EQ1_N}]
 
-# FIREFLY_BOT  6 - EQ2: B7,A7 - JB301 99,97 - B66_L9  - FPGA B3  (LVDS)
-set_property PACKAGE_PIN B3  [get_ports {EQ2_P}]
-set_property IOSTANDARD LVDS [get_ports {EQ2_P}]
-set_property PACKAGE_PIN A3  [get_ports {EQ2_N}]
-set_property IOSTANDARD LVDS [get_ports {EQ2_N}]
+# # FIREFLY_BOT  6 - EQ2: B7,A7 - JB301 99,97 - B66_L9  - FPGA B3  (LVDS)
+# set_property PACKAGE_PIN B3  [get_ports {EQ2_P}]
+# set_property IOSTANDARD LVDS [get_ports {EQ2_P}]
+# set_property PACKAGE_PIN A3  [get_ports {EQ2_N}]
+# set_property IOSTANDARD LVDS [get_ports {EQ2_N}]
 
-# FIREFLY_BOT  7 - EQ3: B5,A5 - JB301 87,85 - B66_L19 - FPGA B5  (LVDS)
-set_property PACKAGE_PIN B5  [get_ports {EQ3_P}]
-set_property IOSTANDARD LVDS [get_ports {EQ3_P}]
-set_property PACKAGE_PIN A5  [get_ports {EQ3_N}]
-set_property IOSTANDARD LVDS [get_ports {EQ3_N}]
+# # FIREFLY_BOT  7 - EQ3: B5,A5 - JB301 87,85 - B66_L19 - FPGA B5  (LVDS)
+# set_property PACKAGE_PIN B5  [get_ports {EQ3_P}]
+# set_property IOSTANDARD LVDS [get_ports {EQ3_P}]
+# set_property PACKAGE_PIN A5  [get_ports {EQ3_N}]
+# set_property IOSTANDARD LVDS [get_ports {EQ3_N}]
 
-# FIREFLY_BOT  8 - FQ0: B3,A3 - JB301 82,84 - B66_L8  - FPGA A2  (LVDS)
-set_property PACKAGE_PIN A2  [get_ports {FQ0_P}]
-set_property IOSTANDARD LVDS [get_ports {FQ0_P}]
-set_property PACKAGE_PIN A1  [get_ports {FQ0_N}]
-set_property IOSTANDARD LVDS [get_ports {FQ0_N}]
+# # FIREFLY_BOT  8 - FQ0: B3,A3 - JB301 82,84 - B66_L8  - FPGA A2  (LVDS)
+# set_property PACKAGE_PIN A2  [get_ports {FQ0_P}]
+# set_property IOSTANDARD LVDS [get_ports {FQ0_P}]
+# set_property PACKAGE_PIN A1  [get_ports {FQ0_N}]
+# set_property IOSTANDARD LVDS [get_ports {FQ0_N}]
 
-# FIREFLY_BOT  9 - FQ1: B1,A1 - JB301 34,32 - B66_L6  - FPGA G5  (LVDS)
-set_property PACKAGE_PIN G5  [get_ports {FQ1_P}]
-set_property IOSTANDARD LVDS [get_ports {FQ1_P}]
-set_property PACKAGE_PIN F5  [get_ports {FQ1_N}]
-set_property IOSTANDARD LVDS [get_ports {FQ1_N}]
+# # FIREFLY_BOT  9 - FQ1: B1,A1 - JB301 34,32 - B66_L6  - FPGA G5  (LVDS)
+# set_property PACKAGE_PIN G5  [get_ports {FQ1_P}]
+# set_property IOSTANDARD LVDS [get_ports {FQ1_P}]
+# set_property PACKAGE_PIN F5  [get_ports {FQ1_N}]
+# set_property IOSTANDARD LVDS [get_ports {FQ1_N}]
 
-# FIREFLY_BOT 10 - FQ2: B7,A7 - JB301 78,76 - B66_L12 - FPGA C3  (LVDS)
-set_property PACKAGE_PIN C3  [get_ports {FQ2_P}]
-set_property IOSTANDARD LVDS [get_ports {FQ2_P}]
-set_property PACKAGE_PIN C2  [get_ports {FQ2_N}]
-set_property IOSTANDARD LVDS [get_ports {FQ2_N}]
+# # FIREFLY_BOT 10 - FQ2: B7,A7 - JB301 78,76 - B66_L12 - FPGA C3  (LVDS)
+# set_property PACKAGE_PIN C3  [get_ports {FQ2_P}]
+# set_property IOSTANDARD LVDS [get_ports {FQ2_P}]
+# set_property PACKAGE_PIN C2  [get_ports {FQ2_N}]
+# set_property IOSTANDARD LVDS [get_ports {FQ2_N}]
 
-# FIREFLY_BOT 11 - FQ3: B5,A5 - JB301 70,72 - B66_L1  - FPGA G1  (LVDS)
-set_property PACKAGE_PIN G1  [get_ports {FQ3_P}]
-set_property IOSTANDARD LVDS [get_ports {FQ3_P}]
-set_property PACKAGE_PIN F1  [get_ports {FQ3_N}]
-set_property IOSTANDARD LVDS [get_ports {FQ3_N}]
+# # FIREFLY_BOT 11 - FQ3: B5,A5 - JB301 70,72 - B66_L1  - FPGA G1  (LVDS)
+# set_property PACKAGE_PIN G1  [get_ports {FQ3_P}]
+# set_property IOSTANDARD LVDS [get_ports {FQ3_P}]
+# set_property PACKAGE_PIN F1  [get_ports {FQ3_N}]
+# set_property IOSTANDARD LVDS [get_ports {FQ3_N}]
+
+# Routing SPI from RPi to ASIC through Trenz
+
+#SPI from RPi to Trenz
+set_property PACKAGE_PIN W8      [get_ports SPI_KOSI]
+set_property IOSTANDARD LVCMOS18 [get_ports {SPI_KOSI}]
+
+set_property  PACKAGE_PIN L7      [get_ports SPI_SCK]
+set_property  IOSTANDARD LVCMOS18 [get_ports SPI_SCK]
+set_property  PACKAGE_PIN R7      [get_ports SPI_SSB1]
+set_property  IOSTANDARD LVCMOS18 [get_ports SPI_SSB1]
+
+set_property  PACKAGE_PIN N8       [get_ports DAT0]
+set_property  IOSTANDARD  LVCMOS18 [get_ports DAT0]
+set_property  PACKAGE_PIN N9       [get_ports DAT1]
+set_property  IOSTANDARD  LVCMOS18 [get_ports DAT1]
+set_property  PACKAGE_PIN V8       [get_ports DAT2]
+set_property  IOSTANDARD  LVCMOS18 [get_ports DAT2]
+set_property  PACKAGE_PIN U8       [get_ports DAT3]
+set_property  IOSTANDARD  LVCMOS18 [get_ports DAT3]
+
+
+#SPI from Trenz to ASIC
+set_property  PACKAGE_PIN F8     [get_ports SCK_P]
+set_property  IOSTANDARD  LVDS   [get_ports SCK_P]
+set_property  PACKAGE_PIN E8     [get_ports SCK_N]
+set_property  IOSTANDARD  LVDS   [get_ports SCK_N]
+
+
+
+set_property  PACKAGE_PIN AC4    [get_ports SDIN_P]
+set_property  IOSTANDARD  LVDS   [get_ports SDIN_P]
+set_property  PACKAGE_PIN AC3    [get_ports SDIN_N]
+set_property  IOSTANDARD  LVDS   [get_ports SDIN_N]
+
+
+
+set_property  PACKAGE_PIN E9     [get_ports CS1B_P]
+set_property  IOSTANDARD  LVDS   [get_ports CS1B_P]
+set_property  PACKAGE_PIN D9     [get_ports CS1B_N]
+set_property  IOSTANDARD  LVDS   [get_ports CS1B_N]
+
+
+set_property  PACKAGE_PIN B4     [get_ports CS2B_P]
+set_property  IOSTANDARD  LVDS   [get_ports CS2B_P]
+set_property  PACKAGE_PIN A4     [get_ports CS2B_N]
+set_property  IOSTANDARD  LVDS   [get_ports CS2B_N]
+
+set_property  PACKAGE_PIN H9     [get_ports MEZZ_PAGE3_P]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE3_P]
+set_property  PACKAGE_PIN H8     [get_ports MEZZ_PAGE3_N]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE3_N]
+
+
+set_property  PACKAGE_PIN G6     [get_ports MEZZ_PAGE2_P]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE2_P]
+set_property  PACKAGE_PIN F6     [get_ports MEZZ_PAGE2_N]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE2_N]
+
+
+set_property  PACKAGE_PIN F2     [get_ports MEZZ_PAGE1_P]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE1_P]
+set_property  PACKAGE_PIN E2     [get_ports MEZZ_PAGE1_N]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE1_N]
+
+
+set_property  PACKAGE_PIN AD2    [get_ports MEZZ_PAGE0_P]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE0_P]
+set_property  PACKAGE_PIN AD1    [get_ports MEZZ_PAGE0_N]
+set_property  IOSTANDARD  LVDS   [get_ports MEZZ_PAGE0_N]
+
+set_property  PACKAGE_PIN M6    [get_ports DDMTD_DATA_P]
+set_property  IOSTANDARD LVDS25 [get_ports DDMTD_DATA_P]
+set_property  PACKAGE_PIN L5    [get_ports DDMTD_DATA_N]
+set_property  IOSTANDARD LVDS25 [get_ports DDMTD_DATA_N]
+
+
 
 
 

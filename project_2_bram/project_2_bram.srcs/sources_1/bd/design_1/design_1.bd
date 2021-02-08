@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x7E0BE65D96275A84",
+      "boundary_crc": "0x483D04CF826D1A61",
       "device": "xczu2cg-sfvc784-1-e",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -110,12 +110,32 @@
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "design_1_zynq_ultra_ps_e_0_1_pl_clk0",
+            "value": "design_1_CLK_IN",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "300000000",
-            "value_src": "user_prop"
+            "value": "160000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "CLK_IN": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_CLK_IN",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "160000000"
           },
           "INSERT_VIP": {
             "value": "0",
@@ -266,7 +286,7 @@
             "value": "100.000000"
           },
           "PSU__CRL_APB__IOU_SWITCH_CTRL__ACT_FREQMHZ": {
-            "value": "240.000000"
+            "value": "266.666656"
           },
           "PSU__CRL_APB__LPD_LSBUS_CTRL__ACT_FREQMHZ": {
             "value": "100.000000"
@@ -278,10 +298,13 @@
             "value": "187.500000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__ACT_FREQMHZ": {
-            "value": "300.000000"
+            "value": "160.000000"
           },
           "PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ": {
-            "value": "300"
+            "value": "160"
+          },
+          "PSU__CRL_APB__PL0_REF_CTRL__SRCSEL": {
+            "value": "RPLL"
           },
           "PSU__CRL_APB__PL1_REF_CTRL__ACT_FREQMHZ": {
             "value": "50.000000"
@@ -953,40 +976,16 @@
       }
     },
     "interface_nets": {
-      "axi_bram_ctrl_0_BRAM_PORTA": {
+      "axi_smc_M03_AXI": {
         "interface_ports": [
-          "axi_bram_ctrl_0_bram/BRAM_PORTA",
-          "axi_bram_ctrl_0/BRAM_PORTA"
+          "axi_bram_ctrl_2/S_AXI",
+          "axi_smc/M03_AXI"
         ]
       },
-      "axi_gpio_0_GPIO": {
+      "axi_smc_M01_AXI": {
         "interface_ports": [
-          "gpio_rtl",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "BRAM_PORTB_1_1": {
-        "interface_ports": [
-          "BRAM_PORTB_1",
-          "axi_bram_ctrl_0_bram1/BRAM_PORTB"
-        ]
-      },
-      "BRAM_PORTB_0_1": {
-        "interface_ports": [
-          "BRAM_PORTB_0",
-          "axi_bram_ctrl_0_bram/BRAM_PORTB"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_bram_ctrl_1/S_AXI",
-          "axi_smc/M00_AXI"
-        ]
-      },
-      "axi_bram_ctrl_1_BRAM_PORTA": {
-        "interface_ports": [
-          "axi_bram_ctrl_0_bram1/BRAM_PORTA",
-          "axi_bram_ctrl_1/BRAM_PORTA"
+          "axi_smc/M01_AXI",
+          "axi_bram_ctrl_0/S_AXI"
         ]
       },
       "axi_smc_M02_AXI": {
@@ -1001,10 +1000,16 @@
           "axi_bram_ctrl_2/BRAM_PORTA"
         ]
       },
-      "axi_smc_M01_AXI": {
+      "BRAM_PORTB_0_1": {
         "interface_ports": [
-          "axi_smc/M01_AXI",
-          "axi_bram_ctrl_0/S_AXI"
+          "BRAM_PORTB_0",
+          "axi_bram_ctrl_0_bram/BRAM_PORTB"
+        ]
+      },
+      "axi_bram_ctrl_1_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram1/BRAM_PORTA",
+          "axi_bram_ctrl_1/BRAM_PORTA"
         ]
       },
       "BRAM_PORTB_2_1": {
@@ -1013,23 +1018,41 @@
           "axi_bram_ctrl_0_bram2/BRAM_PORTB"
         ]
       },
+      "axi_bram_ctrl_0_BRAM_PORTA": {
+        "interface_ports": [
+          "axi_bram_ctrl_0_bram/BRAM_PORTA",
+          "axi_bram_ctrl_0/BRAM_PORTA"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_bram_ctrl_1/S_AXI",
+          "axi_smc/M00_AXI"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "gpio_rtl",
+          "axi_gpio_0/GPIO"
+        ]
+      },
       "zynq_ultra_ps_e_0_M_AXI_HPM0_LPD": {
         "interface_ports": [
           "zynq_ultra_ps_e_0/M_AXI_HPM0_LPD",
           "axi_smc/S00_AXI"
         ]
       },
-      "axi_smc_M03_AXI": {
+      "BRAM_PORTB_1_1": {
         "interface_ports": [
-          "axi_bram_ctrl_2/S_AXI",
-          "axi_smc/M03_AXI"
+          "BRAM_PORTB_1",
+          "axi_bram_ctrl_0_bram1/BRAM_PORTB"
         ]
       }
     },
     "nets": {
       "zynq_ultra_ps_e_0_pl_clk0": {
         "ports": [
-          "zynq_ultra_ps_e_0/pl_clk0",
+          "CLK_IN",
           "axi_smc/aclk",
           "rst_ps8_0_200M/slowest_sync_clk",
           "CLK_OUT",

@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Tue Sep 15 03:03:05 2020
-// Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
-// Command     : write_verilog -force -mode funcsim -rename_top FIFO_10 -prefix
-//               FIFO_10_ FIFO_10_sim_netlist.v
+// Date        : Wed Jan 13 19:11:50 2021
+// Host        : havi running 64-bit Pop!_OS 20.10
+// Command     : write_verilog -force -mode funcsim
+//               /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10_sim_netlist.v
 // Design      : FIFO_10
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,7 +29,7 @@ module FIFO_10
     wr_rst_busy,
     rd_rst_busy);
   input srst;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 write_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME write_clk, FREQ_HZ 300000000, PHASE 0.000, INSERT_VIP 0" *) input wr_clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 write_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME write_clk, FREQ_HZ 160000000, PHASE 0.000, INSERT_VIP 0" *) input wr_clk;
   (* x_interface_info = "xilinx.com:signal:clock:1.0 read_clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME read_clk, FREQ_HZ 160000000, PHASE 0.000, INSERT_VIP 0" *) input rd_clk;
   (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA" *) input [31:0]din;
   (* x_interface_info = "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN" *) input wr_en;
@@ -368,7 +368,7 @@ module FIFO_10
   (* C_WR_DEPTH_WACH = "16" *) 
   (* C_WR_DEPTH_WDCH = "1024" *) 
   (* C_WR_DEPTH_WRCH = "16" *) 
-  (* C_WR_FREQ = "300" *) 
+  (* C_WR_FREQ = "160" *) 
   (* C_WR_PNTR_WIDTH = "10" *) 
   (* C_WR_PNTR_WIDTH_AXIS = "10" *) 
   (* C_WR_PNTR_WIDTH_RACH = "4" *) 
@@ -611,6 +611,7 @@ module FIFO_10
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "builtin_extdepth" *) 
 module FIFO_10_builtin_extdepth
    (empty,
     full,
@@ -680,6 +681,7 @@ module FIFO_10_builtin_extdepth
         .O(srst_qr[0]));
 endmodule
 
+(* ORIG_REF_NAME = "builtin_prim" *) 
 module FIFO_10_builtin_prim
    (empty,
     full,
@@ -906,6 +908,7 @@ module FIFO_10_builtin_prim
         .WRRSTBUSY(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "builtin_top" *) 
 module FIFO_10_builtin_top
    (empty,
     full,
@@ -964,6 +967,7 @@ module FIFO_10_builtin_top
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module FIFO_10_fifo_generator_top
    (empty,
     full,
@@ -1086,10 +1090,10 @@ endmodule
 (* C_WRCH_TYPE = "0" *) (* C_WR_ACK_LOW = "0" *) (* C_WR_DATA_COUNT_WIDTH = "10" *) 
 (* C_WR_DEPTH = "1024" *) (* C_WR_DEPTH_AXIS = "1024" *) (* C_WR_DEPTH_RACH = "16" *) 
 (* C_WR_DEPTH_RDCH = "1024" *) (* C_WR_DEPTH_WACH = "16" *) (* C_WR_DEPTH_WDCH = "1024" *) 
-(* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "300" *) (* C_WR_PNTR_WIDTH = "10" *) 
+(* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "160" *) (* C_WR_PNTR_WIDTH = "10" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_5" *) 
 module FIFO_10_fifo_generator_v13_2_5
    (backup,
     backup_marker,
@@ -2111,6 +2115,7 @@ module FIFO_10_fifo_generator_v13_2_5
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_5_builtin" *) 
 module FIFO_10_fifo_generator_v13_2_5_builtin
    (empty,
     full,
@@ -2180,6 +2185,7 @@ module FIFO_10_fifo_generator_v13_2_5_builtin
         .wr_rst_busy(wr_rst_busy));
 endmodule
 
+(* ORIG_REF_NAME = "fifo_generator_v13_2_5_synth" *) 
 module FIFO_10_fifo_generator_v13_2_5_synth
    (empty,
     full,

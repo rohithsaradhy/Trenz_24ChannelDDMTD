@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Tue Sep 15 09:20:36 2020
-| Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+| Date         : Wed Jan 13 20:06:45 2021
+| Host         : havi running 64-bit Pop!_OS 20.10
 | Command      : report_utilization -file design_1_axi_smc_1_utilization_synth.rpt -pb design_1_axi_smc_1_utilization_synth.pb
 | Design       : design_1_axi_smc_1
 | Device       : xczu2cgsfvc784-1
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| CLB LUTs*                  | 12411 |     0 |     47232 | 26.28 |
-|   LUT as Logic             |  8360 |     0 |     47232 | 17.70 |
+| CLB LUTs*                  | 12392 |     0 |     47232 | 26.24 |
+|   LUT as Logic             |  8341 |     0 |     47232 | 17.66 |
 |   LUT as Memory            |  4051 |     0 |     28800 | 14.07 |
 |     LUT as Distributed RAM |  3100 |     0 |           |       |
 |     LUT as Shift Register  |   951 |     0 |           |       |
@@ -151,15 +151,15 @@ Table of Contents
 +----------+-------+---------------------+
 | FDRE     | 18138 |            Register |
 | RAMD32   |  5404 |                 CLB |
-| LUT3     |  4120 |                 CLB |
-| LUT6     |  2917 |                 CLB |
-| LUT5     |  1695 |                 CLB |
-| LUT4     |  1450 |                 CLB |
-| LUT2     |   789 |                 CLB |
+| LUT3     |  4135 |                 CLB |
+| LUT6     |  2897 |                 CLB |
+| LUT5     |  1691 |                 CLB |
+| LUT4     |  1451 |                 CLB |
+| LUT2     |   793 |                 CLB |
 | RAMS32   |   768 |                 CLB |
 | SRLC32E  |   676 |                 CLB |
 | FDSE     |   369 |            Register |
-| LUT1     |   349 |                 CLB |
+| LUT1     |   353 |                 CLB |
 | SRL16E   |   275 |                 CLB |
 | MUXF7    |    10 |                 CLB |
 | CARRY8   |     8 |                 CLB |

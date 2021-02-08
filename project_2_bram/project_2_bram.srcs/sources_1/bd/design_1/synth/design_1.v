@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Sep 15 09:14:11 2020
-//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+//Date        : Wed Jan 13 19:49:43 2021
+//Host        : havi running 64-bit Pop!_OS 20.10
 //Command     : generate_target design_1.bd
 //Design      : design_1
 //Purpose     : IP block netlist
@@ -32,6 +32,7 @@ module design_1
     BRAM_PORTB_2_en,
     BRAM_PORTB_2_rst,
     BRAM_PORTB_2_we,
+    CLK_IN,
     CLK_OUT,
     gpio_rtl_tri_o);
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_0 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_0, MASTER_TYPE BRAM_CTRL, MEM_ECC NONE, MEM_SIZE 65536, MEM_WIDTH 256, READ_LATENCY 1, READ_WRITE_MODE READ_WRITE" *) input [31:0]BRAM_PORTB_0_addr;
@@ -55,7 +56,8 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 EN" *) input BRAM_PORTB_2_en;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 RST" *) input BRAM_PORTB_2_rst;
   (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 WE" *) input [31:0]BRAM_PORTB_2_we;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_OUT CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_OUT, CLK_DOMAIN design_1_zynq_ultra_ps_e_0_1_pl_clk0, FREQ_HZ 300000000, INSERT_VIP 0, PHASE 0.000" *) output CLK_OUT;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_IN CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_IN, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) input CLK_IN;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK_OUT CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK_OUT, CLK_DOMAIN design_1_CLK_IN, FREQ_HZ 160000000, INSERT_VIP 0, PHASE 0.000" *) output CLK_OUT;
   (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_rtl TRI_O" *) output [31:0]gpio_rtl_tri_o;
 
   wire [31:0]BRAM_PORTB_0_1_ADDR;
@@ -277,6 +279,7 @@ module design_1
   assign BRAM_PORTB_2_dout[255:0] = BRAM_PORTB_2_1_DOUT;
   assign CLK_OUT = zynq_ultra_ps_e_0_pl_clk0;
   assign gpio_rtl_tri_o[31:0] = axi_gpio_0_GPIO_TRI_O;
+  assign zynq_ultra_ps_e_0_pl_clk0 = CLK_IN;
   design_1_axi_bram_ctrl_0_11 axi_bram_ctrl_0
        (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
         .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
@@ -666,6 +669,5 @@ module design_1
         .maxigp2_wstrb(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WSTRB),
         .maxigp2_wvalid(zynq_ultra_ps_e_0_M_AXI_HPM0_LPD_WVALID),
         .maxihpm0_lpd_aclk(zynq_ultra_ps_e_0_pl_clk0),
-        .pl_clk0(zynq_ultra_ps_e_0_pl_clk0),
         .pl_resetn0(zynq_ultra_ps_e_0_pl_resetn0));
 endmodule

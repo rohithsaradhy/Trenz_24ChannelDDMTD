@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Tue Sep 15 03:03:05 2020
--- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim -rename_top FIFO_10 -prefix
---               FIFO_10_ FIFO_10_sim_netlist.vhdl
+-- Date        : Wed Jan 13 19:11:50 2021
+-- Host        : havi running 64-bit Pop!_OS 20.10
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/ip/FIFO_10/FIFO_10_sim_netlist.vhdl
 -- Design      : FIFO_10
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -30,6 +30,8 @@ entity FIFO_10_builtin_prim is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_builtin_prim : entity is "builtin_prim";
 end FIFO_10_builtin_prim;
 
 architecture STRUCTURE of FIFO_10_builtin_prim is
@@ -347,6 +349,8 @@ entity FIFO_10_builtin_extdepth is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_builtin_extdepth : entity is "builtin_extdepth";
 end FIFO_10_builtin_extdepth;
 
 architecture STRUCTURE of FIFO_10_builtin_extdepth is
@@ -409,6 +413,8 @@ entity FIFO_10_builtin_top is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_builtin_top : entity is "builtin_top";
 end FIFO_10_builtin_top;
 
 architecture STRUCTURE of FIFO_10_builtin_top is
@@ -450,6 +456,8 @@ entity FIFO_10_fifo_generator_v13_2_5_builtin is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_fifo_generator_v13_2_5_builtin : entity is "fifo_generator_v13_2_5_builtin";
 end FIFO_10_fifo_generator_v13_2_5_builtin;
 
 architecture STRUCTURE of FIFO_10_fifo_generator_v13_2_5_builtin is
@@ -512,6 +520,8 @@ entity FIFO_10_fifo_generator_top is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_fifo_generator_top : entity is "fifo_generator_top";
 end FIFO_10_fifo_generator_top;
 
 architecture STRUCTURE of FIFO_10_fifo_generator_top is
@@ -553,6 +563,8 @@ entity FIFO_10_fifo_generator_v13_2_5_synth is
     wr_en : in STD_LOGIC;
     din : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_fifo_generator_v13_2_5_synth : entity is "fifo_generator_v13_2_5_synth";
 end FIFO_10_fifo_generator_v13_2_5_synth;
 
 architecture STRUCTURE of FIFO_10_fifo_generator_v13_2_5_synth is
@@ -1199,7 +1211,7 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_WR_DEPTH_WRCH : integer;
   attribute C_WR_DEPTH_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 16;
   attribute C_WR_FREQ : integer;
-  attribute C_WR_FREQ of FIFO_10_fifo_generator_v13_2_5 : entity is 300;
+  attribute C_WR_FREQ of FIFO_10_fifo_generator_v13_2_5 : entity is 160;
   attribute C_WR_PNTR_WIDTH : integer;
   attribute C_WR_PNTR_WIDTH of FIFO_10_fifo_generator_v13_2_5 : entity is 10;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
@@ -1216,6 +1228,8 @@ entity FIFO_10_fifo_generator_v13_2_5 is
   attribute C_WR_PNTR_WIDTH_WRCH of FIFO_10_fifo_generator_v13_2_5 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of FIFO_10_fifo_generator_v13_2_5 : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of FIFO_10_fifo_generator_v13_2_5 : entity is "fifo_generator_v13_2_5";
 end FIFO_10_fifo_generator_v13_2_5;
 
 architecture STRUCTURE of FIFO_10_fifo_generator_v13_2_5 is
@@ -2305,7 +2319,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute C_WR_DEPTH_WRCH : integer;
   attribute C_WR_DEPTH_WRCH of U0 : label is 16;
   attribute C_WR_FREQ : integer;
-  attribute C_WR_FREQ of U0 : label is 300;
+  attribute C_WR_FREQ of U0 : label is 160;
   attribute C_WR_PNTR_WIDTH : integer;
   attribute C_WR_PNTR_WIDTH of U0 : label is 10;
   attribute C_WR_PNTR_WIDTH_AXIS : integer;
@@ -2330,7 +2344,7 @@ architecture STRUCTURE of FIFO_10 is
   attribute x_interface_parameter of rd_clk : signal is "XIL_INTERFACENAME read_clk, FREQ_HZ 160000000, PHASE 0.000, INSERT_VIP 0";
   attribute x_interface_info of rd_en : signal is "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_EN";
   attribute x_interface_info of wr_clk : signal is "xilinx.com:signal:clock:1.0 write_clk CLK";
-  attribute x_interface_parameter of wr_clk : signal is "XIL_INTERFACENAME write_clk, FREQ_HZ 300000000, PHASE 0.000, INSERT_VIP 0";
+  attribute x_interface_parameter of wr_clk : signal is "XIL_INTERFACENAME write_clk, FREQ_HZ 160000000, PHASE 0.000, INSERT_VIP 0";
   attribute x_interface_info of wr_en : signal is "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_EN";
   attribute x_interface_info of din : signal is "xilinx.com:interface:fifo_write:1.0 FIFO_WRITE WR_DATA";
   attribute x_interface_info of dout : signal is "xilinx.com:interface:fifo_read:1.0 FIFO_READ RD_DATA";

@@ -1,0 +1,164 @@
+xilinx rtfpga
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2177] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2176] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2175] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2174] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2173] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2172] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2171] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2170] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2169] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2168] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2167] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2166] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2165] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2164] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2163] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2162] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2161] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2160] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2159] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2158] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2157] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2156] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2155] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2154] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2153] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2152] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2151] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2150] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2149] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2148] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2147] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2146] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2145] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2144] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2143] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2142] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2141] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2140] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2139] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2138] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2137] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2136] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2135] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2134] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2133] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2132] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2131] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2130] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2129] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2128] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2127] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2126] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2125] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2124] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2123] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2122] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2121] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2120] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2119] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2118] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2117] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2116] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2115] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2114] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2113] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2112] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2111] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2110] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2109] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2108] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2107] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2106] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2105] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2104] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2103] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2102] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2101] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2100] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2099] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2098] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2097] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2096] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2095] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2094] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2093] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2092] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2091] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2090] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2089] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2088] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2087] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2086] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2085] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2084] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2083] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2082] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2081] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2080] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2079] driven by constant 0
+INFO: [Synth 8-3917] design sc_mmu_v1_0_8_top__GC0 has port s_arvector[2078] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design sc_mmu_v1_0_8_addr_decoder has unconnected port prot
+WARNING: [Synth 8-3331] design sc_mmu_v1_0_8_addr_decoder__1 has unconnected port prot
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[2]' (FDRE) to 'gen_endpoint.r_state_reg[3]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[3]' (FDRE) to 'gen_endpoint.r_state_reg[4]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[4]' (FDRE) to 'gen_endpoint.r_state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[5]' (FDRE) to 'gen_endpoint.r_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[6]' (FDRE) to 'gen_endpoint.r_state_reg[7]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[7]' (FDRE) to 'gen_endpoint.r_state_reg[8]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[8]' (FDRE) to 'gen_endpoint.r_state_reg[9]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[9]' (FDRE) to 'gen_endpoint.r_state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[10]' (FDRE) to 'gen_endpoint.r_state_reg[11]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[11]' (FDRE) to 'gen_endpoint.r_state_reg[12]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[12]' (FDRE) to 'gen_endpoint.r_state_reg[13]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[13]' (FDRE) to 'gen_endpoint.r_state_reg[14]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[14]' (FDRE) to 'gen_endpoint.r_state_reg[15]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[15]' (FDRE) to 'gen_endpoint.r_state_reg[16]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[16]' (FDRE) to 'gen_endpoint.r_state_reg[17]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[17]' (FDRE) to 'gen_endpoint.r_state_reg[18]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[18]' (FDRE) to 'gen_endpoint.r_state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[19]' (FDRE) to 'gen_endpoint.r_state_reg[20]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[20]' (FDRE) to 'gen_endpoint.r_state_reg[21]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[21]' (FDRE) to 'gen_endpoint.r_state_reg[22]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[22]' (FDRE) to 'gen_endpoint.r_state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[23]' (FDRE) to 'gen_endpoint.r_state_reg[24]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[24]' (FDRE) to 'gen_endpoint.r_state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[25]' (FDRE) to 'gen_endpoint.r_state_reg[26]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[26]' (FDRE) to 'gen_endpoint.r_state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[27]' (FDRE) to 'gen_endpoint.r_state_reg[28]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[28]' (FDRE) to 'gen_endpoint.r_state_reg[29]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[29]' (FDRE) to 'gen_endpoint.r_state_reg[30]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.r_state_reg[30]' (FDRE) to 'gen_endpoint.r_state_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_endpoint.r_state_reg[31] )
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[2]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[3]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[4]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[5]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[6]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[7]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[8]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[9]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[10]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[11]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[12]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[13]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[14]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[15]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[16]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[17]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[18]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[19]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[20]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[21]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[22]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[23]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[24]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[25]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[26]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[27]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[28]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[29]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'gen_endpoint.w_state_reg[30]' (FDRE) to 'gen_endpoint.w_state_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\gen_endpoint.w_state_reg[31] )

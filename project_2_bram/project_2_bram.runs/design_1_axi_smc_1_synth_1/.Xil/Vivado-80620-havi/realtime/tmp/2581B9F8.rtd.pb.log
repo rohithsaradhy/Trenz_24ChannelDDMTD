@@ -1,0 +1,129 @@
+xilinx rtfpga
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port aclk
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_req
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_info[0]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[155]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[154]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[153]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[152]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[151]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[150]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[149]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[148]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[147]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[146]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[145]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[144]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[143]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[142]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[141]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[140]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[139]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[138]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[137]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[136]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[135]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[134]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[133]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[132]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_ar_payld[131]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_req
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_info[0]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[155]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[154]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[153]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[152]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[151]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[150]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[149]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[148]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[147]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[146]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[145]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[144]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[143]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[142]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[141]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[140]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[139]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[138]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[137]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[136]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[135]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[134]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[133]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[132]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_aw_payld[131]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_w_req
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port s_sc_w_info[0]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1023]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1022]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1021]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1020]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1019]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1018]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1017]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1016]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1015]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1014]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1013]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1012]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1011]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1010]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1009]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1008]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1007]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1006]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1005]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1004]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1003]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1002]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1001]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[1000]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[999]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[998]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[997]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[996]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[995]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[994]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[993]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[992]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[991]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[990]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[989]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[988]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[987]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[986]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[985]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[984]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[983]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[982]
+WARNING: [Synth 8-3331] design sc_sc2axi_v1_0_7_top__1 has unconnected port m_axi_buser[981]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /p_0_out_inferred__7/\inst_mi_handler/inst_ingress/inst_incoming_count/count_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /p_0_out_inferred__7/\inst_mi_handler/inst_ingress/inst_incoming_count/count_r_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /p_0_out_inferred__7/\inst_mi_handler/inst_ingress/inst_incoming_count/count_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /p_0_out_inferred__7/\inst_mi_handler/inst_ingress/inst_incoming_count/count_r_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m02_nodes/m02_r_node/inst /\inst_mi_handler/inst_ingress/inst_incoming_count/is_zero_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m02_nodes/m02_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_b_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m02_nodes/m02_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_a_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /\inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/gen_r_ch.accum_reg[sc_route][0] )
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][2]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][5]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][6]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][7]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][8]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][9]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][10]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][12]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][13]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][14]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][15]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][16]'
+INFO: [Synth 8-3886] merging instance 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][16]' (FDRE) to 'm02_nodes/m02_r_node/inst/inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][17]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\m02_nodes/m02_r_node/inst /\inst_mi_handler/gen_normal_area.gen_upsizer.inst_upsizer/inst_upsizer_target_pipeline/gen_pipe[1].pipe_reg[1][17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m02_nodes/m02_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_b_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m02_nodes/m02_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_a_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m03_nodes/m03_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_b_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m03_nodes/m03_r_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_a_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m03_nodes/m03_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_b_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\m03_nodes/m03_b_node/inst /\inst_mi_handler/gen_normal_area.inst_fifo_send/gen_AB_reg_slice.payld_a_reg[0] )

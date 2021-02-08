@@ -1,8 +1,8 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Tue Sep 15 09:14:12 2020
-//Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+//Date        : Wed Jan 13 19:49:43 2021
+//Host        : havi running 64-bit Pop!_OS 20.10
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
 //Purpose     : IP block netlist
@@ -31,6 +31,7 @@ module design_1_wrapper
     BRAM_PORTB_2_en,
     BRAM_PORTB_2_rst,
     BRAM_PORTB_2_we,
+    CLK_IN,
     CLK_OUT,
     gpio_rtl_tri_o);
   input [31:0]BRAM_PORTB_0_addr;
@@ -54,6 +55,7 @@ module design_1_wrapper
   input BRAM_PORTB_2_en;
   input BRAM_PORTB_2_rst;
   input [31:0]BRAM_PORTB_2_we;
+  input CLK_IN;
   output CLK_OUT;
   output [31:0]gpio_rtl_tri_o;
 
@@ -78,6 +80,7 @@ module design_1_wrapper
   wire BRAM_PORTB_2_en;
   wire BRAM_PORTB_2_rst;
   wire [31:0]BRAM_PORTB_2_we;
+  wire CLK_IN;
   wire CLK_OUT;
   wire [31:0]gpio_rtl_tri_o;
 
@@ -103,6 +106,7 @@ module design_1_wrapper
         .BRAM_PORTB_2_en(BRAM_PORTB_2_en),
         .BRAM_PORTB_2_rst(BRAM_PORTB_2_rst),
         .BRAM_PORTB_2_we(BRAM_PORTB_2_we),
+        .CLK_IN(CLK_IN),
         .CLK_OUT(CLK_OUT),
         .gpio_rtl_tri_o(gpio_rtl_tri_o));
 endmodule

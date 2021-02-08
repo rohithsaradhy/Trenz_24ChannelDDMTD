@@ -1777,7 +1777,7 @@ import "DPI-C" function void ps8_simulate_single_cycle_pl_clk0();
      pl_clk0 = 1'b0;
   end
 
-  always #(1.6666666666666667) pl_clk0 <= ~pl_clk0;
+  always #(3.125) pl_clk0 <= ~pl_clk0;
 
   always@(posedge pl_clk0)
   begin

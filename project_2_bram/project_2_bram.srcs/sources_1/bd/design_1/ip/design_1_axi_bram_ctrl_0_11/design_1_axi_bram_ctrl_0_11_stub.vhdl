@@ -1,11 +1,11 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Mon Sep 14 06:04:15 2020
--- Host        : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_bram_ctrl_0_11 -prefix
---               design_1_axi_bram_ctrl_0_11_ design_1_axi_bram_ctrl_0_10_stub.vhdl
--- Design      : design_1_axi_bram_ctrl_0_10
+-- Date        : Wed Jan 13 19:01:21 2021
+-- Host        : havi running 64-bit Pop!_OS 20.10
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_11/design_1_axi_bram_ctrl_0_11_stub.vhdl
+-- Design      : design_1_axi_bram_ctrl_0_11
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xczu2cg-sfvc784-1-e
 -- --------------------------------------------------------------------------------

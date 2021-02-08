@@ -41,7 +41,7 @@ module DDMTD_Sampler
     // Master Stream Ports. TVALID indicates that the master is driving a valid transfer, A transfer takes place when both TVALID and TREADY are asserted. 
     output wire  M_AXIS_TVALID,
     // TDATA is the primary payload that is used to provide the data that is passing across the interface from the master.
-    output wire [DATA_WIDTH-1 : 0] M_AXIS_TDATA,
+    output reg [DATA_WIDTH-1 : 0] M_AXIS_TDATA,
     // TSTRB is the byte qualifier that indicates whether the content of the associated byte of TDATA is processed as a data byte or a position byte.
     output wire [(DATA_WIDTH/8)-1 : 0] M_AXIS_TSTRB,
     // TLAST indicates the boundary of a packet.
@@ -79,6 +79,18 @@ always @(negedge clk_ref) begin
     end
 
 end
+
+// wire write_en;
+// //wire beat_edge;
+// pedge p1 (
+//     .clk(clk_ref),
+//     .reset(reset),
+//     .clk_obs(clk_beat),
+//     .clk_en(enable_sampling_logic),
+//     .out(write_en)
+//     // ,.beat_edge(beat_edge)
+// );
+
 
 
 //Saving values of edge
@@ -211,6 +223,26 @@ assign  M_AXIS_TVALID = 1; //Always valid
 
 
 
+    //Sync Circuit from Erich
+    reg write_en_sync=0;
+    reg [DATA_WIDTH-1 : 0] DATA_IN_SYNC = 0;
+    always @(negedge clk_ref)
+    begin
+        write_en_sync <=write_en;
+        DATA_IN_SYNC <= DATA_IN;
+        
+    end
+
+
+    reg read_en_sync=0;
+    wire [DATA_WIDTH-1 : 0] DATA_OUT;
+    always @(negedge M_AXIS_ACLK)
+    begin
+        read_en_sync <=(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic | reset);
+        M_AXIS_TDATA <= DATA_OUT;
+    end
+
+
 
     FIFO_10 FIFO_10_inst (
     .srst(reset),
@@ -218,10 +250,10 @@ assign  M_AXIS_TVALID = 1; //Always valid
     // .clk(clk_ref),
     .wr_clk(clk_ref),
     .rd_clk(M_AXIS_ACLK),
-    .din(DATA_IN),
-    .wr_en(write_en),
-    .rd_en(M_AXIS_TVALID && M_AXIS_TREADY && enable_sampling_logic && enable_read_logic | reset),
-    .dout(M_AXIS_TDATA),
+    .din(DATA_IN_SYNC),
+    .wr_en(write_en_sync),
+    .rd_en(read_en_sync),
+    .dout(DATA_OUT),
     .full(full),
     .empty(empty),
     .prog_empty(prog_empty),
@@ -350,5 +382,86 @@ assign  M_AXIS_TVALID = 1; //Always valid
 
 
 
+    
+endmodule
+
+
+
+
+module pedge(
+input clk,
+input reset,
+input clk_obs,
+input clk_en,
+output out,
+output beat_edge
+    );
+
+
+ //OLD Stuff   
+        // wire clk_obs_sync;
+        // SYNC sync1(.O(clk_obs_sync),.I(clk_obs),.clk(clk),.reset(reset));            
+        wire D0,D1,D2;
+        wire Q0,Q1,Q2;
+
+
+        assign D0  = clk_obs;
+        assign D1  = Q0;
+        assign D2  = Q1;
+        assign beat_edge = Q1;
+
+
+
+
+        FDRE
+        #(
+            .INIT(1'b0)//Initialvalueofregister(1'b0or1'b1)
+         )
+        FDRE_inst1(
+        .Q(Q0),//1-bit Data output
+        .C(clk),//1-bit Clock input
+        .CE(clk_en), //1-bit Clock enable input
+        .R(reset),//1- bit Synchronous reset input
+        .D(D0)//1 -bit Data input
+        );
+
+
+
+        FDRE
+        #(
+            .INIT(1'b0)//Initialvalueofregister(1'b0or1'b1)
+         )
+        FDRE_inst2(
+        .Q(Q1),//1-bit Data output
+        .C(clk),//1-bit Clock input
+        .CE(clk_en), //1-bit Clock enable input
+        .R(reset),//1- bit Synchronous reset input
+        .D(D1)//1 -bit Data input
+        );
+
+
+                FDRE
+        #(
+            .INIT(1'b0)//Initialvalueofregister(1'b0or1'b1)
+         )
+        FDRE_inst3(
+        .Q(Q2),//1-bit Data output
+        .C(clk),//1-bit Clock input
+        .CE(clk_en), //1-bit Clock enable input
+        .R(reset),//1- bit Synchronous reset input
+        .D(D2)//1 -bit Data input
+        );
+
+
+        
+
+    //    wire temp_out;
+//       XORCY X1(.O(temp_out) ,.LI(clk_obs_sync),.CI(out_FF));
+    //    assign out = Q1^Q2; //Save all edges
+    //    assign out = Q2&(~Q1); //Save negedge
+       assign out = Q1&(~Q2); //Save posedge
+
+    //    assign temp_out = clk_obs_sync&(~out_FF);
+    //    SYNC sync2(.O(out),.I(temp_out),.clk(~clk),.reset(reset));
     
 endmodule
