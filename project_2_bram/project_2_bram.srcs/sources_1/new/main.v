@@ -59,40 +59,99 @@ module main(
     input wire CQ3_P,
     input wire CQ3_N,
 
-    input wire DQ0_P,
-    input wire DQ0_N,
-    input wire DQ1_P,
-    input wire DQ1_N,
-    input wire DQ2_P,
-    input wire DQ2_N,
-    input wire DQ3_P,
-    input wire DQ3_N,
+    // input wire DQ0_P,
+    // input wire DQ0_N,
+    // input wire DQ1_P,
+    // input wire DQ1_N,
+    // input wire DQ2_P,
+    // input wire DQ2_N,
+    // input wire DQ3_P,
+    // input wire DQ3_N,
 
-    input wire EQ0_P,
-    input wire EQ0_N,
-    input wire EQ1_P,
-    input wire EQ1_N,
-    input wire EQ2_P,
-    input wire EQ2_N,
-    input wire EQ3_P,
-    input wire EQ3_N,
+    // input wire EQ0_P,
+    // input wire EQ0_N,
+    // input wire EQ1_P,
+    // input wire EQ1_N,
+    // input wire EQ2_P,
+    // input wire EQ2_N,
+    // input wire EQ3_P,
+    // input wire EQ3_N,
 
-    input wire FQ0_P,
-    input wire FQ0_N,
-    input wire FQ1_P,
-    input wire FQ1_N,
-    input wire FQ2_P,
-    input wire FQ2_N,
-    input wire FQ3_P,
-    input wire FQ3_N
+    // input wire FQ0_P,
+    // input wire FQ0_N,
+    // input wire FQ1_P,
+    // input wire FQ1_N,
+    // input wire FQ2_P,
+    // input wire FQ2_N,
+    // input wire FQ3_P,
+    // input wire FQ3_N,
 
 
+
+    //Input Wire SPI from RPI
+
+    input wire SPI_KOSI,
+    input wire SPI_SCK,
+    input wire SPI_SSB1,
+
+    input wire DAT0,
+    input wire DAT1,
+    input wire DAT2,
+    input wire DAT3,
+
+    //output to ASIC
+
+    output wire SCK_P,
+    output wire SCK_N,
+    
+    output wire SDIN_P,
+    output wire SDIN_N,
+    
+    output wire CS1B_P,
+    output wire CS1B_N,
+
+    output wire CS2B_P,
+    output wire CS2B_N,
+
+
+    
+    output wire MEZZ_PAGE3_P,
+    output wire MEZZ_PAGE3_N,
+    
+    output wire MEZZ_PAGE2_P,
+    output wire MEZZ_PAGE2_N,
+    
+    output wire MEZZ_PAGE1_P,
+    output wire MEZZ_PAGE1_N,
+    
+    output wire MEZZ_PAGE0_P,
+    output wire MEZZ_PAGE0_N
 
 
     );
     
-    wire CLK;
-    wire clk_ref;
+
+    // Bypassing SPI to DCPS
+    OBUFDS OBUFDS_MEZZ_PAGE0(.I(DAT0),.O(MEZZ_PAGE0_P),.OB(MEZZ_PAGE0_N));
+    OBUFDS OBUFDS_MEZZ_PAGE1(.I(DAT1),.O(MEZZ_PAGE1_P),.OB(MEZZ_PAGE1_N));
+    OBUFDS OBUFDS_MEZZ_PAGE2(.I(DAT2),.O(MEZZ_PAGE2_P),.OB(MEZZ_PAGE2_N));
+    OBUFDS OBUFDS_MEZZ_PAGE3(.I(DAT3),.O(MEZZ_PAGE3_P),.OB(MEZZ_PAGE3_N));
+
+    OBUFDS OBUFDS_SDIN(.I(SPI_KOSI),.O(SDIN_P),.OB(SDIN_N));
+    OBUFDS OBUFDS_SCK (.I(SPI_SCK),.O(SCK_P),.OB(SCK_N));
+
+    //Swapped
+    // OBUFDS OBUFDS_SDIN(.I(SPI_SCK),.O(SDIN_P),.OB(SDIN_N));
+    // OBUFDS OBUFDS_SCK (.I(SPI_KOSI),.O(SCK_P),.OB(SCK_N));
+
+    OBUFDS OBUFDS_CS1B(.I(SPI_SSB1),.O(CS1B_P),.OB(CS1B_N));
+    OBUFDS OBUFDS_CS2B(.I(SPI_SSB1),.O(CS2B_P),.OB(CS2B_N));
+
+
+
+// Uncomment from here
+//     wire CLK;
+//     wire clk_ref;
 
 
 
@@ -117,28 +176,6 @@ module main(
    IBUFGDS IBUFGDS_CQ1 (.O(CQ1), .I(CQ1_P), .IB(CQ1_N)); //good
    IBUFGDS IBUFGDS_CQ2 (.O(CQ2), .I(CQ2_P), .IB(CQ2_N)); //good
    IBUFGDS IBUFGDS_CQ3 (.O(CQ3), .I(CQ3_P), .IB(CQ3_N)); //
-   
-
-   wire DQ0,DQ1,DQ2,DQ3;
-   IBUFGDS IBUFGDS_DQ0 (.O(DQ0), .I(DQ0_P), .IB(DQ0_N)); //good
-   IBUFGDS IBUFGDS_DQ1 (.O(DQ1), .I(DQ1_P), .IB(DQ1_N)); //good
-   IBUFGDS IBUFGDS_DQ2 (.O(DQ2), .I(DQ2_P), .IB(DQ2_N)); //good
-   IBUFGDS IBUFGDS_DQ3 (.O(DQ3), .I(DQ3_P), .IB(DQ3_N)); //good
-
-
-   wire EQ0,EQ1,EQ2,EQ3;
-   IBUFGDS IBUFGDS_EQ0 (.O(EQ0), .I(EQ0_P), .IB(EQ0_N)); //good
-   IBUFGDS IBUFGDS_EQ1 (.O(EQ1), .I(EQ1_P), .IB(EQ1_N)); //good
-   IBUFGDS IBUFGDS_EQ2 (.O(EQ2), .I(EQ2_P), .IB(EQ2_N)); //good
-   IBUFGDS IBUFGDS_EQ3 (.O(EQ3), .I(EQ3_P), .IB(EQ3_N)); //good
-
-
-   wire FQ0,FQ1,FQ2,FQ3;
-   IBUFGDS IBUFGDS_FQ0 (.O(FQ0), .I(FQ0_P), .IB(FQ0_N)); //good
-   IBUFGDS IBUFGDS_FQ1 (.O(FQ1), .I(FQ1_P), .IB(FQ1_N)); //good
-   IBUFGDS IBUFGDS_FQ2 (.O(FQ2), .I(FQ2_P), .IB(FQ2_N)); //good
-   IBUFGDS IBUFGDS_FQ3 (.O(FQ3), .I(FQ3_P), .IB(FQ3_N)); //good
-
 
 
 
@@ -265,9 +302,16 @@ module main(
   
   // Each bit of this wire will be the clock
   wire [NUM_DDMTD-1:0]  clk_beat;
+//  Edit this 
+//   assign clk_beat =  { 
+//                       beat_0_q1,FQ2,FQ1,FQ0,EQ3,EQ2,EQ1,EQ0,
+//                       DQ3,DQ2,DQ1,DQ0,CQ3,CQ2,CQ1,CQ0,
+//                       BQ3,BQ2,BQ1,BQ0,AQ3,AQ2,AQ1,AQ0 
+//                      };
+
   assign clk_beat =  { 
-                      beat_0_q1,FQ2,FQ1,FQ0,EQ3,EQ2,EQ1,EQ0,
-                      DQ3,DQ2,DQ1,DQ0,CQ3,CQ2,CQ1,CQ0,
+                      beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,
+                      beat_0_q1,beat_0_q1,beat_0_q1,beat_0_q1,CQ3,CQ2,CQ1,CQ0,
                       BQ3,BQ2,BQ1,BQ0,AQ3,AQ2,AQ1,AQ0 
                      };
 
@@ -328,8 +372,6 @@ module main(
 //      .enable_read_logic(1)
 
 //  );
-
-
 
 
 

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Mon Sep 21 13:28:59 2020
-| Host         : rsaradhy-acer running 64-bit Ubuntu 18.04.5 LTS
+| Date         : Tue Feb 16 20:33:08 2021
+| Host         : havi running 64-bit Pop!_OS 20.10
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
 | Device       : xczu2cgsfvc784-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  161 |     0 |     47232 |  0.34 |
-|   LUT as Logic          |  161 |     0 |     47232 |  0.34 |
+| CLB LUTs*               |  152 |     0 |     47232 |  0.32 |
+|   LUT as Logic          |  152 |     0 |     47232 |  0.32 |
 |   LUT as Memory         |    0 |     0 |     28800 |  0.00 |
-| CLB Registers           | 1062 |     0 |     94464 |  1.12 |
-|   Register as Flip Flop | 1062 |     0 |     94464 |  1.12 |
+| CLB Registers           | 1051 |     0 |     94464 |  1.11 |
+|   Register as Flip Flop | 1051 |     0 |     94464 |  1.11 |
 |   Register as Latch     |    0 |     0 |     94464 |  0.00 |
 | CARRY8                  |   24 |     0 |      8820 |  0.27 |
 | F7 Muxes                |    0 |     0 |     35280 |  0.00 |
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1062  |          Yes |       Reset |            - |
+| 1051  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| Bonded IOB |   50 |     0 |       252 | 19.84 |
+| Bonded IOB |   49 |     0 |       252 | 19.44 |
 +------------+------+-------+-----------+-------+
 
 
@@ -147,16 +147,19 @@ Table of Contents
 +-----------+------+---------------------+
 |  Ref Name | Used | Functional Category |
 +-----------+------+---------------------+
-| FDRE      | 1062 |            Register |
+| FDRE      | 1051 |            Register |
 | LUT2      |   90 |                 CLB |
 | LUT3      |   43 |                 CLB |
 | LUT4      |   39 |                 CLB |
-| IBUFCTRL  |   25 |              Others |
-| DIFFINBUF |   25 |                 I/O |
 | CARRY8    |   24 |                 CLB |
+| IBUFCTRL  |   20 |              Others |
 | LUT6      |   17 |                 CLB |
+| OBUF      |   16 |                 I/O |
+| DIFFINBUF |   13 |                 I/O |
 | LUT5      |    8 |                 CLB |
+| INV       |    8 |                 CLB |
 | LUT1      |    7 |                 CLB |
+| INBUF     |    7 |                 I/O |
 | BUFGCE    |    1 |               Clock |
 +-----------+------+---------------------+
 

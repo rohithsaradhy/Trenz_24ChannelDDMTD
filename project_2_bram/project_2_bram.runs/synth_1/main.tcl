@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
 create_project -in_memory -part xczu2cg-sfvc784-1-e
 
 set_param project.singleFileAddWarning.threshold 0

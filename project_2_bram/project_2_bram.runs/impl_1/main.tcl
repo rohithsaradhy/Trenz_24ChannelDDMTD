@@ -65,7 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 3
+  set_param chipscope.maxJobs 4
   create_project -in_memory -part xczu2cg-sfvc784-1-e
   set_property board_part trenz.biz:te0820_2cg_1e:part0:2.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
