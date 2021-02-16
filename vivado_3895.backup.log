@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jan 13 20:00:19 2021
+# Process ID: 3895
+# Current directory: /home/rsaradhy/Work/trenz/vivado
+# Command line: vivado project_2_bram/project_2_bram.xpr
+# Log file: /home/rsaradhy/Work/trenz/vivado/vivado.log
+# Journal file: /home/rsaradhy/Work/trenz/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project project_2_bram/project_2_bram.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/rsaradhy/Software/Vivado/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_smc_1' generated file not found '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_smc_1' generated file not found '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_smc_1' generated file not found '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_smc_1' generated file not found '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_smc_1' generated file not found '/home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_1/design_1_axi_smc_1_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:13 . Memory (MB): peak = 6573.879 ; gain = 110.438 ; free physical = 11828 ; free virtual = 13764
+reset_run synth_1
+reset_run design_1_axi_smc_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Attempt to kill process failed
+
+launch_runs impl_1 -jobs 16
+[Wed Jan 13 20:01:18 2021] Launched design_1_axi_smc_1_synth_1, synth_1...
+Run output will be captured here:
+design_1_axi_smc_1_synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/design_1_axi_smc_1_synth_1/runme.log
+synth_1: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/synth_1/runme.log
+[Wed Jan 13 20:01:18 2021] Launched impl_1...
+Run output will be captured here: /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.95 . Memory (MB): peak = 7500.027 ; gain = 0.000 ; free physical = 1157 ; free virtual = 9969
+INFO: [Netlist 29-17] Analyzing 313 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8017.402 ; gain = 44.883 ; free physical = 557 ; free virtual = 9398
+Restored from archive | CPU: 2.950000 secs | Memory: 32.579369 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 8017.402 ; gain = 44.883 ; free physical = 557 ; free virtual = 9398
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8017.402 ; gain = 0.000 ; free physical = 561 ; free virtual = 9403
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 266 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 7 instances
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 13 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 246 instances
+
+open_run: Time (s): cpu = 00:01:02 ; elapsed = 00:00:56 . Memory (MB): peak = 8383.965 ; gain = 1530.949 ; free physical = 300 ; free virtual = 9161
+open_report: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 8426.359 ; gain = 42.395 ; free physical = 163 ; free virtual = 8843
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+config_webtalk -user off
