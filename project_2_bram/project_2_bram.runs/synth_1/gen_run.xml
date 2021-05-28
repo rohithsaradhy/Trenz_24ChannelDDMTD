@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1600712846">
+<GenRun Id="synth_1" LaunchPart="xczu2cg-sfvc784-1-e" LaunchTime="1615856081">
+  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="main.dcp"/>
   <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
@@ -7,7 +8,6 @@
   <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="main.vds"/>
   <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="main.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
