@@ -85,7 +85,7 @@
 /config/ip/num_si/value=1
 /config/ip/num_mi/value=4
 /config/ip/num_clks/value=1
-/config/aclk/csk/value=design_1_CLK_IN:160:0.000
+/config/aclk/csk/value=design_1_zynq_ultra_ps_e_0_1_pl_clk0:160:0.000
 /clocking/S00_Entry/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0
 /clocking/M00_Exit/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0
 /clocking/M01_Exit/ASSOCIATED_CLK/value=aclk;range=aclk;editable=0

@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Wed Jan 13 19:01:22 2021
+-- Date        : Wed Jan 13 19:01:21 2021
 -- Host        : havi running 64-bit Pop!_OS 20.10
--- Command     : write_vhdl -force -mode funcsim
---               /home/rsaradhy/Work/trenz/vivado/project_2_bram/project_2_bram.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_11/design_1_axi_bram_ctrl_0_11_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_axi_bram_ctrl_0_11 -prefix
+--               design_1_axi_bram_ctrl_0_11_ design_1_axi_bram_ctrl_0_11_sim_netlist.vhdl
 -- Design      : design_1_axi_bram_ctrl_0_11
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -37,8 +37,6 @@ entity design_1_axi_bram_ctrl_0_11_SRL_FIFO is
     bid_gets_fifo_load_d1_reg_0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_bid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_SRL_FIFO : entity is "SRL_FIFO";
 end design_1_axi_bram_ctrl_0_11_SRL_FIFO;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_SRL_FIFO is
@@ -402,8 +400,6 @@ entity design_1_axi_bram_ctrl_0_11_sng_port_arb is
     \bram_we_a[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     last_arb_won_reg_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_sng_port_arb : entity is "sng_port_arb";
 end design_1_axi_bram_ctrl_0_11_sng_port_arb;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_sng_port_arb is
@@ -1018,8 +1014,6 @@ entity design_1_axi_bram_ctrl_0_11_wrap_brst is
     \wrap_burst_total_reg[0]_0\ : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_wrap_brst : entity is "wrap_brst";
 end design_1_axi_bram_ctrl_0_11_wrap_brst;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_wrap_brst is
@@ -2095,8 +2089,6 @@ entity design_1_axi_bram_ctrl_0_11_rd_chnl is
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_rddata_a : in STD_LOGIC_VECTOR ( 255 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_rd_chnl : entity is "rd_chnl";
 end design_1_axi_bram_ctrl_0_11_rd_chnl;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_rd_chnl is
@@ -12585,8 +12577,6 @@ entity design_1_axi_bram_ctrl_0_11_wr_chnl is
     BRAM_En_B_i : in STD_LOGIC;
     s_axi_wstrb : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_wr_chnl : entity is "wr_chnl";
 end design_1_axi_bram_ctrl_0_11_wr_chnl;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_wr_chnl is
@@ -16365,8 +16355,6 @@ entity design_1_axi_bram_ctrl_0_11_full_axi is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_full_axi : entity is "full_axi";
 end design_1_axi_bram_ctrl_0_11_full_axi;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_full_axi is
@@ -16723,8 +16711,6 @@ entity design_1_axi_bram_ctrl_0_11_axi_bram_ctrl_top is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awlen : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl_top : entity is "axi_bram_ctrl_top";
 end design_1_axi_bram_ctrl_0_11_axi_bram_ctrl_top;
 
 architecture STRUCTURE of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl_top is
@@ -16878,8 +16864,6 @@ entity design_1_axi_bram_ctrl_0_11_axi_bram_ctrl is
   attribute C_S_AXI_PROTOCOL of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl : entity is "AXI4";
   attribute C_S_AXI_SUPPORTS_NARROW_BURST : integer;
   attribute C_S_AXI_SUPPORTS_NARROW_BURST of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl : entity is "axi_bram_ctrl";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_1_axi_bram_ctrl_0_11_axi_bram_ctrl : entity is "yes";
 end design_1_axi_bram_ctrl_0_11_axi_bram_ctrl;

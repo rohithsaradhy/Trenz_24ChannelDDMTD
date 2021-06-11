@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Wed Jan 13 20:15:34 2021
+| Date             : Fri Jun  4 12:24:21 2021
 | Host             : havi running 64-bit Pop!_OS 20.10
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.412        |
+| Total On-Chip Power (W)  | 2.423        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.102        |
+| Dynamic (W)              | 2.112        |
 | Device Static (W)        | 0.310        |
 | Effective TJA (C/W)      | 2.4          |
 | Max Ambient (C)          | 94.3         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.076 |        4 |       --- |             --- |
+| Clocks                   |     0.081 |        4 |       --- |             --- |
 | CLB Logic                |     0.168 |    37844 |       --- |             --- |
 |   LUT as Distributed RAM |     0.105 |     1968 |     28800 |            6.83 |
-|   LUT as Logic           |     0.048 |     8423 |     47232 |           17.83 |
+|   LUT as Logic           |     0.048 |     8429 |     47232 |           17.85 |
 |   LUT as Shift Register  |     0.008 |      955 |     28800 |            3.32 |
 |   Register               |     0.007 |    20423 |     94464 |           21.62 |
 |   CARRY8                 |    <0.001 |       26 |      8820 |            0.29 |
 |   Others                 |     0.000 |      718 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       13 |     70560 |            0.02 |
-| Signals                  |     0.086 |    27578 |       --- |             --- |
+| Signals                  |     0.091 |    27583 |       --- |             --- |
 | Block RAM                |     0.104 |       72 |       150 |           48.00 |
 | I/O                      |     0.117 |       49 |       252 |           19.44 |
 | PS8                      |     1.551 |        1 |       --- |             --- |
 | Static Power             |     0.310 |          |           |                 |
 |   PS Static              |     0.094 |          |           |                 |
 |   PL Static              |     0.216 |          |           |                 |
-| Total                    |     2.412 |          |           |                 |
+| Total                    |     2.423 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------------+-------------+-----------+-------------+------------+
-| Vccint          |       0.850 |     0.557 |       0.502 |      0.055 |
+| Vccint          |       0.850 |     0.569 |       0.514 |      0.055 |
 | Vccint_io       |       0.850 |     0.031 |       0.004 |      0.027 |
 | Vccbram         |       0.850 |     0.010 |       0.009 |      0.001 |
 | Vccaux          |       1.800 |     0.048 |       0.000 |      0.048 |
@@ -146,11 +146,12 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-----------+-----------+-----------------+
-| Clock     | Domain    | Constraint (ns) |
-+-----------+-----------+-----------------+
-| CLK_REF_N | CLK_REF_P |             6.2 |
-+-----------+-----------+-----------------+
++-----------+-------------------------------------------------------------------+-----------------+
+| Clock     | Domain                                                            | Constraint (ns) |
++-----------+-------------------------------------------------------------------+-----------------+
+| CLK_REF_N | CLK_REF_P                                                         |             6.2 |
+| clk_pl_0  | desing_ins/design_1_i/zynq_ultra_ps_e_0/inst/pl_clk_unbuffered[0] |             6.2 |
++-----------+-------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -162,8 +163,8 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| main                        |     2.102 |
-|   DDMTD_Array_inst          |     0.028 |
+| main                        |     2.112 |
+|   DDMTD_Array_inst          |     0.031 |
 |     ddmtd_inst[12].DDMTD_i  |     0.002 |
 |       FIFO_10_inst          |     0.001 |
 |     ddmtd_inst[13].DDMTD_i  |     0.002 |
@@ -180,6 +181,7 @@ Table of Contents
 |       FIFO_10_inst          |     0.001 |
 |     ddmtd_inst[19].DDMTD_i  |     0.002 |
 |       FIFO_10_inst          |     0.001 |
+|     ddmtd_inst[1].DDMTD_i   |     0.001 |
 |     ddmtd_inst[20].DDMTD_i  |     0.002 |
 |       FIFO_10_inst          |     0.001 |
 |     ddmtd_inst[21].DDMTD_i  |     0.002 |
@@ -201,15 +203,15 @@ Table of Contents
 |   IBUFGDS_CQ1               |     0.002 |
 |   IBUFGDS_CQ2               |     0.002 |
 |   IBUFGDS_CQ3               |     0.002 |
-|   desing_ins                |     1.950 |
-|     design_1_i              |     1.950 |
+|   desing_ins                |     1.956 |
+|     design_1_i              |     1.956 |
 |       axi_bram_ctrl_0       |     0.009 |
 |       axi_bram_ctrl_0_bram  |     0.032 |
-|       axi_bram_ctrl_0_bram1 |     0.028 |
-|       axi_bram_ctrl_0_bram2 |     0.028 |
-|       axi_bram_ctrl_1       |     0.009 |
+|       axi_bram_ctrl_0_bram1 |     0.029 |
+|       axi_bram_ctrl_0_bram2 |     0.029 |
+|       axi_bram_ctrl_1       |     0.010 |
 |       axi_bram_ctrl_2       |     0.009 |
-|       axi_smc               |     0.282 |
+|       axi_smc               |     0.286 |
 |       zynq_ultra_ps_e_0     |     1.552 |
 +-----------------------------+-----------+
 
